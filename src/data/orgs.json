@@ -58,5 +58,11 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:New_Mexico_State_University_logo.svg",
     "wide": false
+  },
+  "A2 Consulting": {
+    "logo": "img/orgs/a2.png",
+    "license": "Provided by A2 Consulting",
+    "source": "https://a2cons.com/",
+    "wide": true
   }
 }

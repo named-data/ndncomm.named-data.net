@@ -86,8 +86,9 @@ npm run build    # static site in dist/
 
 ## Organization logos
 
-Organizer avatars show the organization's logo when a public-domain one exists on Wikimedia Commons
-(`src/data/orgs.json`; any other organization falls back to the person's initials). Logos are trademarks of their
+Organizer avatars show the organization's logo when a public-domain one exists on Wikimedia Commons, or when the
+organization provided it (A2 Consulting) (`src/data/orgs.json`; any other organization falls back to the person's
+initials). Organizer names and affiliations link to the homepages in `src/data/links.json`. Logos are trademarks of their
 owners and are shown only to identify affiliations.
 
 | Organization | File | License | Source |

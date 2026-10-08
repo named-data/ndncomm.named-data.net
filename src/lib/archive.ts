@@ -119,10 +119,25 @@ interface OrgLogo {
   wide?: boolean;
 }
 
-/** Public-domain logos for organizer affiliations (src/data/orgs.json), keyed by affiliation. */
+const readData = <T>(file: string, fallback: T): T => {
+  const p = path.resolve('src/data', file);
+  return fs.existsSync(p) ? (JSON.parse(fs.readFileSync(p, 'utf8')) as T) : fallback;
+};
+// Affiliations written differently in different years share one logo.
+const ORG_ALIAS: Record<string, string> = { 'UC San Diego/CAIDA': 'UC San Diego', 'UCLA REMAP': 'UCLA' };
+
+/** Logos for organizer affiliations (src/data/orgs.json): public domain, or provided by the organization. */
 export function orgLogo(affiliation?: string): (OrgLogo & { href: string }) | undefined {
-  const p = path.resolve('src/data/orgs.json');
-  if (!affiliation || !fs.existsSync(p)) return undefined;
-  const entry = (JSON.parse(fs.readFileSync(p, 'utf8')) as Record<string, OrgLogo>)[affiliation];
+  if (!affiliation) return undefined;
+  const logos = readData<Record<string, OrgLogo>>('orgs.json', {});
+  const entry = logos[affiliation] ?? logos[ORG_ALIAS[affiliation]];
   return entry && { ...entry, href: url(entry.logo) };
+}
+
+/** Homepages of organizers and their organizations (src/data/links.json). */
+export function orgUrl(affiliation?: string): string | undefined {
+  return affiliation ? readData<{ orgs?: Record<string, string> }>('links.json', {}).orgs?.[affiliation] : undefined;
+}
+export function personUrl(name: string): string | undefined {
+  return readData<{ people?: Record<string, string> }>('links.json', {}).people?.[name];
 }

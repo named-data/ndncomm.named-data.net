@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
 import Program from '../components/Program.astro';
-import { url, documents, kalturaInfo, formatDuration, pageHtml, orgLogo } from '../lib/archive';
+import { url, documents, kalturaInfo, formatDuration, pageHtml, orgLogo, orgUrl, personUrl } from '../lib/archive';
 import { allMeetings, dateRange, FORMAT_LABEL, isUpcoming, programFor, recordingsLost, type Meeting } from '../lib/meetings';
 
 export async function getStaticPaths() {
@@ -17,6 +17,12 @@ const program = await programFor(year);
 const docs = documents(year);
 const kaltura = kalturaInfo(year);
 const original = m.original_page ? pageHtml(year, m.original_page) : '';
+const organizers = m.organizers.map((o) => ({
+  ...o,
+  logo: orgLogo(o.affiliation),
+  orgHref: orgUrl(o.affiliation),
+  href: personUrl(o.name),
+}));
 const place = [m.venue, m.city].filter(Boolean).join(', ');
 const initials = (n: string) =>
   n
@@ -144,18 +150,18 @@ const initials = (n: string) =>
             <div class="side-card">
               <h3>Organizers</h3>
               <ul class="people">
-                {m.organizers.map((o) => (
+                {organizers.map((o) => (
                   <li>
-                    {orgLogo(o.affiliation) ? (
-                      <span class:list={['avatar', 'avatar-logo', { wide: orgLogo(o.affiliation)!.wide }]}>
-                        <img src={orgLogo(o.affiliation)!.href} alt={o.affiliation} loading="lazy" />
-                      </span>
+                    {o.logo ? (
+                      <a href={o.orgHref} class:list={['avatar', 'avatar-logo', { wide: o.logo.wide }]} title={o.affiliation}>
+                        <img src={o.logo.href} alt={o.affiliation} loading="lazy" />
+                      </a>
                     ) : (
                       <span class="avatar">{initials(o.name)}</span>
                     )}
                     <div>
-                      <b>{o.name}</b>
-                      <span>{o.affiliation}</span>
+                      <a href={o.href} class="person-name">{o.name}</a>
+                      <a href={o.orgHref} class="person-org">{o.affiliation}</a>
                     </div>
                   </li>
                 ))}
