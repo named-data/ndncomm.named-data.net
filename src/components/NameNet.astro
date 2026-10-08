@@ -101,7 +101,13 @@ const lateBackStart = lateArrive + 0.02;
 const lateBackEnd = lateBackStart + pathLen(lateRoute) * v;
 
 // PIT breadcrumbs: a dot on the incoming link next to the router, from Interest arrival until the Data leaves.
-const crumbAt = (router: string, from: string) => point(router, from, 19 / len(router, from));
+// Beside the incoming link (offset to one side, so the link itself stays unbroken), close to the router.
+const crumbAt = (router: string, from: string) => {
+  const t = 22 / len(router, from);
+  const p = point(router, from, t), q = point(router, from, t + 0.02);
+  const d = Math.hypot(q.x - p.x, q.y - p.y);
+  return { x: p.x - ((q.y - p.y) / d) * 7, y: p.y + ((q.x - p.x) / d) * 7 };
+};
 const arrivals = (route: string[], start: number) => {
   const out: Record<string, number> = {};
   route.reduce((t, id, i) => ((out[id] = i ? t + len(route[i - 1], id) * v : t), out[id]), start);
@@ -186,7 +192,7 @@ const move = (from: number, to: number, reverse = false) => ({
   <!-- PIT breadcrumbs: where each pending request came from -->
   {
     crumbs.map((c) => (
-      <circle cx={c.x} cy={c.y} r="3.6" class="nn-crumb nn-anim" opacity="0">
+      <circle cx={c.x} cy={c.y} r="3" class="nn-crumb nn-anim" opacity="0">
         <animate attributeName="opacity" dur={dur} repeatCount="indefinite" {...show(c.on, c.off)} />
       </circle>
     ))
@@ -243,7 +249,7 @@ const move = (from: number, to: number, reverse = false) => ({
     <circle cx="9" cy="-4" r="5" class="nn-consumer small" /><text x="20" y="0">consumer</text>
     <circle cx="94" cy="-4" r="5" class="nn-interest" /><text x="105" y="0">Interest</text>
     <rect x="164" y="-10" width="12" height="12" rx="3" class="nn-data" /><text x="182" y="0">Data</text>
-    <circle cx="232" cy="-4" r="3.6" class="nn-crumb" /><text x="241" y="0">pending request</text>
+    <circle cx="232" cy="-4" r="3" class="nn-crumb" /><text x="241" y="0">pending request</text>
     <rect x="345" y="-9" width="10" height="10" rx="2" class="nn-copy" /><text x="361" y="0">cached copy</text>
   </g>
 </svg>
@@ -254,7 +260,7 @@ const move = (from: number, to: number, reverse = false) => ({
   .nn-router { fill: #16110c; stroke: #dd9a17; stroke-width: 2; }
   .nn-router.cached { fill: #2a1c0d; stroke: #fdf9f2; }
   .nn-copy { fill: #fdf9f2; }
-  .nn-crumb { fill: #f0b44a; stroke: #16110c; stroke-width: 1; }
+  .nn-crumb { fill: #fdf9f2; filter: drop-shadow(0 0 3px rgb(253 249 242 / 70%)); }
   .nn-consumer { fill: #dd9a17; stroke: #16110c; stroke-width: 2; }
   .nn-consumer.small { stroke-width: 0; }
   .nn-producer { fill: #c24e1b; stroke: #fdf9f2; stroke-width: 1.5; }
