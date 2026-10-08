@@ -28,6 +28,8 @@ const nav = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title ? `${title} · NDNComm` : 'NDNComm · Named Data Networking Community Meeting'}</title>
     <meta name="description" content={description} />
+    {Astro.site && <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />}
+    <link rel="sitemap" href={url('sitemap-index.xml')} />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
     <meta name="theme-color" content="#16110c" />
   </head>
