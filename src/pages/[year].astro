@@ -17,6 +17,8 @@ const program = await programFor(year);
 const docs = documents(year);
 const kaltura = kalturaInfo(year);
 const original = m.original_page ? pageHtml(year, m.original_page) : '';
+// External links open in a new tab, so visitors don't leave the site.
+const ext = (href?: string) => (href ? { target: '_blank', rel: 'noopener' } : {});
 const organizers = m.organizers.map((o) => ({
   ...o,
   logo: orgLogo(o.affiliation),
@@ -153,15 +155,15 @@ const initials = (n: string) =>
                 {organizers.map((o) => (
                   <li>
                     {o.logo ? (
-                      <a href={o.orgHref} class:list={['avatar', 'avatar-logo', { wide: o.logo.wide }]} title={o.affiliation}>
+                      <a href={o.orgHref} {...ext(o.orgHref)} class:list={['avatar', 'avatar-logo', { wide: o.logo.wide }]} title={o.affiliation}>
                         <img src={o.logo.href} alt={o.affiliation} loading="lazy" />
                       </a>
                     ) : (
                       <span class="avatar">{initials(o.name)}</span>
                     )}
                     <div>
-                      <a href={o.href} class="person-name">{o.name}</a>
-                      <a href={o.orgHref} class="person-org">{o.affiliation}</a>
+                      <a href={o.href} {...ext(o.href)} class="person-name">{o.name}</a>
+                      <a href={o.orgHref} {...ext(o.orgHref)} class="person-org">{o.affiliation}</a>
                     </div>
                   </li>
                 ))}
