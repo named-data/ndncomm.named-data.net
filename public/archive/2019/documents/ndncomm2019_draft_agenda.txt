@@ -1,0 +1,164 @@
+Thursday September 5, 2019
+08:00am   Registration
+09:00am   Opening Session: Towards Smart Energy Systems
+             Chair: Lotfi Benmohamed (NIST)
+          • NIST Smart Grid Program, Avi Gopstein (NIST)
+          • Commercialization of NDN in Cybersecure Energy System Communications, Randall
+             King (Operant Networks)
+          • iCens: An Information-Centric Smart Grid Network Architecture, Reza Tourani (Saint
+             Louis University)
+10:00am   Session 1: Tactical Edge
+              Chair: Tamer Refaei (MITRE)
+          •   ICT-Sync and its use in DARPA SHARE, John DeHart (Washington Univ. in St. Louis)
+          •   NDN Full Packet Security, Constantin Serban (Perspecta Labs)
+          •   Smart Forwarding in NDN VANET, Lan Wang (University of Memphis)
+11:00am   Break
+11:15am   Session 2: IoT and Applications
+              Chair: Alex Afanasyev (Florida International University)
+          •   Secure Onboarding and Provisioning of NDNoT Devices, Davide Pesavento (NIST),
+              Kerry McKay (NIST)
+          •   Service Discovery in NDN IoT, Yufeng Zhang (UCLA)
+          •   On the Power of In-Network Caching in the Hadoop Distributed File System,
+              Beichuan Zhang (University of Arizona)
+12:15pm   Lunch
+1:30pm    Session 3: Applications over NDN
+              Chair: Lan Wang (University of Memphis)
+          •   Building a Bridge from Applications to NDN, Kathleen Nichols (Pollere, Inc.)
+          •   GitSync, Zhaoning Kong (UCLA)
+          •   Deploying a Video Streaming Service on NDN Testbed, Beichuan Zhang (University of
+              Arizona)
+          •   Naming to Reason About Security in Named Data Networking, Alex Afanasyev
+              (Florida International University)
+3:00pm    Lightning Talks
+              Chair: Lotfi Benmohamed (NIST)
+4:00pm    Posters and Demos
+6:00pm    Day 1 Closing
+Friday September 6, 2019
+08:00am   Registration
+09:00am   Session 4: Wireless Networks
+              Chair: Beichuan Zhang (University of Arizona)
+          •   Information-Centric Networking in Wireless Edge Networks (ICN-WEN): Update on
+              the NSF/Intel ICN-WEN Program, Christian Tschudin (University of Basel)
+          •   Secure Predictive Low-Latency Information Centric Edge for Next Generation
+              Wireless Networks, I-Hong Hou (Texas A&M University)
+          •   Data-Centric Medium Access Control Supporting Robust Multicast, Mohammed
+              Elbadry (Stony Brook University)
+10:00am   Break
+10:30am   Panel 1: Towards Easier NDN Application Development
+                      Moderator: Christian Tschudin (University of Basel)
+                      Organizer: Ashlesh Gawande (University of Memphis)
+                      Panelists: Alex Afanasyev (Florida International University)
+                                 Jeff Burke (UCLA REMAP)
+                                 Kathleen Nichols (Pollere, Inc.)
+                                 Davide Pesavento (NIST)
+                                 Constantin Serban (Perspecta Labs)
+12:00pm   Lunch
+1:00pm    Panel 2: Enabling a Data-Centric Ecosystem for Big Data Applications
+                     Moderator: Lan Wang (University of Memphis)
+                      Panelists:   Nasir Ali (University of Memphis)
+                                   Christos Papadopoulos (Colorado State University)
+                                   Alex Szalay (Johns Hopkins University)
+                                   Edmund Yeh (Northeastern University)
+2:00pm    Session 5: Security
+             Chair: Eric Osterweil (George Mason University)
+          • NDN-ABS: Attribute Based Signature Scheme for Named Data Networking, Sanjeev
+             Ramani (Florida International University)
+          • DLedger, Xinyu Ma (UCLA)
+          • Result Provenance in Named-Function Networking, Claudio Marxer (Univ. of Basel)
+3:00pm    Break
+3:30pm    Session 6: Routing and Forwarding
+              Chair: Ken Calvert (NSF)
+          •   The Case for Hop-by-Hop Traffic Engineering, Klaus Schneider (University of Arizona)
+          •   NDN-DPDK: High-Speed Named Data Networking Forwarder, Junxiao Shi (NIST)
+          •   SANDIE: Accelerating Large-Scale Data-Intensive Science with NDN, Edmund Yeh
+              (Northeastern University)
+4:30pm    Session 7: Support for Applications
+              Chair: Jeff Burke (UCLA REMAP)
+          •   On Namespace Management in NDN and How DNSSEC Might Help, Eric Osterweil
+              (George Mason University)
+          •   Hyper-connected Intelligence Infrastructure based on NDN, Namseok Ko (ETRI)
+          •   NDND: NDN Neighbor Discovery, Lixia Zhang (UCLA)
+5:30pm    Closing
+Posters and Demos:
+
+   • Demo: Towards an NDN-based Online Gaming Architecture, Philipp Moll, Klagenfurt University;
+   Sebastian Theuermann, Klagenfurt University; Hermann Hellwagner, Klagenfurt University; Jeff
+   Burke, UCLA
+
+   •   Better Multipath Route Calculation for ndnSIM, Klaus Schneider, University of Arizona
+
+   • Enhancing Resiliency in Electrical Grid OT Networks Using NDN, Travis Machacek, MITRE
+   Corporation; Tamer Refaei, MITRE Corporation
+
+   • Location-Based Certificates, Dan Ameme, New Mexico State University; Travis Machacek, New
+   Mexico State University; Abderrahmen Mtibaa, New Mexico State University; Sanjeev Kaushik
+   Ramani, Florida International University; Satyajayant Misra, New Mexico State University; Alex
+   Afanasyev, Florida International University
+
+   • Demo: Decentralized multimedia sharing Android application over NDN, Ashlesh Gawande,
+   University of Memphis; Jeremy Clark, University of Memphis; Lan Wang, University of Memphis
+
+   • An NDN Push-To-Talk Application for Public Safety Communications, Edward Lu, NIST; Davide
+   Pesavento, NIST; Junxiao Shi, NIST; Lotfi Benmohamed, NIST; Maxwell Maurice, NIST
+
+   •   Demo: NDN Control Center, Xinyu Ma, UCLA ; Zhaoning Kong, UCLA ; Zhiyi Zhang, UCLA
+
+   • Automated Fuzz Testing for NDN, George Torres, NIST; Davide Pesavento, NIST; Junxiao Shi,
+   NIST; Lotfi Benmohamed, NIST
+
+   • Demo: A Comparison of Bootstrapping Protocols for IoT over Named Data Networking, Laqin
+   Fan, University of Memphis; Lan Wang, University of Memphis
+
+   • Broadcast-Based Yet Lightweight Forwarding for Wireless Named Data Networking, Amar
+   Abane, NIST; Paul Muhlethaler, Inria; Samia Bouzefrane, CNAM; Abdella Battou, NIST
+
+   • Medium Integration Architecture for ICDTNs using NDN, Katherine Russell, George Mason
+   University; Robert Simon, George Mason University
+Abstracts:
+
+Panel 1: Towards Easier NDN Application Development
+
+Application developments play a fundamental role in driving NDN's architectural design and
+development.
+They help validate architectural design decisions, identify remaining issue, and drive the NDN
+rollout.
+This panel aims to:
+1. assess the existing tools developed in recent years that promote NDN app development
+(comment: make people aware of what's, or soon to be, available)
+2. What still hard? identify and prioritize remaining issues, and
+3. explore new application areas that may benefit most from NDN's new architectural features as
+compared to TCP/IP.
+
+Panel 2: Enabling a Data-Centric Ecosystem for Big Data Applications
+
+The amount of data generated by individuals and businesses have been growing exponentially.
+An IDC report “The Digital Universe in 2020” projects that, by 2020, there will be around 40
+zettabytes of data.
+
+Domain experts have been collecting and analyzing ever growing data sets to derive insights from
+the data, but they face the challenges of individually building their own systems or developing their
+own solutions to handle big data. As of now, most people develop big data applications based on
+commercially available cloud services, which provide a logical central place for storage and
+processing but do not address some of the very fundamental problems, including:
+• unstructured data collections that are difficult to navigate;
+• lack of systematic solutions to security and privacy when data is outside the cloud, and lack of
+auditability when the data is inside the cloud; and
+• the need to deal with lower layer details for storing, transferring, and processing data.
+
+We believe that harnessing the big data revolution will require a big data ecosystem that enables
+data sharing across the boundaries of different vendors, different providers, and different
+applications. Our 9-year research efforts on the design and development of Named Data Networking
+(NDN) project also convince us that we can develop this big data ecosystem by taking on a data-
+centric design approach. The goal of this panel is to
+• understand the requirements of big data application in specific domains, and
+• examine the problems from multiple diverse domains to identify potential common application
+patterns, common needs and requirements.
+
+The panel will steer the discussion toward formulate a common big data ecosystem framework that
+supports the management of data through its life cycle, starting from data production, naming and
+securing data at the production time, to structured data storage and scalable retrieval, and to
+controlled data consumption.
+
+Abstracts for Presentations/Demos/Posters
+(to be added)
+

@@ -1,7 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import { url } from '../lib/archive';
-import { dateRange, FORMAT_LABEL, isUpcoming, programFor, programStats, type Meeting } from '../lib/meetings';
+import { dateRange, FORMAT_LABEL, isUpcoming, programFor, programStats, recordingsLost, type Meeting } from '../lib/meetings';
 
 interface Props {
   meeting: Meeting;
@@ -27,15 +27,21 @@ const place = [m.venue, m.city].filter(Boolean).join(', ') || FORMAT_LABEL[m.for
     {stats.talks > 0 && <span class="chip">{stats.talks} talks</span>}
     {stats.panels > 0 && <span class="chip">{stats.panels} panels</span>}
     {
-      !upcoming &&
-        (m.videos.length > 0 ? (
-          <span class="chip chip-accent">
-            <Icon name="play" size={12} />
-            {m.videos.length} recording{m.videos.length > 1 ? 's' : ''}
-          </span>
-        ) : (
-          <span class="chip chip-warn">Recordings lost</span>
-        ))
+      !upcoming && m.videos.length > 0 && (
+        <span class="chip chip-accent">
+          <Icon name="play" size={12} />
+          {m.videos.length} recording{m.videos.length > 1 ? 's' : ''}
+        </span>
+      )
     }
+    {
+      !upcoming && stats.videos > 0 && (
+        <span class="chip chip-accent">
+          <Icon name="play" size={12} />
+          {stats.videos} talk videos
+        </span>
+      )
+    }
+    {!upcoming && recordingsLost(meeting) && <span class="chip chip-warn">Recordings lost</span>}
   </div>
 </a>

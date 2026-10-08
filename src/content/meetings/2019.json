@@ -1,0 +1,30 @@
+{
+  "title": "NDN Community Meeting 2019",
+  "start": "2019-09-05",
+  "end": "2019-09-06",
+  "format": "in-person",
+  "venue": "NIST, Green Auditorium",
+  "city": "Gaithersburg, MD, USA",
+  "host": {
+    "name": "National Institute of Standards and Technology (NIST)",
+    "short": "NIST",
+    "url": "https://www.nist.gov/"
+  },
+  "organizers": [
+    {
+      "name": "Alex Afanasyev",
+      "affiliation": "FIU"
+    },
+    {
+      "name": "Lotfi Benmohamed",
+      "affiliation": "NIST"
+    },
+    {
+      "name": "Tamer Refaei",
+      "affiliation": "MITRE"
+    }
+  ],
+  "original_page": "https://www.nist.gov/news-events/events/2019/09/ndn-community-meeting",
+  "videos": [],
+  "video_note": "The recordings (eight videos) were removed from NIST's video hosting and are currently lost. If you have a copy, please get in touch."
+}

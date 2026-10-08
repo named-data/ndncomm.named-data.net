@@ -1,0 +1,273 @@
+{
+  "timezone": "PDT (UTC−7)",
+  "days": [
+    {
+      "date": "2026-05-18",
+      "items": [
+        {
+          "start": "07:00",
+          "end": "08:30",
+          "kind": "session",
+          "title": "Session 1: Data-Centric Architecture and Its Applications",
+          "chair": {
+            "name": "Lixia Zhang"
+          },
+          "talks": [
+            {
+              "title": "From SRM to NDN: Three Decades of Lessons in Data-Centric Networking",
+              "speakers": [
+                {
+                  "name": "Lan Wang"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/01_From_SRM_to_NDN_Lan_Wang/video.mp4",
+              "slides": "archive/2026/slides/01_From_SRM_to_NDN_Lan_Wang.pdf"
+            },
+            {
+              "title": "Resilient In-Network Data Storage in NDN",
+              "speakers": [
+                {
+                  "name": "Adam Thieme"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/02_Resilient_InNetwork_Storage_adam_Thieme/video.mp4",
+              "slides": "archive/2026/slides/02_Resilient_InNetwork_Storage_adam_Thieme.pdf"
+            },
+            {
+              "title": "NDN-CloudSync: A Secure Storage Service Running on Multiple Clouds",
+              "speakers": [
+                {
+                  "name": "Ronak Badhe"
+                },
+                {
+                  "name": "Tianyuan Yu"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/03_NDN_CloudSync_Ronak_Badhe/video.mp4",
+              "slides": "archive/2026/slides/03_NDN_CloudSync_Ronak_Badhe.pdf"
+            }
+          ]
+        },
+        {
+          "start": "08:30",
+          "end": "08:45",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "08:45",
+          "end": "10:15",
+          "kind": "session",
+          "title": "Session 2: NDN-Based Access Control and Encryption",
+          "chair": {
+            "name": "Lan Wang"
+          },
+          "talks": [
+            {
+              "title": "An Open-Source Decentralized Access Control Library for Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Ferhat Mecerhed"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/04_Security_Library_Ferhat_Mecerhed/video.mp4",
+              "slides": "archive/2026/slides/04_Security_Library_Ferhat_Mecerhed.pdf"
+            },
+            {
+              "title": "Enhancing NAC-ABE to Support Access Control for mHealth Applications and Beyond",
+              "speakers": [
+                {
+                  "name": "Suravi Regmi"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/05_NAC_ABE_Suravi_Regmi/video.mp4",
+              "slides": "archive/2026/slides/05_NAC_ABE_Suravi_Regmi.pdf"
+            },
+            {
+              "title": "Message Layer Security in Ownly Group Encryption",
+              "speakers": [
+                {
+                  "name": "Mike Han"
+                },
+                {
+                  "name": "Tianyuan Yu"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/06_OpenMLS_Mike_Han/video.mp4",
+              "slides": "archive/2026/slides/06_OpenMLS_Mike_Han.pdf"
+            }
+          ]
+        },
+        {
+          "start": "10:15",
+          "end": "10:30",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "10:30",
+          "end": "12:00",
+          "kind": "session",
+          "title": "Session 3: NDN Applications and AI",
+          "chair": {
+            "name": "Beichuan Zhang"
+          },
+          "talks": [
+            {
+              "title": "NDN Framework for Service Oriented Applications",
+              "speakers": [
+                {
+                  "name": "Tianxing Ma"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/07_NDN_Framework_Tianxing_Ma/video.mp4",
+              "slides": "archive/2026/slides/07_NDN_Framework_Tianxing_Ma.pdf"
+            },
+            {
+              "title": "NDN for AI and AI for NDN: Challenges, Opportunities and Early Results",
+              "speakers": [
+                {
+                  "name": "Marica Amadeo"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/08_NDN_for_AI_Marica_Amadeo/video.mp4",
+              "slides": "archive/2026/slides/08_NDN_for_AI_Marica_Amadeo.pdf"
+            },
+            {
+              "title": "MGuard: Development Updates",
+              "speakers": [
+                {
+                  "name": "Suravi Regmi"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/09_MGuard_Updates_Suravi_Regmi/video.mp4",
+              "slides": "archive/2026/slides/09_MGuard_Updates_Suravi_Regmi.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "items": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "kind": "panel",
+          "title": "Panel: Networking AI Agents: Challenges and Solutions",
+          "chair": {
+            "name": "Beichuan Zhang"
+          },
+          "panelists": [
+            {
+              "name": "Dirk Kutscher"
+            },
+            {
+              "name": "Chenguang Du"
+            },
+            {
+              "name": "Lixia Zhang"
+            }
+          ],
+          "abstract": "AI agents are rapidly emerging as autonomous network participants, yet the underlying infrastructure remains ad hoc and ill-suited for their needs. Agents must identify each other, discover capabilities, delegate tasks, and establish trust, raising fundamental protocol questions: Are agents just applications, or should they be treated as first-class network entities? What is the impact of agent communication patterns on transport and network layer functionality? What should agent identity look like? How should trust be established across domains? How do agents discover the right peers? And which of these functions belong in the network layer?\n\nThis panel asks whether today's Internet stack, including DNS/DNSSEC, WebPKI, and TLS, can scale to agent ecosystems, or whether their assumptions of human-driven sessions and centralized trust fundamentally break down. If so, can alternative approaches such as Named Data Networking (NDN), with data-centric security and decentralized trust, point toward a new architectural direction?",
+          "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/Panel/video.mp4",
+          "slides": "archive/2026/slides/Panel.pdf"
+        },
+        {
+          "start": "08:00",
+          "end": "08:15",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "08:15",
+          "end": "09:45",
+          "kind": "session",
+          "title": "Session 4: Digital Autonomy and Zero-Trust",
+          "chair": {
+            "name": "Tianyuan Yu"
+          },
+          "talks": [
+            {
+              "title": "Reclaiming Digital Autonomy: A Systematic Review of NDN Applications in IoT Systems",
+              "speakers": [
+                {
+                  "name": "Lixia Zhang"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/10_IoT_Digital_Autonomy_Lixia_Zhang/video.mp4",
+              "slides": "archive/2026/slides/10_IoT_Digital_Autonomy_Lixia_Zhang.pdf"
+            },
+            {
+              "title": "TrustNG: Using Named Data Networking as a Zero-Trust Overlay for Cloud-Native 5G Core Networks",
+              "speakers": [
+                {
+                  "name": "Amirreza Ghafoori"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/11_TrustNG_Amirreza_Ghafoori/video.mp4",
+              "slides": "archive/2026/slides/11_TrustNG_Amirreza_Ghafoori.pdf"
+            },
+            {
+              "title": "Why Ownly Does Not Work on the ndn6 Network? A Decade of Operational Gaps in Trust and Routing",
+              "speakers": [
+                {
+                  "name": "Junxiao Shi"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/12_Why_ONLY_Fails_Junxiao_Shi/video.mp4",
+              "slides": "archive/2026/slides/12_Why_ONLY_Fails_Junxiao_Shi.pdf"
+            }
+          ]
+        },
+        {
+          "start": "09:45",
+          "end": "10:00",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "10:00",
+          "end": "11:30",
+          "kind": "session",
+          "title": "Session 5: Scalable Routing Architecture",
+          "chair": {
+            "name": "Junxiao Shi"
+          },
+          "talks": [
+            {
+              "title": "ICN+SCION Global Name-Based Network Service",
+              "speakers": [
+                {
+                  "name": "Ken Calvert"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/13_ICN_SCION_Global_Name_Service_Ken_Calvert/video.mp4",
+              "slides": "archive/2026/slides/13_ICN_SCION_Global_Name_Service_Ken_Calvert.pdf"
+            },
+            {
+              "title": "From Map-and-Encap to BIER: Observations on Network Routing Scalability",
+              "speakers": [
+                {
+                  "name": "Beichuan Zhang"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/14_Map_Encap_BIER_Beichuan_Zhang/video.mp4",
+              "slides": "archive/2026/slides/14_Map_Encap_BIER_Beichuan_Zhang.pdf"
+            },
+            {
+              "title": "Architecting a Scalable Routing and Forwarding System for NDN",
+              "speakers": [
+                {
+                  "name": "Tianyuan Yu"
+                }
+              ],
+              "video": "https://ndncomm2026.named-data.net/assets/talks/organized_talks/15_Architecting_Scalable_Routing_Tianyuan_Yu/video.mp4",
+              "slides": "archive/2026/slides/15_Architecting_Scalable_Routing_Tianyuan_Yu.pdf"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

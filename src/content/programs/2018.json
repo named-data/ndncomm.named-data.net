@@ -1,0 +1,1129 @@
+{
+  "timezone": "",
+  "days": [
+    {
+      "date": "2018-09-19",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "kind": "other",
+          "title": "Registration"
+        },
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "kind": "opening",
+          "title": "Opening Session",
+          "chair": {
+            "name": "Lotfi Benmohamed",
+            "affiliation": "NIST"
+          },
+          "talks": [
+            {
+              "title": "NIST Cybersecurity Programs",
+              "speakers": [
+                {
+                  "name": "Kevin Stine",
+                  "affiliation": "NIST"
+                }
+              ]
+            },
+            {
+              "title": "A New Way to Support Security",
+              "speakers": [
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "University of California, Los Angeles"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "Florida International University"
+                }
+              ],
+              "abstract": "It is a commonly accepted notion that today's Internet security protections, mainly IPsec, (D)TLS, certificate authorities, and DNSSEC, are patch-on's to an already deployed Internet, and any future internet architecture should have the security designed-in. This talk aims to share with the community NDN's approach to achieve this goal, by providing an overview of the NDN security model, explaining the major components in this model and how they function together. The talk will also illustrate the basic difference between NDN security and the existing TCP/IP security, and identify new research challenges."
+            }
+          ]
+        },
+        {
+          "start": "10:00",
+          "end": "11:00",
+          "kind": "session",
+          "title": "Session 1: NDN support for computing",
+          "chair": {
+            "name": "Beichuan Zhang",
+            "affiliation": "University of Arizona"
+          },
+          "talks": [
+            {
+              "title": "Towards an Augmented Reality Browser using NDN",
+              "speakers": [
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA REMAP"
+                },
+                {
+                  "name": "Peter Gusev",
+                  "affiliation": "UCLA REMAP"
+                },
+                {
+                  "name": "Jeff Thompson",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "abstract": "Augmented reality is typically discussed as being achieved by individual \"apps\" that follow existing mobile application models. We propose that NDN enables a different and potentially more appropriate way of looking this application domain that is less oriented around the current model of vertically integrated, silo'd apps. AR overlays digital content on the physical world, and it is reasonable to assume that more than one such overlay might be active at any given time. Inspired by this requirement and the success of the world wide web, we propose a model of an ecosystem of named, signed, linkable NDN content that is retrieved and displayed by sandboxed code running in one of many layers within an AR \"browser\". NDN provides the necessary capabilities for low-latency, granular content access and efficient multicast distribution of user context to enable this approach. In this presentation, we present the application model, an initial NDN design and prototype focusing on edge support for mobile AR, and plans for future development."
+            },
+            {
+              "title": "Edge Computing Over Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Abderrahmen Mtibaa",
+                  "affiliation": "New Mexico State University"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Abderrahmen Mtibaa",
+                  "affiliation": "New Mexico State University"
+                },
+                {
+                  "name": "Satyajayant Misra",
+                  "affiliation": "New Mexico State University"
+                },
+                {
+                  "name": "Reza Tourani",
+                  "affiliation": "New Mexico State University"
+                },
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "While edge computing research is rapidly growing, most of the proposed IP-based edge computing systems are centered around optimizing applications and services and are agnostic of the underlying networking problems. Such problems include complex mapping between application names and IP addresses without leveraging the available network conditions. Named Data Networking (NDN), however, solves the above problem by marrying app names to network forwarding. We discuss leveraging the NDN in-network features that can be used for seamless and efficient edge computing. We discuss how NDN can enable seamless computing resource discovery, task forwarding, and compute re-use in a distributed fashion without relying on a centralized entity while incurring a minimum overhead. Our approach can aid the optimization envisaged today with proxies and SDN controllers and may also be strong enough to be leveraged alone. We discuss the feasibility of a generic NDN edge computing paradigm that leverages NDN networking and forwarding features to seamlessly offload computation efficiently. We focus on in-network compute execution in NDN and we highlight the open issues for enabling secure, efficient and seamless edge computing functionalities over NDN."
+            },
+            {
+              "title": "Compute-First-Network for NDN",
+              "speakers": [
+                {
+                  "name": "Asit Chakraborti",
+                  "affiliation": "Huawei Technologies"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Asit Chakraborti",
+                  "affiliation": "Huawei Technologies"
+                },
+                {
+                  "name": "Dirk Kutscher",
+                  "affiliation": "Huawei Technologies"
+                },
+                {
+                  "name": "He Jianfei",
+                  "affiliation": "Huawei Technologies"
+                },
+                {
+                  "name": "Cedric Westphal",
+                  "affiliation": "Huawei Technologies"
+                },
+                {
+                  "name": "Syed Obaid Amin",
+                  "affiliation": "Huawei Technologies"
+                }
+              ],
+              "abstract": "Modern applications often expect the network to deliver it processed data. As a result, in-network compute capability has often been considered as a complementary feature for network architectures like Named Data Network (NDN). The desire for the computation to be performed in the network instead of at the data source, destination or a remote server might stem from reasons related to computing resource availability, access latency, network bandwidth optimization, geographical or other application context, etc. Compute-First-Network (CFN) is a generalized framework that will allow application vendors to provide functions that can be discovered and invoked by applications in a location agnostic way, with the network selecting the most optimal location for the function execution. CFN expands on the abstractions provided by NDN: it allows named access to functions and receiver driven data flow, the function body being treated essentially as data. A Request For Execution is a primary protocol entity of CFN. Functions can be short lived or long lived, stateless or stateful; and on-demand function instantiation is a key feature. It is expected that initially functions will be loaded at service points at the cloud and edge locations, but mechanisms will be available for a CFN node to download a function and offer execution of the same. A CFN capable network node will feature a Function Store to cache function bodies, and a Function Controller capable of managing the execution environment that uses Unikernels and Linux containers. The Function Controller maintains a state for every active function, and is capable of responding to new function instantiation requests from the NDN forwarder. CFN will accommodate protocols that facilitate parameter and result passing between the client and the function, as well as their mutual authentication. The discovery of function execution points can be aided by centralized entities, for example, a cloud based service; or it could be performed in a distributed way that takes care of resource congestion locally. One of the use-cases for CFN is performing resource heavy computation for AR/VR applications at a dynamically determined edge location. At the same time, the platform is intended to be equally applicable for ephemeral computations for IoT data. Other approaches to in-network computing like NFN and NFaaS lack the generality needed to be suitable for a large set of applications. NFN lacks a standard virtualization environment, and incorporating stateful functions and high-volume parameter passing using the lambda expressions could be difficult. While NFaaS offers Unikernel based execution, it does not focus on aspects like function discovery, parameter passing and congestion control."
+            }
+          ]
+        },
+        {
+          "start": "11:00",
+          "end": "11:15",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "11:15",
+          "end": "12:15",
+          "kind": "session",
+          "title": "Session 2: IoT and Security",
+          "chair": {
+            "name": "Giovanni Pau",
+            "affiliation": "Sorbonne University/UCLA"
+          },
+          "talks": [
+            {
+              "title": "NDNoT: A Framework for Named Data of Things",
+              "speakers": [
+                {
+                  "name": "Zhiyi Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Zhiyi Zhang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Yanbiao Li",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Tianyuan Yu",
+                  "affiliation": "Sichuan University"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "Florida International University"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "The Named Data Networking (NDN) architecture provides simple solutions to the communication needs of Internet of Things (IoT) in terms of ease-of-use, security, and content delivery. To utilize the desirable properties of NDN architecture in IoT scenarios, we are working to provide an integrated framework, dubbed NDNoT, to support IoT over NDN. NDNoT provides solutions to auto configuration, service discovery, data-centric security, content delivery, and other needs of IoT application developers. Utilizing NDN naming conventions, NDNoT aims to create an open environment where IoT applications and different services can easily cooperate and work together. This presentation will help to introduce the basic components of our framework and explains how these components function together."
+            },
+            {
+              "title": "Blockchain-based Decentralized Public Key Management for Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Kan Yang",
+                  "affiliation": "University of Memphis"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Kan Yang",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Jobin J. Sunny",
+                  "affiliation": "St. Jude Children's Research Hospital"
+                },
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                }
+              ],
+              "abstract": "Named Data Networking (NDN) uses public-key based identities and trust models to achieve data-centric security. Each NDN data packet is signed by its producer, and any data consumer can check the data integrity and authenticity by following a chain of trust to verify that the data is signed by a public key associated with the data producer. Such trust chains typically end at an application-specific trust anchor whose public key is either preconfigured into the software package or can be verified through some means outside the application. As these trust anchors play a critical role in ensuring the security of NDN applications, it is highly desirable to develop a public key management system to register, query, update, validate, and revoke their public keys. However, traditional public key management system such as Public Key Infrastructure (PKI) and Web-of-Trust (WoT) suffer from various problems. In this paper, we propose BC-PKM, a public key management system for NDN that takes advantage of the decentralized and tamper-proof design features of Blockchains. We further prove that BC-PKM can resist a variety of attacks from adversaries that compromise less than half of the public key miners. Moreover, we demonstrate a prototype that implements the proposed API of BC-PKM."
+            },
+            {
+              "title": "Distributed Ledger over NDN for A Real-world Solar System",
+              "speakers": [
+                {
+                  "name": "Zhiyi Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Zhiyi Zhang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Vishrant Vasavada",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Randy King",
+                  "affiliation": "Operant Solar"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "Distributed blockchain system has great potentials in cybersecurity systems for its built-in robustness, incorruptibility, and publicity. Named Data Networking (NDN) secures communication at the network layer by requiring all data packets to be signed when produced, ensuring data authentication and integrity. Therefore, an NDN Data packet naturally serves as an unforgeable and undeniable record of an entity's behavior. We are now working to build a distributed ledger over NDN for a real-world solar system (Operant Solar) that requires a distributed ledger system to record the energy production and consumption. In our system, we directly use NDN Data packets as the blocks and link Data packets together through names, thus each block can directly be fetched from the Internet by the name without knowing where to fetch. We use signature signing/verification to place proof-of-work, and make the record in a question-answer mode to prevent compromised attackers from keeping adding fake records to the system."
+            }
+          ]
+        },
+        {
+          "start": "12:15",
+          "end": "13:30",
+          "kind": "break",
+          "title": "Lunch"
+        },
+        {
+          "start": "13:30",
+          "end": "14:30",
+          "kind": "panel",
+          "title": "Panel 1: Security and Privacy in NDN: An Edge Computing Perspective",
+          "chair": {
+            "name": "Jay Misra",
+            "affiliation": "New Mexico State University"
+          },
+          "panelists": [
+            {
+              "name": "Alex Afanasyev",
+              "affiliation": "Florida International University"
+            },
+            {
+              "name": "Ken Calvert",
+              "affiliation": "National Science Foundation"
+            },
+            {
+              "name": "Tamer Refaei",
+              "affiliation": "MITRE Corporation"
+            },
+            {
+              "name": "Murugiah Souppaya",
+              "affiliation": "NIST"
+            }
+          ],
+          "abstract": "Edge computing can support new applications, such as augmented reality and autonomous driving. It will also allow the interactions between multiple application and data stakeholders and tenants. This creates new security and privacy challenges at the edge. Several questions arise: How does an end-user trust the edge devices? Who owns the context generated by the edge device from user data? How can data sharing happen between the stakeholders and tenants? How are the data and user privacy issues handled? NDN may provide unique opportunities to address these challenges. In this panel, NDN experts and experts from outside the NDN community will present their thoughts on these and other challenges and discuss how NDN positions itself as a solution in the edge computing perspective."
+        },
+        {
+          "start": "14:30",
+          "end": "16:00",
+          "kind": "session",
+          "title": "Lightning Talks",
+          "chair": {
+            "name": "Lotfi Benmohamed",
+            "affiliation": "NIST"
+          }
+        },
+        {
+          "start": "16:00",
+          "end": "18:00",
+          "kind": "other",
+          "title": "Posters and Demos",
+          "talks": [
+            {
+              "title": "NDN for Public Safety Deployable Networks",
+              "speakers": [
+                {
+                  "name": "Davide Pesavento",
+                  "affiliation": "NIST"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Davide Pesavento",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Junxiao Shi",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Edward Lu",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Lotfi Benmohamed",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Maxwell Maurice",
+                  "affiliation": "NIST"
+                }
+              ]
+            },
+            {
+              "title": "Bootstrapping Trust in NDN-Based Vehicular Network Using SWIFT Trust",
+              "speakers": [
+                {
+                  "name": "Sanjeev Kaushik Ramani",
+                  "affiliation": "Florida International University"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Sanjeev Kaushik Ramani",
+                  "affiliation": "Florida International University"
+                },
+                {
+                  "name": "Manusri Viswanath",
+                  "affiliation": "Rensselaer Polytechnic Institute"
+                },
+                {
+                  "name": "Jalena Jones",
+                  "affiliation": "Claflin University"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "Florida International University"
+                }
+              ]
+            },
+            {
+              "title": "Get an NDN certificate with NDNCERT protocol",
+              "speakers": [
+                {
+                  "name": "Zhiyi Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Zhiyi Zhang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "Florida International University"
+                }
+              ]
+            },
+            {
+              "title": "Named-based Access Control",
+              "speakers": [
+                {
+                  "name": "Zhiyi Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Zhiyi Zhang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Yingdi Yu",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "Florida International University"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ]
+            },
+            {
+              "title": "Upcoming Changes in NDN Protocol",
+              "speakers": [
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "Florida International University"
+                }
+              ]
+            },
+            {
+              "title": "Performance evaluation of the NDN-DPDK forwarder",
+              "speakers": [
+                {
+                  "name": "Siham Khoussi",
+                  "affiliation": "NIST"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Siham Khoussi",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Junxiao Shi",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Ayoub Nouri",
+                  "affiliation": "Grenoble University"
+                },
+                {
+                  "name": "James Filliben",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Lotfi Benmohamed",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Saddek Bensalem",
+                  "affiliation": "Grenoble University"
+                }
+              ]
+            },
+            {
+              "title": "IoT+NDN+Wireless: Experimental Insights from Using 802.11 Infrastructure and Ad-hoc Modes",
+              "speakers": [
+                {
+                  "name": "Travis Machacek",
+                  "affiliation": "New Mexico State University"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Travis Machacek",
+                  "affiliation": "New Mexico State University"
+                },
+                {
+                  "name": "Abderrahmen Mtibaa",
+                  "affiliation": "New Mexico State University"
+                },
+                {
+                  "name": "Reza Tourani",
+                  "affiliation": "New Mexico State University"
+                },
+                {
+                  "name": "Satyajayant Misra",
+                  "affiliation": "New Mexico State University"
+                }
+              ]
+            },
+            {
+              "title": "Leveraging Named Data Networking in Edge Computing",
+              "speakers": [
+                {
+                  "name": "Byung-Seo Kim",
+                  "affiliation": "Hongik Univeristy Sejong Campus, South Korea"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Rehmat Ullah",
+                  "affiliation": "Hongik Univeristy Sejong Campus, South Korea"
+                },
+                {
+                  "name": "Byung-Seo Kim",
+                  "affiliation": "Hongik Univeristy Sejong Campus, South Korea"
+                }
+              ]
+            },
+            {
+              "title": "An Overlay NDN Architecture for Application-Driven Satellite-Terrestrial Integration",
+              "speakers": [
+                {
+                  "name": "Tian Song",
+                  "affiliation": "Beijing Institute of Technology"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Yating Yang",
+                  "affiliation": "Beijing Institute of Technology"
+                },
+                {
+                  "name": "Tian Song",
+                  "affiliation": "Beijing Institute of Technology"
+                }
+              ]
+            },
+            {
+              "title": "Named Query Framework for Named Data Networking of Things",
+              "speakers": [
+                {
+                  "name": "Byung-Seo Kim",
+                  "affiliation": "Hongik University Sejong Campus, South Korea"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Muhammad Atif Ur Rehman",
+                  "affiliation": "Hongik University Sejong Campus, South Korea"
+                },
+                {
+                  "name": "Rehmat Ullah",
+                  "affiliation": "Hongik University Sejong Campus, South Korea"
+                },
+                {
+                  "name": "Byung-Seo Kim",
+                  "affiliation": "Hongik University Sejong Campus, South Korea"
+                }
+              ]
+            },
+            {
+              "title": "ICE-AR Application Progress",
+              "speakers": [
+                {
+                  "name": "Peter Gusev",
+                  "affiliation": "UCLA REMAP"
+                }
+              ]
+            },
+            {
+              "title": "Optimal Cache Allocation under Network-Wide Capacity Constraint",
+              "speakers": [
+                {
+                  "name": "Van Sy Mai",
+                  "affiliation": "NIST"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Van Sy Mai",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Stratis Ioannidis",
+                  "affiliation": "Northeastern University"
+                },
+                {
+                  "name": "Davide Pesavento",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Lotfi Benmohamed",
+                  "affiliation": "NIST"
+                }
+              ]
+            },
+            {
+              "title": "Distributed Network Measurement Protocol (DNMP): A Secure Role-Based Approach",
+              "speakers": [
+                {
+                  "name": "Kathleen Nichols",
+                  "affiliation": "Pollere, Inc"
+                }
+              ]
+            },
+            {
+              "title": "ANTD NDN-IoT Testbed: Smart Building Sensing",
+              "speakers": [
+                {
+                  "name": "Edward Lu",
+                  "affiliation": "NIST"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Edward Lu",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Junxiao Shi",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Davide Pesavento",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Kerry McKay",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "David Cooper",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Lotfi Benmohamed",
+                  "affiliation": "NIST"
+                }
+              ]
+            },
+            {
+              "title": "PSync deployment on IoT sensor testbed",
+              "speakers": [
+                {
+                  "name": "Ashlesh Gawande",
+                  "affiliation": "Uinversity of Memphis"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Ashlesh Gawande",
+                  "affiliation": "Uinversity of Memphis"
+                },
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                }
+              ]
+            },
+            {
+              "title": "Vehicular Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Christopher Scherb",
+                  "affiliation": "University of Basel"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Dennis Grewe",
+                  "affiliation": "Robert Bosch GmbH"
+                },
+                {
+                  "name": "Claudio Marxer",
+                  "affiliation": "University of Basel"
+                },
+                {
+                  "name": "Christopher Scherb",
+                  "affiliation": "University of Basel"
+                },
+                {
+                  "name": "Marco Wagner",
+                  "affiliation": "Robert Bosch GmbH"
+                },
+                {
+                  "name": "Christian Tschudin",
+                  "affiliation": "University of Basel"
+                }
+              ]
+            },
+            {
+              "title": "HomeCam Browser-based Home Surveillance Camera",
+              "speakers": [
+                {
+                  "name": "Junxiao Shi",
+                  "affiliation": "NIST"
+                }
+              ]
+            },
+            {
+              "title": "NDN Supporting Ultra-Dense Networks",
+              "speakers": [
+                {
+                  "name": "Xiaoyan Hong",
+                  "affiliation": "University of Alabama"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Xiaoyan Hong",
+                  "affiliation": "University of Alabama"
+                },
+                {
+                  "name": "Pawan Subedi",
+                  "affiliation": "University of Alabama"
+                }
+              ]
+            },
+            {
+              "title": "A Raspberry Pi Based Data-Centric MAC for Robust Multicast in Vehicular Networks",
+              "speakers": [
+                {
+                  "name": "Mohammed Elbadry",
+                  "affiliation": "Stony Brook University"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Mohammed Elbadry",
+                  "affiliation": "Stony Brook University"
+                },
+                {
+                  "name": "Bing Zhou",
+                  "affiliation": "Stony Brook University"
+                },
+                {
+                  "name": "Fan Ye",
+                  "affiliation": "Stony Brook University"
+                },
+                {
+                  "name": "Peter Milder",
+                  "affiliation": "Stony Brook University"
+                },
+                {
+                  "name": "YuanYuan Yang",
+                  "affiliation": "Stony Brook University"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "18:00",
+          "kind": "closing",
+          "title": "Day 1 Closing"
+        }
+      ]
+    },
+    {
+      "date": "2018-09-20",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "08:30",
+          "kind": "other",
+          "title": "Registration"
+        },
+        {
+          "start": "08:30",
+          "end": "09:00",
+          "kind": "other",
+          "title": "Community Feedback"
+        },
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "kind": "session",
+          "title": "Session 3: NDN for Vehicular Networks",
+          "chair": {
+            "name": "Beichuan Zhang",
+            "affiliation": "University of Arizona"
+          },
+          "talks": [
+            {
+              "title": "Vehicular Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Claudio Marxer",
+                  "affiliation": "University of Basel"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Dennis Grewe",
+                  "affiliation": "Robert Bosch GmbH"
+                },
+                {
+                  "name": "Claudio Marxer",
+                  "affiliation": "University of Basel"
+                },
+                {
+                  "name": "Christopher Scherb",
+                  "affiliation": "University of Basel"
+                },
+                {
+                  "name": "Marco Wagner",
+                  "affiliation": "Robert Bosch GmbH"
+                },
+                {
+                  "name": "Christian Tschudin",
+                  "affiliation": "University of Basel"
+                }
+              ],
+              "abstract": "Named Data Networks (NDN) offer the service to deliver information based on the content’s name. This means, clients are released from holding server locations and request content in a connection oriented fashion. As an extension of NDN, Named Function Networking (NFN) allows users to request for derived, i.e. dynamically produced, data. In NFN, named functions are published, which can be applied to any available content on demand of a user. For this purpose, a user composes a data name which encodes the application of named function(s) to certain data. It is the task of the network to compute and deliver the result. Behind the scenes, the network implements a forwarding strategy which decides where a computation is executed. Recently, vehicle-to-vehicle (V2V) and vehicle-to-infrastructure(V2I) connectivity transitioned from a vision of the future to reality. Applications in such environments vary from large-scale traffic flow control systems to local propagation of road conditions. We present a network stack for the data exchange in the automotive IoT. Based on the Named Function Networking (NFN) principles, the communication model is not restricted to propagation of static data but natively supports computation-offloading to other nodes. We present solutions and report on experiments with real cars on a test course."
+            },
+            {
+              "title": "Connectivity and Location-aware Routing Scheme (CLRS) for Connected and Autonomous Vehicles (CAVs)",
+              "speakers": [
+                {
+                  "name": "Junaid Ahmed Khan",
+                  "affiliation": "University of Memphis"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Muktadir Chowdhury",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Junaid Ahmed Khan",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                }
+              ],
+              "abstract": "Routing or forwarding data packet in Connected Vehicles is a challenging task and data retrieval rate can be very low due to highly dynamic topology and intermittent connectivity. Most of the data forwarding strategies in the literature are location-based accompanied with limited flooding when location information is not available. For efficient communication and data retrieval in the vehicular network, we propose a hybrid forwarding solution, called CLR, that will enable vehicles to choose next-hop based on both the vehicle’s centrality score as well as its location. Rather than flooding when location information is not available, CLR uses centrality score to forward packet. To overcome the shortcomings of IP in mobile environment, CLR is based on a data-centric network called Named Data Network (NDN). CLR will be compared against both location-aware forwarding strategy (GPSR and NAVIGO) and centrality-based forwarding strategy (STRIVE) in the literature."
+            },
+            {
+              "title": "Data-Centric MAC for Robust Multicast in Vehicular Networks",
+              "speakers": [
+                {
+                  "name": "Mohammed Elbadry",
+                  "affiliation": "Stony Brook University"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Mohammed Elbadry",
+                  "affiliation": "Stony Brook University"
+                },
+                {
+                  "name": "Bing Zhou",
+                  "affiliation": "Stony Brook University"
+                },
+                {
+                  "name": "Fan Ye",
+                  "affiliation": "Stony Brook University"
+                },
+                {
+                  "name": "Peter Milder",
+                  "affiliation": "Stony Brook University"
+                },
+                {
+                  "name": "YuanYuan Yang",
+                  "affiliation": "Stony Brook University"
+                }
+              ],
+              "abstract": "Data-centric networks provide content instead of address (what vs. where) based communication primitives, and have been argued to be the proper candidate for data dissemination in high mobility vehicular networks (e.g., delivering road side accident video clips to affected drivers in both directions). However, current Medium Access Control (MAC) layers filter incoming frames based on destination addresses, not content. The data-centric network community has resorted to MAC broadcast, with high and greatly varying frame loss rates. We propose V-MAC, a data-centric MAC layer that filters frames by content. It supports one to many multicast at MAC level, and ensures a uniform and controllable small frame loss rate across all receivers, despite their varying reception qualities. We have created a V-MAC prototype using Raspberry Pis and WiFi dongles. Experiments under extremely noisy environment show that it reduces frame loss from 50% (broadcast) to less than 10%, and consistently among multiple receivers."
+            }
+          ]
+        },
+        {
+          "start": "10:00",
+          "end": "11:00",
+          "kind": "session",
+          "title": "Session 4: NDN in Mobile AdHoc Networks",
+          "chair": {
+            "name": "Lan Wang",
+            "affiliation": "University of Memphis"
+          },
+          "talks": [
+            {
+              "title": "Peer-to-Peer File Sharing in Mobile Ad hoc Networks over NDN",
+              "speakers": [
+                {
+                  "name": "Spyridon Mastorakis",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Spyridon Mastorakis",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Tianxiang Li",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "Mobile Ad hoc NETworks (MANETs) are network environments, where intermittent connectivity and unpredictable node mobility are the norms. In such environments, sharing files among the nodes is challenging. In this presentation, we discuss the design of a peer-to-peer file sharing application in MANETs over NDN. We use our previous work, nTorrent, which is a peer-to-peer file sharing application in wired NDN networks, as the starting point of our design. However, our design fundamentally departs from nTorrent to efficiently address the communication challenges in MANETs, such as network partitions, short-lived ad hoc node encounters, and lossy links. Our design proposes a space-efficient approach for nodes to let others know about the torrent data they are missing, and leverages NDN’s data-centric security to achieve data authentication and integrity. We study a number of different design decisions to achieve efficient data dissemination with the fewest possible packet transmissions to minimize energy consumption, and we evaluate the effect of each design decision through simulations."
+            },
+            {
+              "title": "Distributed Dataset Synchronization in Mobile Ad Hoc Networks over NDN",
+              "speakers": [
+                {
+                  "name": "Tianxiang Li",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Tianxiang Li",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Spyridon Mastorakis",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Xin Xu",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Haitao Zhang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "Mobile Ad-hoc Networking (MANETs) is characterized by dynamic movements of mobile nodes and intermittent connectivity among them, creating unique challenges to running applications over MANET. In response to this challenge, we developed DDSN, a Distributed Dataset Synchronization protocol over Named Data Networking (NDN). Taking wireless ad hoc, intermittent connectivity as the norm and utilizing NDN advantages, DDSN enables nodes running the same applications to synchronize their shared application dataset whenever they encounter each other securely and efficiently. We evaluated the DDSN design through extensive experiments, and the results show that DDSN can achieve resilient and timely dataset synchronization over lossy and intermittent connectivity. We also compared DDSN with TCP/IP based MANET solutions, both qualitatively through the design analysis and quantitatively via experimental results."
+            },
+            {
+              "title": "Toward Multi-Hop Long-Range D2D Communication via Information Centric Ad Hoc Networks",
+              "speakers": [
+                {
+                  "name": "Yaoqing Liu",
+                  "affiliation": "Clarkson University"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Yaoqing Liu",
+                  "affiliation": "Clarkson University"
+                },
+                {
+                  "name": "Anthony Dowling",
+                  "affiliation": "Clarkson University"
+                }
+              ],
+              "abstract": "Mobile wireless ad hoc networks (MANETs) do not rely on an infrastructure to operate and can disseminate information quickly without worrying about single point of failure, thus can be used for a variety of applications, such as disaster relief, vehicular communication, smart agriculture, etc. However, the challenges affecting MANETs, including ubiquitous connectivity, dynamic routing, and flexible mobility, span from various layers of the current TCP/IP protocol stack. A particularly daunting challenge is to enable adaptive communication and interoperability over multiple heterogeneous wireless links. To circumvent existing constraints, the poster leverages Named Data Networks (NDN), an emerging information-centric network architecture, to interconnect diverse wireless links at the network layer and implements flexible routing and forwarding strategies for efficient information dissemination. The system focuses on implementing an interface between NDN and LoRaWAN, and interconnecting LoRaWAN and WiFi via NDN Forwarding Daemon (NFD) into a ubiquitous ad hoc network, which bears very long-range and multi-hop capabilities for Device-to-Device (D2D) communication. Many compelling applications, such as disaster relief, smart cities, etc., can benefit from the technology. Field experimental results show that the newly built ad hoc network can easily cover a radius of several kilometers and make full use of NDN features to maximize utilization of heterogeneous wireless links and to enhance efficiency of information dissemination. In the poster, we will demonstrate the research results using NDN-enabled devices for a number of multi-hop long-range experiments and share the experiences we learned from the study."
+            }
+          ]
+        },
+        {
+          "start": "11:00",
+          "end": "11:15",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "11:15",
+          "end": "12:15",
+          "kind": "panel",
+          "title": "Panel 2: Edge Computing: Shaping the Named Data Edge",
+          "chair": {
+            "name": "Christian Tschudin",
+            "affiliation": "University of Basel"
+          },
+          "panelists": [
+            {
+              "name": "Jeff Burke",
+              "affiliation": "University of California, Los Angeles"
+            },
+            {
+              "name": "Asit Chakraborti",
+              "affiliation": "Huawei Technologies"
+            },
+            {
+              "name": "Martial Michel",
+              "affiliation": "Data Machines Corp."
+            },
+            {
+              "name": "Lan Wang",
+              "affiliation": "University of Memphis"
+            }
+          ],
+          "abstract": "The edge highlights locality and diversity while the cloud wants to hide them. How can NDN support this difference? Where do computing resources play a role? Is NDN \"edge-ready\", has it the potential and is it already actively shaping the edge? In this panel, experts from inside as well as outside the NDN core community will reflect on these questions. The goal is to review the edge's use cases (IoT, reverse CDN) and requirements (security, low-latency) and to identify NDN's opportunities and challenges for building a post-IP named data edge."
+        },
+        {
+          "start": "12:15",
+          "end": "13:30",
+          "kind": "break",
+          "title": "Lunch"
+        },
+        {
+          "start": "13:30",
+          "end": "14:30",
+          "kind": "session",
+          "title": "Session 5: Routing and Forwarding",
+          "chair": {
+            "name": "Jeff Burke",
+            "affiliation": "University of California, Los Angeles"
+          },
+          "talks": [
+            {
+              "title": "High-Speed NDN-DPDK Forwarder",
+              "speakers": [
+                {
+                  "name": "Junxiao Shi",
+                  "affiliation": "NIST"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Junxiao Shi",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Lotfi Benmohamed",
+                  "affiliation": "NIST"
+                }
+              ],
+              "abstract": "NDN-DPDK forwarder is a high-speed NDN forwarder developed with Data Plane Development Kit (DPDK). This presentation explains the motivation, design, and current status of this project. NDN protocol’s reference implementation, the NDN Forwarding Daemon (NFD), is designed to be modular and extensible, but is not optimized for performance. The NDN community needs a high-speed forwarder that would be useful to data-intensive science applications that require the distribution of large amounts of scientific data, and to enable NDN adoption for general usage such as video streaming services. NDN-DPDK forwarder adopts four techniques to be fast: (1) processes packets in parallel on multiple CPU cores, fully utilizing available CPU resources on the target hardware; (2) uses pre-allocated memory pool, avoiding costly memory allocations during packet processing; (3) incorporates better data structures; (4) communicates with Network Interface Cards (NICs) directly, bypassing the kernel. As of Jul 2018, NDN-DPDK has achieved a forwarding throughput in excess of one million Interest-Data exchanges per second. This was measured on a server equipped with two Intel E5-2680V3 processors, 512GB memory in two channels, and Mellanox ConnectX-5 100Gbps network cards. NDN-DPDK codebase includes a traffic generator to perform this test. In the future, NDN-DPDK forwarder will be integrated into a complete system that includes a management and measurement framework."
+            },
+            {
+              "title": "A New Way of Traffic Engineering in NDN",
+              "speakers": [
+                {
+                  "name": "Klaus Schneider",
+                  "affiliation": "The University of Arizona"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Klaus Schneider",
+                  "affiliation": "The University of Arizona"
+                },
+                {
+                  "name": "Beichuan Zhang",
+                  "affiliation": "The University of Arizona"
+                },
+                {
+                  "name": "Lotfi Benmohamed",
+                  "affiliation": "NIST"
+                }
+              ],
+              "abstract": "Today’s network providers use Traffic Engineering (TE) in order to steer traffic from heavily used paths towards lightly used ones, aiming to use their existing network in the most efficient way. The most common approaches for IP traffic engineering are 1) tuning the link weights of a hop-by-hop routing protocol [1], 2) splitting traffic among pre-established end-to-end tunnels (like MPLS) [2], and 3) using centralized control via Software-Defined Networking [3]. However, each of these approaches comes with drawbacks, respectively, 1) hard-to-predict global side-effects of changing link weights, 2) manual setup of label-switched paths and slowly-adjusting bandwidth reservations, and 3) requiring a centralized control plane. In this presentation, we show that NDN can offer an additional way of traffic engineering, one which does not suffer these drawbacks. We show that our new way of NDN TE can a) simplify configuration (avoiding manual configuration or having to pre-establish paths) and b) improve performance (maximizing user utility and using the available network resources more efficiently), while also supporting important NDN features such as multi-destination routing and ubiquitous in-network caching. To achieve this, we make use of hop-by-hop multipath routing, NDN’s stateful forwarding plane, and explicit probing of the path (congestion) state. More specifically, we address the research questions of how to coordinate routers which make independent forwarding decisions, how to ensure stability and avoid oscillations, and lastly how to determine when traffic should be split among multiple paths and when it shouldn’t."
+            },
+            {
+              "title": "NDNCONF: Network Configuration Management System for NDN based on NETCONF protocol",
+              "speakers": [
+                {
+                  "name": "Rajender Kumar",
+                  "affiliation": "Florida International University"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Rajender Kumar",
+                  "affiliation": "Florida International University"
+                },
+                {
+                  "name": "Alexander Afanasyev",
+                  "affiliation": "Florida International University"
+                }
+              ],
+              "abstract": "Internet is rapidly growing and a variety of services are provided by the heterogeneous network devices developed by different companies. For faster information processing and efficient data delivery, it is very important to have some tools, mechanism or protocols for configuration management of these heterogeneous devices. Due to recent changes in network technology, network operators do not only have to deal with network devices configuration, but also they have to manage various aspect of services. Thus, management of services and various network devices is a major factor which affects the cost of networks. In the past, SNMP and CLI (Command Line Interface) are used for configuration of network devices. But due to introduction of heterogeneous equipment and requirements of automation in configuration management, these solutions are no longer used for configuration management. IETF introduces a new standard called NETCONF (NETwork CONFiguration) for efficiently managing the configuration of different network devices. The Network Configuration Protocol (NETCONF) defined in RFC4741 provides new mechanisms to install, manipulate, and delete the configuration of network devices. NETCONF protocol is based on XML data encoding scheme for encoding the protocol messages and configuration related data. Our understanding of design and architecture of NDN states that NDN can be used in place of IP-based architecture with the current state-of-the-art heterogeneous types of equipment for accessing data over Internet. Thus, as we stated above, it becomes necessary that there should be some kind of protocol to efficiently configure different types of equipment over the Internet for NDN. To the best of our knowledge, there is no protocol (equivalent to Netconf) implemented on the NDN paradigm for configuration management. So, we decide to work in this direction to design a protocol, called NDNCONF (NDN version of Netconf), for configuration management over NDN network so that different network devices can easily be configured and used in the network. We design a Yang model for different classes of management module of NFD. We provide an architecture of NDNCONF protocol for NDN network configuration management. NDNCONF protocol provides new mechanisms to view, manipulate, and delete the configuration of network devices over the NDN network. Our NDNCONF protocol is based on XML data encoding scheme for encoding the protocol messages and configuration related data. Our NDNCONF protocol uses the client -server architecture for configuration management in which a network device acts as a server and an application or another device acts as client and they can be connected using existing secure transport protocols over the NDN. In NDNCONF, built on top of NDN, all response can be properly authenticated at the network packet level and commands can leverage trust schema to realize various control permissions at fine granularity. Client gives commands (in the form of interest packets) to get or edit the configuration data, which are processed by the server device and resultant configuration or state data is transferred to client in a data packet. Client uses the simple interest to retrieve state data and command interest to edit the configuration data. Thus, NDNCONF is a variant of the Netconf for the NDN network."
+            }
+          ]
+        },
+        {
+          "start": "14:30",
+          "end": "15:30",
+          "kind": "session",
+          "title": "Session 6: NDN support for new deployments",
+          "chair": {
+            "name": "Alex Afanasyev",
+            "affiliation": "Florida International University"
+          },
+          "talks": [
+            {
+              "title": "NDN Supporting Ultra-Dense Networks",
+              "speakers": [
+                {
+                  "name": "Xiaoyan Hong",
+                  "affiliation": "University of Alabama"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Xiaoyan Hong",
+                  "affiliation": "University of Alabama"
+                },
+                {
+                  "name": "Pawan Subedi",
+                  "affiliation": "University of Alabama"
+                }
+              ],
+              "abstract": "Dense presences of IoT devices as well as high population of mobile phones are likely future scenarios. Under the 5G paradigm of Ultra Dense Networks (UDN), there is also a high density of access points (APs), or called base stations (BS), via the deployment of macro-cell, micro-cell, fermtocell, and user devices acting as APs. Thus in addition to small cell stations, relay APs and distributed remote radio heads are all components in the network architecture. One of the network paradigm to achieve the resource management, interference management, mobility management and security aspect in such dense networks is User-Centric Ultra-Dense Network (UUDN). In this architecture, each device is treated as the center, surrounded by a small pseudo-celled network which is created such that the network provides multiple access points (AP Group, or APG) for the device. The UUDN architecture has a functional unit of Local Access Server (LAS) at wireless edge with control plane for APG management and user plane for data communications. LASs connect to the core network service centers. The UUDN architecture, if implemented using the traditional IP network, will encounter the same problems in dealing with mobility, content sharing, security, etc., as those identified and motivated Named-Data Network Internet Architecture. As such, in this work, we present an implementation blueprint of UUDN using Named-Data Networking. The goal is to demonstrate the benefits of NDN in supporting UUDN model for ultra-dense networks. The name conventions of the control messages, the communications among the main types of devices in the UUDN, and various tables will be prototyped. The presentation/demo will show a three-nodes scenario that is general enough to extend to multiple IoT scenarios, for examples, Intelligent Transportation System and smart home systems."
+            },
+            {
+              "title": "Automated Neighbor Discovery to Run NDN Anywhere",
+              "speakers": [
+                {
+                  "name": "Arthi Padmanabhan",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Arthi Padmanabhan",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "NDN is designed as a \"universal overlay\" that operates over existing infrastructure, which allows it to be deployed incrementally. To run over IP, NDN allows its packets to be sent using IP tunnels. NDN's use of IP tunnels can be leveraged in situations where establishing NDN connectivity through normal methods is not feasible. Some networks prohibit multicast, unicast, or both within the local network, leaving NDN nodes isolated. This presentation introduces the NDN Neighbor Discovery service (NDND), which details the communication required for NDN nodes in such networks to establish connectivity through the use of a rendezvous server."
+            },
+            {
+              "title": "NDN for Data Intensive Science",
+              "speakers": [
+                {
+                  "name": "Susmit Shannigrahi",
+                  "affiliation": "Colorado State University"
+                }
+              ],
+              "abstract": "In this talk, we discuss the progress of the SANDIE project since the last NDNComm. The SANDIE project aims to integrate NDN and SDN concepts with the existing High Energy Particle Physics workflows for efficient data distribution, in-network strategic caching, and request redirection to the nearest replica, among other novel mechanisms. In addition, we expect that integrating NDN/SDN with current workflows will reduce the complexity of data management software, such as xtootd, that are currently used in the HEP domain. We discuss how we have inferred the network topology with detailed metrics such as link capacity, RTT delay, the available bandwidth for US-CMS. We then use this topology to simulate delay reduction by strategically adding in-network caches at Tier-2 sites in the US. We also analyzed real data from CMS and found that they display a significant locality of reference. Consequently, our simulations showed that we should be able to reduce the average data distribution delay by 48% using NDN and the VIP caching algorithm. Having simulated the improvements, we are extending the ndn-sci testbed to deploy our algorithms in a real environment. We are also working on integrating an NDN plugin with xrootd that will allow the xrootd system to redirect requests and utilize caches in the network transparently. In this talk, I discuss these updates as well as how we plan to study NDN's benefits using real HEP data requests once we integrate NDN to the existing production xrootd system."
+            }
+          ]
+        },
+        {
+          "start": "15:30",
+          "kind": "closing",
+          "title": "Closing"
+        }
+      ]
+    }
+  ]
+}

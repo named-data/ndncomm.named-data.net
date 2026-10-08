@@ -52,6 +52,9 @@ const talk = z.object({
   speakers: z.array(person).default([]),
   authors: z.array(person).optional(),
   abstract: z.string().optional(),
+  video: z.string().url().optional(),
+  // absolute URL, or a site path such as "archive/2025/slides/x.pdf"
+  slides: z.string().optional(),
 });
 
 /** Structured agenda: src/content/programs/<year>.json */
@@ -72,6 +75,8 @@ const programs = defineCollection({
             panelists: z.array(person).optional(),
             speakers: z.array(person).optional(),
             abstract: z.string().optional(),
+            video: z.string().url().optional(),
+            slides: z.string().optional(),
             talks: z.array(talk).optional(),
           }),
         ),

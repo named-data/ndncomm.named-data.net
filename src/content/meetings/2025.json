@@ -1,0 +1,38 @@
+{
+  "title": "NDN Community Meeting 2025",
+  "start": "2025-04-17",
+  "end": "2025-04-18",
+  "format": "hybrid",
+  "venue": "UCLA, Engineering VI, Room 134 (Cohen Room)",
+  "city": "Los Angeles, CA, USA",
+  "host": {
+    "name": "University of California, Los Angeles (UCLA)",
+    "short": "UCLA",
+    "url": "https://www.ucla.edu/"
+  },
+  "organizers": [
+    {
+      "name": "Alex Afanasyev",
+      "affiliation": "A2 Consulting"
+    },
+    {
+      "name": "Randy King",
+      "affiliation": "Operant Networks"
+    },
+    {
+      "name": "Jay Misra",
+      "affiliation": "New Mexico State University"
+    },
+    {
+      "name": "Beichuan Zhang",
+      "affiliation": "University of Arizona"
+    },
+    {
+      "name": "Lixia Zhang",
+      "affiliation": "UCLA"
+    }
+  ],
+  "original_page": "https://ndncomm2025.named-data.net/",
+  "videos": [],
+  "video_note": "Recordings of individual talks are linked in the program."
+}

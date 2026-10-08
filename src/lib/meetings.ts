@@ -42,12 +42,32 @@ export function clock(hhmm: string) {
 export const FORMAT_LABEL = { 'in-person': 'In person', hybrid: 'Hybrid', virtual: 'Virtual' } as const;
 
 export function programStats(p?: Program) {
-  if (!p) return { talks: 0, panels: 0 };
+  if (!p) return { talks: 0, panels: 0, videos: 0 };
   const items = p.days.flatMap((d) => d.items);
+  const talks = items.flatMap((i) => i.talks ?? []);
   return {
-    talks: items.reduce((n, i) => n + (i.talks?.length ?? 0) + (i.kind === 'talk' || i.kind === 'keynote' ? 1 : 0), 0),
+    talks: talks.length + items.filter((i) => i.kind === 'talk' || i.kind === 'keynote').length,
     panels: items.filter((i) => i.kind === 'panel').length,
+    videos: talks.filter((t) => t.video).length + items.filter((i) => i.video).length,
   };
+}
+
+/** Recordings are known to be gone (the note says so). */
+export function recordingsLost(m: Meeting) {
+  return m.data.videos.length === 0 && /lost|removed/i.test(m.data.video_note ?? '');
+}
+
+/** Contiguous "2018–2021, 2023–2024"-style list of years. */
+export function yearRanges(years: number[]) {
+  const ys = [...new Set(years)].sort((a, b) => a - b);
+  const out: string[] = [];
+  for (let i = 0; i < ys.length; ) {
+    let j = i;
+    while (j + 1 < ys.length && ys[j + 1] === ys[j] + 1) j++;
+    out.push(i === j ? `${ys[i]}` : `${ys[i]}–${ys[j]}`);
+    i = j + 1;
+  }
+  return out.join(', ');
 }
 
 export function person(p: { name: string; affiliation?: string }) {

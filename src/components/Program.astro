@@ -1,4 +1,5 @@
 ---
+import Materials from './Materials.astro';
 import { clock, dayLabel, type Program } from '../lib/meetings';
 
 interface Props {
@@ -69,6 +70,7 @@ const label = (it: { kind: string; title: string }) => it.title.match(NUMBERED)?
                   ))}
                 </div>
               )}
+              <Materials video={it.video} slides={it.slides} />
               {it.abstract && (
                 <details class="abstract-toggle">
                   <summary>
@@ -82,7 +84,7 @@ const label = (it: { kind: string; title: string }) => it.title.match(NUMBERED)?
               {it.talks && (
                 <ul class="talks">
                   {it.talks.map((t) => (
-                    <li>
+                    <li class="talk-row">
                       <details class="talk">
                         <summary>
                           <span class="talk-title">
@@ -98,6 +100,7 @@ const label = (it: { kind: string; title: string }) => it.title.match(NUMBERED)?
                           </div>
                         )}
                       </details>
+                      <Materials video={t.video} slides={t.slides} />
                     </li>
                   ))}
                 </ul>

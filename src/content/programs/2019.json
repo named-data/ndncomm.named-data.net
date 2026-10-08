@@ -1,0 +1,671 @@
+{
+  "timezone": "",
+  "days": [
+    {
+      "date": "2019-09-05",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "kind": "other",
+          "title": "Registration"
+        },
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "kind": "opening",
+          "title": "Opening Session: Towards Smart Energy Systems",
+          "chair": {
+            "name": "Lotfi Benmohamed",
+            "affiliation": "NIST"
+          },
+          "talks": [
+            {
+              "title": "NIST Smart Grid Program",
+              "speakers": [
+                {
+                  "name": "Avi Gopstein",
+                  "affiliation": "NIST"
+                }
+              ]
+            },
+            {
+              "title": "Commercialization of NDN in Cybersecure Energy System Communications",
+              "speakers": [
+                {
+                  "name": "Randall King",
+                  "affiliation": "Operant Networks"
+                }
+              ]
+            },
+            {
+              "title": "iCens: An Information-Centric Smart Grid Network Architecture",
+              "speakers": [
+                {
+                  "name": "Reza Tourani",
+                  "affiliation": "Saint Louis University"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "10:00",
+          "end": "11:00",
+          "kind": "session",
+          "title": "Session 1: Tactical Edge",
+          "chair": {
+            "name": "Tamer Refaei",
+            "affiliation": "MITRE"
+          },
+          "talks": [
+            {
+              "title": "ICT-Sync and its use in DARPA SHARE",
+              "speakers": [
+                {
+                  "name": "John DeHart",
+                  "affiliation": "Washington Univ. in St. Louis"
+                }
+              ]
+            },
+            {
+              "title": "NDN Full Packet Security",
+              "speakers": [
+                {
+                  "name": "Constantin Serban",
+                  "affiliation": "Perspecta Labs"
+                }
+              ]
+            },
+            {
+              "title": "Smart Forwarding in NDN VANET",
+              "speakers": [
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "11:00",
+          "end": "11:15",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "11:15",
+          "end": "12:15",
+          "kind": "session",
+          "title": "Session 2: IoT and Applications",
+          "chair": {
+            "name": "Alex Afanasyev",
+            "affiliation": "Florida International University"
+          },
+          "talks": [
+            {
+              "title": "Secure Onboarding and Provisioning of NDNoT Devices",
+              "speakers": [
+                {
+                  "name": "Davide Pesavento",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Kerry McKay",
+                  "affiliation": "NIST"
+                }
+              ]
+            },
+            {
+              "title": "Service Discovery in NDN IoT",
+              "speakers": [
+                {
+                  "name": "Yufeng Zhang",
+                  "affiliation": "UCLA"
+                }
+              ]
+            },
+            {
+              "title": "On the Power of In-Network Caching in the Hadoop Distributed File System",
+              "speakers": [
+                {
+                  "name": "Beichuan Zhang",
+                  "affiliation": "University of Arizona"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "12:15",
+          "end": "13:30",
+          "kind": "break",
+          "title": "Lunch"
+        },
+        {
+          "start": "13:30",
+          "end": "15:00",
+          "kind": "session",
+          "title": "Session 3: Applications over NDN",
+          "chair": {
+            "name": "Lan Wang",
+            "affiliation": "University of Memphis"
+          },
+          "talks": [
+            {
+              "title": "Building a Bridge from Applications to NDN",
+              "speakers": [
+                {
+                  "name": "Kathleen Nichols",
+                  "affiliation": "Pollere, Inc."
+                }
+              ]
+            },
+            {
+              "title": "GitSync",
+              "speakers": [
+                {
+                  "name": "Zhaoning Kong",
+                  "affiliation": "UCLA"
+                }
+              ]
+            },
+            {
+              "title": "Deploying a Video Streaming Service on NDN Testbed",
+              "speakers": [
+                {
+                  "name": "Beichuan Zhang",
+                  "affiliation": "University of Arizona"
+                }
+              ]
+            },
+            {
+              "title": "Naming to Reason About Security in Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "Florida International University"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "15:00",
+          "end": "16:00",
+          "kind": "session",
+          "title": "Lightning Talks",
+          "chair": {
+            "name": "Lotfi Benmohamed",
+            "affiliation": "NIST"
+          }
+        },
+        {
+          "start": "16:00",
+          "end": "18:00",
+          "kind": "other",
+          "title": "Posters and Demos",
+          "talks": [
+            {
+              "title": "Demo: Towards an NDN-based Online Gaming Architecture",
+              "speakers": [
+                {
+                  "name": "Philipp Moll",
+                  "affiliation": "Klagenfurt University"
+                },
+                {
+                  "name": "Sebastian Theuermann",
+                  "affiliation": "Klagenfurt University"
+                },
+                {
+                  "name": "Hermann Hellwagner",
+                  "affiliation": "Klagenfurt University"
+                },
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA"
+                }
+              ]
+            },
+            {
+              "title": "Better Multipath Route Calculation for ndnSIM",
+              "speakers": [
+                {
+                  "name": "Klaus Schneider",
+                  "affiliation": "University of Arizona"
+                }
+              ]
+            },
+            {
+              "title": "Enhancing Resiliency in Electrical Grid OT Networks Using NDN",
+              "speakers": [
+                {
+                  "name": "Travis Machacek",
+                  "affiliation": "MITRE Corporation"
+                },
+                {
+                  "name": "Tamer Refaei",
+                  "affiliation": "MITRE Corporation"
+                }
+              ]
+            },
+            {
+              "title": "Location-Based Certificates",
+              "speakers": [
+                {
+                  "name": "Dan Ameme",
+                  "affiliation": "New Mexico State University"
+                },
+                {
+                  "name": "Travis Machacek",
+                  "affiliation": "New Mexico State University"
+                },
+                {
+                  "name": "Abderrahmen Mtibaa",
+                  "affiliation": "New Mexico State University"
+                },
+                {
+                  "name": "Sanjeev Kaushik Ramani",
+                  "affiliation": "Florida International University"
+                },
+                {
+                  "name": "Satyajayant Misra",
+                  "affiliation": "New Mexico State University"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "Florida International University"
+                }
+              ]
+            },
+            {
+              "title": "Demo: Decentralized multimedia sharing Android application over NDN",
+              "speakers": [
+                {
+                  "name": "Ashlesh Gawande",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Jeremy Clark",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                }
+              ]
+            },
+            {
+              "title": "An NDN Push-To-Talk Application for Public Safety Communications",
+              "speakers": [
+                {
+                  "name": "Edward Lu",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Davide Pesavento",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Junxiao Shi",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Lotfi Benmohamed",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Maxwell Maurice",
+                  "affiliation": "NIST"
+                }
+              ]
+            },
+            {
+              "title": "Demo: NDN Control Center",
+              "speakers": [
+                {
+                  "name": "Xinyu Ma",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Zhaoning Kong",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Zhiyi Zhang",
+                  "affiliation": "UCLA"
+                }
+              ]
+            },
+            {
+              "title": "Automated Fuzz Testing for NDN",
+              "speakers": [
+                {
+                  "name": "George Torres",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Davide Pesavento",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Junxiao Shi",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Lotfi Benmohamed",
+                  "affiliation": "NIST"
+                }
+              ]
+            },
+            {
+              "title": "Demo: A Comparison of Bootstrapping Protocols for IoT over Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Laqin Fan",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                }
+              ]
+            },
+            {
+              "title": "Broadcast-Based Yet Lightweight Forwarding for Wireless Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Amar Abane",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Paul Muhlethaler",
+                  "affiliation": "Inria"
+                },
+                {
+                  "name": "Samia Bouzefrane",
+                  "affiliation": "CNAM"
+                },
+                {
+                  "name": "Abdella Battou",
+                  "affiliation": "NIST"
+                }
+              ]
+            },
+            {
+              "title": "Medium Integration Architecture for ICDTNs using NDN",
+              "speakers": [
+                {
+                  "name": "Katherine Russell",
+                  "affiliation": "George Mason University"
+                },
+                {
+                  "name": "Robert Simon",
+                  "affiliation": "George Mason University"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "18:00",
+          "kind": "closing",
+          "title": "Day 1 Closing"
+        }
+      ]
+    },
+    {
+      "date": "2019-09-06",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "kind": "other",
+          "title": "Registration"
+        },
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "kind": "session",
+          "title": "Session 4: Wireless Networks",
+          "chair": {
+            "name": "Beichuan Zhang",
+            "affiliation": "University of Arizona"
+          },
+          "talks": [
+            {
+              "title": "Information-Centric Networking in Wireless Edge Networks (ICN-WEN): Update on the NSF/Intel ICN-WEN Program",
+              "speakers": [
+                {
+                  "name": "Christian Tschudin",
+                  "affiliation": "University of Basel"
+                }
+              ]
+            },
+            {
+              "title": "Secure Predictive Low-Latency Information Centric Edge for Next Generation Wireless Networks",
+              "speakers": [
+                {
+                  "name": "I-Hong Hou",
+                  "affiliation": "Texas A&M University"
+                }
+              ]
+            },
+            {
+              "title": "Data-Centric Medium Access Control Supporting Robust Multicast",
+              "speakers": [
+                {
+                  "name": "Mohammed Elbadry",
+                  "affiliation": "Stony Brook University"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "10:00",
+          "end": "10:30",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "10:30",
+          "end": "12:00",
+          "kind": "panel",
+          "title": "Panel 1: Towards Easier NDN Application Development",
+          "chair": {
+            "name": "Christian Tschudin",
+            "affiliation": "University of Basel"
+          },
+          "panelists": [
+            {
+              "name": "Alex Afanasyev",
+              "affiliation": "Florida International University"
+            },
+            {
+              "name": "Jeff Burke",
+              "affiliation": "UCLA REMAP"
+            },
+            {
+              "name": "Kathleen Nichols",
+              "affiliation": "Pollere, Inc."
+            },
+            {
+              "name": "Davide Pesavento",
+              "affiliation": "NIST"
+            },
+            {
+              "name": "Constantin Serban",
+              "affiliation": "Perspecta Labs"
+            }
+          ],
+          "abstract": "Application developments play a fundamental role in driving NDN's architectural design and development. They help validate architectural design decisions, identify remaining issue, and drive the NDN rollout.\n\nThis panel aims to:\n1. assess the existing tools developed in recent years that promote NDN app development (comment: make people aware of what's, or soon to be, available)\n2. What still hard? identify and prioritize remaining issues, and\n3. explore new application areas that may benefit most from NDN's new architectural features as compared to TCP/IP."
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "kind": "break",
+          "title": "Lunch"
+        },
+        {
+          "start": "13:00",
+          "end": "14:00",
+          "kind": "panel",
+          "title": "Panel 2: Enabling a Data-Centric Ecosystem for Big Data Applications",
+          "chair": {
+            "name": "Lan Wang",
+            "affiliation": "University of Memphis"
+          },
+          "panelists": [
+            {
+              "name": "Nasir Ali",
+              "affiliation": "University of Memphis"
+            },
+            {
+              "name": "Christos Papadopoulos",
+              "affiliation": "Colorado State University"
+            },
+            {
+              "name": "Alex Szalay",
+              "affiliation": "Johns Hopkins University"
+            },
+            {
+              "name": "Edmund Yeh",
+              "affiliation": "Northeastern University"
+            }
+          ],
+          "abstract": "The amount of data generated by individuals and businesses have been growing exponentially. An IDC report “The Digital Universe in 2020” projects that, by 2020, there will be around 40 zettabytes of data.\n\nDomain experts have been collecting and analyzing ever growing data sets to derive insights from the data, but they face the challenges of individually building their own systems or developing their own solutions to handle big data. As of now, most people develop big data applications based on commercially available cloud services, which provide a logical central place for storage and processing but do not address some of the very fundamental problems, including:\n• unstructured data collections that are difficult to navigate;\n• lack of systematic solutions to security and privacy when data is outside the cloud, and lack of auditability when the data is inside the cloud; and\n• the need to deal with lower layer details for storing, transferring, and processing data.\n\nWe believe that harnessing the big data revolution will require a big data ecosystem that enables data sharing across the boundaries of different vendors, different providers, and different applications. Our 9-year research efforts on the design and development of Named Data Networking (NDN) project also convince us that we can develop this big data ecosystem by taking on a data-centric design approach. The goal of this panel is to\n• understand the requirements of big data application in specific domains, and\n• examine the problems from multiple diverse domains to identify potential common application patterns, common needs and requirements.\n\nThe panel will steer the discussion toward formulate a common big data ecosystem framework that supports the management of data through its life cycle, starting from data production, naming and securing data at the production time, to structured data storage and scalable retrieval, and to controlled data consumption."
+        },
+        {
+          "start": "14:00",
+          "end": "15:00",
+          "kind": "session",
+          "title": "Session 5: Security",
+          "chair": {
+            "name": "Eric Osterweil",
+            "affiliation": "George Mason University"
+          },
+          "talks": [
+            {
+              "title": "NDN-ABS: Attribute Based Signature Scheme for Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Sanjeev Ramani",
+                  "affiliation": "Florida International University"
+                }
+              ]
+            },
+            {
+              "title": "DLedger",
+              "speakers": [
+                {
+                  "name": "Xinyu Ma",
+                  "affiliation": "UCLA"
+                }
+              ]
+            },
+            {
+              "title": "Result Provenance in Named-Function Networking",
+              "speakers": [
+                {
+                  "name": "Claudio Marxer",
+                  "affiliation": "Univ. of Basel"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "15:30",
+          "end": "16:30",
+          "kind": "session",
+          "title": "Session 6: Routing and Forwarding",
+          "chair": {
+            "name": "Ken Calvert",
+            "affiliation": "NSF"
+          },
+          "talks": [
+            {
+              "title": "The Case for Hop-by-Hop Traffic Engineering",
+              "speakers": [
+                {
+                  "name": "Klaus Schneider",
+                  "affiliation": "University of Arizona"
+                }
+              ]
+            },
+            {
+              "title": "NDN-DPDK: High-Speed Named Data Networking Forwarder",
+              "speakers": [
+                {
+                  "name": "Junxiao Shi",
+                  "affiliation": "NIST"
+                }
+              ]
+            },
+            {
+              "title": "SANDIE: Accelerating Large-Scale Data-Intensive Science with NDN",
+              "speakers": [
+                {
+                  "name": "Edmund Yeh",
+                  "affiliation": "Northeastern University"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "16:30",
+          "end": "17:30",
+          "kind": "session",
+          "title": "Session 7: Support for Applications",
+          "chair": {
+            "name": "Jeff Burke",
+            "affiliation": "UCLA REMAP"
+          },
+          "talks": [
+            {
+              "title": "On Namespace Management in NDN and How DNSSEC Might Help",
+              "speakers": [
+                {
+                  "name": "Eric Osterweil",
+                  "affiliation": "George Mason University"
+                }
+              ]
+            },
+            {
+              "title": "Hyper-connected Intelligence Infrastructure based on NDN",
+              "speakers": [
+                {
+                  "name": "Namseok Ko",
+                  "affiliation": "ETRI"
+                }
+              ]
+            },
+            {
+              "title": "NDND: NDN Neighbor Discovery",
+              "speakers": [
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "17:30",
+          "kind": "closing",
+          "title": "Closing"
+        }
+      ]
+    }
+  ]
+}

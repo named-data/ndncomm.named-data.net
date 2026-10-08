@@ -1,0 +1,31 @@
+---
+import Icon from './Icon.astro';
+import { url } from '../lib/archive';
+
+interface Props {
+  video?: string;
+  slides?: string;
+}
+const { video, slides } = Astro.props;
+const slidesHref = slides && (/^https?:/.test(slides) ? slides : url(slides));
+const slidesKind = slides && /\.pptx?$/i.test(slides) ? 'PPT' : 'PDF';
+---
+
+{
+  (video || slides) && (
+    <div class="materials">
+      {video && (
+        <a class="material material-video" href={video} target="_blank" rel="noopener">
+          <Icon name="play" size={13} />
+          Video
+        </a>
+      )}
+      {slidesHref && (
+        <a class="material" href={slidesHref} target="_blank" rel="noopener">
+          <Icon name="file" size={13} />
+          Slides <span class="muted">{slidesKind}</span>
+        </a>
+      )}
+    </div>
+  )
+}

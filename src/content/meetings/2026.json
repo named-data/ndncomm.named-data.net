@@ -1,0 +1,40 @@
+{
+  "title": "NDN Community Meeting 2026",
+  "start": "2026-05-18",
+  "end": "2026-05-19",
+  "format": "virtual",
+  "host": {
+    "name": "University of California, Los Angeles (UCLA)",
+    "short": "UCLA",
+    "url": "https://www.ucla.edu/"
+  },
+  "organizers": [
+    {
+      "name": "Lixia Zhang",
+      "affiliation": "UCLA"
+    },
+    {
+      "name": "Davide Pesavento",
+      "affiliation": "NIST"
+    },
+    {
+      "name": "Lan Wang",
+      "affiliation": "University of Memphis"
+    },
+    {
+      "name": "Tianyuan Yu",
+      "affiliation": "UCLA"
+    },
+    {
+      "name": "Beichuan Zhang",
+      "affiliation": "University of Arizona"
+    },
+    {
+      "name": "Junxiao Shi",
+      "affiliation": "NIST"
+    }
+  ],
+  "original_page": "https://ndncomm2026.named-data.net/",
+  "videos": [],
+  "video_note": "Recordings of individual talks are linked in the program."
+}

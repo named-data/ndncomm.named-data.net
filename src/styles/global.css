@@ -234,6 +234,10 @@ h1, h2, h3, h4 { font-family: var(--font); letter-spacing: -0.025em; line-height
 .panel-card.dark p { color: rgb(253 249 242 / 70%); }
 .panel-card.dark a { color: var(--amber); }
 
+.host-list { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 10px; }
+.host-list li { display: grid; grid-template-columns: 8.5em 1fr; gap: 12px; color: rgb(253 249 242 / 85%); }
+.host-years { color: var(--amber); font-weight: 600; }
+
 /* ---------- Meeting page ---------- */
 .meeting-hero { padding-bottom: 56px; }
 .crumbs { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; text-decoration: none; color: rgb(253 249 242 / 65%) !important; margin-bottom: 26px; }
@@ -323,6 +327,7 @@ h1, h2, h3, h4 { font-family: var(--font); letter-spacing: -0.025em; line-height
   padding: 14px 18px; border-radius: var(--radius-sm); background: var(--warn-soft); color: var(--warn); font-size: 15px;
 }
 .note .icon { margin-top: 2px; }
+.note-info { background: var(--accent-soft); color: var(--accent); }
 
 /* Program */
 .day-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
@@ -390,6 +395,20 @@ summary:hover .toggle { color: var(--accent); }
 .abstract .authors { font-size: 13.5px; color: var(--faint); margin-bottom: 10px; }
 .abstract-toggle { margin-top: 8px; border-top: 1px solid var(--border); }
 .abstract-toggle > summary { padding: 10px 0 4px; font-weight: 600; font-size: 14px; color: var(--accent); grid-template-columns: auto auto; justify-content: start; align-items: center; }
+
+/* Per-talk video / slides links */
+.materials { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 2px; }
+.talk-row .materials { margin: -4px 0 12px; }
+.material {
+  display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 999px;
+  font-size: 12.5px; font-weight: 600; text-decoration: none;
+  background: var(--surface-2); color: var(--text); border: 1px solid transparent;
+}
+.material:hover { border-color: var(--accent); color: var(--accent); }
+.material .icon { color: var(--accent); }
+.material-video { background: var(--accent-soft); color: var(--accent); }
+.talk-row { border-top: 1px solid var(--border); }
+.talk-row .talk { border-top: 0; }
 
 /* Archived page text */
 .original { border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }

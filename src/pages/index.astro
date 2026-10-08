@@ -3,8 +3,8 @@ import Base from '../layouts/Base.astro';
 import HeroGraphic from '../components/HeroGraphic.astro';
 import MeetingCard from '../components/MeetingCard.astro';
 import Icon from '../components/Icon.astro';
-import { url, kalturaInfo } from '../lib/archive';
-import { allMeetings, isUpcoming, programFor, programStats, dateRange } from '../lib/meetings';
+import { url } from '../lib/archive';
+import { allMeetings, isUpcoming, programFor, programStats, yearRanges } from '../lib/meetings';
 
 const meetings = await allMeetings();
 const upcoming = meetings.filter((m) => isUpcoming(m)).reverse();
@@ -13,15 +13,25 @@ const latest = upcoming[0] ?? past[0];
 
 let talks = 0;
 let panels = 0;
-let videoSeconds = 0;
+let videos = 0;
 for (const m of past) {
   const s = programStats(await programFor(m.id));
   talks += s.talks;
   panels += s.panels;
-  const k = kalturaInfo(m.id);
-  for (const v of m.data.videos) videoSeconds += (v.kaltura && k[v.kaltura]?.duration_sec) || 0;
+  videos += s.videos + m.data.videos.filter((v) => v.youtube).length;
 }
 const years = past.map((m) => m.id);
+
+// Who hosted which years, oldest first: "2018–2021, 2023–2024 · NIST"
+const hostYears = new Map<string, { label: string; url?: string; years: number[] }>();
+for (const m of [...past].reverse()) {
+  const h = m.data.host;
+  const key = h?.name ?? (m.data.format === 'virtual' ? 'Online' : (m.data.venue ?? 'Other'));
+  const entry = hostYears.get(key) ?? { label: h?.name ?? key, url: h?.url, years: [] };
+  entry.years.push(Number(m.id));
+  hostYears.set(key, entry);
+}
+const hosts = [...hostYears.values()].map((h) => ({ ...h, range: yearRanges(h.years) }));
 ---
 
 <Base overlayHeader>
@@ -47,9 +57,9 @@ const years = past.map((m) => m.id);
     <div class="wrap">
       <div class="stats">
         <div class="stat"><b>{past.length}</b><span>meetings, {years.at(-1)}–{years[0]}</span></div>
-        <div class="stat"><b>{talks}</b><span>talks with abstracts</span></div>
+        <div class="stat"><b>{talks}</b><span>talks</span></div>
         <div class="stat"><b>{panels}</b><span>panels</span></div>
-        <div class="stat"><b>{Math.round(videoSeconds / 3600)} h</b><span>of recordings</span></div>
+        <div class="stat"><b>{videos}</b><span>videos on YouTube</span></div>
       </div>
     </div>
   </section>
@@ -108,14 +118,18 @@ const years = past.map((m) => m.id);
         <a href="https://named-data.net/">Learn more at named-data.net →</a>
       </div>
       <div class="panel-card dark">
-        <span class="kicker" style="color: var(--amber)">Thank you, NIST</span>
-        <h3>Hosted by NIST, {years.at(-1)}–{years[0]}</h3>
-        <p>
-          The National Institute of Standards and Technology organized and hosted NDNComm{' '}
-          {past.filter((m) => m.data.host?.short === 'NIST').map((m) => m.id).sort().join(', ')}. The programs, abstracts
-          and recordings on this site were originally published on NIST's event pages, linked from each meeting.
-        </p>
-        <a href={url('about/')}>About this site →</a>
+        <span class="kicker" style="color: var(--amber)">Hosts</span>
+        <h3>Where NDNComm has met</h3>
+        <ul class="host-list">
+          {
+            hosts.map((h) => (
+              <li>
+                <span class="host-years">{h.range}</span>
+                {h.url ? <a href={h.url}>{h.label}</a> : <span>{h.label}</span>}
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </div>
   </section>

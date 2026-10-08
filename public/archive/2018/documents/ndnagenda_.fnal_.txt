@@ -1,0 +1,100 @@
+Wednesday September 19, 2018
+08:00am   Registration
+09:00am   Opening Session
+              Chair: Lotfi Benmohamed (NIST)
+          •   NIST Cybersecurity Programs, Kevin Stine (NIST)
+          •   A New Way to Support Security, Lixia Zhang (University of California, Los Angeles),
+              Alex Afanasyev (Florida International University)
+10:00am   Session 1- NDN support for computing
+             Chair: Beichuan Zhang (University of Arizona)
+          •   Towards an Augmented Reality Browser using NDN, Jeff Burke (UCLA REMAP)
+          •   Edge Computing Over Named Data Networking, Abderrahmen Mtibaa (New Mexico
+              State University)
+          •   Compute-First-Network for NDN, Asit Chakraborti (Huawei Technologies)
+11:00am   Break
+11:15am   Session 2- IoT and Security
+             Chair: Giovanni Pau (Sorbonne University/UCLA)
+          •   NDNoT: A Framework for Named Data of Things, Zhiyi Zhang (UCLA)
+          •   Blockchain-based Decentralized Public Key Management for Named Data
+              Networking, Kan Yang (University of Memphis)
+          •   Distributed Ledger over NDN for A Real-world Solar System, Zhiyi Zhang (UCLA)
+12:15pm   Lunch
+1:30pm    Panel 1: Security and Privacy in NDN: An Edge Computing Perspective
+                     Chair: Jay Misra (New Mexico State University)
+                      Alex Afanasyev (Florida International University)
+                      Ken Calvert (National Science Foundation)
+                      Tamer Refaei (MITRE Corporation)
+                      Murugiah Souppaya (NIST)
+2:30pm    Lightning Talks
+              Chair: Lotfi Benmohamed (NIST)
+4:00pm    Posters and Demos
+6:00pm    Day 1 Closing
+Thursday September 20, 2018
+08:00am   Registration
+08:30am   Community Feedback
+09:00am   Session 3- NDN for Vehicular Networks
+             Chair: Beichuan Zhang (University of Arizona)
+          •   Vehicular Named Data Networking, Claudio Marxer (University of Basel)
+          •   Connectivity and Location-aware Routing Scheme (CLRS) for Connected and
+              Autonomous Vehicles (CAVs), Junaid Ahmed Khan (University of Memphis)
+          •   Data-Centric MAC for Robust Multicast in Vehicular Networks, Mohammed Elbadry
+              (Stony Brook University)
+10:00am   Session 4- NDN in Mobile AdHoc Networks
+             Chair: Lan Wang (University of Memphis)
+          •   Peer-to-Peer File Sharing in Mobile Ad hoc Networks over NDN, Spyridon Mastorakis
+              (UCLA)
+          •   Distributed Dataset Synchronization in Mobile Ad Hoc Networks over NDN,
+              Tianxiang Li (UCLA)
+          •   Toward Multi-Hop Long-Range D2D Communication via Information Centric Ad Hoc
+              Networks, Yaoqing Liu (Clarkson University)
+11:00am   Break
+11:15am   Panel 2: Edge Computing: Shaping the Named Data Edge
+                     Chair: Christian Tschudin (University of Basel)
+                      Jeff Burke (University of California, Los Angeles)
+                      Asit Chakraborti (Huawei Technologies)
+                      Martial Michel (Data Machines Corp.)
+                      Lan Wang (University of Memphis)
+12:15pm   Lunch
+1:30pm    Session 5- Routing and Forwarding
+             Chair: Jeff Burke (University of California, Los Angeles)
+          •   High-Speed NDN-DPDK Forwarder, Junxiao Shi (NIST)
+          •   A New Way of Traffic Engineering in NDN, Klaus Schneider (The University of
+              Arizona)
+          •   NDNCONF: Network Configuration Management System for NDN based on
+              NETCONF protocol, Rajender Kumar (Florida International University)
+2:30pm    Session 6 -NDN support for new deployments
+             Chair: Alex Afanasyev (Florida International University)
+          •   NDN Supporting Ultra-Dense Networks, Xiaoyan Hong (University of Alabama)
+          •   Automated Neighbor Discovery to Run NDN Anywhere, Arthi Padmanabhan (UCLA)
+          •   NDN for Data Intensive Science, Susmit Shannigrahi (Colorado State University)
+3:30pm    Closing
+Posters:
+•   NDN for Public Safety Deployable Networks, Davide Pesavento (NIST)
+•   Bootstrapping Trust in NDN-Based Vehicular Network Using SWIFT Trust, Sanjeev Kaushik Ramani
+    (Florida International University)
+•   Get an NDN certificate with NDNCERT protocol, Zhiyi Zhang (UCLA)
+•   Named-based Access Control, Zhiyi Zhang (UCLA)
+•   Upcoming Changes in NDN Protocol, Alex Afanasyev (Florida International University)
+•   Performance evaluation of the NDN-DPDK forwarder, Siham Khoussi (NIST)
+•   IoT+NDN+Wireless: Experimental Insights from Using 802.11 Infrastructure and Ad-hoc Modes,
+    Travis Machacek (New Mexico State University)
+•   Leveraging Named Data Networking in Edge Computing, Byung-Seo Kim (Hongik Univeristy Sejong
+    Campus, South Korea)
+•   An Overlay NDN Architecture for Application-Driven Satellite-Terrestrial Integration, Tian Song
+    (Beijing Institute of Technology)
+•   Named Query Framework for Named Data Networking of Things, Byung-Seo Kim (Hongik University
+    Sejong Campus, South Korea)
+•   ICE-AR Application Progress, Peter Gusev (UCLA REMAP)
+•   Optimal Cache Allocation under Network-Wide Capacity Constraint, Van Sy Mai (NIST)
+•   Distributed Network Measurement Protocol (DNMP): A Secure Role-Based Approach, Kathleen
+    Nichols (Pollere, Inc)
+
+Demos:
+•   ANTD NDN-IoT Testbed: Smart Building Sensing, Edward Lu (NIST)
+•   PSync deployment on IoT sensor testbed, Ashlesh Gawande (Uinversity of Memphis)
+•   Vehicular Named Data Networking, Christopher Scherb (University of Basel)
+•   HomeCam Browser-based Home Surveillance Camera, Junxiao Shi (NIST)
+•   NDN Supporting Ultra-Dense Networks, Xiaoyan Hong (University of Alabama)
+•   A Raspberry Pi Based Data-Centric MAC for Robust Multicast in Vehicular Networks, Mohammed
+    Elbadry (Stony Brook University)
+
