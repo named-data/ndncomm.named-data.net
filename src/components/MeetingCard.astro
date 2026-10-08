@@ -1,0 +1,41 @@
+---
+import Icon from './Icon.astro';
+import { url } from '../lib/archive';
+import { dateRange, FORMAT_LABEL, isUpcoming, programFor, programStats, type Meeting } from '../lib/meetings';
+
+interface Props {
+  meeting: Meeting;
+}
+const { meeting } = Astro.props;
+const m = meeting.data;
+const stats = programStats(await programFor(meeting.id));
+const upcoming = isUpcoming(meeting);
+const place = [m.venue, m.city].filter(Boolean).join(', ') || FORMAT_LABEL[m.format];
+---
+
+<a class="meeting-card" href={url(`${meeting.id}/`)}>
+  <span class="card-arrow"><Icon name="arrow" size={20} /></span>
+  <span class="year">{meeting.id}</span>
+  <h3>{m.title}</h3>
+  <div class="facts">
+    <span class="fact"><Icon name="calendar" size={16} />{dateRange(m.start, m.end)}</span>
+    <span class="fact"><Icon name="pin" size={16} />{place}{m.venue && m.format !== 'in-person' ? ` · ${FORMAT_LABEL[m.format]}` : ''}</span>
+    {m.host && <span class="fact"><Icon name="users" size={16} />Hosted by {m.host.short}</span>}
+  </div>
+  <div class="chips">
+    {upcoming && <span class="chip chip-accent">Upcoming</span>}
+    {stats.talks > 0 && <span class="chip">{stats.talks} talks</span>}
+    {stats.panels > 0 && <span class="chip">{stats.panels} panels</span>}
+    {
+      !upcoming &&
+        (m.videos.length > 0 ? (
+          <span class="chip chip-accent">
+            <Icon name="play" size={12} />
+            {m.videos.length} recording{m.videos.length > 1 ? 's' : ''}
+          </span>
+        ) : (
+          <span class="chip chip-warn">Recordings lost</span>
+        ))
+    }
+  </div>
+</a>

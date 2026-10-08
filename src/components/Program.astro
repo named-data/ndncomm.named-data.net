@@ -1,0 +1,111 @@
+---
+import { clock, dayLabel, type Program } from '../lib/meetings';
+
+interface Props {
+  program: Program;
+}
+const { program } = Astro.props;
+
+type P = { name: string; affiliation?: string };
+const names = (ps?: P[]) => (ps ?? []).map((p) => (p.affiliation ? `${p.name} (${p.affiliation})` : p.name)).join(', ');
+const paragraphs = (t: string) => t.split(/\n\n+/);
+const KIND: Record<string, string> = {
+  opening: 'Opening',
+  keynote: 'Keynote',
+  panel: 'Panel',
+  session: 'Session',
+  talk: 'Talk',
+  closing: 'Closing',
+  other: '',
+};
+// "Session 2: Security" -> label "Session 2", heading "Security"
+const NUMBERED = /^(Session|Panel)\s+\d+\s*:\s*/i;
+const label = (it: { kind: string; title: string }) => it.title.match(NUMBERED)?.[0].replace(/\s*:\s*$/, '') ?? KIND[it.kind];
+---
+
+<nav class="day-tabs" aria-label="Program days">
+  {
+    program.days.map((d, i) => (
+      <a class="day-tab" href={`#day-${i + 1}`}>
+        Day {i + 1}
+        <span>{dayLabel(d.date).replace(/^\w+, /, '')}</span>
+      </a>
+    ))
+  }
+</nav>
+{program.timezone && <p class="tz">All times {program.timezone}</p>}
+
+{
+  program.days.map((d, i) => (
+    <section class="day" id={`day-${i + 1}`}>
+      <div class="day-head">
+        <h3>Day {i + 1}</h3>
+        <span>{dayLabel(d.date)}</span>
+      </div>
+      <ol class="timeline">
+        {d.items.map((it) => (
+          <li class:list={['slot', { break: it.kind === 'break' }]}>
+            <div class="slot-time">
+              {clock(it.start)}
+              {it.end && it.kind !== 'break' && <small>– {clock(it.end)}</small>}
+            </div>
+            <div class:list={['slot-card', it.kind]}>
+              {it.kind !== 'break' && label(it) && <span class="kind">{label(it)}</span>}
+              <h4>{it.kind !== 'break' ? it.title.replace(NUMBERED, '') : it.title}</h4>
+              {it.chair && (
+                <p class="who">
+                  {it.kind === 'panel' ? 'Moderator' : 'Chair'}: <b>{it.chair.name}</b>
+                  {it.chair.affiliation && ` · ${it.chair.affiliation}`}
+                </p>
+              )}
+              {it.speakers && it.speakers.length > 0 && <p class="who">{names(it.speakers)}</p>}
+              {it.panelists && (
+                <div class="panelists">
+                  {it.panelists.map((p) => (
+                    <span class="chip" title={p.affiliation}>
+                      {p.name}
+                      {p.affiliation && <span class="muted">· {p.affiliation}</span>}
+                    </span>
+                  ))}
+                </div>
+              )}
+              {it.abstract && (
+                <details class="abstract-toggle">
+                  <summary>
+                    Abstract <span class="toggle">+</span>
+                  </summary>
+                  <div class="abstract">
+                    {paragraphs(it.abstract).map((p) => <p>{p}</p>)}
+                  </div>
+                </details>
+              )}
+              {it.talks && (
+                <ul class="talks">
+                  {it.talks.map((t) => (
+                    <li>
+                      <details class="talk">
+                        <summary>
+                          <span class="talk-title">
+                            {t.title}
+                            <span class="talk-by">{names(t.speakers)}</span>
+                          </span>
+                          {(t.abstract || t.authors) && <span class="toggle">+</span>}
+                        </summary>
+                        {(t.abstract || t.authors) && (
+                          <div class="abstract">
+                            {t.authors && t.authors.length > 0 && <p class="authors">Authors: {names(t.authors)}</p>}
+                            {t.abstract && paragraphs(t.abstract).map((p) => <p>{p}</p>)}
+                          </div>
+                        )}
+                      </details>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  ))
+}

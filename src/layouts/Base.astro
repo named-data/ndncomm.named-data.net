@@ -1,12 +1,26 @@
 ---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/space-grotesk';
+import '@fontsource-variable/jetbrains-mono';
 import '../styles/global.css';
-import { siteTitle, url } from '../lib/archive';
+import { url } from '../lib/archive';
 
 interface Props {
   title?: string;
   description?: string;
+  /** Pages with a dark hero let the header sit on top of it. */
+  overlayHeader?: boolean;
 }
-const { title, description = 'Archive of the Named Data Networking Community Meetings hosted by NIST.' } = Astro.props;
+const {
+  title,
+  description = 'NDNComm, the Named Data Networking community meeting: programs, abstracts and recordings.',
+  overlayHeader = false,
+} = Astro.props;
+const path = Astro.url.pathname;
+const nav = [
+  { href: url(), label: 'Meetings', active: path === url() || /\/\d{4}\/$/.test(path) },
+  { href: url('about/'), label: 'About', active: path.startsWith(url('about/')) },
+];
 ---
 
 <!doctype html>
@@ -14,31 +28,50 @@ const { title, description = 'Archive of the Named Data Networking Community Mee
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title ? `${title} · ${siteTitle}` : siteTitle}</title>
+    <title>{title ? `${title} · NDNComm` : 'NDNComm · Named Data Networking Community Meeting'}</title>
     <meta name="description" content={description} />
+    <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
+    <meta name="theme-color" content="#16110c" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="wrap">
-        <a class="brand" href={url()}>
-          <span class="brand-mark" aria-hidden="true">NDN</span>
-          <span>{siteTitle}</span>
+    <header class:list={['site-header', { overlay: overlayHeader }]}>
+      <div class="wrap header-row">
+        <a class="brand" href={url()} aria-label="NDNComm home">
+          <span class="brand-logo"><img src={url('img/ndn-logo.png')} alt="Named Data Networking" width="110" height="31" /></span>
+          <span class="brand-name">NDNComm</span>
         </a>
-        <span class="tagline">Named Data Networking Community Meetings</span>
+        <nav class="nav">
+          {nav.map((n) => <a href={n.href} class:list={{ active: n.active }}>{n.label}</a>)}
+          <a href="https://named-data.net/" class="nav-ext">named-data.net ↗</a>
+        </nav>
       </div>
     </header>
-    <main class="wrap">
-      <slot />
-    </main>
+
+    <slot />
+
     <footer class="site-footer">
-      <div class="wrap">
-        <p>
-          The NDN Community Meetings listed here were organized and hosted by the
-          <a href="https://www.nist.gov/">National Institute of Standards and Technology (NIST)</a>.
-          This site keeps a community copy of the public event pages, agendas, abstracts and recordings.
-          It is not affiliated with or endorsed by NIST.
-        </p>
-        <p>More about Named Data Networking: <a href="https://named-data.net/">named-data.net</a></p>
+      <div class="wrap footer-grid">
+        <div>
+          <img class="footer-logo" src={url('img/ndn-logo.png')} alt="Named Data Networking" width="140" height="39" />
+          <p>NDNComm is the annual community meeting of the Named Data Networking project and the wider NDN community.</p>
+        </div>
+        <div>
+          <h2>Acknowledgment</h2>
+          <p>
+            NDNComm 2020–2024 were organized and hosted by the
+            <a href="https://www.nist.gov/">National Institute of Standards and Technology (NIST)</a>. Material from
+            those meetings is preserved here from the original NIST event pages, which are credited on each meeting
+            page. This site is not affiliated with or endorsed by NIST.
+          </p>
+        </div>
+        <div>
+          <h2>Community</h2>
+          <ul>
+            <li><a href="https://named-data.net/">Named Data Networking project</a></li>
+            <li><a href="https://www.lists.cs.ucla.edu/mailman/listinfo/ndn-interest">ndn-interest mailing list</a></li>
+            <li><a href={url('about/')}>About this site</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>

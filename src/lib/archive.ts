@@ -2,36 +2,15 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { marked } from 'marked';
-import data from '../data/events.json';
 
 const ARCHIVE = path.resolve('public/archive');
 const NIST = 'https://www.nist.gov';
-
-export interface VideoRef {
-  label: string;
-  kaltura?: string;
-  youtube?: string | null;
-}
-
-export interface Event {
-  year: string;
-  title: string;
-  dates: string;
-  location: string;
-  organizers: string[];
-  nist_url: string;
-  videos: VideoRef[];
-  video_note?: string;
-}
 
 interface Doc {
   file: string;
   url: string;
   page: string | null;
 }
-
-export const siteTitle = data.title;
-export const events = data.events as Event[];
 
 /** Prefix a site-relative path with the configured base path. */
 export function url(p = '') {

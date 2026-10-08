@@ -1,0 +1,40 @@
+{
+  "title": "NDN Community Meeting 2024",
+  "start": "2024-03-06",
+  "end": "2024-03-07",
+  "format": "hybrid",
+  "venue": "National Cybersecurity Center of Excellence (NCCoE)",
+  "city": "Rockville, MD, USA",
+  "host": {
+    "name": "National Institute of Standards and Technology (NIST)",
+    "short": "NIST",
+    "url": "https://www.nist.gov/"
+  },
+  "organizers": [
+    {
+      "name": "Lotfi Benmohamed",
+      "affiliation": "NIST"
+    },
+    {
+      "name": "Davide Pesavento",
+      "affiliation": "NIST"
+    },
+    {
+      "name": "Marc Mosko",
+      "affiliation": "SRI"
+    }
+  ],
+  "original_page": "https://www.nist.gov/news-events/events/ndncomm2024",
+  "videos": [
+    {
+      "label": "Day 1 — March 6, 2024",
+      "kaltura": "1_a7qttcel",
+      "youtube": null
+    },
+    {
+      "label": "Day 2 — March 7, 2024",
+      "kaltura": "1_yxz7cuen",
+      "youtube": null
+    }
+  ]
+}

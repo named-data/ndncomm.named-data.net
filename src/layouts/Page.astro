@@ -1,0 +1,19 @@
+---
+// Layout for plain Markdown pages in src/pages/*.md (set `layout: ../layouts/Page.astro` in frontmatter).
+import Base from './Base.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} overlayHeader>
+  <section class="hero meeting-hero">
+    <div class="wrap wrap-narrow">
+      {frontmatter.kicker && <span class="eyebrow"><span class="dot"></span>{frontmatter.kicker}</span>}
+      <h1>{frontmatter.title}</h1>
+      {frontmatter.description && <p class="lede">{frontmatter.description}</p>}
+    </div>
+  </section>
+  <article class="wrap wrap-narrow page-body">
+    <slot />
+  </article>
+</Base>

@@ -1,119 +1,190 @@
 ---
 import Base from '../layouts/Base.astro';
-import {
-  events,
-  url,
-  documents,
-  agendaText,
-  kalturaInfo,
-  formatDuration,
-  pageHtml,
-  waybackUrl,
-  type Event,
-} from '../lib/archive';
+import Icon from '../components/Icon.astro';
+import Program from '../components/Program.astro';
+import { url, documents, kalturaInfo, formatDuration, pageHtml, waybackUrl } from '../lib/archive';
+import { allMeetings, dateRange, FORMAT_LABEL, isUpcoming, programFor, type Meeting } from '../lib/meetings';
 
-export function getStaticPaths() {
-  return events.map((event) => ({ params: { year: event.year }, props: { event } }));
+export async function getStaticPaths() {
+  return (await allMeetings()).map((meeting) => ({ params: { year: meeting.id }, props: { meeting } }));
 }
 
-const { event } = Astro.props as { event: Event };
-const docs = documents(event.year);
-const agenda = agendaText(event.year);
-const kaltura = kalturaInfo(event.year);
-const body = pageHtml(event.year);
+const { meeting } = Astro.props as { meeting: Meeting };
+const m = meeting.data;
+const year = meeting.id;
+const upcoming = isUpcoming(meeting);
+const program = await programFor(year);
+const docs = documents(year);
+const kaltura = kalturaInfo(year);
+const original = m.original_page ? pageHtml(year) : '';
+const place = [m.venue, m.city].filter(Boolean).join(', ');
+const initials = (n: string) =>
+  n
+    .split(/\s+/)
+    .filter((w) => /^\p{Lu}/u.test(w))
+    .map((w) => w[0])
+    .slice(0, 2)
+    .join('');
 ---
 
-<Base title={event.title} description={`${event.title}, ${event.dates}. Agenda, abstracts and recordings.`}>
-  <nav class="crumbs"><a href={url()}>← All meetings</a></nav>
-
-  <header class="event-header">
-    <p class="eyebrow">NDNComm {event.year}</p>
-    <h1>{event.title}</h1>
-    <p class="meta">{event.dates} · {event.location}</p>
-  </header>
-
-  <aside class="provenance">
-    <p>
-      Organized and hosted by the <strong>National Institute of Standards and Technology (NIST)</strong>.
-      This is an archived copy of the original event page at
-      <a href={event.nist_url}>{event.nist_url.replace('https://', '')}</a>
-      (<a href={waybackUrl(event.nist_url)}>Wayback Machine copy</a>).
-    </p>
-  </aside>
-
-  <section>
-    <h2>Organizers</h2>
-    <ul class="organizers">
-      {event.organizers.map((o) => <li>{o}</li>)}
-    </ul>
-  </section>
-
-  <section>
-    <h2>Recordings</h2>
-    {
-      event.videos.length > 0 && (
-        <div class="videos">
-          {event.videos.map((v) => {
-            const k = v.kaltura ? kaltura[v.kaltura] : undefined;
-            return (
-              <figure class="video">
-                {v.youtube ? (
-                  <div class="player">
-                    <iframe
-                      src={`https://www.youtube-nocookie.com/embed/${v.youtube}`}
-                      title={v.label}
-                      loading="lazy"
-                      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    />
-                  </div>
-                ) : (
-                  <div class="player player-pending">
-                    <span>Video upload to YouTube pending</span>
-                  </div>
-                )}
-                <figcaption>
-                  <strong>{v.label}</strong>
-                  {k && <span class="muted"> · {formatDuration(k.duration_sec)}</span>}
-                </figcaption>
-              </figure>
-            );
-          })}
-        </div>
-      )
-    }
-    {event.video_note && <p class="note">{event.video_note}</p>}
-  </section>
-
-  <section>
-    <h2>Program</h2>
-    <div class="doc-buttons">
-      {
-        docs.map((d) => (
-          <a class="button" href={d.href}>
-            {d.kind} <span class="muted">PDF</span>
-          </a>
-        ))
-      }
+<Base title={m.title} description={`${m.title}, ${dateRange(m.start, m.end)}: program, abstracts and recordings.`} overlayHeader>
+  <section class="hero meeting-hero">
+    <div class="wrap">
+      <a class="crumbs" href={url()}><Icon name="arrow" size={14} />All meetings</a>
+      <div>
+        <span class="eyebrow"><span class="dot"></span>NDNComm {year}</span>
+        <span class:list={['status-pill', { upcoming }]}>{upcoming ? 'Upcoming' : FORMAT_LABEL[m.format]}</span>
+      </div>
+      <h1>{m.title}</h1>
+      <div class="hero-facts">
+        <span class="fact"><Icon name="calendar" />{dateRange(m.start, m.end)}</span>
+        <span class="fact"><Icon name="pin" />{place || 'Online'}{place && m.format === 'hybrid' ? ' · and online' : ''}</span>
+        {m.host && <span class="fact"><Icon name="users" />Hosted by {m.host.short}</span>}
+      </div>
+      {m.summary && <p class="lede" style="margin-top: 18px">{m.summary}</p>}
+      <div class="btn-row">
+        {program && <a class="btn btn-primary" href="#program">View program <Icon name="arrow" size={16} /></a>}
+        {m.videos.length > 0 && <a class="btn btn-ghost" href="#recordings"><Icon name="play" size={15} />Recordings</a>}
+        {m.links?.registration && <a class="btn btn-primary" href={m.links.registration}>Register</a>}
+        {m.links?.call_for_submissions && <a class="btn btn-ghost" href={m.links.call_for_submissions}>Call for submissions</a>}
+      </div>
     </div>
-    {
-      agenda && (
-        <details class="agenda" open>
-          <summary>Agenda</summary>
-          <pre>{agenda}</pre>
-        </details>
-      )
-    }
   </section>
 
-  {
-    body && (
-      <section>
-        <details class="original">
-          <summary>Original event page text (as published by NIST)</summary>
-          <div class="prose" set:html={body} />
-        </details>
-      </section>
-    )
-  }
+  <div class="wrap">
+    {
+      m.original_page && m.host && (
+        <aside class="provenance">
+          <Icon name="archive" size={20} />
+          <p>
+            <strong>Organized and hosted by the {m.host.name}.</strong> This page preserves the program, abstracts and
+            recordings from the original event page at <a href={m.original_page}>{m.original_page.replace('https://', '')}</a>{' '}
+            (<a href={waybackUrl(m.original_page)}>Wayback Machine copy</a>).
+          </p>
+        </aside>
+      )
+    }
+
+    <div class="page-grid">
+      <div>
+        {
+          (m.videos.length > 0 || m.video_note) && !upcoming && (
+            <section class="block" id="recordings">
+              <h2>Recordings</h2>
+              {m.videos.length > 0 && <p class="sub">Full-length recordings of the meeting.</p>}
+              <div class="videos">
+                {m.videos.map((v) => {
+                  const k = v.kaltura ? kaltura[v.kaltura] : undefined;
+                  return (
+                    <figure class="video-card" style="margin: 0">
+                      {v.youtube ? (
+                        <div class="player">
+                          <iframe
+                            src={`https://www.youtube-nocookie.com/embed/${v.youtube}`}
+                            title={v.label}
+                            loading="lazy"
+                            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                          />
+                        </div>
+                      ) : (
+                        <div class="player player-pending">
+                          <span class="play-ring"><Icon name="play" size={24} /></span>
+                          <span class="pending-label">Coming soon to YouTube</span>
+                          {k && <span class="duration">{formatDuration(k.duration_sec)}</span>}
+                        </div>
+                      )}
+                      <figcaption class="video-meta">
+                        <b>{v.label.split(' — ')[0]}</b>
+                        <span>{v.label.split(' — ')[1]}</span>
+                      </figcaption>
+                    </figure>
+                  );
+                })}
+              </div>
+              {m.video_note && (
+                <p class="note">
+                  <Icon name="clock" />
+                  <span>{m.video_note}</span>
+                </p>
+              )}
+            </section>
+          )
+        }
+
+        {
+          program && (
+            <section class="block" id="program">
+              <h2>Program</h2>
+              <p class="sub">Select a talk to read its abstract.</p>
+              <Program program={program} />
+            </section>
+          )
+        }
+
+        {
+          original && (
+            <section class="block">
+              <details class="original">
+                <summary>
+                  <Icon name="file" />
+                  Original event page text, as published by {m.host?.short ?? 'the host'}
+                  <span class="toggle">+</span>
+                </summary>
+                <div class="prose" set:html={original} />
+              </details>
+            </section>
+          )
+        }
+      </div>
+
+      <aside>
+        {
+          m.organizers.length > 0 && (
+            <div class="side-card">
+              <h3>Organizers</h3>
+              <ul class="people">
+                {m.organizers.map((o) => (
+                  <li>
+                    <span class="avatar">{initials(o.name)}</span>
+                    <div>
+                      <b>{o.name}</b>
+                      <span>{o.affiliation}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+        {
+          (docs.length > 0 || m.links?.slides) && (
+            <div class="side-card">
+              <h3>Documents</h3>
+              <ul class="doc-list">
+                {docs.map((d) => (
+                  <li>
+                    <a class="doc-link" href={d.href}>
+                      <Icon name="file" />
+                      {d.kind}
+                      <small>PDF</small>
+                    </a>
+                  </li>
+                ))}
+                {m.links?.slides && (
+                  <li>
+                    <a class="doc-link" href={m.links.slides}>
+                      <Icon name="external" />
+                      Presentation slides
+                      <small>Drive</small>
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </div>
+          )
+        }
+      </aside>
+    </div>
+  </div>
 </Base>

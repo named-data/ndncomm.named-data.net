@@ -1,0 +1,700 @@
+{
+  "timezone": "US Eastern Time (UTC−5)",
+  "days": [
+    {
+      "date": "2024-03-06",
+      "items": [
+        {
+          "start": "10:00",
+          "end": "10:10",
+          "kind": "opening",
+          "title": "Opening",
+          "speakers": [
+            {
+              "name": "Lotfi Benmohamed",
+              "affiliation": "NIST"
+            },
+            {
+              "name": "Marc Mosko",
+              "affiliation": "SRI"
+            },
+            {
+              "name": "Davide Pesavento",
+              "affiliation": "NIST"
+            }
+          ]
+        },
+        {
+          "start": "10:10",
+          "end": "11:10",
+          "kind": "session",
+          "title": "Session 1: Forwarding and Applications",
+          "chair": {
+            "name": "Marc Mosko",
+            "affiliation": "SRI"
+          },
+          "talks": [
+            {
+              "title": "Low-Earth-Orbit Satellite Constellations and Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Beichuan Zhang",
+                  "affiliation": "The University of Arizona"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Sirapop Theeranantachai",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Beichuan Zhang",
+                  "affiliation": "The University of Arizona"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "Large low-earth-orbit (LEO) satellite constellations such as Starlink can provide Internet access to users around the globe and low-latency communication over long distance. To achieve their full potential would require scalable and efficient routing and forwarding using inter-satellite links (ISLs). This talk will discuss the basic characteristics of LEO constellations, the implications on network design, and the potential and challenges of applying NDN to such a network environment."
+            },
+            {
+              "title": "NDN for Data-Intensive Science Experiments: Progress and Future Directions",
+              "speakers": [
+                {
+                  "name": "Edmund Yeh",
+                  "affiliation": "Northeastern University"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Edmund Yeh",
+                  "affiliation": "Northeastern University"
+                },
+                {
+                  "name": "Harvey Newman",
+                  "affiliation": "Caltech"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Jason Cong",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Susmit Shannigrahi",
+                  "affiliation": "Tennessee Tech"
+                }
+              ],
+              "abstract": "The NDN for Data-Intensive Science Experiments (N-DISE) project focuses on designing and implementing a new, highly efficient and field-tested data distribution, caching, access and analysis system for the Large Hadron Collider (LHC) high energy physics (HEP) network and other major science programs. In this talk, we review the progress of the N-DISE project over the past three years, and discuss future directions."
+            },
+            {
+              "title": "NDN based CNI for Kubernetes: Unlocking Secure, Smart, and On-Demand Communication",
+              "speakers": [
+                {
+                  "name": "Tushar Sood",
+                  "affiliation": "Tata Communications"
+                },
+                {
+                  "name": "Mohit Tahiliani",
+                  "affiliation": "National Institute of Technology Karnataka, Surathkal"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Tushar Sood",
+                  "affiliation": "Tata Communications"
+                },
+                {
+                  "name": "Mohit P Tahiliani",
+                  "affiliation": "National Institute of Technology Karnataka, Surathkal"
+                }
+              ],
+              "abstract": "This work-in-progress introduces an innovative Named Data Networking (NDN) based Container Networking Interface (CNI) architecture to address the evolving challenges in containerized workload communication within cloud and edge computing environments. By leveraging NDN, we intend to offer enhanced security, improved efficiency, and dynamic intelligence, presenting a promising alternative to existing solutions. Through a comprehensive analysis, we aim to highlight the architectural advantages of NDN-CNI over conventional options, particularly emphasizing its benefits in pod-to-pod, pod-to-service, and external-to-service communications. Although NDN is still not widely adopted, its integration as an overlay on existing IP infrastructure demonstrates promising potential, especially in intra-cluster deployments. We intend to facilitate pure NDN-based communication within nodes and NDN overlay communication between nodes, ensuring compatibility and scalability. We believe that integrating NDN seamlessly into Kubernetes clusters promises heightened security, efficient routing, dynamic service discovery, and simplified ingress configuration, paving the way for a new paradigm in Kubernetes communication."
+            }
+          ]
+        },
+        {
+          "start": "11:10",
+          "end": "12:00",
+          "kind": "session",
+          "title": "Session 2: Emerging Applications",
+          "chair": {
+            "name": "Christos Papadopoulos",
+            "affiliation": "University of Memphis"
+          },
+          "talks": [
+            {
+              "title": "Data-oriented, Decentralized, Daring: Opportunities and Research Challenges for an Information-Centric Web",
+              "speakers": [
+                {
+                  "name": "Dirk Kutscher",
+                  "affiliation": "HKUST"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Dirk Kutscher",
+                  "affiliation": "HKUST"
+                }
+              ],
+              "abstract": "Research and development in ICN has led to different communication patterns such as Sync and API implementations such as CNL. It is now time to think about how to leverage Information-Centric principles for providing better foundations for hypermedia applications in the future web. This talk will talk about how ICN could possibly help, what could be fruitful future research directions, and why web3 and dweb are not the answer."
+            },
+            {
+              "title": "Naming in Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "Names play a fundamental role in the NDN design. This talk elaborates the three important roles of names in developing applications running over NDN, and discusses the role of DNS names in NDN data names."
+            },
+            {
+              "title": "Naming a Microverse of One's Own",
+              "speakers": [
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "This lightning talk uses the example of a \"microverse\" to introduce naming challenges and potential differentiating strategies in NDN. Specifically, it discusses the opportunity to support interoperability of secure web objects that is protocol- and application-independent in the conventional sense of those terms."
+            }
+          ]
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "13:00",
+          "end": "14:00",
+          "kind": "session",
+          "title": "Session 3: Internet of Things",
+          "chair": {
+            "name": "Beichuan Zhang",
+            "affiliation": "University of Arizona"
+          },
+          "talks": [
+            {
+              "title": "Analysing NDN and MQTT performance for Industrial IoT Scenarios",
+              "speakers": [
+                {
+                  "name": "Parth Anand",
+                  "affiliation": "fortiss"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Parth Anand",
+                  "affiliation": "fortiss"
+                },
+                {
+                  "name": "Rute C. Sofia",
+                  "affiliation": "fortiss"
+                }
+              ],
+              "abstract": "In Industrial IoT, Publish-Subscribe approaches such as MQTT or OPC-UA are being heavily used to provide support to data exchange across environments such as shop-floors, warehouses, etc. Host-based IP PubSub approaches are not fully suitable to IIoT environments, as they are not data-oriented but host-oriented. IIoT environments would benefit from a decentraliised communication pattern, data-oriented, to support publishers and subscribers in a many-to-many asynchronous data exchange, which ICN/NDN provides. This talk debates on the advantages of NDN in comparison to MQTT as an example of a broker-based PubSub approach, for IIoT environments. We have evaluated NDN against MQTT on our open testbed lab involving embedded devices, and present a performance evaluation of NDN against MQTT in terms of latency (time to completion of tasks), and messaging overhead. We will also present the current steps we are developing in the testbed towards an analysis of NDN vs. MQTT involving mobile embedded robots."
+            },
+            {
+              "title": "Deadline-Aware Named Data Networking for Time-Sensitive IoT Applications",
+              "speakers": [
+                {
+                  "name": "Afia Anjum",
+                  "affiliation": "University of Texas at Arlington"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Afia Anjum",
+                  "affiliation": "University of Texas at Arlington"
+                },
+                {
+                  "name": "Sena Hounsinou",
+                  "affiliation": "Metro State University"
+                },
+                {
+                  "name": "Habeeb Olufowobi",
+                  "affiliation": "University of Texas at Arlington"
+                }
+              ],
+              "abstract": "Named Data Networking (NDN) has evolved as a networking model that can facilitate Internet of Things (IoT) applications by providing a name-based communication model, in-network caching, and inherent support for data-centric security. However, despite the benefits, the best-effort NDN cannot offer the deterministic data delivery required by safety-critical IoT applications. This paper proposes a novel deadline-aware NDN protocol that utilizes a critical deadline first scheduler to prioritize traffic based on the approaching deadline. Evaluation results show that the proposed deadline-aware NDN can meet the communication needs of time-sensitive IoT applications."
+            },
+            {
+              "title": "Developing a Mobile Application for IoT using Named Data Networking (IoT-NDN) with FIWARE",
+              "speakers": [
+                {
+                  "name": "Mohamed Hail",
+                  "affiliation": "University of Lübeck"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Ahmed M. Hail",
+                  "affiliation": "University of Lübeck"
+                }
+              ],
+              "abstract": "This work presents the development of a mobile application for IoT over Named Data Networking (IoT-NDN) using Flutter, NDN, and NFD, integrated with FIWARE. The system utilizes ESP32 DevKits as sensor nodes, running NDN, to facilitate seamless communication within the network. The primary objective is to build a testbed where sensor nodes can be controlled via the mobile app, enabling efficient data exchange and management. Key functionalities include sensor data transmission to FIWARE for storage and analysis. Through the integration of NDN principles and the utilization of Flutter for app development, the project aims to bridge the gap between IoT networks and user-friendly mobile interfaces. By leveraging FIWARE integration, the system enhances scalability and interoperability, paving the way for robust IoT solutions. This work provides insights into the design, implementation, and deployment of the IoT-NDN mobile application, offering valuable contributions to the field of IoT and NDN integration."
+            }
+          ]
+        },
+        {
+          "start": "14:00",
+          "end": "14:20",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "14:20",
+          "end": "15:20",
+          "kind": "session",
+          "title": "Session 4: Testbed and Applications",
+          "chair": {
+            "name": "Susmit Shannigrahi",
+            "affiliation": "Tennessee Tech"
+          },
+          "talks": [
+            {
+              "title": "Updates on the NDN Testbed",
+              "speakers": [
+                {
+                  "name": "Varun Patil",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Varun Patil",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Tianyuan Yu",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "The global NDN Testbed is a real NDN deployment spanning four continents. We discuss the current status of the testbed topology and plans for expansion, recent changes to the testbed and how you can utilize the testbed for your research, along with ongoing efforts for improving the testbed."
+            },
+            {
+              "title": "Workspace: A Data-Oriented, Decentralized Collaboration Web App",
+              "speakers": [
+                {
+                  "name": "Xinyu Ma",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Tianyuan Yu",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Xinyu Ma",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Varun Patil",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Yekta Kocaoğullar",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "Remote collaborations are one of the popular applications on today’s Internet. However, the existing collaborative apps are all hosted on the cloud servers, largely owned by a small number of providers. In these apps, although contents are generated by end users, they can only collaborate through connections to clouds. This work explores an alternative path to building collaborative applications by making use of named, secured Web Objects (SWO). Inspired from the original data-orientation vision of web, we developed a decentralized collaborative application dubbed Workspace. Workspace users establish trust relations among each other, secure their data productions directly, exchange SWO through rendezvous points, and support users with intermittent connectivity."
+            },
+            {
+              "title": "Distributed User-Centric mHealth Data-Sharing Application Running on NDN Testbed",
+              "speakers": [
+                {
+                  "name": "Adam Thieme",
+                  "affiliation": "The University of Memphis"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Adam Thieme",
+                  "affiliation": "The University of Memphis"
+                },
+                {
+                  "name": "Suravi Regmi",
+                  "affiliation": "The University of Memphis"
+                },
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "The University of Memphis"
+                }
+              ],
+              "abstract": "Mobile health (mHealth) data collection and sharing have made significant strides, yet challenges persist in achieving fine-grained contextual access control and facilitating real-time data sharing. To address these challenges, we introduced an enhanced version of mGuard, a distributed NDN-based data sharing system. This iteration of mGuard focuses on a user-centric approach, enhancing the user interface (UI) and streamlining access control policies for improved usability.\n\nThe demonstration will showcase the distributed nature of mGuard, to ensure secure data sharing across networks. Additionally, we will present the upgraded UI, featuring more fine-grained policies and an intuitive graphical interface enabling consumers to subscribe/unsubscribe to distributed data streams and retrieve corresponding information. Leveraging the NDN testbed, live demonstrations will illustrate the integration of these enhancements within the mGuard framework."
+            }
+          ]
+        },
+        {
+          "start": "15:20",
+          "end": "15:40",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "15:40",
+          "end": "17:00",
+          "kind": "panel",
+          "title": "Panel 1: Building an Open-Source Ecosystem around NDN",
+          "chair": {
+            "name": "Davide Pesavento",
+            "affiliation": "NIST"
+          },
+          "panelists": [
+            {
+              "name": "Randy King",
+              "affiliation": "Operant Networks"
+            },
+            {
+              "name": "Songwu Lu",
+              "affiliation": "UCLA"
+            },
+            {
+              "name": "Christos Papadopoulos",
+              "affiliation": "University of Memphis"
+            },
+            {
+              "name": "Constantin Serban",
+              "affiliation": "Peraton Labs"
+            }
+          ],
+          "abstract": "After years of strong research activity and community building, the NDN team is ready to explore the creation of an Open-Source Ecosystem (OSE) to empower the user community and drive further innovation. There is a significant difference between running a research project (as the NDN team has done so far) and creating, nurturing, and managing an OSE. An OSE poses challenges that are not present in a research project, such as establishing a guiding vision, developing the appropriate governance structure, expanding and coordinating a productive community of developers, and establishing an effective management organization. This panel brings together experts from industry and academia to discuss the exciting opportunities and unique challenges associated with this transition."
+        },
+        {
+          "start": "17:00",
+          "kind": "closing",
+          "title": "Day 1 Closing"
+        }
+      ]
+    },
+    {
+      "date": "2024-03-07",
+      "items": [
+        {
+          "start": "10:00",
+          "end": "10:50",
+          "kind": "session",
+          "title": "Session 5: Security and Trust Management",
+          "chair": {
+            "name": "Alex Afanasyev",
+            "affiliation": "Florida International University"
+          },
+          "talks": [
+            {
+              "title": "A New API in Support of NDN Trust Schema",
+              "speakers": [
+                {
+                  "name": "Yekta Kocaoğullar",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Tianyuan Yu",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Xinyu Ma",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Yekta Kocaoğullar",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "The decade-long experiences from developing applications over Named Data Networking (NDN) have taught us the importance of well-designed libraries that offer support to application developers to support data security. NDN trust schema provides a critical component in the NDN security support, however its implementation and support only started receiving significant attention in recent years. This work provides a summary of the existing API support for trust schema, and takes a step forward by developing a new trust schema API, named Envelope. Envelope addresses the application requirements by offering comprehensive trust schema functionalities, an easy-to-write schema language, and an extensible design."
+            },
+            {
+              "title": "VerSec Schema Visualization",
+              "speakers": [
+                {
+                  "name": "Varun Patil",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Varun Patil",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "Writing Trust Schema can be a challenging task as they grow more complex. This demo showcases NDN-Play's abilities to help write and visualize VerSec schema in the browser."
+            },
+            {
+              "title": "CLedger: A Secure Distributed Certificate Ledger via Named Data",
+              "speakers": [
+                {
+                  "name": "Tianyuan Yu",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Tianyuan Yu",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Xinyu Ma",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Varun Patil",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "Named-Data Networking (NDN) is a novel network that secures network communication by fetching semantically named and secured data. All data packets in NDN are signed by producers and verified by data consumers. Therefore, it is vital to have producers’ certificates available all the time. In this paper, we describe the design of CLedger, a secure distributed certificate ledger, to ensure certificate availability in NDN. CLedger logs certificate records in an immutable Directed Acyclic Graph (DAG) structure and replicates the DAG among a set of distributed loggers. We implemented CLedger using NDN’s pub/sub API, and evaluated our design through an emulated deployment setting. Our initial evaluation results show that CLedger is effective, efficient, and resilient to failures."
+            }
+          ]
+        },
+        {
+          "start": "10:50",
+          "end": "12:10",
+          "kind": "panel",
+          "title": "Panel 2: From Local-First to Fully Decentralized Applications",
+          "chair": {
+            "name": "Lixia Zhang",
+            "affiliation": "UCLA"
+          },
+          "panelists": [
+            {
+              "name": "Zhongren Cao",
+              "affiliation": "C-3 Comm Systems"
+            },
+            {
+              "name": "Rahul Gupta",
+              "affiliation": "Independent Researcher"
+            },
+            {
+              "name": "Xinyu Ma",
+              "affiliation": "UCLA"
+            },
+            {
+              "name": "Wilfred Pinfold",
+              "affiliation": "OpenCommons"
+            },
+            {
+              "name": "Tianyuan Yu",
+              "affiliation": "UCLA"
+            }
+          ],
+          "abstract": "There exist many ongoing efforts aiming to steer Internet applications towards decentralized realizations; one such work was presented at last IETF \"Local-first software, resilient and secure collaboration\". This panel will show case examples of decentralized designs, articulate their commonalities and differences, share experience from the different efforts, and identify remaining challenges in building secure, resilient, and easy to use and deploy codebase with well-defined API to facilitate new generations of decentralized apps."
+        },
+        {
+          "start": "12:10",
+          "end": "13:10",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "13:10",
+          "end": "13:50",
+          "kind": "other",
+          "title": "Hackathon project pitches"
+        },
+        {
+          "start": "13:50",
+          "end": "15:10",
+          "kind": "panel",
+          "title": "Panel 3: Present and Future of Network Security Framework",
+          "chair": {
+            "name": "Alex Afanasyev",
+            "affiliation": "Florida International University"
+          },
+          "panelists": [
+            {
+              "name": "Marc Mosko",
+              "affiliation": "SRI"
+            },
+            {
+              "name": "Davide Pesavento",
+              "affiliation": "NIST"
+            },
+            {
+              "name": "Jeff White",
+              "affiliation": "Dell Technologies"
+            }
+          ],
+          "abstract": "Network security remains one of the biggest challenges on the Internet. Currently, we have several scattered solutions at different levels providing a level of security and privacy. This panel aims to identify the scope of today’s solutions, current strengths, potentially missing functions, and discuss a potential for a comprehensive security framework for future security needs."
+        },
+        {
+          "start": "15:10",
+          "end": "15:30",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "kind": "session",
+          "title": "Session 6: Infrastructure and Services",
+          "chair": {
+            "name": "Saurab Dulal",
+            "affiliation": "Walmart"
+          },
+          "talks": [
+            {
+              "title": "Hydra: An NDN based federated storage system for multi-organizational science data",
+              "speakers": [
+                {
+                  "name": "Susmit Shannigrahi",
+                  "affiliation": "Tennessee Tech"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Susmit Shannigrahi",
+                  "affiliation": "Tennessee Tech"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "FIU"
+                }
+              ],
+              "abstract": "We provide updates on the Hydra project that aims to build a federated repository over NDN. We plan to show our deployment on FABRIC and also plan to do a demo of the prototype."
+            },
+            {
+              "title": "NDN for AI: Starting From A Data-Centric Collective Communication",
+              "speakers": [
+                {
+                  "name": "Teng Liang",
+                  "affiliation": "Peng Cheng Laboratory"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Teng Liang",
+                  "affiliation": "Peng Cheng Laboratory"
+                },
+                {
+                  "name": "Beichuan Zhang",
+                  "affiliation": "The University of Arizona"
+                }
+              ],
+              "abstract": "Generative AI may depend on large models, which require a robust and scalable system to collaborate massive computing resources. Such systems can be complicated to achieve high performance built on top of the end-to-end architecture. NDN provides a data-centric architecture, which is potentially more suitable for such systems, given its architectural benefits demonstrated in other scenarios. In this presentation, I will explain the design of ndn-allreduce, a data-centric collective communication, which is the first step of NDN for AI. Additionally, potential benefits and research directions will be discussed."
+            },
+            {
+              "title": "Traffic Measurement on the Global NDN Testbed",
+              "speakers": [
+                {
+                  "name": "Davide Pesavento",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Junxiao Shi",
+                  "affiliation": "NIST"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Davide Pesavento",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Junxiao Shi",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Sankalpa Timilsina",
+                  "affiliation": "Tennessee Tech"
+                },
+                {
+                  "name": "Susmit Shannigrahi",
+                  "affiliation": "Tennessee Tech"
+                },
+                {
+                  "name": "Lotfi Benmohamed",
+                  "affiliation": "NIST"
+                }
+              ],
+              "abstract": "High-quality network traffic measurements from realistic network deployments are crucial to analyze and better understand emerging network technologies for the purpose of maturing them. However, achieving this measurement goal for the NDN protocol remains a challenge mainly due to the lack of real-world deployments. At the ACM ICN 2023 conference, we announced the first non-synthetic dataset of NDN traffic traces, captured directly from the actual routers of the official NDN testbed, and made it openly available to the research community. In this talk, we will provide an update on our ongoing trace collection project, which recently grew to cover the entire global testbed, and discuss potential next steps."
+            },
+            {
+              "title": "NDN Service Framework (NDNSF)",
+              "speakers": [
+                {
+                  "name": "Tianxing Ma",
+                  "affiliation": "University of Memphis"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Tianxing Ma",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                }
+              ],
+              "abstract": "NDNSF is a secure service framework that offers encrypted service communication and permission management between service providers and users. In NDNSF, a service controller will be responsible for automated key distribution and service permission management during bootstrap. However, secure communication and permission control can be achieved without the controller after bootstrap. The service request/response messages' names are published via a sync protocol. The message data is encrypted using NAC-ABE and then later served/stored using an NDN repository. When a service provider receives a Service Request from a new user, it will initiate a Permission Challenge by sending an encrypted token. If the service user is authorized to use the service, they can decrypt the token and respond with a Permission Challenge Response. Later, the service provider will start processing the request and publish a Service Response Message if the Permission Challenge Response is valid.\n\nFor the time being, we will bootstrap manually and demonstrate the entire Service Request/Response/Permission-Challenge/Permission-Challenge-Response process in the demo."
+            },
+            {
+              "title": "Edge Challenges with Data Management and Networking",
+              "speakers": [
+                {
+                  "name": "Jeff White",
+                  "affiliation": "Dell Technologies"
+                }
+              ],
+              "authors": [
+                {
+                  "name": "Jeff White",
+                  "affiliation": "Dell Technologies"
+                }
+              ],
+              "abstract": "Edge is an accelerating new computational architecture deployment framework that is largely driven by the emergence of data intensive applications requiring time sensitive processing such as AI/ML, Environmental Simulation, XR/VR, Industry 4.0, etc. This presentation explores the technical challenges of data management in an Edge context."
+            }
+          ]
+        },
+        {
+          "start": "17:00",
+          "kind": "closing",
+          "title": "Closing"
+        }
+      ]
+    }
+  ]
+}

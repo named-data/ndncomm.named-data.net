@@ -1,0 +1,68 @@
+---
+// Decorative: a small NDN network where Interests travel toward data by name.
+const nodes = [
+  { id: 'a', x: 80, y: 90, name: '/ndn/edu/ucla' },
+  { id: 'b', x: 300, y: 60, name: '/ndn/org/nist' },
+  { id: 'c', x: 200, y: 220, name: null },
+  { id: 'd', x: 430, y: 200, name: '/ndncomm/2024/program' },
+  { id: 'e', x: 90, y: 340, name: '/ndn/edu/memphis' },
+  { id: 'f', x: 330, y: 360, name: '/video/day1/seg=42' },
+];
+const edges: [string, string][] = [
+  ['a', 'c'], ['b', 'c'], ['c', 'd'], ['c', 'e'], ['c', 'f'], ['b', 'd'], ['d', 'f'], ['a', 'b'],
+];
+const at = (id: string) => nodes.find((n) => n.id === id)!;
+const path = ([s, t]: [string, string]) => {
+  const a = at(s), b = at(t);
+  const mx = (a.x + b.x) / 2 + (b.y - a.y) * 0.12;
+  const my = (a.y + b.y) / 2 - (b.x - a.x) * 0.12;
+  return `M${a.x},${a.y} Q${mx},${my} ${b.x},${b.y}`;
+};
+const flows = [
+  { d: path(['e', 'c']) + ' ' + path(['c', 'd']).replace(/^M[^Q]+/, ''), dur: 5.5, begin: 0 },
+  { d: path(['a', 'c']) + ' ' + path(['c', 'f']).replace(/^M[^Q]+/, ''), dur: 6.5, begin: 1.8 },
+  { d: path(['b', 'd']), dur: 4, begin: 0.9 },
+];
+---
+
+<svg class="hero-graphic" viewBox="0 0 520 430" role="img" aria-label="Illustration of a named-data network">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dd9a17" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#dd9a17" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="edge" x1="0" x2="1">
+      <stop offset="0%" stop-color="#dd9a17" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#c24e1b" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <circle cx="200" cy="220" r="150" fill="url(#glow)" opacity="0.5" />
+  {edges.map((e) => <path d={path(e)} fill="none" stroke="url(#edge)" stroke-width="1.6" stroke-dasharray="4 5" />)}
+  {
+    flows.map((f) => (
+      <circle r="4" fill="#fdf9f2" class="packet">
+        <animateMotion dur={`${f.dur}s`} begin={`${f.begin}s`} repeatCount="indefinite" path={f.d} />
+      </circle>
+    ))
+  }
+  {
+    nodes.map((n) => (
+      <g>
+        <circle cx={n.x} cy={n.y} r={n.name ? 9 : 14} fill="#16110c" stroke="#dd9a17" stroke-width="2" />
+        <circle cx={n.x} cy={n.y} r={n.name ? 3.5 : 5} fill="#dd9a17" />
+        {n.name && (
+          <g transform={`translate(${Math.min(n.x - 12, 520 - n.name.length * 7.4 - 22)}, ${n.y + 18})`}>
+            <rect width={n.name.length * 7.4 + 20} height="26" rx="13" fill="rgb(253 249 242 / 0.07)" stroke="rgb(253 249 242 / 0.2)" />
+            <text x="10" y="17.5" fill="#fdf9f2" font-family="'JetBrains Mono Variable', monospace" font-size="12.2">{n.name}</text>
+          </g>
+        )}
+      </g>
+    ))
+  }
+</svg>
+
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    .packet { display: none; }
+  }
+</style>

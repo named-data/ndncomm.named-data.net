@@ -1,4 +1,4 @@
-# NDNComm archive
+# NDNComm website
 
 Archive of the Named Data Networking Community Meeting (NDNComm) pages that
 were hosted by the National Institute of Standards and Technology (NIST) on
@@ -24,10 +24,16 @@ npm run dev      # http://localhost:4321/
 npm run build    # static site in dist/
 ```
 
-- `src/data/events.json`: per-year details (dates, organizers, original NIST URL) and the video list.
+- `src/content/meetings/<year>.json`: one file per meeting (dates, venue, organizers, host, links, videos).
   When a recording is on YouTube, put its video ID in the `"youtube"` field and push.
+  A meeting whose end date is in the future is shown as upcoming; add `links.registration`,
+  `links.call_for_submissions` and `deadlines` for it. The schema is in `src/content.config.ts`.
+- `src/content/programs/<year>.json`: the structured program (days, sessions, talks, abstracts).
+  The 2020–2024 programs were transcribed from the agenda and abstracts PDFs.
+- `src/pages/*.md`: plain Markdown pages (see `about.md`), using `src/layouts/Page.astro`.
 - `src/pages/index.astro`: the front page. `src/pages/[year].astro`: one page per meeting.
-- `public/archive/<year>/`: the scraped material, served as-is.
+- `public/archive/<year>/`: the scraped NIST material, served as-is.
+- `public/img/ndn-logo.png`: the NDN logo (an SVG version would be sharper).
 
 ## Scraped material
 

@@ -1,0 +1,28 @@
+{
+  "title": "NDN Community Meeting 2020",
+  "start": "2020-09-10",
+  "end": "2020-09-11",
+  "format": "virtual",
+  "host": {
+    "name": "National Institute of Standards and Technology (NIST)",
+    "short": "NIST",
+    "url": "https://www.nist.gov/"
+  },
+  "organizers": [
+    {
+      "name": "Lotfi Benmohamed",
+      "affiliation": "NIST"
+    },
+    {
+      "name": "Kathleen Nichols",
+      "affiliation": "Pollere Inc."
+    },
+    {
+      "name": "Christos Papadopoulos",
+      "affiliation": "Colorado State University"
+    }
+  ],
+  "original_page": "https://www.nist.gov/news-events/events/ndn-community-meeting",
+  "videos": [],
+  "video_note": "The six recordings (two days, three parts each) were removed from NIST's video hosting and are currently lost. If you have a copy, please get in touch."
+}

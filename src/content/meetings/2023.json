@@ -1,0 +1,36 @@
+{
+  "title": "NDNComm 2023",
+  "start": "2023-03-02",
+  "end": "2023-03-03",
+  "format": "hybrid",
+  "venue": "National Cybersecurity Center of Excellence (NCCoE)",
+  "city": "Rockville, MD, USA",
+  "host": {
+    "name": "National Institute of Standards and Technology (NIST)",
+    "short": "NIST",
+    "url": "https://www.nist.gov/"
+  },
+  "organizers": [
+    {
+      "name": "Lotfi Benmohamed",
+      "affiliation": "NIST"
+    },
+    {
+      "name": "Dirk Kutscher",
+      "affiliation": "Hong Kong University of Science and Technology"
+    },
+    {
+      "name": "Christos Papadopoulos",
+      "affiliation": "University of Memphis"
+    }
+  ],
+  "original_page": "https://www.nist.gov/news-events/events/2023/03/ndncomm-2023",
+  "videos": [
+    {
+      "label": "Day 1, Part 1 — March 2, 2023",
+      "kaltura": "1_5sqzakox",
+      "youtube": null
+    }
+  ],
+  "video_note": "Only the first part of Day 1 was published on the NIST event page. No other recordings of NDNComm 2023 have been found."
+}

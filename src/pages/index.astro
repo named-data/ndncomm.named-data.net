@@ -1,45 +1,122 @@
 ---
 import Base from '../layouts/Base.astro';
-import { events, url, documents } from '../lib/archive';
+import HeroGraphic from '../components/HeroGraphic.astro';
+import MeetingCard from '../components/MeetingCard.astro';
+import Icon from '../components/Icon.astro';
+import { url, kalturaInfo } from '../lib/archive';
+import { allMeetings, isUpcoming, programFor, programStats, dateRange } from '../lib/meetings';
+
+const meetings = await allMeetings();
+const upcoming = meetings.filter((m) => isUpcoming(m)).reverse();
+const past = meetings.filter((m) => !isUpcoming(m));
+const latest = upcoming[0] ?? past[0];
+
+let talks = 0;
+let panels = 0;
+let videoSeconds = 0;
+for (const m of past) {
+  const s = programStats(await programFor(m.id));
+  talks += s.talks;
+  panels += s.panels;
+  const k = kalturaInfo(m.id);
+  for (const v of m.data.videos) videoSeconds += (v.kaltura && k[v.kaltura]?.duration_sec) || 0;
+}
+const years = past.map((m) => m.id);
 ---
 
-<Base>
-  <section class="intro">
-    <h1>NDN Community Meetings</h1>
-    <p class="lede">
-      NDNComm is an annual meeting of researchers and practitioners from academia, industry and government who
-      work on Named Data Networking (NDN). From 2020 to 2024 the meeting was organized and hosted by the
-      National Institute of Standards and Technology (NIST). This archive keeps the event pages, agendas, abstracts
-      and recordings that NIST originally published.
-    </p>
+<Base overlayHeader>
+  <section class="hero home-hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>Named Data Networking Community Meeting</span>
+        <h1>Where the <span class="grad">named-data</span> community meets.</h1>
+        <p class="lede">
+          NDNComm brings together researchers, developers and practitioners from academia, industry and government
+          working on Named Data Networking: networking by named, secured data instead of host addresses.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href={url(`${latest.id}/`)}>
+            {upcoming.length ? `NDNComm ${latest.id}` : `Latest: NDNComm ${latest.id}`}
+            <Icon name="arrow" size={16} />
+          </a>
+          <a class="btn btn-ghost" href="#meetings">All meetings</a>
+        </div>
+      </div>
+      <HeroGraphic />
+    </div>
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat"><b>{past.length}</b><span>meetings, {years.at(-1)}–{years[0]}</span></div>
+        <div class="stat"><b>{talks}</b><span>talks with abstracts</span></div>
+        <div class="stat"><b>{panels}</b><span>panels</span></div>
+        <div class="stat"><b>{Math.round(videoSeconds / 3600)} h</b><span>of recordings</span></div>
+      </div>
+    </div>
   </section>
 
-  <ol class="event-list">
-    {
-      events.map((e) => {
-        const docs = documents(e.year);
-        const published = e.videos.filter((v) => v.youtube).length;
-        return (
-          <li class="event-card">
-            <a class="year" href={url(`${e.year}/`)}>{e.year}</a>
-            <div class="event-body">
-              <h2><a href={url(`${e.year}/`)}>{e.title}</a></h2>
-              <p class="meta">{e.dates} · {e.location}</p>
-              <ul class="badges">
-                {docs.map((d) => <li class="badge">{d.kind}</li>)}
-                {e.videos.length > 0 ? (
-                  <li class="badge badge-video">
-                    {e.videos.length} recording{e.videos.length > 1 ? 's' : ''}
-                    {published < e.videos.length && ' (YouTube upload pending)'}
-                  </li>
-                ) : (
-                  <li class="badge badge-lost">Recordings lost</li>
-                )}
-              </ul>
+  <section class="section" id="meetings">
+    <div class="wrap">
+      {
+        upcoming.length > 0 ? (
+          <>
+            <div class="section-head">
+              <div>
+                <span class="kicker">Upcoming</span>
+                <h2>Next meeting</h2>
+              </div>
             </div>
-          </li>
-        );
-      })
-    }
-  </ol>
+            <div class="meeting-grid" style="margin-bottom: 56px">
+              {upcoming.map((m) => <MeetingCard meeting={m} />)}
+            </div>
+          </>
+        ) : (
+          <div class="next-card" style="margin-bottom: 56px">
+            <span class="badge-ring"><Icon name="calendar" size={22} /></span>
+            <div>
+              <h3>Next NDNComm: to be announced</h3>
+              <p>Dates and the call for submissions are announced on the ndn-interest mailing list.</p>
+            </div>
+            <a class="btn btn-outline" href="https://www.lists.cs.ucla.edu/mailman/listinfo/ndn-interest">
+              <Icon name="mail" size={16} />Join the list
+            </a>
+          </div>
+        )
+      }
+
+      <div class="section-head">
+        <div>
+          <span class="kicker">Program · Abstracts · Recordings</span>
+          <h2>Past meetings</h2>
+        </div>
+      </div>
+      <div class="meeting-grid">
+        {past.map((m) => <MeetingCard meeting={m} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="panel-card">
+        <span class="kicker">About NDN</span>
+        <h3>Networking by name, not by address</h3>
+        <p>
+          Named Data Networking is an architectural realization of Information-Centric Networking. Applications ask
+          for data by name, every piece of data is signed by its producer, and the network can cache and deliver it
+          from wherever it is closest.
+        </p>
+        <a href="https://named-data.net/">Learn more at named-data.net →</a>
+      </div>
+      <div class="panel-card dark">
+        <span class="kicker" style="color: var(--amber)">Thank you, NIST</span>
+        <h3>Hosted by NIST, {years.at(-1)}–{years[0]}</h3>
+        <p>
+          The National Institute of Standards and Technology organized and hosted NDNComm{' '}
+          {past.filter((m) => m.data.host?.short === 'NIST').map((m) => m.id).sort().join(', ')}. The programs, abstracts
+          and recordings on this site were originally published on NIST's event pages, linked from each meeting.
+        </p>
+        <a href={url('about/')}>About this site →</a>
+      </div>
+    </div>
+  </section>
 </Base>
