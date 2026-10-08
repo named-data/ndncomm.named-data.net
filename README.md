@@ -43,6 +43,14 @@ The deleted Kaltura entry IDs are listed in `archive/<year>/videos.json`, in cas
 
 The original 2023/2024 files came from NIST's Kaltura (`download_url` in `archive/<year>/videos.json`).
 
+## Other missing material
+
+- **2021 slides:** the NIST page linked them in a Google Drive folder
+  (`https://drive.google.com/drive/folders/0ACSWNKeNXxxwUk9PVA`), which now requires a NIST login. Ask the 2021
+  organizers (Lotfi Benmohamed, Susmit Shannigrahi, Marie-José Montpetit) for a copy, then add the files to
+  `public/2021/slides/` and a `"slides"` path to each talk in `src/content/programs/2021.json`.
+- **2018–2020, 2023, 2024 slides:** NIST never published them.
+
 ## Website
 
 The site is built with [Astro](https://astro.build/). `.github/workflows/deploy.yml` deploys it to GitHub Pages on
