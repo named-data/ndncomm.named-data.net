@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import NameTree from '../components/NameTree.astro';
+import NameNet from '../components/NameNet.astro';
 import MeetingCard from '../components/MeetingCard.astro';
 import Icon from '../components/Icon.astro';
 import { url } from '../lib/archive';
@@ -52,7 +52,7 @@ const hosts = [...hostYears.values()].map((h) => ({ ...h, range: yearRanges(h.ye
           <a class="btn btn-ghost" href="#meetings">All meetings</a>
         </div>
       </div>
-      <NameTree />
+      <NameNet />
     </div>
     <div class="wrap">
       <div class="stats">

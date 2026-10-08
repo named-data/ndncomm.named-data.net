@@ -1,0 +1,271 @@
+---
+// Home-page hero animation: NDN request/response with Interest aggregation (multicast) and in-network caching.
+//  1. Consumers A–D ask for the same name a moment apart. Each router an Interest passes leaves a dot on the link
+//     it came in on (its PIT entry: where the request came from). A's Interest reaches the producer; the others
+//     reach a router that already forwarded the request, which only adds a dot for the new link.
+//  2. One Data comes back and follows the dots: each dot sends a copy down its link and is cleared, so the Data
+//     fans out to every consumer at once (multicast); each router keeps a copy.
+//  3. A late consumer, E, is answered by the nearest cached copy.
+// All animations share one clock (same dur, all start at 0), so they stay in sync.
+const T = 12;
+const NAME = '/ndn/edu/ucla/video/seg=42';
+
+type Kind = 'router' | 'consumer' | 'producer';
+type Node = { id: string; x: number; y: number; kind: Kind; label?: string; lx?: number; ly?: number; anchor?: 'start' | 'middle' | 'end' };
+const nodes: Node[] = [
+  { id: 'A', x: 28, y: 230, kind: 'consumer', label: 'A', lx: 0, ly: 26 },
+  { id: 'B', x: 150, y: 62, kind: 'consumer', label: 'B', ly: -15 },
+  { id: 'C', x: 120, y: 372, kind: 'consumer', label: 'C', lx: -15, ly: 4, anchor: 'end' },
+  { id: 'D', x: 468, y: 392, kind: 'consumer', label: 'D', lx: 15, ly: 4, anchor: 'start' },
+  { id: 'E', x: 480, y: 44, kind: 'consumer', label: 'E', lx: 15, ly: 4, anchor: 'start' },
+  { id: 'r1', x: 120, y: 230, kind: 'router' },
+  { id: 'r2', x: 222, y: 150, kind: 'router' },
+  { id: 'r3', x: 330, y: 215, kind: 'router' },
+  { id: 'r4', x: 432, y: 165, kind: 'router' },
+  { id: 'r5', x: 228, y: 318, kind: 'router' },
+  { id: 'r6', x: 350, y: 78, kind: 'router' },
+  { id: 'r7', x: 390, y: 320, kind: 'router' },
+  { id: 'P', x: 528, y: 165, kind: 'producer', label: 'producer', ly: 32 },
+];
+const links: [string, string][] = [
+  ['A', 'r1'], ['r1', 'r2'], ['r2', 'r3'], ['r3', 'r4'], ['r4', 'P'],
+  ['r1', 'r5'], ['r5', 'r3'], ['r5', 'r7'], ['r7', 'r4'], ['r2', 'r6'], ['r6', 'r4'], ['r3', 'r7'],
+  ['B', 'r2'], ['C', 'r5'], ['D', 'r7'], ['E', 'r6'],
+];
+const at = (id: string) => nodes.find((n) => n.id === id)!;
+// Links are gentle arcs (to echo the background). The control point depends only on the pair, not the direction,
+// so a hop u→w and its reverse w→u trace the same curve.
+const BEND = 0.2;
+const ctrl = (a: string, b: string) => {
+  const [p, q] = a < b ? [at(a), at(b)] : [at(b), at(a)];
+  return { x: (p.x + q.x) / 2 - (q.y - p.y) * BEND, y: (p.y + q.y) / 2 + (q.x - p.x) * BEND };
+};
+const point = (a: string, b: string, t: number) => {
+  const p = at(a), c = ctrl(a, b), q = at(b), u = 1 - t;
+  return { x: u * u * p.x + 2 * u * t * c.x + t * t * q.x, y: u * u * p.y + 2 * u * t * c.y + t * t * q.y };
+};
+const len = (a: string, b: string) => {
+  let total = 0;
+  for (let i = 1, prev = point(a, b, 0); i <= 24; i++) {
+    const cur = point(a, b, i / 24);
+    total += Math.hypot(cur.x - prev.x, cur.y - prev.y);
+    prev = cur;
+  }
+  return total;
+};
+const pathOf = (ids: string[]) =>
+  `M${at(ids[0]).x},${at(ids[0]).y}` +
+  ids.slice(1).map((id, i) => ` Q${ctrl(ids[i], id).x},${ctrl(ids[i], id).y} ${at(id).x},${at(id).y}`).join('');
+const pathLen = (ids: string[]) => ids.slice(1).reduce((s, id, i) => s + len(ids[i], id), 0);
+
+// Everything moves at one speed (fraction of T per pixel).
+const v = 0.2 / pathLen(['A', 'r1', 'r2', 'r3', 'r4', 'P']);
+
+// Phase 1: Interests. A goes all the way; B, C, D stop where they join A's request (Interest aggregation).
+const aStart = 0.03;
+const aRoute = ['A', 'r1', 'r2', 'r3', 'r4', 'P'];
+const passA: Record<string, number> = {};
+aRoute.reduce((t, id, i) => ((passA[id] = i ? t + len(aRoute[i - 1], id) * v : t), passA[id]), aStart);
+const joiner = (route: string[]) => {
+  const merge = route.at(-1)!;
+  const end = passA[merge] + 0.03; // arrives just after A's Interest went through
+  return { route, start: end - pathLen(route) * v, end, merge };
+};
+const interests = [
+  { route: aRoute, start: aStart, end: passA.P, merge: '' },
+  joiner(['B', 'r2']),
+  joiner(['C', 'r5', 'r3']),
+  joiner(['D', 'r7', 'r4']),
+];
+
+// Phase 2: one Data, copied down the tree of pending requests (multicast), cached by every router it passes.
+const dataStart = passA.P + 0.04;
+const tree: Record<string, string[]> = { P: ['r4'], r4: ['r3', 'r7'], r3: ['r2', 'r5'], r2: ['r1', 'B'], r1: ['A'], r5: ['C'], r7: ['D'] };
+const reach: Record<string, number> = { P: dataStart };
+const dataHops: { from: string; to: string; t0: number; t1: number }[] = [];
+const walk = (u: string) =>
+  (tree[u] ?? []).forEach((w) => {
+    reach[w] = reach[u] + len(u, w) * v;
+    dataHops.push({ from: u, to: w, t0: reach[u], t1: reach[w] });
+    walk(w);
+  });
+walk('P');
+const dataEnd = Math.max(...Object.values(reach));
+const cached = Object.keys(reach).filter((id) => at(id).kind === 'router');
+
+// Phase 3: a late consumer is answered by the nearest copy (r2, via r6), never reaching the producer.
+const lateRoute = ['E', 'r6', 'r2'];
+const lateStart = dataEnd + 0.08;
+const lateArrive = lateStart + pathLen(lateRoute) * v;
+const lateBackStart = lateArrive + 0.02;
+const lateBackEnd = lateBackStart + pathLen(lateRoute) * v;
+
+// PIT breadcrumbs: a dot on the incoming link next to the router, from Interest arrival until the Data leaves.
+const crumbAt = (router: string, from: string) => point(router, from, 19 / len(router, from));
+const arrivals = (route: string[], start: number) => {
+  const out: Record<string, number> = {};
+  route.reduce((t, id, i) => ((out[id] = i ? t + len(route[i - 1], id) * v : t), out[id]), start);
+  return out;
+};
+const crumbs: { x: number; y: number; on: number; off: number }[] = [];
+for (const i of interests) {
+  const arr = arrivals(i.route, i.start);
+  i.route.slice(1).forEach((id, k) => {
+    if (at(id).kind === 'router') crumbs.push({ ...crumbAt(id, i.route[k]), on: arr[id], off: reach[id] });
+  });
+}
+{
+  const arr = arrivals(lateRoute, lateStart);
+  const back: Record<string, number> = { r2: lateBackStart, r6: lateBackStart + len('r2', 'r6') * v };
+  lateRoute.slice(1).forEach((id, k) => crumbs.push({ ...crumbAt(id, lateRoute[k]), on: arr[id], off: back[id] }));
+}
+
+const dur = `${T}s`;
+const FADE = 0.95;
+const show = (from: number, to: number) => ({
+  values: '0;0;1;1;0;0',
+  keyTimes: `0;${from};${from + 0.004};${to - 0.004};${to};1`,
+});
+const latch = (from: number) => ({ values: '0;0;1;1;0', keyTimes: `0;${from};${from + 0.01};${FADE};1` });
+const move = (from: number, to: number, reverse = false) => ({
+  keyPoints: reverse ? '1;1;0;0' : '0;0;1;1',
+  keyTimes: `0;${from};${to};1`,
+});
+---
+
+<svg class="hero-graphic name-net" viewBox="0 0 590 440" role="img"
+  aria-label="Animation: several consumers request the same named data; routers merge the requests so only one reaches the producer, then copy the returning data to every consumer and cache it, so a later request is answered from a nearby cache.">
+  <defs>
+    <radialGradient id="nn-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dd9a17" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#dd9a17" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <g transform="translate(28, 4)">
+    <rect width={NAME.length * 6.9 + 74} height="26" rx="13" class="nn-name-pill" />
+    <text x="12" y="17.5" class="nn-name-key">name</text>
+    <text x="54" y="17.5" class="nn-name">{NAME}</text>
+  </g>
+
+  {links.map(([s, t]) => <path d={pathOf([s, t])} class="nn-link" />)}
+
+  <!-- links carrying the exchange light up -->
+  {
+    interests.map((i) => (
+      <path d={pathOf(i.route)} class="nn-active nn-anim" opacity="0">
+        <animate attributeName="opacity" dur={dur} repeatCount="indefinite" {...show(i.start, dataEnd + 0.02)} />
+      </path>
+    ))
+  }
+  <path d={pathOf(lateRoute)} class="nn-active nn-anim" opacity="0">
+    <animate attributeName="opacity" dur={dur} repeatCount="indefinite" {...show(lateStart, lateBackEnd + 0.02)} />
+  </path>
+
+  {
+    nodes.map((n) =>
+      n.kind === 'router' ? (
+        <circle cx={n.x} cy={n.y} r="11" class="nn-router" />
+      ) : n.kind === 'producer' ? (
+        <rect x={n.x - 13} y={n.y - 13} width="26" height="26" rx="6" class="nn-producer" />
+      ) : (
+        <circle cx={n.x} cy={n.y} r="9" class="nn-consumer" />
+      ),
+    )
+  }
+  {
+    nodes
+      .filter((n) => n.label)
+      .map((n) => (
+        <text x={n.x + (n.lx ?? 0)} y={n.y + (n.ly ?? 28)} text-anchor={n.anchor ?? 'middle'} class="nn-label">
+          {n.label}
+        </text>
+      ))
+  }
+
+  <!-- PIT breadcrumbs: where each pending request came from -->
+  {
+    crumbs.map((c) => (
+      <circle cx={c.x} cy={c.y} r="3.6" class="nn-crumb nn-anim" opacity="0">
+        <animate attributeName="opacity" dur={dur} repeatCount="indefinite" {...show(c.on, c.off)} />
+      </circle>
+    ))
+  }
+
+  <!-- cached copies -->
+  {
+    cached.map((id) => (
+      <g class="nn-anim" opacity="0">
+        <animate attributeName="opacity" dur={dur} repeatCount="indefinite" {...latch(reach[id])} />
+        <circle cx={at(id).x} cy={at(id).y} r="22" fill="url(#nn-glow)" />
+        <circle cx={at(id).x} cy={at(id).y} r="11" class="nn-router cached" />
+        <rect x={at(id).x - 4.5} y={at(id).y - 4.5} width="9" height="9" rx="2" class="nn-copy" />
+      </g>
+    ))
+  }
+
+  <!-- Interests -->
+  {
+    interests.map((i) => (
+      <circle r="5.5" class="nn-interest nn-anim" opacity="0">
+        <animateMotion dur={dur} repeatCount="indefinite" path={pathOf(i.route)} calcMode="linear" {...move(i.start, i.end)} />
+        <animate attributeName="opacity" dur={dur} repeatCount="indefinite" {...show(i.start, i.end)} />
+      </circle>
+    ))
+  }
+  <circle r="5.5" class="nn-interest nn-anim" opacity="0">
+    <animateMotion dur={dur} repeatCount="indefinite" path={pathOf(lateRoute)} calcMode="linear" {...move(lateStart, lateArrive)} />
+    <animate attributeName="opacity" dur={dur} repeatCount="indefinite" {...show(lateStart, lateArrive)} />
+  </circle>
+
+  <!-- the producer answers once -->
+  <circle cx={at('P').x} cy={at('P').y} r="28" fill="url(#nn-glow)" class="nn-anim" opacity="0">
+    <animate attributeName="opacity" dur={dur} repeatCount="indefinite" {...show(passA.P - 0.01, dataStart + 0.03)} />
+  </circle>
+
+  <!-- Data: one copy per link of the tree, all leaving each router at the same moment -->
+  {
+    dataHops.map((h) => (
+      <g class="nn-anim" opacity="0">
+        <animateMotion dur={dur} repeatCount="indefinite" path={pathOf([h.from, h.to])} calcMode="linear" {...move(h.t0, h.t1)} />
+        <animate attributeName="opacity" dur={dur} repeatCount="indefinite" {...show(h.t0, h.t1)} />
+        <rect x="-6.5" y="-6.5" width="13" height="13" rx="3" class="nn-data" />
+      </g>
+    ))
+  }
+  <g class="nn-anim" opacity="0">
+    <animateMotion dur={dur} repeatCount="indefinite" path={pathOf(lateRoute)} calcMode="linear" {...move(lateBackStart, lateBackEnd, true)} />
+    <animate attributeName="opacity" dur={dur} repeatCount="indefinite" {...show(lateBackStart, lateBackEnd)} />
+    <rect x="-6.5" y="-6.5" width="13" height="13" rx="3" class="nn-data" />
+  </g>
+
+  <g transform="translate(28, 430)" class="nn-legend">
+    <circle cx="9" cy="-4" r="5" class="nn-consumer small" /><text x="20" y="0">consumer</text>
+    <circle cx="94" cy="-4" r="5" class="nn-interest" /><text x="105" y="0">Interest</text>
+    <rect x="164" y="-10" width="12" height="12" rx="3" class="nn-data" /><text x="182" y="0">Data</text>
+    <circle cx="232" cy="-4" r="3.6" class="nn-crumb" /><text x="241" y="0">pending request</text>
+    <rect x="345" y="-9" width="10" height="10" rx="2" class="nn-copy" /><text x="361" y="0">cached copy</text>
+  </g>
+</svg>
+
+<style>
+  .nn-link { fill: none; stroke: rgb(221 154 23 / 38%); stroke-width: 1.4; stroke-dasharray: 4 5; }
+  .nn-active { fill: none; stroke: #dd9a17; stroke-width: 2.2; filter: drop-shadow(0 0 4px rgb(221 154 23 / 70%)); }
+  .nn-router { fill: #16110c; stroke: #dd9a17; stroke-width: 2; }
+  .nn-router.cached { fill: #2a1c0d; stroke: #fdf9f2; }
+  .nn-copy { fill: #fdf9f2; }
+  .nn-crumb { fill: #f0b44a; stroke: #16110c; stroke-width: 1; }
+  .nn-consumer { fill: #dd9a17; stroke: #16110c; stroke-width: 2; }
+  .nn-consumer.small { stroke-width: 0; }
+  .nn-producer { fill: #c24e1b; stroke: #fdf9f2; stroke-width: 1.5; }
+  .nn-label { fill: rgb(253 249 242 / 80%); font: 600 12px 'Inter Variable', sans-serif; }
+  .nn-name-pill { fill: rgb(22 17 12 / 75%); stroke: rgb(221 154 23 / 45%); }
+  .nn-name-key { fill: #dd9a17; font: 650 11px 'Inter Variable', sans-serif; letter-spacing: 0.06em; text-transform: uppercase; }
+  .nn-name { fill: #fdf9f2; font: 500 12.5px 'Inter Variable', sans-serif; }
+  .nn-interest { fill: #dd9a17; filter: drop-shadow(0 0 5px #dd9a17); }
+  .nn-data { fill: #fdf9f2; filter: drop-shadow(0 0 6px rgb(253 249 242 / 80%)); }
+  .nn-legend text { fill: rgb(253 249 242 / 62%); font: 500 11.5px 'Inter Variable', sans-serif; }
+  @media (prefers-reduced-motion: reduce) {
+    .nn-anim { display: none; }
+  }
+</style>
