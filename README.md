@@ -46,9 +46,11 @@ The original 2023/2024 files came from NIST's Kaltura (`download_url` in `archiv
 ## Other missing material
 
 - **2021 slides:** the NIST page linked them in a Google Drive folder
-  (`https://drive.google.com/drive/folders/0ACSWNKeNXxxwUk9PVA`), which now requires a NIST login. Ask the 2021
-  organizers (Lotfi Benmohamed, Susmit Shannigrahi, Marie-José Montpetit) for a copy, then add the files to
-  `public/2021/slides/` and a `"slides"` path to each talk in `src/content/programs/2021.json`.
+  (`https://drive.google.com/drive/folders/0ACSWNKeNXxxwUk9PVA`), which now requires a NIST login. Access was
+  requested on 2026-10-08. The 2021 organizers (Lotfi Benmohamed, Susmit Shannigrahi, Marie-José Montpetit) may also
+  have a copy. Once the files are in hand, add them to `public/2021/slides/` and a `"slides"` path to each talk in
+  `src/content/programs/2021.json`. The archived 2021 page text still links that folder ("Presentation Files"); drop
+  the link if the files can't be recovered.
 - **2018–2020, 2023, 2024 slides:** NIST never published them.
 
 ## Website
