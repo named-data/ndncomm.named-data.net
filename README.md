@@ -79,6 +79,25 @@ npm run build    # static site in dist/
   `page.md`, `documents.json`, `text/` PDF extracts, `videos.json`).
 - `public/img/ndn-logo.png`: the NDN logo (an SVG version would be sharper).
 
+## Organization logos
+
+Organizer avatars show the organization's logo when a public-domain one exists on Wikimedia Commons
+(`src/data/orgs.json`; any other organization falls back to the person's initials). Logos are trademarks of their
+owners and are shown only to identify affiliations.
+
+| Organization | File | License | Source |
+|---|---|---|---|
+| NIST | `public/img/orgs/nist.svg` | Public domain | https://commons.wikimedia.org/wiki/File:NIST_logo.svg |
+| University of Memphis | `public/img/orgs/memphis.svg` | Public domain | https://commons.wikimedia.org/wiki/File:University_of_Memphis_logo.svg |
+| UCLA | `public/img/orgs/ucla.svg` | Public domain | https://commons.wikimedia.org/wiki/File:University_of_California,_Los_Angeles_logo.svg |
+| Colorado State University | `public/img/orgs/colostate.svg` | Public domain | https://commons.wikimedia.org/wiki/File:Colorado_State_University_logo.svg |
+| University of Arizona | `public/img/orgs/arizona.svg` | Public domain | https://commons.wikimedia.org/wiki/File:Arizona_Wildcats_logo.svg |
+| FIU | `public/img/orgs/fiu.svg` | Public domain | https://commons.wikimedia.org/wiki/File:Florida_International_University_FIU_logo.svg |
+| MITRE | `public/img/orgs/mitre.svg` | Public domain | https://commons.wikimedia.org/wiki/File:Mitre_Corporation_logo.svg |
+| Concordia University | `public/img/orgs/concordia.png` | Public domain | https://commons.wikimedia.org/wiki/File:Concordia_univ_montreal_textlogo.png |
+| SRI | `public/img/orgs/sri.svg` | Public domain | https://commons.wikimedia.org/wiki/File:SRI_International_logo_2023.svg |
+| New Mexico State University | `public/img/orgs/nmsu.svg` | Public domain | https://commons.wikimedia.org/wiki/File:New_Mexico_State_University_logo.svg |
+
 ## Re-scraping a NIST page
 
 ```

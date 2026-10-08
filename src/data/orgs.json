@@ -1,0 +1,62 @@
+{
+  "NIST": {
+    "logo": "img/orgs/nist.svg",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:NIST_logo.svg",
+    "wide": true
+  },
+  "University of Memphis": {
+    "logo": "img/orgs/memphis.svg",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:University_of_Memphis_logo.svg",
+    "wide": true
+  },
+  "UCLA": {
+    "logo": "img/orgs/ucla.svg",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:University_of_California,_Los_Angeles_logo.svg",
+    "wide": true
+  },
+  "Colorado State University": {
+    "logo": "img/orgs/colostate.svg",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Colorado_State_University_logo.svg",
+    "wide": true
+  },
+  "University of Arizona": {
+    "logo": "img/orgs/arizona.svg",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Arizona_Wildcats_logo.svg",
+    "wide": false
+  },
+  "FIU": {
+    "logo": "img/orgs/fiu.svg",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Florida_International_University_FIU_logo.svg",
+    "wide": true
+  },
+  "MITRE": {
+    "logo": "img/orgs/mitre.svg",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mitre_Corporation_logo.svg",
+    "wide": true
+  },
+  "Concordia University": {
+    "logo": "img/orgs/concordia.png",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Concordia_univ_montreal_textlogo.png",
+    "wide": true
+  },
+  "SRI": {
+    "logo": "img/orgs/sri.svg",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:SRI_International_logo_2023.svg",
+    "wide": true
+  },
+  "New Mexico State University": {
+    "logo": "img/orgs/nmsu.svg",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:New_Mexico_State_University_logo.svg",
+    "wide": false
+  }
+}

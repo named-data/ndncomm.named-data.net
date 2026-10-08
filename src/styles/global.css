@@ -277,7 +277,8 @@ h1, h2, h3, h4 { font-family: var(--font); letter-spacing: -0.025em; line-height
 .side-card { padding: 20px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
 .side-card h3 { font: 600 12.5px/1 var(--font); letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin: 0 0 14px; }
 .people { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
-.people li { display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: center; }
+.people li { display: grid; grid-template-columns: 64px 1fr; gap: 10px; align-items: center; }
+.people .avatar { justify-self: center; }
 .avatar {
   width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
   font: 650 13px/1 var(--font); color: var(--cream);
@@ -285,7 +286,7 @@ h1, h2, h3, h4 { font-family: var(--font); letter-spacing: -0.025em; line-height
 }
 .avatar-logo { background: #fff; border: 1px solid var(--border); padding: 5px; overflow: hidden; }
 .avatar-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
-.avatar-logo.wide { border-radius: 8px; padding: 3px; }
+.avatar-logo.wide { width: 64px; height: 36px; border-radius: 8px; padding: 4px 6px; }
 .people b { display: block; font-size: 15px; font-weight: 600; line-height: 1.3; }
 .people div span { font-size: 13px; color: var(--muted); line-height: 1.3; display: block; }
 .doc-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
