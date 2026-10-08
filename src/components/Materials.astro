@@ -5,14 +5,15 @@ import { url } from '../lib/archive';
 interface Props {
   video?: string;
   slides?: string;
+  more?: { label: string; url: string }[];
 }
-const { video, slides } = Astro.props;
+const { video, slides, more = [] } = Astro.props;
 const slidesHref = slides && (/^https?:/.test(slides) ? slides : url(slides));
 const slidesKind = slides && /\.pptx?$/i.test(slides) ? 'PPT' : 'PDF';
 ---
 
 {
-  (video || slides) && (
+  (video || slides || more.length > 0) && (
     <div class="materials">
       {video && (
         <a class="material material-video" href={video} target="_blank" rel="noopener">
@@ -20,6 +21,12 @@ const slidesKind = slides && /\.pptx?$/i.test(slides) ? 'PPT' : 'PDF';
           Video
         </a>
       )}
+      {more.map((v) => (
+        <a class="material material-video" href={v.url} target="_blank" rel="noopener">
+          <Icon name="play" size={13} />
+          {v.label}
+        </a>
+      ))}
       {slidesHref && (
         <a class="material" href={slidesHref} target="_blank" rel="noopener">
           <Icon name="file" size={13} />

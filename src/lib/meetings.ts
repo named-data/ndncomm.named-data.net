@@ -48,7 +48,9 @@ export function programStats(p?: Program) {
   return {
     talks: talks.length + items.filter((i) => i.kind === 'talk' || i.kind === 'keynote').length,
     panels: items.filter((i) => i.kind === 'panel').length,
-    videos: talks.filter((t) => t.video).length + items.filter((i) => i.video).length,
+    videos:
+      talks.filter((t) => t.video).length +
+      items.reduce((n, i) => n + (i.video ? 1 : 0) + (i.more_videos?.length ?? 0), 0),
   };
 }
 

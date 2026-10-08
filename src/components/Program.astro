@@ -70,7 +70,7 @@ const label = (it: { kind: string; title: string }) => it.title.match(NUMBERED)?
                   ))}
                 </div>
               )}
-              <Materials video={it.video} slides={it.slides} />
+              <Materials video={it.video} slides={it.slides} more={it.more_videos} />
               {it.abstract && (
                 <details class="abstract-toggle">
                   <summary>

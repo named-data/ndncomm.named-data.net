@@ -171,7 +171,17 @@
           ],
           "abstract": "AI agents are rapidly emerging as autonomous network participants, yet the underlying infrastructure remains ad hoc and ill-suited for their needs. Agents must identify each other, discover capabilities, delegate tasks, and establish trust, raising fundamental protocol questions: Are agents just applications, or should they be treated as first-class network entities? What is the impact of agent communication patterns on transport and network layer functionality? What should agent identity look like? How should trust be established across domains? How do agents discover the right peers? And which of these functions belong in the network layer?\n\nThis panel asks whether today's Internet stack, including DNS/DNSSEC, WebPKI, and TLS, can scale to agent ecosystems, or whether their assumptions of human-driven sessions and centralized trust fundamentally break down. If so, can alternative approaches such as Named Data Networking (NDN), with data-centric security and decentralized trust, point toward a new architectural direction?",
           "video": "https://youtu.be/QpXpVPHqrR0",
-          "slides": "archive/2026/slides/Panel.pdf"
+          "slides": "archive/2026/slides/Panel.pdf",
+          "more_videos": [
+            {
+              "label": "Panel discussions 1",
+              "url": "https://youtu.be/kp-TrfR4Xdk"
+            },
+            {
+              "label": "Panel discussions 2",
+              "url": "https://youtu.be/AB5Esoxb9bM"
+            }
+          ]
         },
         {
           "start": "08:00",

@@ -31,16 +31,9 @@ Every recording should be on YouTube. Status per meeting:
 | 2023 | Day 1 Part 1 on YouTube. **Day 1 Part 2 and Day 2 were never published** | Ask NIST whether they exist |
 | 2024 | Day 1 and Day 2 on YouTube | — |
 | 2025 | Every talk and panel on YouTube (linked per talk) | — |
-| 2026 | Every talk and the panel on YouTube (linked per talk) | Decide on the unlinked panel clip (below) |
+| 2026 | Every talk, the panel and its two discussion clips on YouTube (linked per talk) | — |
 
 The deleted Kaltura entry IDs are listed in `public/archive/<year>/videos.json`, in case NIST can restore them.
-
-### 2026: extra panel footage
-
-The [NDNComm-2026](https://github.com/conference-websites/NDNComm-2026) repo has two panel clips that its program
-never linked: `assets/talks/organized_talks/Panel_Opening_Intro/video.mp4` and `Panel_Discussion/video.mp4`. The
-channel has one extra upload, "Panel discussions 1 @ NDNComm 2026" (`kp-TrfR4Xdk`), which is not linked from the
-site either.
 
 ### Already on YouTube
 
