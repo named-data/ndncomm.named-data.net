@@ -120,11 +120,19 @@ h1, h2, h3, h4 { font-family: var(--font); letter-spacing: -0.025em; line-height
 .hero::before {
   content: ''; position: absolute; inset: 0; z-index: -2;
   background:
+    linear-gradient(90deg, var(--ink) 0%, rgb(22 17 12 / 85%) 30%, rgb(22 17 12 / 20%) 65%, rgb(22 17 12 / 35%) 100%),
+    linear-gradient(0deg, var(--ink) 0%, transparent 25%),
+    url('/img/hero-forwarder.webp') right center / cover no-repeat,
+    var(--ink);
+}
+/* The home page keeps the plain glow: the picture would fight the animated name network on the right. */
+.home-hero::before {
+  background:
     radial-gradient(60% 80% at 85% 10%, rgb(221 154 23 / 28%), transparent 60%),
     radial-gradient(50% 70% at 10% 100%, rgb(194 78 27 / 30%), transparent 60%),
     linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
 }
-.hero::after {
+.home-hero::after {
   content: ''; position: absolute; inset: 0; z-index: -1; opacity: 0.35;
   background-image: radial-gradient(rgb(253 249 242 / 18%) 1px, transparent 1px);
   background-size: 22px 22px;
