@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+import { siteTitle, url } from '../lib/archive';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description = 'Archive of the Named Data Networking Community Meetings hosted by NIST.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ? `${title} · ${siteTitle}` : siteTitle}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href={url()}>
+          <span class="brand-mark" aria-hidden="true">NDN</span>
+          <span>{siteTitle}</span>
+        </a>
+        <span class="tagline">Named Data Networking Community Meetings</span>
+      </div>
+    </header>
+    <main class="wrap">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          The NDN Community Meetings listed here were organized and hosted by the
+          <a href="https://www.nist.gov/">National Institute of Standards and Technology (NIST)</a>.
+          This site keeps a community copy of the public event pages, agendas, abstracts and recordings.
+          It is not affiliated with or endorsed by NIST.
+        </p>
+        <p>More about Named Data Networking: <a href="https://named-data.net/">named-data.net</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

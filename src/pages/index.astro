@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import { events, url, documents } from '../lib/archive';
+---
+
+<Base>
+  <section class="intro">
+    <h1>NDN Community Meetings</h1>
+    <p class="lede">
+      NDNComm is an annual meeting of researchers and practitioners from academia, industry and government who
+      work on Named Data Networking (NDN). From 2020 to 2024 the meeting was organized and hosted by the
+      National Institute of Standards and Technology (NIST). This archive keeps the event pages, agendas, abstracts
+      and recordings that NIST originally published.
+    </p>
+  </section>
+
+  <ol class="event-list">
+    {
+      events.map((e) => {
+        const docs = documents(e.year);
+        const published = e.videos.filter((v) => v.youtube).length;
+        return (
+          <li class="event-card">
+            <a class="year" href={url(`${e.year}/`)}>{e.year}</a>
+            <div class="event-body">
+              <h2><a href={url(`${e.year}/`)}>{e.title}</a></h2>
+              <p class="meta">{e.dates} · {e.location}</p>
+              <ul class="badges">
+                {docs.map((d) => <li class="badge">{d.kind}</li>)}
+                {e.videos.length > 0 ? (
+                  <li class="badge badge-video">
+                    {e.videos.length} recording{e.videos.length > 1 ? 's' : ''}
+                    {published < e.videos.length && ' (YouTube upload pending)'}
+                  </li>
+                ) : (
+                  <li class="badge badge-lost">Recordings lost</li>
+                )}
+              </ul>
+            </div>
+          </li>
+        );
+      })
+    }
+  </ol>
+</Base>

@@ -1,0 +1,119 @@
+---
+import Base from '../layouts/Base.astro';
+import {
+  events,
+  url,
+  documents,
+  agendaText,
+  kalturaInfo,
+  formatDuration,
+  pageHtml,
+  waybackUrl,
+  type Event,
+} from '../lib/archive';
+
+export function getStaticPaths() {
+  return events.map((event) => ({ params: { year: event.year }, props: { event } }));
+}
+
+const { event } = Astro.props as { event: Event };
+const docs = documents(event.year);
+const agenda = agendaText(event.year);
+const kaltura = kalturaInfo(event.year);
+const body = pageHtml(event.year);
+---
+
+<Base title={event.title} description={`${event.title}, ${event.dates}. Agenda, abstracts and recordings.`}>
+  <nav class="crumbs"><a href={url()}>← All meetings</a></nav>
+
+  <header class="event-header">
+    <p class="eyebrow">NDNComm {event.year}</p>
+    <h1>{event.title}</h1>
+    <p class="meta">{event.dates} · {event.location}</p>
+  </header>
+
+  <aside class="provenance">
+    <p>
+      Organized and hosted by the <strong>National Institute of Standards and Technology (NIST)</strong>.
+      This is an archived copy of the original event page at
+      <a href={event.nist_url}>{event.nist_url.replace('https://', '')}</a>
+      (<a href={waybackUrl(event.nist_url)}>Wayback Machine copy</a>).
+    </p>
+  </aside>
+
+  <section>
+    <h2>Organizers</h2>
+    <ul class="organizers">
+      {event.organizers.map((o) => <li>{o}</li>)}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Recordings</h2>
+    {
+      event.videos.length > 0 && (
+        <div class="videos">
+          {event.videos.map((v) => {
+            const k = v.kaltura ? kaltura[v.kaltura] : undefined;
+            return (
+              <figure class="video">
+                {v.youtube ? (
+                  <div class="player">
+                    <iframe
+                      src={`https://www.youtube-nocookie.com/embed/${v.youtube}`}
+                      title={v.label}
+                      loading="lazy"
+                      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    />
+                  </div>
+                ) : (
+                  <div class="player player-pending">
+                    <span>Video upload to YouTube pending</span>
+                  </div>
+                )}
+                <figcaption>
+                  <strong>{v.label}</strong>
+                  {k && <span class="muted"> · {formatDuration(k.duration_sec)}</span>}
+                </figcaption>
+              </figure>
+            );
+          })}
+        </div>
+      )
+    }
+    {event.video_note && <p class="note">{event.video_note}</p>}
+  </section>
+
+  <section>
+    <h2>Program</h2>
+    <div class="doc-buttons">
+      {
+        docs.map((d) => (
+          <a class="button" href={d.href}>
+            {d.kind} <span class="muted">PDF</span>
+          </a>
+        ))
+      }
+    </div>
+    {
+      agenda && (
+        <details class="agenda" open>
+          <summary>Agenda</summary>
+          <pre>{agenda}</pre>
+        </details>
+      )
+    }
+  </section>
+
+  {
+    body && (
+      <section>
+        <details class="original">
+          <summary>Original event page text (as published by NIST)</summary>
+          <div class="prose" set:html={body} />
+        </details>
+      </section>
+    )
+  }
+</Base>

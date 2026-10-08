@@ -1,0 +1,49 @@
+{
+  "title": "NDNComm Archive",
+  "events": [
+    {
+      "year": "2024",
+      "title": "NDN Community Meeting 2024",
+      "dates": "March 6–7, 2024",
+      "location": "National Cybersecurity Center of Excellence (NCCoE), Rockville, MD, and online",
+      "organizers": ["Lotfi Benmohamed (NIST)", "Davide Pesavento (NIST)", "Marc Mosko (SRI)"],
+      "nist_url": "https://www.nist.gov/news-events/events/ndncomm2024",
+      "videos": [
+        {"label": "Day 1 — March 6, 2024", "kaltura": "1_a7qttcel", "youtube": null},
+        {"label": "Day 2 — March 7, 2024", "kaltura": "1_yxz7cuen", "youtube": null}
+      ]
+    },
+    {
+      "year": "2023",
+      "title": "NDNComm 2023",
+      "dates": "March 2–3, 2023",
+      "location": "National Cybersecurity Center of Excellence (NCCoE), Rockville, MD, and online",
+      "organizers": ["Lotfi Benmohamed (NIST)", "Dirk Kutscher (Hong Kong University of Science and Technology)", "Christos Papadopoulos (University of Memphis)"],
+      "nist_url": "https://www.nist.gov/news-events/events/2023/03/ndncomm-2023",
+      "videos": [
+        {"label": "Day 1, Part 1 — March 2, 2023", "kaltura": "1_5sqzakox", "youtube": null}
+      ],
+      "video_note": "Only the first part of Day 1 was published on the NIST event page. No other recordings of NDNComm 2023 have been found."
+    },
+    {
+      "year": "2021",
+      "title": "NDN Community Meeting 2021",
+      "dates": "October 28–29, 2021",
+      "location": "Virtual",
+      "organizers": ["Lotfi Benmohamed (NIST)", "Marie-José Montpetit (Concordia University)", "Susmit Shannigrahi (Tennessee Tech University)"],
+      "nist_url": "https://www.nist.gov/news-events/events/2021/10/ndn-community-meeting-2021",
+      "videos": [],
+      "video_note": "The recordings were removed from NIST's video hosting and are currently lost. If you have a copy, please get in touch."
+    },
+    {
+      "year": "2020",
+      "title": "NDN Community Meeting 2020",
+      "dates": "September 10–11, 2020",
+      "location": "Virtual",
+      "organizers": ["Lotfi Benmohamed (NIST)", "Kathleen Nichols (Pollere Inc.)", "Christos Papadopoulos (Colorado State University)"],
+      "nist_url": "https://www.nist.gov/news-events/events/ndn-community-meeting",
+      "videos": [],
+      "video_note": "The six recordings (two days, three parts each) were removed from NIST's video hosting and are currently lost. If you have a copy, please get in touch."
+    }
+  ]
+}
