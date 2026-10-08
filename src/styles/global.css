@@ -125,18 +125,13 @@ h1, h2, h3, h4 { font-family: var(--font); letter-spacing: -0.025em; line-height
     url('/img/hero-forwarder.webp') right center / cover no-repeat,
     var(--ink);
 }
-/* The home page keeps the plain glow: the picture would fight the animated name network on the right. */
+/* Home: the namespace constellation, kept faint behind the animated name tree. */
 .home-hero::before {
   background:
-    radial-gradient(60% 80% at 85% 10%, rgb(221 154 23 / 28%), transparent 60%),
-    radial-gradient(50% 70% at 10% 100%, rgb(194 78 27 / 30%), transparent 60%),
-    linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
-}
-.home-hero::after {
-  content: ''; position: absolute; inset: 0; z-index: -1; opacity: 0.35;
-  background-image: radial-gradient(rgb(253 249 242 / 18%) 1px, transparent 1px);
-  background-size: 22px 22px;
-  mask-image: linear-gradient(180deg, transparent, #000 30%, #000 70%, transparent);
+    linear-gradient(90deg, var(--ink) 0%, rgb(22 17 12 / 80%) 30%, rgb(22 17 12 / 55%) 60%, rgb(22 17 12 / 62%) 100%),
+    linear-gradient(0deg, var(--ink) 0%, transparent 30%),
+    url('/img/hero-namespace.webp') right center / cover no-repeat,
+    var(--ink);
 }
 .hero a { color: var(--amber); }
 .eyebrow {

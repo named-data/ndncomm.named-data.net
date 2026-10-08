@@ -1,0 +1,145 @@
+---
+// Home-page hero animation: data is fetched by name through a namespace tree, and cached on the way back.
+// Every animation shares one 9 s clock (same dur, all start at 0), so the steps stay in sync.
+const T = 9;
+
+type Node = { id: string; x: number; y: number; label: string; leaf?: boolean };
+const nodes: Node[] = [
+  { id: 'root', x: 34, y: 215, label: '/ndn' },
+  { id: 'edu', x: 160, y: 132, label: '/edu' },
+  { id: 'org', x: 160, y: 312, label: '/org' },
+  { id: 'ucla', x: 284, y: 74, label: '/ucla' },
+  { id: 'memphis', x: 284, y: 190, label: '/memphis' },
+  { id: 'nist', x: 284, y: 318, label: '/nist' },
+  { id: 'video', x: 404, y: 36, label: '/video/seg=42', leaf: true },
+  { id: 'talks', x: 404, y: 110, label: '/ndncomm/2026', leaf: true },
+  { id: 'mguard', x: 404, y: 196, label: '/mguard/data', leaf: true },
+  { id: 'agenda', x: 404, y: 290, label: '/agenda.pdf', leaf: true },
+  { id: 'slides', x: 404, y: 358, label: '/slides/s3.pdf', leaf: true },
+];
+const edges: [string, string][] = [
+  ['root', 'edu'], ['root', 'org'], ['edu', 'ucla'], ['edu', 'memphis'], ['org', 'nist'],
+  ['ucla', 'video'], ['ucla', 'talks'], ['memphis', 'mguard'], ['nist', 'agenda'], ['nist', 'slides'],
+];
+const at = (id: string) => nodes.find((n) => n.id === id)!;
+// Horizontal S-curve from a to b, as a continuation segment ("C ...") or a full path ("M ... C ...").
+const seg = (a: Node, b: Node) => {
+  const mx = (a.x + b.x) / 2;
+  return `C${mx},${a.y} ${mx},${b.y} ${b.x},${b.y}`;
+};
+const edgePath = ([s, t]: [string, string]) => `M${at(s).x},${at(s).y} ${seg(at(s), at(t))}`;
+const route = (...ids: string[]) =>
+  `M${at(ids[0]).x},${at(ids[0]).y} ` + ids.slice(1).map((id, i) => seg(at(ids[i]), at(id))).join(' ');
+
+const toLeaf = route('root', 'edu', 'ucla', 'video'); // first Interest, all the way to the producer
+const toCache = route('root', 'edu'); // second Interest stops at the cached copy
+
+// keyTimes helpers: visible only inside [from, to] (fractions of T).
+const window = (from: number, to: number) => ({
+  values: '0;0;1;1;0;0',
+  keyTimes: `0;${from};${from + 0.01};${to - 0.01};${to};1`,
+});
+const move = (from: number, to: number, reverse = false) => ({
+  keyPoints: reverse ? '1;1;0;0' : '0;0;1;1',
+  keyTimes: `0;${from};${to};1`,
+});
+const steps = [
+  { text: 'Interest: /ndn/edu/ucla/video/seg=42 — routed by name, not by host', ...window(0.03, 0.31) },
+  { text: 'Data returns along the same path, and is cached on the way', ...window(0.32, 0.57) },
+  { text: 'The next request for that name is answered by the nearest copy', ...window(0.58, 0.93) },
+];
+const pillWidth = (s: string) => s.length * 6.7 + 18;
+---
+
+<svg class="hero-graphic name-tree" viewBox="0 0 560 440" role="img"
+  aria-label="Animation: a request for named data travels through a namespace tree; the data comes back and is cached, so the next request is answered from the cache.">
+  <defs>
+    <radialGradient id="nt-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dd9a17" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#dd9a17" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  {edges.map((e) => <path d={edgePath(e)} class="nt-edge" />)}
+
+  <!-- the requested name's path lights up while the exchange is in flight -->
+  <path d={toLeaf} class="nt-route">
+    <animate attributeName="opacity" dur={`${T}s`} repeatCount="indefinite" {...window(0.04, 0.57)} />
+  </path>
+
+  {
+    nodes.map((n) => (
+      <g>
+        <circle cx={n.x} cy={n.y} r={n.leaf ? 5 : 7} class:list={['nt-node', { leaf: n.leaf }]} />
+        <g transform={`translate(${n.x + 12}, ${n.y - 12})`}>
+          <rect width={pillWidth(n.label)} height="24" rx="12" class="nt-pill" />
+          <text x="9" y="16.5" class="nt-label">{n.label}</text>
+        </g>
+      </g>
+    ))
+  }
+
+  <!-- producer answers -->
+  <circle cx={at('video').x} cy={at('video').y} r="14" fill="url(#nt-glow)" class="nt-anim">
+    <animate attributeName="opacity" dur={`${T}s`} repeatCount="indefinite" {...window(0.29, 0.36)} />
+  </circle>
+
+  <!-- cached copy at /ndn/edu -->
+  <g class="nt-anim" opacity="0">
+    <animate attributeName="opacity" dur={`${T}s`} repeatCount="indefinite" {...window(0.47, 0.95)} />
+    <circle cx={at('edu').x} cy={at('edu').y} r="13" class="nt-cache-ring" />
+    <g transform={`translate(${at('edu').x - 30}, ${at('edu').y + 16})`}>
+      <rect width="60" height="20" rx="10" class="nt-cache-pill" />
+      <text x="30" y="14" text-anchor="middle" class="nt-cache-text">cached</text>
+    </g>
+  </g>
+
+  <!-- Interest 1, Data 1, Interest 2, Data 2 -->
+  <circle r="5" class="nt-interest nt-anim" opacity="0">
+    <animateMotion dur={`${T}s`} repeatCount="indefinite" path={toLeaf} calcMode="linear" {...move(0.05, 0.3)} />
+    <animate attributeName="opacity" dur={`${T}s`} repeatCount="indefinite" {...window(0.05, 0.3)} />
+  </circle>
+  <circle r="6.5" class="nt-data nt-anim" opacity="0">
+    <animateMotion dur={`${T}s`} repeatCount="indefinite" path={toLeaf} calcMode="linear" {...move(0.33, 0.56, true)} />
+    <animate attributeName="opacity" dur={`${T}s`} repeatCount="indefinite" {...window(0.33, 0.56)} />
+  </circle>
+  <circle r="5" class="nt-interest nt-anim" opacity="0">
+    <animateMotion dur={`${T}s`} repeatCount="indefinite" path={toCache} calcMode="linear" {...move(0.6, 0.69)} />
+    <animate attributeName="opacity" dur={`${T}s`} repeatCount="indefinite" {...window(0.6, 0.69)} />
+  </circle>
+  <circle r="6.5" class="nt-data nt-anim" opacity="0">
+    <animateMotion dur={`${T}s`} repeatCount="indefinite" path={toCache} calcMode="linear" {...move(0.71, 0.8, true)} />
+    <animate attributeName="opacity" dur={`${T}s`} repeatCount="indefinite" {...window(0.71, 0.8)} />
+  </circle>
+
+  <!-- narration -->
+  {
+    steps.map((s) => (
+      <text x="34" y="428" class="nt-caption nt-anim" opacity="0">
+        {s.text}
+        <animate attributeName="opacity" dur={`${T}s`} repeatCount="indefinite" values={s.values} keyTimes={s.keyTimes} />
+      </text>
+    ))
+  }
+  <text x="34" y="428" class="nt-caption nt-static">Data is requested by name and served by the nearest copy</text>
+</svg>
+
+<style>
+  .nt-edge { fill: none; stroke: rgb(221 154 23 / 45%); stroke-width: 1.4; stroke-dasharray: 4 5; }
+  .nt-route { fill: none; stroke: #dd9a17; stroke-width: 2.4; opacity: 0; filter: drop-shadow(0 0 4px rgb(221 154 23 / 70%)); }
+  .nt-node { fill: #16110c; stroke: #dd9a17; stroke-width: 2; }
+  .nt-node.leaf { fill: #dd9a17; stroke: none; }
+  .nt-pill { fill: rgb(22 17 12 / 72%); stroke: rgb(253 249 242 / 22%); }
+  .nt-label { fill: #fdf9f2; font: 500 12px 'Inter Variable', sans-serif; }
+  .nt-interest { fill: #dd9a17; filter: drop-shadow(0 0 5px #dd9a17); }
+  .nt-data { fill: #fdf9f2; filter: drop-shadow(0 0 6px rgb(253 249 242 / 80%)); }
+  .nt-cache-ring { fill: none; stroke: #fdf9f2; stroke-width: 1.6; stroke-dasharray: 3 3; }
+  .nt-cache-pill { fill: #dd9a17; }
+  .nt-cache-text { fill: #16110c; font: 650 11px 'Inter Variable', sans-serif; letter-spacing: 0.03em; }
+  .nt-caption { fill: rgb(253 249 242 / 78%); font: 500 13px 'Inter Variable', sans-serif; }
+  .nt-static { display: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .nt-anim { display: none; }
+    .nt-static { display: inline; }
+  }
+</style>
