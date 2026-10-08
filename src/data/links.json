@@ -1,0 +1,38 @@
+{
+  "people": {
+    "Alex Afanasyev": "https://users.cs.fiu.edu/~afanasyev/",
+    "Beichuan Zhang": "https://www2.cs.arizona.edu/~bzhang/",
+    "Christos Papadopoulos": "https://www.memphis.edu/cs/people/faculty_pages/christos-papadopoulos.php",
+    "Davide Pesavento": "https://www.nist.gov/people/davide-pesavento",
+    "Dirk Kutscher": "https://dirk-kutscher.info/",
+    "Jay Misra": "https://www.cs.nmsu.edu/~misra/",
+    "Jeff Burke": "https://www.tft.ucla.edu/directory/people/jeff-burke/",
+    "Junxiao Shi": "https://www.nist.gov/people/junxiao-shi",
+    "Kathleen Nichols": "https://pollere.net/about.html",
+    "Lan Wang": "https://www.memphis.edu/cs/people/faculty_pages/lan-wang.php",
+    "Lixia Zhang": "https://web.cs.ucla.edu/~lixia/",
+    "Susmit Shannigrahi": "https://www.tntech.edu/directory/engineering/faculty/susmit-shannigrahi.php",
+    "Tianyuan Yu": "https://www.tianyuan-yu.com/",
+    "kc claffy": "https://users.caida.org/~kc/"
+  },
+  "orgs": {
+    "A2 Consulting": "https://a2cons.com",
+    "Colorado State University": "https://www.colostate.edu/",
+    "Concordia University": "https://www.concordia.ca/",
+    "FIU": "https://www.fiu.edu/",
+    "Hong Kong University of Science and Technology": "https://hkust.edu.hk/",
+    "MITRE": "https://www.mitre.org/",
+    "NIST": "https://www.nist.gov/",
+    "New Mexico State University": "https://nmsu.edu/",
+    "Operant Networks": "https://operantnetworks.com/",
+    "Pollere Inc.": "https://pollere.net/",
+    "SRI": "https://www.sri.com/",
+    "Tennessee Tech University": "https://www.tntech.edu/",
+    "UC San Diego": "https://ucsd.edu/",
+    "UC San Diego/CAIDA": "https://www.caida.org/",
+    "UCLA": "https://www.ucla.edu/",
+    "UCLA REMAP": "https://remap.ucla.edu/",
+    "University of Arizona": "https://www.arizona.edu/",
+    "University of Memphis": "https://www.memphis.edu/"
+  }
+}
