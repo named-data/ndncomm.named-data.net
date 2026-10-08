@@ -84,6 +84,8 @@ def main(url, out):
 
     _, raw = fetch(url)
     html = raw.decode("utf-8", "replace")
+    # nist.gov embeds its Mapbox key in drupalSettings; GitHub push protection rejects it
+    html = re.sub(r'"mapbox_access_token":"[^"]*"', '"mapbox_access_token":"REDACTED"', html)
     open(os.path.join(out, "source", "page.html"), "w").write(html)
 
     region = content_region(html)
