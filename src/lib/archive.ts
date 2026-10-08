@@ -1,9 +1,11 @@
-// Build-time loader for the scraped NIST pages in public/archive/<year>/.
+// Build-time loader for archived meeting material: raw scrapes in archive/<year>/ (not published),
+// and the files served with each meeting page in public/<year>/ (documents, slides, images).
 import fs from 'node:fs';
 import path from 'node:path';
 import { marked } from 'marked';
 
-const ARCHIVE = path.resolve('public/archive');
+const ARCHIVE = path.resolve('archive');
+const PUBLIC = path.resolve('public');
 const NIST = 'https://www.nist.gov';
 
 interface Doc {
@@ -23,10 +25,10 @@ function readJson<T>(year: string, file: string, fallback: T): T {
 }
 
 export function documents(year: string) {
-  const docs = readJson<Doc[]>(year, 'documents/manifest.json', []);
+  const docs = readJson<Doc[]>(year, 'documents.json', []);
   return docs.map((d) => ({
     ...d,
-    href: url(`archive/${year}/documents/${d.file}`),
+    href: url(`${year}/documents/${d.file}`),
     kind: /abstract/i.test(d.file) ? 'Abstracts' : /agenda/i.test(d.file) ? 'Agenda' : d.file,
   }));
 }
@@ -34,7 +36,7 @@ export function documents(year: string) {
 export function agendaText(year: string) {
   const agenda = documents(year).find((d) => d.kind === 'Agenda');
   if (!agenda) return null;
-  const p = path.join(ARCHIVE, year, 'documents', agenda.file.replace(/\.pdf$/i, '.txt'));
+  const p = path.join(ARCHIVE, year, 'text', agenda.file.replace(/\.pdf$/i, '.txt'));
   if (!fs.existsSync(p)) return null;
   return fs
     .readFileSync(p, 'utf8')
@@ -93,10 +95,10 @@ export function pageHtml(year: string) {
     const abs = new URL(href, NIST).href;
     return docs.find((d) => d.page === abs || d.url === abs)?.href;
   };
-  const imagesDir = path.join(ARCHIVE, year, 'images');
+  const imagesDir = path.join(PUBLIC, year, 'images');
   const localImage = (href: string) => {
     const name = path.basename(new URL(href, NIST).pathname);
-    return fs.existsSync(path.join(imagesDir, name)) ? url(`archive/${year}/images/${name}`) : null;
+    return fs.existsSync(path.join(imagesDir, name)) ? url(`${year}/images/${name}`) : null;
   };
 
   md = md.replace(/(!?)\[([^\]]*)\]\((\/[^)\s]*)/g, (_, bang, text, href) => {
@@ -105,4 +107,19 @@ export function pageHtml(year: string) {
   });
 
   return marked.parse(md.replace(/\n{3,}/g, '\n\n').trim(), { async: false }) as string;
+}
+
+interface OrgLogo {
+  logo: string;
+  license: string;
+  source: string;
+  wide?: boolean;
+}
+
+/** Public-domain logos for organizer affiliations (src/data/orgs.json), keyed by affiliation. */
+export function orgLogo(affiliation?: string): (OrgLogo & { href: string }) | undefined {
+  const p = path.resolve('src/data/orgs.json');
+  if (!affiliation || !fs.existsSync(p)) return undefined;
+  const entry = (JSON.parse(fs.readFileSync(p, 'utf8')) as Record<string, OrgLogo>)[affiliation];
+  return entry && { ...entry, href: url(entry.logo) };
 }

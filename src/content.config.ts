@@ -23,7 +23,7 @@ const meetings = defineCollection({
     summary: z.string().optional(),
     host: z.object({ name: z.string(), short: z.string(), url: z.string().url() }).optional(),
     organizers: z.array(person).default([]),
-    // Set for meetings whose official page lived elsewhere and is preserved in public/archive/<year>/.
+    // Set for meetings whose official page lived elsewhere and is preserved in archive/<year>/.
     original_page: z.string().url().optional(),
     links: z
       .object({
@@ -53,7 +53,7 @@ const talk = z.object({
   authors: z.array(person).optional(),
   abstract: z.string().optional(),
   video: z.string().url().optional(),
-  // absolute URL, or a site path such as "archive/2025/slides/x.pdf"
+  // absolute URL, or a site path such as "2025/slides/x.pdf"
   slides: z.string().optional(),
 });
 

@@ -19,7 +19,7 @@
               ],
               "abstract": "We present Ownly - a secure decentralized workspace application built with Named Data Networking and Security. In this talk we will deep dive into the network internals, the security model and details such as Ownly’s usage of NDN Testbed infrastructure.",
               "video": "https://youtu.be/zlXJFK8nWFE",
-              "slides": "archive/2025/slides/s1-1-Varun-Patil.pdf"
+              "slides": "2025/slides/s1-1-Varun-Patil.pdf"
             },
             {
               "title": "SASW: Secure and Automated Scientific Workflow",
@@ -31,7 +31,7 @@
               ],
               "abstract": "Modern scientific workloads can be time-consuming and multi-step porcesses. For instance, the workflows in genomics research involve managing large volumes of data, computing resources, and multiple steps in a distributed environment. We propose a federated solution, SASW, that can utilize available resources across distributed facilities without any central controller. SASW converts workflows into Directed Acyclic Graphs (DAGs) of tasks, and available resource nodes self-orchestrate parallel executions of independent tasks based on the data availability and shared system state. SASW is also designed with a distributed logging system for task auditing, fine-tuning performance, and workflow debugging.",
               "video": "https://youtu.be/OWKP9W-RVJI",
-              "slides": "archive/2025/slides/s1-2-Susmit-Shannigrahi.pdf"
+              "slides": "2025/slides/s1-2-Susmit-Shannigrahi.pdf"
             },
             {
               "title": "Solid: Re-decentralising the Web",
@@ -43,7 +43,7 @@
               ],
               "abstract": "Solid, initially developed by Sir Tim Berners-Lee’s Lab at MIT and their collaborators, allows people to manage and control personal data using Personal Online Data Stores (Pods). The technology ensures that data is no longer centralised around applications but instead is centred around the user. This shift enables individuals to decide how their data is collected, accessed, stored, and shared, addressing growing concerns about privacy, transparency, and control in the digital world.",
               "video": "https://youtu.be/lNOMqU8h28o",
-              "slides": "archive/2025/slides/s1-3-Jesse-Wright.pdf"
+              "slides": "2025/slides/s1-3-Jesse-Wright.pdf"
             },
             {
               "title": "The Impact of Network Architectures on the Development of Decentralized Applications",
@@ -116,7 +116,7 @@
               ],
               "abstract": "AI data requirements have been thoroughly established in the context of training. AI Inferencing is less understood with a much more fragmented approach. NDN has inherent strengths to assist in the establishment of capabilities for scaling AI inference.",
               "video": "https://youtu.be/HZ78f2f7YXo",
-              "slides": "archive/2025/slides/s2-1-Jeff-White.pdf"
+              "slides": "2025/slides/s2-1-Jeff-White.pdf"
             },
             {
               "title": "Finding Named Data in Xanadu: XR and NDN",
@@ -139,7 +139,7 @@
               ],
               "abstract": "The interenet has been under relentless scaling pressure, and it is a testament to the robustness of the Internet’s basic datagram architecture that we’ve been able to scale the network by a billion-fold and still retain most of the Internet’s basic behaviours. However there has been a fundamental shift in this environment and that is the move in the locus of attention (and investment) up the protocol stack from transmission and networking to the application layer. The result is that these days the proponderance of content and services are delivered from replicated content delivery platforms, and the basic means of traffic switching has shifted from routing protocols to the DNS anmd the applcation. We will look at why this has occurred and how this related to the concepts of named data networking.\n\nhttps://www.potaroo.net/presentations/2025-04-17-ndncomm.pdf",
               "video": "https://youtu.be/avTP5Vicx4s",
-              "slides": "archive/2025/slides/s2-3-Geoff-Huston.pdf"
+              "slides": "2025/slides/s2-3-Geoff-Huston.pdf"
             }
           ]
         },
@@ -165,7 +165,7 @@
               ],
               "abstract": "NDNd is a Golang implementation of the Named Data Networking stack. In this talk, we will discuss the NDNd structure and design decisions and focus on usability, the current status of implementation, and some results including performance benchmarks.",
               "video": "https://youtu.be/BNCHWsjmOZE",
-              "slides": "archive/2025/slides/s3-1-Varun-Patil.pdf"
+              "slides": "2025/slides/s3-1-Varun-Patil.pdf"
             },
             {
               "title": "Named Data Networking Distance-Vector Routing",
@@ -177,7 +177,7 @@
               ],
               "abstract": "ndn-dv is a new distance-vector routing protocol for Named Data Networks. The ndn-dv design minimizes routing overhead by separating prefix and router reachability in the NDN network. We will discuss the design and implementation of ndn-dv along with some evaulation results.",
               "video": "https://youtu.be/HYY4iAHJHSY",
-              "slides": "archive/2025/slides/s3-2-Varun-Patil.pdf"
+              "slides": "2025/slides/s3-2-Varun-Patil.pdf"
             },
             {
               "title": "Investigating NDN Forwarding without Routing for Resource-Constrained Wireless Mobile Networks",
@@ -189,7 +189,7 @@
               ],
               "abstract": "The high frequency of connectivity changes in MANET scenarios makes running a regular network routing protocol infeasible. This talk reports our investigation into using NDN forwarding strategies alone in Interest forwarding in a bandwidth-constrained MANET scenario. We used Mini-NDN to conduct various experiments. We show that the baseline ASF strategy, which is designed for the infrastructure environment, exhibits high traffic overhead, which causes wireless network congestion. We modified ASF and show the new version is able to perform well in the examined test cases.",
               "video": "https://youtu.be/fhdcFdm6LWc",
-              "slides": "archive/2025/slides/s3-3-Alex-Lane.pdf"
+              "slides": "2025/slides/s3-3-Alex-Lane.pdf"
             },
             {
               "title": "Keeping Time: Trust Domain Virtual Clock",
@@ -201,7 +201,7 @@
               ],
               "abstract": "Defined-trust Domains (DtD) are a type of Limited Domain [RFC8799] where the rules specifying the networking of application information are defined in a communications schema that governs the information exchanged and is integrated into the DtD’s Defined-trust Transport Protocol (DeftT). The schema also defines the form of valid member identities which are distributed as a chain of trust rooted at the trust anchor of the DtD. This framework grew out of work with NDN [DNMP] and background can be found at [IOTK,TST,DTLD]. Example implementations [DCT]. With a focus on secured communications, DtDs are constructed to mitigate attacks, including replay.\n\nDtD applications interface to collections of hierarchically named publications. Collections are synchronized across all members of the DtD by a sync protocol that sends and receives the collection’s packets wrapped in its own protocol data units (PDUs) which are exchanged using system transports, e.g., UDP, TCP, IPv6. PDUs are hierarchically named and prefixed with their collection name. Publications are timestamped which helps to prevent replay attacks, among other uses. In deployment, Scott Gray of Operant Networks found devices that do not use NTP and are sufficiently different that publications were being discarded. For timestamps to be meaningful, the members of a DtD must use a (virtual) clock that is synchronized throughout the DtD. The virtual clock does not need to be monotonic or particularly close to actual time and the relative precision of this clock in a common DtD can be 0.5 seconds (for publication lifetimes 1 second), though the aim is to keep it well below that value.\n\nClock synchronization has many solutions: NTP and its descendants for synchronizing internet-connected systems and a number of approaches for wireless sensor networks that aim for microsecond accuracy so carefully account for processing delays and make use of physical or MAC layer clocks. Both these classes of approach are focused on synchronizing the system clock of their devices. DtDs need a clock that can be used throughout the Domain for publications. Its granularity can be closely related to its publication lifetimes and it need not be monotonic nor relate to any global clock (e.g., GMT). This talk describes a Trust Domain Virtual Clock that is integrated with DeftT and completely self-contained [TDVC]. TDVC contains a delay estimator that can be used for DtD subnets with transit delays that exceed calibration granularity.\n\nTDVC has its own DeftT collection that propagates virtual clock publications via single-hop reachable members (neighbors), gossip-style, to minimize clock noise due to transmission delay. Contributions to the calculation are weighted by the neighborhood size of each member; that is, a member with more neighbors is given more weight than a member with fewer neighbors. Members use the differences between their virtual clock and that of its neighbors in calibration computations. A member considers its virtual clock to be calibrated when all neighbor difference values are within a tolerance (that must account for the expected transmission delay) and all of its neighbors also indicate they are in tolerance. Calibration restarts either when a neighbor’s clock is detected out of tolerance or a neighbor sends values from a new calibration. In DtDs that contain relay elements, the relays act like a meshed member that connects otherwise disconnected members. The talk will cover TDVC details and results from initial testing.\n\n[DNMP] Nichols, K., \"Lessons Learned Building a Secure Network Measurement Framework Using Basic NDN\", Proceedings of ACM ICN ’19, September 24-26, 2019, Macao, China. [IOTK] Nichols, K., \"Trust schemas and ICN: key to secure home IoT\", Proceedings of ACM ICN ’21, September 22-24, Paris, France, https://doi.org/10.1145/3460417.3482972. [TST] K. Nichols, \"Versec/DCT to create and use trust schemas\", ACM ICN 2021 Tutorial, https://conferences2.sigcomm.org/acm-icn/2021/assets/tutorial-trust-schema/2-versec-dct-e1c6ddae2a10c47df55846b58ab84b93aeaff30d1eb00fa4fe9383afb3abca59.pdf [DTLD] Nichols, K., Jacobson, V., King, R., \"Defined-trust Transport for Limited Domains”, https://pollere.net/Txtdocs/defTrust.html [TDVC] Nichols, K. “Defined-trust Domain Virtual Clock”, https://www.tdcommons.org/dpubs_series/7887",
               "video": "https://youtu.be/Z_0OEXPnT0c",
-              "slides": "archive/2025/slides/s3-4-Kathie-Nichols.pdf"
+              "slides": "2025/slides/s3-4-Kathie-Nichols.pdf"
             }
           ]
         }
@@ -230,7 +230,7 @@
               ],
               "abstract": "In this short talk, we will briefly introduce the currently available developer and operator tooling for building applications and running NDN networks.",
               "video": "https://youtu.be/-vjEb-FpleA",
-              "slides": "archive/2025/slides/s4-1-Adam-and-Junxiao.pdf"
+              "slides": "2025/slides/s4-1-Adam-and-Junxiao.pdf"
             },
             {
               "title": "A Computing-aware Adaptive Forwarding Strategy in Named Data Networking",
@@ -242,7 +242,7 @@
               ],
               "abstract": "Adaptive forwarding is a key feature of Named Data Networking (NDN), enhancing routers’ forwarding decisions for efficient data retrieval. However, few strategies address dynamic data scenarios with remote computation, and none can work with the NDN RPC framework, a crucial component for remote computation. Consequently, existing strategies fail to maintain in-network load balancing as they cannot detect producer state changes in such scenarios. To address this, we propose CAF, a computing-aware adaptive forwarding strategy for in-network load balancing.",
               "video": "https://youtu.be/Zglqx7tG3As",
-              "slides": "archive/2025/slides/s4-2-Teng-Liang.pdf"
+              "slides": "2025/slides/s4-2-Teng-Liang.pdf"
             },
             {
               "title": "Duplicate Suppression in Named Data Networking using Reinforcement Learning",
@@ -254,7 +254,7 @@
               ],
               "abstract": "Named Data Networking (NDN) is a promising data-centric internet architecture that focuses on data rather than the hosts. By design, NDN supports multicast communication, enabling data distribution to multiple recipients, which is beneficial for modern applications such as video conferencing, online gaming, and vehicular networks. However, when multiple NDN nodes access the same data on a multicast link, they may send duplicate interest and data packets, leading to inefficiencies and increased latency. Our research employs Actor-Critic Reinforcement Learning (RL) to optimize the wait time each node should observe before sending interest or data packets in a single-hop network, thereby minimizing unnecessary duplications. The Actor-Critic network enables nodes to learn and adjust wait times based on real-time network conditions. Our experiments demonstrate a significant reduction in duplicate packet transmissions, leading to reduced file transfer time.",
               "video": "https://youtu.be/aipXsDkwj2A",
-              "slides": "archive/2025/slides/s4-3-Bidhya-Shrestha.pdf"
+              "slides": "2025/slides/s4-3-Bidhya-Shrestha.pdf"
             },
             {
               "title": "Establishing Trust Across Zones in NDN: Challenges and Design Considerations",
@@ -266,7 +266,7 @@
               ],
               "abstract": "Named Data Networking (NDN) organizes entities into trust zones, where each entity undergoes a bootstrapping process that includes name assignment, trust anchor installation, and trust schema configuration. This process ensures that entities within the same zone can securely consume data and verify the legitimacy of content producers. However, trust boundaries between zones present challenges when entities need to validate and consume data from producers in different zones. In this presentation, we will illustrate these concepts through a case study and explore the challenges of implementing inter-zone communication, based on previous initiatives. We also discuss some design considerations and additional requirements that could enhance communication between different zones.",
               "video": "https://youtu.be/t2okSIZ_bNM",
-              "slides": "archive/2025/slides/s4-4-Leobino-Sampaio.pdf"
+              "slides": "2025/slides/s4-4-Leobino-Sampaio.pdf"
             }
           ]
         },
@@ -327,7 +327,7 @@
               ],
               "abstract": "Ad-hoc networks are essential for decentralized communication, particularly in drone systems. However, Mini-NDN and NFD lack sufficient support for such networks. Forwarding strategies in Ad-hoc NDN networks, such as CCLF (Leveraging Content Connectivity and Location Awareness for Adaptive Forwarding in NDN-based Mobile Ad Hoc Networks), rely heavily on location information for making forwarding decisions. To address this, we introduced MinindnAdhoc, a subclass of MinindnWifi, along with GPSDApp, which enables GPS data retrieval. GPSD is a service daemon that collects data from GPS receivers and other positioning sensors, providing a unified interface for applications to access location, velocity, and time information. Additionally, we ported CCLF from NDN-SIM to NFD and integrated GPSD-based location support for forwarding decisions. Further enhancements are in progress, including the development of a secure protocol for sharing mobility data among trusted nodes and an improved CCLFv2 for more efficient forwarding. These advancements will significantly enhance Mini-NDN’s capabilities in simulating Ad-hoc NDN networks.",
               "video": "https://youtu.be/KJlkdOnXsfE",
-              "slides": "archive/2025/slides/s5-1-Tianxing-Ma.pdf"
+              "slides": "2025/slides/s5-1-Tianxing-Ma.pdf"
             },
             {
               "title": "mGuard Development Updates and Testbed Evaluation",
@@ -339,7 +339,7 @@
               ],
               "abstract": "Recent development efforts in mGuard have focused on improving synchronization reliability and enhancing data security, guided by insights gained through testbed experimentation and evaluation. A key challenge addressed was a PSync-related synchronization issue, which led to protocol-level refinements, including the introduction of unique data stream naming and real-time notifications of stream changes, streamlining synchronization and eliminating the need for redundant polling. Additionally, mGuard now supports timestamp attributed based encryption, where data is encrypted using a time-based attribute corresponding to its generation time, enabling fine-grained, time-bound access control. This presentation will detail the challenges identified during testing, the resolution process, and the impact of these improvements and other development updates, along with performance results and observations from testbed experiments.",
               "video": "https://youtu.be/8wEV7qix2jg",
-              "slides": "archive/2025/slides/s5-2-Suravi-Regmi.pdf"
+              "slides": "2025/slides/s5-2-Suravi-Regmi.pdf"
             },
             {
               "title": "GlobalPing Alternative Using NDN",
@@ -351,7 +351,7 @@
               ],
               "abstract": "In this talk we will present a pub/sub model where some nodes are requested to do measurements by a central server. After the measurements, these servers send the results back to the central server.",
               "video": "https://youtu.be/avpUc6lBeFg",
-              "slides": "archive/2025/slides/s5-3-Yekta-Kocaogullar.pdf"
+              "slides": "2025/slides/s5-3-Yekta-Kocaogullar.pdf"
             },
             {
               "title": "Data de-duplication with FLIC Manifests",
@@ -362,7 +362,7 @@
               ],
               "abstract": "We implement a data de-duplication mechanism using FLIC Manifests and CCNx, though the method directly applies to NDN. Using the FastCDC data-deduplication algorithm, we encode file chunks of several GNU repositories with FLIC manifests. After introducing the IRTF ICNRG FLIC Manifest, we show a cumulative storage savings result of 45% - 65% as compared to the original tar files (uncompressed) when measured over minor and revision releases. Our results include the best-case CCNx Nameless objects (pure object store) and common routable prefix object store, for approximate NDN performance.",
               "video": "https://youtu.be/9zCnkd1yXDQ",
-              "slides": "archive/2025/slides/s5-4-Marc-Mosko.pdf"
+              "slides": "2025/slides/s5-4-Marc-Mosko.pdf"
             },
             {
               "title": "NDN-DPDK file server benchmark on FABRIC",
@@ -374,7 +374,7 @@
               ],
               "abstract": "This presentation introduces the ndn6-file-server protocol and its implementation in NDN-DPDK, and then shows benchmark results of file transfer scenario using NDN-DPDK file server over the FABRIC testbed.",
               "video": "https://youtu.be/shW9WMxJtLg",
-              "slides": "archive/2025/slides/s5-5-Junxiao-Shi.pdf"
+              "slides": "2025/slides/s5-5-Junxiao-Shi.pdf"
             }
           ]
         },

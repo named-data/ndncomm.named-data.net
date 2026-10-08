@@ -33,7 +33,7 @@ Every recording should be on YouTube. Status per meeting:
 | 2025 | Every talk and panel on YouTube (linked per talk) | — |
 | 2026 | Every talk, the panel and its two discussion clips on YouTube (linked per talk) | — |
 
-The deleted Kaltura entry IDs are listed in `public/archive/<year>/videos.json`, in case NIST can restore them.
+The deleted Kaltura entry IDs are listed in `archive/<year>/videos.json`, in case NIST can restore them.
 
 ### Already on YouTube
 
@@ -41,7 +41,7 @@ The deleted Kaltura entry IDs are listed in `public/archive/<year>/videos.json`,
 - 2024 Day 1: `BHX1xNs0C5s`, Day 2: `FGEM72Ar0Gg`
 - 2025 and 2026: per-talk links in `src/content/programs/<year>.json`
 
-The original 2023/2024 files came from NIST's Kaltura (`download_url` in `public/archive/<year>/videos.json`).
+The original 2023/2024 files came from NIST's Kaltura (`download_url` in `archive/<year>/videos.json`).
 
 ## Website
 
@@ -63,14 +63,16 @@ npm run build    # static site in dist/
   conference sites.
 - `src/pages/*.md`: plain Markdown pages (see `about.md`), using `src/layouts/Page.astro`.
 - `src/pages/index.astro`: the front page. `src/pages/[year].astro`: one page per meeting.
-- `public/archive/<year>/`: the archived original material, served as-is (`page.md`, `documents/`, `slides/`,
-  `images/`, `source/` raw HTML, `videos.json`).
+- `public/<year>/`: files served next to each meeting page (`/<year>/documents/`, `/<year>/slides/`,
+  `/<year>/images/`).
+- `archive/<year>/`: raw material from the original pages, kept in the repo but not published (`source/` raw HTML,
+  `page.md`, `documents.json`, `text/` PDF extracts, `videos.json`).
 - `public/img/ndn-logo.png`: the NDN logo (an SVG version would be sharper).
 
 ## Re-scraping a NIST page
 
 ```
-python3 tools/scrape_nist_event.py <nist-event-url> public/archive/<year>
+python3 tools/scrape_nist_event.py <nist-event-url> <year>
 ```
 
 This needs `pandoc` and `pdftotext` (poppler). It redacts the Mapbox key that nist.gov embeds in every page, which

@@ -74,7 +74,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_jburke.pdf"
+              "slides": "2017/slides/ndn1703_jburke.pdf"
             },
             {
               "title": "NDN-Opp: NDN in Opportunistic Networks",
@@ -92,7 +92,7 @@
                   "affiliation": "COPELABS, University Lusofona"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_sdynerowicz.pdf"
+              "slides": "2017/slides/ndn1703_sdynerowicz.pdf"
             },
             {
               "title": "FleetLink: NDN-Powered Low-Cost, Low-Rate, Reliable, Secure Communication for Neighborhood Solar: A Practical Approach to Lowering the Cost of Solar",
@@ -106,7 +106,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_aafanasyev3.pdf"
+              "slides": "2017/slides/ndn1703_aafanasyev3.pdf"
             },
             {
               "title": "Named Data Networking of Things: NDN for Microcontrollers (NDN-RIOT)",
@@ -124,7 +124,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_wshang.pdf"
+              "slides": "2017/slides/ndn1703_wshang.pdf"
             },
             {
               "title": "Named Data Networking of Things: Trust Management for Autonomous Data-Centric Security",
@@ -142,7 +142,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_aafanasyev2.pdf"
+              "slides": "2017/slides/ndn1703_aafanasyev2.pdf"
             }
           ]
         },
@@ -177,7 +177,7 @@
                   "affiliation": "CSU"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_sshannigrahi.pdf"
+              "slides": "2017/slides/ndn1703_sshannigrahi.pdf"
             },
             {
               "title": "From Crowd to Cloud: Apply Named Data Networking Principles to Manage Air Sensor Data",
@@ -195,7 +195,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_yzhu.pdf"
+              "slides": "2017/slides/ndn1703_yzhu.pdf"
             },
             {
               "title": "Hadoop over NDN: Initial Experience and Results",
@@ -217,7 +217,7 @@
                   "affiliation": "University of Arizona"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_mgibbens.pdf"
+              "slides": "2017/slides/ndn1703_mgibbens.pdf"
             },
             {
               "title": "nTorrent: Peer-to-Peer File Sharing in Named Data Networking",
@@ -239,7 +239,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_smastorakis2.pptx"
+              "slides": "2017/slides/ndn1703_smastorakis2.pptx"
             }
           ]
         },
@@ -292,7 +292,7 @@
                   "affiliation": "Verizon"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_dpacella2.pdf"
+              "slides": "2017/slides/ndn1703_dpacella2.pdf"
             }
           ]
         },
@@ -317,7 +317,7 @@
                   "affiliation": "Northeastern University"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_eyeh.pdf"
+              "slides": "2017/slides/ndn1703_eyeh.pdf"
             },
             {
               "title": "NDN Control Center: NDN Networking Stack and Security Enabler for Desktop Systems",
@@ -335,7 +335,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_qzhao.pdf"
+              "slides": "2017/slides/ndn1703_qzhao.pdf"
             },
             {
               "title": "NDN-Android: NDN Networking Stack for Android Platform",
@@ -353,7 +353,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_aafanasyev4.pptx"
+              "slides": "2017/slides/ndn1703_aafanasyev4.pptx"
             },
             {
               "title": "Facilitating ICN Deployment with an Extended OpenFlow Protocol",
@@ -375,7 +375,7 @@
                   "affiliation": "TNO"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_pzuraniewski.pdf"
+              "slides": "2017/slides/ndn1703_pzuraniewski.pdf"
             }
           ]
         },
@@ -414,7 +414,7 @@
                   "affiliation": "The University of Alabama"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_mkuai.pdf"
+              "slides": "2017/slides/ndn1703_mkuai.pdf"
             },
             {
               "title": "Demo: Implementing an environmental sensor system using ICN",
@@ -440,7 +440,7 @@
                   "affiliation": "Ericsson Research"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_bohlman.pdf"
+              "slides": "2017/slides/ndn1703_bohlman.pdf"
             },
             {
               "title": "Demo: NDN operation in Opportunistic Wireless Networks",
@@ -471,7 +471,7 @@
                   "affiliation": "University of Memphis"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_lpi.pdf"
+              "slides": "2017/slides/ndn1703_lpi.pdf"
             },
             {
               "title": "Demo: Scalable Real-time Collaborative Communication over NDN using Edge Service Routers",
@@ -501,7 +501,7 @@
                   "affiliation": "Huawei Research Center"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_samin.pdf"
+              "slides": "2017/slides/ndn1703_samin.pdf"
             },
             {
               "title": "Demo: Mini-NDN: a Lightweight and Scalable Emulation Environment for NDN",
@@ -515,7 +515,7 @@
                   "affiliation": "University of Memphis"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_agawande.pdf"
+              "slides": "2017/slides/ndn1703_agawande.pdf"
             },
             {
               "title": "Demo: Open mHealth: What is NDNFit",
@@ -529,7 +529,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_hzhang2.pdf"
+              "slides": "2017/slides/ndn1703_hzhang2.pdf"
             },
             {
               "title": "Poster: Robus and Anonymous Information Sharing among Autonomous Vehicles",
@@ -547,7 +547,7 @@
                   "affiliation": "University of Memphis"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_mchowdhury.pdf"
+              "slides": "2017/slides/ndn1703_mchowdhury.pdf"
             },
             {
               "title": "Poster: Controlling Strategy Retransmissions in Named Data Networking",
@@ -578,7 +578,7 @@
                   "affiliation": "NIST"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_dpesavento.pdf"
+              "slides": "2017/slides/ndn1703_dpesavento.pdf"
             },
             {
               "title": "Poster: Path Tracing in Named Data Networking",
@@ -592,7 +592,7 @@
                   "affiliation": "NIST"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_skhoussi.pdf"
+              "slides": "2017/slides/ndn1703_skhoussi.pdf"
             },
             {
               "title": "Poster: NDN Distributed File System(NDFS)",
@@ -610,7 +610,7 @@
                   "affiliation": "Paris-Est University"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_jdongo.pdf"
+              "slides": "2017/slides/ndn1703_jdongo.pdf"
             },
             {
               "title": "Poster: NDN for Cog Network to Support Next Generation Social Systems",
@@ -624,7 +624,7 @@
                   "affiliation": "Nippon Telegraph and Telephone Corp."
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_akoike.pdf"
+              "slides": "2017/slides/ndn1703_akoike.pdf"
             },
             {
               "title": "Poster: NDN-IoT Framework and Example Application \"Flow\"",
@@ -646,7 +646,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_zwang.pdf"
+              "slides": "2017/slides/ndn1703_zwang.pdf"
             },
             {
               "title": "Demo: NDN-Android: NDN Networking Stack for Android Platform",
@@ -664,7 +664,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_hzhang.pdf"
+              "slides": "2017/slides/ndn1703_hzhang.pdf"
             },
             {
               "title": "Demo: NDN Control Center: NDN Networking Stack and Security Enabler for Desktop Systems",
@@ -682,7 +682,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_qzhao_demo.pdf"
+              "slides": "2017/slides/ndn1703_qzhao_demo.pdf"
             },
             {
               "title": "Demo: Facilitating ICN Deployment with an Extended OpenFlow Protocol",
@@ -704,7 +704,7 @@
                   "affiliation": "TNO"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_pzuraniewski.pdf"
+              "slides": "2017/slides/ndn1703_pzuraniewski.pdf"
             },
             {
               "title": "Demo: ndnSIM v2.3",
@@ -722,7 +722,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_smastorakis_demo.pdf"
+              "slides": "2017/slides/ndn1703_smastorakis_demo.pdf"
             }
           ]
         },
@@ -786,7 +786,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_aafanasyev5.pptx"
+              "slides": "2017/slides/ndn1703_aafanasyev5.pptx"
             },
             {
               "title": "NDNS: DNS is NDN",
@@ -804,7 +804,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_aafanasyev.pdf"
+              "slides": "2017/slides/ndn1703_aafanasyev.pdf"
             },
             {
               "title": "NDN-RTC and Experimental Library Functionality",
@@ -822,7 +822,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_pgusev.pdf"
+              "slides": "2017/slides/ndn1703_pgusev.pdf"
             },
             {
               "title": "Common Client Libraries - Update",
@@ -853,7 +853,7 @@
                   "affiliation": "UCLA"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_smastorakis.pptx"
+              "slides": "2017/slides/ndn1703_smastorakis.pptx"
             },
             {
               "title": "NDN Testbed: Status Update",
@@ -863,7 +863,7 @@
                   "affiliation": "Washington University"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_jdehart.pdf"
+              "slides": "2017/slides/ndn1703_jdehart.pdf"
             }
           ]
         },
@@ -902,7 +902,7 @@
                   "affiliation": "Northeastern University"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_ivoitalov.pdf"
+              "slides": "2017/slides/ndn1703_ivoitalov.pdf"
             },
             {
               "title": "How to Establish Loop-Free Multipath Routes in Named Data Networking?",
@@ -916,7 +916,7 @@
                   "affiliation": "The University of Arizona"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_kschneider.pdf"
+              "slides": "2017/slides/ndn1703_kschneider.pdf"
             },
             {
               "title": "A Native Content Discovery Mechanism for NDN",
@@ -938,7 +938,7 @@
                   "affiliation": "University College London"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_oascigil.pdf"
+              "slides": "2017/slides/ndn1703_oascigil.pdf"
             },
             {
               "title": "Geolocation Compass: Geolocalized Data Registry and Forwarding for ICN Networks",
@@ -956,7 +956,7 @@
                   "affiliation": "Verizon"
                 }
               ],
-              "slides": "archive/2017/slides/ndn1703_dpacella.pdf"
+              "slides": "2017/slides/ndn1703_dpacella.pdf"
             }
           ]
         },

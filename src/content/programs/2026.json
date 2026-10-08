@@ -21,7 +21,7 @@
                 }
               ],
               "video": "https://youtu.be/KeStEPRvU8Q",
-              "slides": "archive/2026/slides/01_From_SRM_to_NDN_Lan_Wang.pdf"
+              "slides": "2026/slides/01_From_SRM_to_NDN_Lan_Wang.pdf"
             },
             {
               "title": "Resilient In-Network Data Storage in NDN",
@@ -31,7 +31,7 @@
                 }
               ],
               "video": "https://youtu.be/aIWN3yGm0DA",
-              "slides": "archive/2026/slides/02_Resilient_InNetwork_Storage_adam_Thieme.pdf"
+              "slides": "2026/slides/02_Resilient_InNetwork_Storage_adam_Thieme.pdf"
             },
             {
               "title": "NDN-CloudSync: A Secure Storage Service Running on Multiple Clouds",
@@ -44,7 +44,7 @@
                 }
               ],
               "video": "https://youtu.be/RTiyN0xXbAg",
-              "slides": "archive/2026/slides/03_NDN_CloudSync_Ronak_Badhe.pdf"
+              "slides": "2026/slides/03_NDN_CloudSync_Ronak_Badhe.pdf"
             }
           ]
         },
@@ -71,7 +71,7 @@
                 }
               ],
               "video": "https://youtu.be/eOiQRGHbVcA",
-              "slides": "archive/2026/slides/04_Security_Library_Ferhat_Mecerhed.pdf"
+              "slides": "2026/slides/04_Security_Library_Ferhat_Mecerhed.pdf"
             },
             {
               "title": "Enhancing NAC-ABE to Support Access Control for mHealth Applications and Beyond",
@@ -81,7 +81,7 @@
                 }
               ],
               "video": "https://youtu.be/5UPe_k2RQpU",
-              "slides": "archive/2026/slides/05_NAC_ABE_Suravi_Regmi.pdf"
+              "slides": "2026/slides/05_NAC_ABE_Suravi_Regmi.pdf"
             },
             {
               "title": "Message Layer Security in Ownly Group Encryption",
@@ -94,7 +94,7 @@
                 }
               ],
               "video": "https://youtu.be/F4nCfmxxPvE",
-              "slides": "archive/2026/slides/06_OpenMLS_Mike_Han.pdf"
+              "slides": "2026/slides/06_OpenMLS_Mike_Han.pdf"
             }
           ]
         },
@@ -121,7 +121,7 @@
                 }
               ],
               "video": "https://youtu.be/P3-yZynI92I",
-              "slides": "archive/2026/slides/07_NDN_Framework_Tianxing_Ma.pdf"
+              "slides": "2026/slides/07_NDN_Framework_Tianxing_Ma.pdf"
             },
             {
               "title": "NDN for AI and AI for NDN: Challenges, Opportunities and Early Results",
@@ -131,7 +131,7 @@
                 }
               ],
               "video": "https://youtu.be/r7_AfcHfHu8",
-              "slides": "archive/2026/slides/08_NDN_for_AI_Marica_Amadeo.pdf"
+              "slides": "2026/slides/08_NDN_for_AI_Marica_Amadeo.pdf"
             },
             {
               "title": "MGuard: Development Updates",
@@ -141,7 +141,7 @@
                 }
               ],
               "video": "https://youtu.be/2KB8-uyekws",
-              "slides": "archive/2026/slides/09_MGuard_Updates_Suravi_Regmi.pdf"
+              "slides": "2026/slides/09_MGuard_Updates_Suravi_Regmi.pdf"
             }
           ]
         }
@@ -171,7 +171,7 @@
           ],
           "abstract": "AI agents are rapidly emerging as autonomous network participants, yet the underlying infrastructure remains ad hoc and ill-suited for their needs. Agents must identify each other, discover capabilities, delegate tasks, and establish trust, raising fundamental protocol questions: Are agents just applications, or should they be treated as first-class network entities? What is the impact of agent communication patterns on transport and network layer functionality? What should agent identity look like? How should trust be established across domains? How do agents discover the right peers? And which of these functions belong in the network layer?\n\nThis panel asks whether today's Internet stack, including DNS/DNSSEC, WebPKI, and TLS, can scale to agent ecosystems, or whether their assumptions of human-driven sessions and centralized trust fundamentally break down. If so, can alternative approaches such as Named Data Networking (NDN), with data-centric security and decentralized trust, point toward a new architectural direction?",
           "video": "https://youtu.be/QpXpVPHqrR0",
-          "slides": "archive/2026/slides/Panel.pdf",
+          "slides": "2026/slides/Panel.pdf",
           "more_videos": [
             {
               "label": "Panel discussions 1",
@@ -206,7 +206,7 @@
                 }
               ],
               "video": "https://youtu.be/ab6JMJGtzHk",
-              "slides": "archive/2026/slides/10_IoT_Digital_Autonomy_Lixia_Zhang.pdf"
+              "slides": "2026/slides/10_IoT_Digital_Autonomy_Lixia_Zhang.pdf"
             },
             {
               "title": "TrustNG: Using Named Data Networking as a Zero-Trust Overlay for Cloud-Native 5G Core Networks",
@@ -216,7 +216,7 @@
                 }
               ],
               "video": "https://youtu.be/jXr2y4wa95U",
-              "slides": "archive/2026/slides/11_TrustNG_Amirreza_Ghafoori.pdf"
+              "slides": "2026/slides/11_TrustNG_Amirreza_Ghafoori.pdf"
             },
             {
               "title": "Why Ownly Does Not Work on the ndn6 Network? A Decade of Operational Gaps in Trust and Routing",
@@ -226,7 +226,7 @@
                 }
               ],
               "video": "https://youtu.be/fkT99uoPrOs",
-              "slides": "archive/2026/slides/12_Why_ONLY_Fails_Junxiao_Shi.pdf"
+              "slides": "2026/slides/12_Why_ONLY_Fails_Junxiao_Shi.pdf"
             }
           ]
         },
@@ -253,7 +253,7 @@
                 }
               ],
               "video": "https://youtu.be/I-ow32zclks",
-              "slides": "archive/2026/slides/13_ICN_SCION_Global_Name_Service_Ken_Calvert.pdf"
+              "slides": "2026/slides/13_ICN_SCION_Global_Name_Service_Ken_Calvert.pdf"
             },
             {
               "title": "From Map-and-Encap to BIER: Observations on Network Routing Scalability",
@@ -263,7 +263,7 @@
                 }
               ],
               "video": "https://youtu.be/anMztCSKNLs",
-              "slides": "archive/2026/slides/14_Map_Encap_BIER_Beichuan_Zhang.pdf"
+              "slides": "2026/slides/14_Map_Encap_BIER_Beichuan_Zhang.pdf"
             },
             {
               "title": "Architecting a Scalable Routing and Forwarding System for NDN",
@@ -273,7 +273,7 @@
                 }
               ],
               "video": "https://youtu.be/nSLQ-dgtE8c",
-              "slides": "archive/2026/slides/15_Architecting_Scalable_Routing_Tianyuan_Yu.pdf"
+              "slides": "2026/slides/15_Architecting_Scalable_Routing_Tianyuan_Yu.pdf"
             }
           ]
         }

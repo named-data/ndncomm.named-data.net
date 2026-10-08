@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 """Scrape a NIST event page (text, linked documents, Kaltura video metadata).
 
-Usage: scrape_nist_event.py <event-url> <output-dir>
+Usage: scrape_nist_event.py <event-url> <year>   (run from the repository root)
 
-Writes into <output-dir>:
+Raw material, kept in the repo but not published, goes to archive/<year>/:
   source/page.html      raw page as downloaded
   source/content.html   just the page's main content region
   page.md               content region converted to Markdown (needs pandoc)
-  documents/*.pdf       documents linked from the page (agenda, abstracts, slides, ...)
-  documents/*.txt       pdftotext versions (needs pdftotext)
-  images/*              images shown in the page content
+  documents.json        where each document came from
+  text/*.txt            pdftotext versions of the PDFs (needs pdftotext)
   videos.json           Kaltura entries embedded on the page, with direct download URLs
+
+Files served next to the meeting page (/<year>/) go to public/<year>/:
+  documents/*           documents linked from the page (agenda, abstracts, ...)
+  images/*              images shown in the page content
 """
 import json
 import os
@@ -77,10 +80,10 @@ def kaltura_videos(html):
     return videos
 
 
-def main(url, out):
+def main(url, year):
+    out = os.path.join("archive", year)
+    pub = os.path.join("public", year)
     os.makedirs(os.path.join(out, "source"), exist_ok=True)
-    os.makedirs(os.path.join(out, "documents"), exist_ok=True)
-    os.makedirs(os.path.join(out, "images"), exist_ok=True)
 
     _, raw = fetch(url)
     html = raw.decode("utf-8", "replace")
@@ -110,18 +113,21 @@ def main(url, out):
     for link, page in docs.items():
         final, data = fetch(urllib.parse.urljoin(BASE, link))
         name = urllib.parse.unquote(os.path.basename(urllib.parse.urlparse(final).path))
-        path = os.path.join(out, "documents", name)
+        os.makedirs(os.path.join(pub, "documents"), exist_ok=True)
+        path = os.path.join(pub, "documents", name)
         open(path, "wb").write(data)
         manifest.append({"file": name, "url": final, "page": urllib.parse.urljoin(BASE, page) if page else None})
         if name.lower().endswith(".pdf") and shutil.which("pdftotext"):
-            subprocess.run(["pdftotext", "-layout", path, path[:-4] + ".txt"], check=True)
+            os.makedirs(os.path.join(out, "text"), exist_ok=True)
+            subprocess.run(["pdftotext", "-layout", path, os.path.join(out, "text", name[:-4] + ".txt")], check=True)
         print("doc:", name)
-    json.dump(manifest, open(os.path.join(out, "documents", "manifest.json"), "w"), indent=2)
+    json.dump(manifest, open(os.path.join(out, "documents.json"), "w"), indent=2)
 
     for src in sorted(set(re.findall(r'<img\b[^>]*\bsrc="([^"]+)"', region))):
         _, data = fetch(urllib.parse.urljoin(BASE, src))
         name = os.path.basename(urllib.parse.urlparse(src).path)
-        open(os.path.join(out, "images", name), "wb").write(data)
+        os.makedirs(os.path.join(pub, "images"), exist_ok=True)
+        open(os.path.join(pub, "images", name), "wb").write(data)
         print("image:", name)
 
     videos = kaltura_videos(html)

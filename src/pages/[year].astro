@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
 import Program from '../components/Program.astro';
-import { url, documents, kalturaInfo, formatDuration, pageHtml } from '../lib/archive';
+import { url, documents, kalturaInfo, formatDuration, pageHtml, orgLogo } from '../lib/archive';
 import { allMeetings, dateRange, FORMAT_LABEL, isUpcoming, programFor, recordingsLost, type Meeting } from '../lib/meetings';
 
 export async function getStaticPaths() {
@@ -146,7 +146,13 @@ const initials = (n: string) =>
               <ul class="people">
                 {m.organizers.map((o) => (
                   <li>
-                    <span class="avatar">{initials(o.name)}</span>
+                    {orgLogo(o.affiliation) ? (
+                      <span class:list={['avatar', 'avatar-logo', { wide: orgLogo(o.affiliation)!.wide }]}>
+                        <img src={orgLogo(o.affiliation)!.href} alt={o.affiliation} loading="lazy" />
+                      </span>
+                    ) : (
+                      <span class="avatar">{initials(o.name)}</span>
+                    )}
                     <div>
                       <b>{o.name}</b>
                       <span>{o.affiliation}</span>
