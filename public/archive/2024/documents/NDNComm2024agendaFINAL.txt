@@ -1,0 +1,78 @@
+All times are US Eastern Time (UTC – 5)
+
+Wednesday March 6, 2024
+10:00am        Opening
+                   NDNComm 2024 co-chairs: Lotfi Benmohamed (NIST)
+                                           Marc Mosko (SRI)
+                                           Davide Pesavento (NIST)
+10:10am        Session 1: Forwarding and Applications
+                   Chair: Marc Mosko (SRI)
+               •   Low-Earth-Orbit Satellite Constellations and Named Data Networking, Beichuan
+                   Zhang (The University of Arizona)
+               •   NDN for Data-Intensive Science Experiments: Progress and Future Directions, Edmund
+                   Yeh (Northeastern University)
+               •   NDN based CNI for Kubernetes: Unlocking Secure, Smart, and On-Demand
+                   Communication, Tushar Sood (Tata Communications), Mohit Tahiliani (National Institute
+                   of Technology Karnataka, Surathkal)
+11:10am        Session 2: Emerging Applications
+                   Chair: Christos Papadopoulos (University of Memphis)
+               •   Data-oriented, Decentralized, Daring: Opportunities and Research Challenges for an
+                   Information-Centric Web, Dirk Kutscher (HKUST)
+               •   Naming in Named Data Networking, Lixia Zhang (UCLA)
+               •   Naming a Microverse of One's Own, Jeff Burke (UCLA)
+12:00pm        Break
+1:00pm         Session 3: Internet of Things
+                   Chair: Beichuan Zhang (University of Arizona)
+               •   Analysing NDN and MQTT performance for Industrial IoT Scenarios, Parth Anand (fortiss)
+               •   Deadline-Aware Named Data Networking for Time-Sensitive IoT Applications, Afia
+                   Anjum (University of Texas at Arlington)
+               •   Developing a Mobile Application for IoT using Named Data Networking (IoT-NDN) with
+                   FIWARE, Mohamed Hail (University of Lübeck)
+2:00pm         Break
+2:20pm         Session 4: Testbed and Applications
+                   Chair: Susmit Shannigrahi (Tennessee Tech)
+          •   Updates on the NDN Testbed, Varun Patil (UCLA)
+          •   Workspace: A Data-Oriented, Decentralized Collaboration Web App, Xinyu Ma (UCLA)
+          •   Distributed User-Centric mHealth Data-Sharing Application Running on NDN Testbed,
+              Adam Thieme (The University of Memphis)
+3:20pm    Break
+3:40pm    Panel 1: Building an Open-Source Ecosystem around NDN
+              Chair:       Davide Pesavento (NIST)
+              Panelists:   Randy King (Operant Networks)
+                           Songwu Lu (UCLA)
+                           Christos Papadopoulos (University of Memphis)
+                           Constantin Serban (Peraton Labs)
+5:00pm    Day 1 Closing
+Thursday March 7, 2024
+10:00am   Session 5: Security and Trust Management
+              Chair: Alex Afanasyev (Florida International University)
+          •   A New API in Support of NDN Trust Schema, Yekta Kocaoğullar (UCLA)
+          •   VerSec Schema Visualization, Varun Patil (UCLA)
+          •   CLedger: A Secure Distributed Certificate Ledger via Named Data, Tianyuan Yu (UCLA)
+10:50am   Panel 2: From Local-First to Fully Decentralized Applications
+              Chair:       Lixia Zhang (UCLA)
+              Panelists:   Zhongren Cao (C-3 Comm Systems)
+                           Rahul Gupta (Independent Researcher)
+                           Xinyu Ma (UCLA)
+                           Wilfred Pinfold (OpenCommons)
+                           Tianyuan Yu (UCLA)
+12:10pm   Break
+1:10pm    Hackathon project pitches
+1:50pm    Panel 3: Present and Future of Network Security Framework
+              Chair:       Alex Afanasyev (Florida International University)
+              Panelists:   Marc Mosko (SRI)
+                           Davide Pesavento (NIST)
+                           Jeff White (Dell Technologies)
+3:10pm    Break
+3:30pm    Session 6: Infrastructure and Services
+              Chair: Saurab Dulal (Walmart)
+          •   Hydra: An NDN based federated storage system for multi-organizational science data,
+              Susmit Shannigrahi (Tennessee Tech)
+          •   NDN for AI: Starting From A Data-Centric Collective Communication, Teng Liang (Peng
+              Cheng Laboratory)
+          •   Traffic Measurement on the Global NDN Testbed, Davide Pesavento (NIST), Junxiao Shi
+              (NIST)
+          •   NDN Service Framework (NDNSF), Tianxing Ma (University of Memphis)
+          •   Edge Challenges with Data Management and Networking, Jeff White (Dell Technologies)
+5:00pm    Closing
+

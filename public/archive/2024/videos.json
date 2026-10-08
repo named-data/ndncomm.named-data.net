@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1_a7qttcel",
+    "name": "20240306_NDNComm",
+    "duration_sec": 22095,
+    "playlist": "1_tjjzvqj2",
+    "created_at": 1710777527,
+    "thumbnail": "https://cdnsecakmi.kaltura.com/p/684682/sp/68468200/thumbnail/entry_id/1_a7qttcel/version/100011",
+    "download_url": "https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/1_a7qttcel/format/download/protocol/https/flavorParamIds/0"
+  },
+  {
+    "id": "1_yxz7cuen",
+    "name": "20240307_NDNComm",
+    "duration_sec": 19294,
+    "playlist": "1_tjjzvqj2",
+    "created_at": 1710778335,
+    "thumbnail": "https://cdnsecakmi.kaltura.com/p/684682/sp/68468200/thumbnail/entry_id/1_yxz7cuen/version/100001",
+    "download_url": "https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/1_yxz7cuen/format/download/protocol/https/flavorParamIds/0"
+  }
+]

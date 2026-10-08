@@ -1,0 +1,119 @@
+All times are US Eastern Time (UTC – 5)
+
+
+
+Thursday March 2, 2023
+10:00am        Opening
+                   Lotfi Benmohamed (NIST)
+10:10am        Panel 1: Lessons Learned
+                   Chair:       Ken Calvert (University of Kentucky)
+                   Panelists:   Alex Afanasyev (Florida International University)
+                                Jeff Burke (UCLA REMAP)
+                                Luca Muscariello (Cisco)
+                                Lan Wang (University of Memphis)
+                                Beichuan Zhang (University of Arizona)
+                                Lixia Zhang (UCLA)
+11:40am        Session 1: Vehicular and Public Safety
+                   Chair: Davide Pesavento (NIST)
+               •   Resilient Edge Ecosystem for Collaborative and Trustworthy Disaster Response (REsCue):
+                   An Information-Centric Approach, Abde Mtibaa (UMSL)
+               •   In-vehicle networking with NDN, Zach Threet (Tennessee Tech)
+               •   Secure Truck-Tractor to Trailer Communications based on NDN, Ahmed Elhadeedy
+                   (Colorado State University)
+12:40pm        Break
+1:30pm         Session 2: Security
+                   Chair: Christos Papadopoulos (University of Memphis)
+               •   To know the road ahead: A Forward-Looking Analysis of Lessons to Learn from IP DDoS,
+                   Eric Osterweil (George Mason University)
+               •   Schema-Based Automation of Name-Based Access Control, Alex Afanasyev (Florida
+                   International University)
+               •   A Security Bootstrapping Package for Hydra, Tianyuan Yu (UCLA)
+               •   A Review of Defined Trust Transport (DeftT), Turan Vural (UCLA)
+               •   Identity Authentication Security Strategies using TPM private key storage in an NDN
+                   Publish/Subscribe Industrial Energy Control System, Randy King (Operant Networks)
+3:10pm         Break
+3:40pm    Session 3: Applications
+             Chair: Susmit Shannigrahi (Tennessee Tech)
+          •  A Secure mHealth Infrastructure for Real-Time Data transfer with Fine-grained Access
+             Control, Saurab Dulal (The University of Memphis)
+          • A Dataset of NDN Traffic Traces for the Research Community, Davide Pesavento (NIST)
+          • NDN Sync API Overview, Varun Patil (UCLA)
+          • Steering New Applications Away from Centralized Realization, Lixia Zhang (UCLA)
+5:00pm    Day 1 Closing
+
+
+
+
+Friday March 3, 2023
+
+10:00am   Session 4: Forwarding and Applications
+              Chair: Lotfi Benmohamed (NIST)
+          •   iStack: An in-Kernel Networking Stack for Named Data Networking, Tian Song (Beijing
+              Institute of Technology)
+          •   Bringing Named Data Networking to Internet Livestreaming, Teng Liang (Peng Cheng
+              Laboratory)
+          •   Towards First Data Centric Medium Access Control Multicast Rate Control, Mohammed
+              Elbadry (Stony Brook University)
+11:00am   Panel 2: Named Data Metaverse
+              Chair:       Dirk Kutscher (Hong Kong University of Science and Technology)
+              Panelists:   Jeff Burke (UCLA REMAP)
+                           Todd Hodes (Eluvio)
+                           Paulo Mendes (Airbus)
+                           Michelle Munson (Eluvio)
+             12:30pm Break
+1:30pm    Panel 3: Time for Standardization?
+              Chair:       Christos Papadopoulos (University of Memphis)
+              Panelists:   Randy King (Operant Networks)
+                           Suzanne Lightman (NIST)
+                           Luca Muscariello (Cisco)
+                           Kathyayani Srikanteswara (Intel)
+3:00pm    Break
+3:15pm    Session 5: Applications and Services
+              Chair: Tamer Refaei (MITRE)
+          •   mGuard: a Secure mHealth Data Sharing Infrastructure over NDN, Suravi Regmi (The
+              University of Memphis)
+          •   NDN Opportunities in 5G/6G Core Networks, Junxiao Shi (NIST)
+          •   N-DISE: NDN-based Data Distribution for Large-Scale Data-Intensive Science
+              Experiments, Edmund Yeh (Northeastern University)
+          •   Edge Information Management - Demand is Only Growing, Jeff White (Dell
+              Technologies)
+               •   SPAN-AI federated UCDN PoC - the first commercial ICN network at scale, Rhett
+                   Sampson (GT Systems), Jaime Llorca (GT Systems and NYU)
+4:50pm         Closing
+
+
+
+
+Panel Abstracts:
+
+
+• Panel 1: Lessons Learned
+The "10 years of NDN - Lessons Learned" panel at the 2020 NDNComm emphasized the utility of the
+basic building block (semantically named, secured data) and the importance of driving the architecture
+through application building and understanding application needs. In this panel, members will present
+insights about specific aspects of the NDN architecture, including for example namespace structure and
+API features.
+
+• Panel 2: Named Data Metaverse
+This panel will discuss opportunities and challenges for building Metaverse systems with a Named Data
+Networking approach. Specific discussion questions include: What are architectural, security-related,
+and performance-related issues in Metaverse systems today? What communication patterns could be
+supported by NDN platforms? How can the data-oriented model and decentralized trust establishment
+help in developing better Metaverse systems and at what layer would NDN technologies help? What are
+gaps, challenges and research opportunities for NDN evolution to address Metaverse system
+requirements?
+
+• Panel 3: Time for Standardization?
+After 13 years, Named Data networking (NDN), is the only NSF Future Internet Architectures (FIA)
+project still active. While NDN has substantial research and development under its belt, with running
+code, hundreds of mostly academic research papers, a global testbed, and a sizable community, it has
+not yet made an equally strong impact in the commercial space.
+Industry adoption typically requires some form of standardization or agreed upon specification. This
+panel will explore whether such activities are needed to transition NDN into a commercial success. More
+specifically, the panel will address two questions: (a) is it time to pursue some form of NDN
+standardization? and (b), if the answer is yes, what is the appropriate path for NDN?
+
+
+
+Abstracts for Presentations (compiled in separate document)
+

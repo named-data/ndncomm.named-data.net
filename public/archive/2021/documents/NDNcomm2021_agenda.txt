@@ -1,0 +1,121 @@
+All times are US Eastern Time (UTC – 4)
+
+
+Thursday October 28, 2021
+10:00am        Opening
+10:05am        Session 1: NDN Past to Present
+                   Chair: Patrick Crowley (Washington University in St. Louis)
+               •   Lessons Learned Over the Last 10 Years, Lixia Zhang (UCLA)
+               •   NDN Codebase Overview, Beichuan Zhang (University of Arizona)
+               •   Developing Practical E2E Systems and Applications using NDN, Marcin Spoczynski (Intel)
+11:05am        Break
+11:15am        Panel 1: NDN Application Development: Lessons Learned and Next Steps
+                       Moderator:         Davide Pesavento (NIST)
+                       Panelists:         Alex Afanasyev (Florida International University)
+                                          John DeHart (Washington University in St. Louis)
+                                          Peter Gusev (UCLA REMAP)
+                                          Xinyu Ma (UCLA)
+                                          Kathleen Nichols (Pollere, Inc.)
+                                          Marcin Spoczynski (Intel)
+12:30pm        Break
+1:30pm         Session 2: NDN for Data Intensive Applications
+                  Chair: Lotfi Benmohamed (NIST)
+               •  NDN for Data Intensive Science Experiments (N-DISE): Overview and Recent
+                  Developments, Edmund Yeh (Northeastern University)
+               • NDNc - A lightweight integration of ndn-cxx with NDN-DPDK to achieve high throughput
+                  performance in scientific applications, Catalin Iordache (Caltech)
+               • Exploring rate-based congestion control in NDN, Sichen Song (UCLA)
+               • NDN-DPDK File Server for Data-Intensive Science Applications, Junxiao Shi (NIST)
+               • FPGA-Based Acceleration of the NDN Forwarder, Michael Lo (UCLA)
+2:30pm         Session 3: Tactical and Wireless
+                  Chair: Tamer Refaei (MITRE)
+               • DARPA Secure Handhelds on Assured Resilient networks at the tactical Edge (SHARE)
+                  and Mission-Integrated Network Control (MINC), Mary Schurgot (DARPA)
+               • Towards Unification of Name and Address Based Communication, Mohammed Elbadry
+                  (Stony Brook University)
+               • NEAR Platform: Supporting Augmented Reality Over NDN, Jinghao Zhao (UCLA)
+3:30pm    Break
+3:50pm    Session 4: Short Presentations (Posters/Demos)
+              Chair: Jay Misra (NMSU)
+          •   Methods for NDN based data transfer in multi-path networking environments, Xin Tian
+              (Intelligent Fusion Technology, Inc.)
+          •   NDN for Next Generation of Factory Automation, Charif Mahmoudi (Siemens)
+          •   Information Management in the Emerging Edge, Jeff White (Dell)
+          •   NDNts video streaming using QUIC and WebTransport, Junxiao Shi (NIST)
+          •   NDN Play, Varun Patil (UCLA)
+          •   Multiverse: designing a network management system with NDN, Amar Abane (NIST)
+          •   NDN Forwarder Manager Demo, Xinyu Ma (UCLA)
+5:00pm    Day 1 Closing
+
+
+Friday October 29, 2021
+
+10:00am   Session 5: Applications
+              Chair: Jeff Burke (UCLA REMAP)
+          •   mGuard: A Secure Real-time Data Distribution System with Fine-Grained Access Control
+              for mHealth Research, Lan Wang (University of Memphis)
+          •   Hydra - A secure, distributed, and federated storage for large science data, Susmit
+              Shannigrahi (Tennessee Tech University)
+          •   Bootstrapping Remote NDN Entity Leveraging CA-based Authentications, Tianyuan Yu
+              (UCLA)
+11:00am   Panel 2: NDN beyond NDN: data driven applications and services
+                 Moderator:      Marie-Jose Montpetit (Concordia University)
+                 Panelists:      Ike Kunze, (RWTH Aachen University)
+                                 Rute Sofia (Fortiss)
+                                 Srikathyayani Srikanteswara (INTEL)
+                                 Dirk Trossen (Huawei Technologies)
+12:00pm   Break
+1:00pm    Panel 3: Addressing NDN's accessibility challenges through real-world use cases
+                 Moderator:      Susmit Shannigrahi (Tennessee Tech University)
+                 Panelists:      F. Alex Feltus (Clemson University)
+                                 James Lyke (Air Force Research Lab / UNM)
+                                 Christos Papadopoulos (University of Memphis)
+                                 Matthias Wahlisch (FU Berlin)
+                                 Beichuan Zhang (University of Arizona)
+2:15pm    Break
+2:30pm    Session 6: Network and Transport
+              Chair: Christos Papadopoulos (University of Memphis)
+          •   Industrial Applications and NDN, Kathleen Nichols (Pollere, Inc.)
+          •   Considerations for Higher Level Transports over Sync, Varun Patil (UCLA)
+          •   sV2Pc: On Scaling LTE-based Vehicle-to-Pedestrian Communication using NDN, Proyash
+              Podder (Florida International University)
+                •    BLEnD: Improving NDN Performance Over Wireless Links Using Interest Bundling, Md
+                     Ashiqur Rahman (University of Arizona)
+                •    Adaptive Duplicate Suppression for Multicasting in a Multi-Access NDN Network, Saurab
+                     Dulal (University of Memphis)
+4:10pm          Closing
+
+
+
+
+Panel Abstracts:
+• Panel 1: NDN Application Development: Lessons Learned and Next Steps
+The lessons learned from years of developing and operating “NDN native” applications have been invaluable
+for the evolution of NDN and continue to play an important role in shaping its future. However, putting
+together a non-trivial application that takes advantage of NDN’s core features (name-based
+communications, security) remains challenging due to the lack of easy-to-use library APIs and development
+tools. This panel seeks to (1) identify the major pain points in the current NDN software ecosystem from an
+application developer’s point of view; (2) discuss how we can improve the developer’s experience by
+providing a powerful but at the same time intuitive collection of libraries and tools; (3) distill and prioritize
+this feedback into a list of action items that can help the NDN community plan future improvements to
+enhance productivity and attract new developers.
+
+• Panel 2: NDN beyond NDN: data driven applications and services
+With the advent of artificial intelligence in Networking, IoT and the increasing need for precise telemetry,
+data is becoming the “currency” of networking. More and more, finding, storing and processing that data
+are becoming in-network features at the edge and at the core. Many of the required functionalities have
+been central to NDN for many years. Can there be a better integration? The panel will be a conversation on
+the move towards data in networking and how it may open a better dialogue between the NDN community
+and the data-driven application and service developers.
+
+• Panel 3: Addressing NDN's accessibility challenges through real-world use cases
+As NDN continues to be investigated and used for a diverse set of use cases such as IoT, Big Data, Vehicular
+Network, and more, it is increasingly being used by users with different levels of technical backgrounds,
+skills, and interests. Successful integration of these applications with NDN requires a low barrier of entry and
+an ecosystem that is accessible. This panel will discuss the accessibility challenges in the current NDN
+ecosystem, how we can make the ecosystem more intuitive, easy to learn and use, and how we can allow
+the users to easily access, modify, and extend the codebase and core NDN components.
+
+
+Abstracts for Presentations (compiled in separate document)
+

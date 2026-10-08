@@ -1,0 +1,125 @@
+Thursday September 10, 2020
+10:00am   Opening
+10:10am   Session 1: NDN Trial Deployments
+              Chair: Susmit Shannigrahi (Tennessee Tech University)
+          •   Publishing Genomics Datasets into NDN Testbed and Integrating with Cloud Workflows,
+              F. Alex Feltus (Clemson University)
+          •   Data-Centric Ecosystems for Large-scale Data-Intensive Science, Edmund Yeh
+              (Northeastern University)
+          •   mGuard Project Overview, Lan Wang (University of Memphis)
+          •   FABRIC - Capabilities and Use-cases, Ilya Baldin (RENCI/UNC Chapel Hill)
+11:00am   Panel 1: Vehicular applications of NDN
+                 Moderator:      Christos Papadopoulos (University of Memphis)
+                 Panelists:      Ted Guild (W3C)
+                                 Mike Westra (Ford Motor Company)
+                                 Tao Zhang (NIST)
+12:00pm   Break
+1:00pm    Session 2: ICN for Wireless Edge Networking
+              Chair: Eve Schooler (INTEL)
+          •   ICN-WEN program overview, Srikathyayani Srikanteswara (INTEL)
+          •   SPLICE: Secure Predictive Low-Latency Information Centric Edge for Next Generation
+              Wireless Networks, Srinivas Shakkottai (Texas A&M University)
+          •   Update on ICN-Enabled Secure Edge Networking with Augmented Reality (ICE-AR), Jeff
+              Burke (UCLA REMAP)
+1:45pm    Panel 2: IoT and other edge applications
+                 Moderator:      Kathleen Nichols (Pollere, Inc.)
+                 Panelists:      Justin Caswell (Revokind, Inc.)
+                                 Dan Massey (DoD)
+                                 Sokwoo Rhee (NIST)
+                                 Geng Wu (INTEL)
+2:45pm    Break
+3:15pm    Lightning Talks for Posters and Demos
+              Chair: Lotfi Benmohamed (NIST)
+          •   NDNViber: Vibration-Assisted Automated Bootstrapping of IoT Devices, Sanjeev Ramani
+              (Florida International University)
+          •   NDNts: Named Data Networking libraries for the Modern Web, Junxiao Shi (NIST)
+          •   Towards a Distance Vector Routing Protocol for Named Data Networking, Italo Valcy Da
+              Silva Brito (Federal University of Bahia, Brazil)
+          •   CertCoalesce: Efficient Certificate Pool for NDN-Based Systems, Alex Afanasyev (Florida
+              International University)
+          •   Managing NDN with the Multiverse Network Management System, Amar Abane (NIST)
+          •   A Novel P4 Target Architecture for Runtime-Reconfigurable NDN Data Planes, Ouassim
+              Karrakchou (University of Ottawa)
+          •   On Using NDN to Vertically Secure Smart Power Distribution, Sanjeev Ramani (Florida
+              International University)
+4:00pm    Posters and Demos
+5:00pm    Day 1 Closing
+
+
+Friday September 11, 2020
+
+10:00am   Session 3: Routing and Forwarding
+              Chair: Alex Afanasyev (Florida International University)
+          •   On the Prefix Granularity Problem in NDN Adaptive Forwarding, Teng Liang (Peng
+              Cheng Laboratory)
+          •   m-ASF - An Adaptive SRTT-based Forwarding Strategy for Mobile Environments,
+              Muktadir Chowdhury (University of Memphis)
+          •   NDN-DPDK: NDN Forwarding at 100 Gbps on Commodity Hardware, Junxiao Shi (NIST)
+10:45am   Panel 3: Named Data Networking: Lessons Learned Over the Last 10 Years
+                  Moderator:      Christian Tschudin (University of Basel)
+                  Panelists:      Jeff Burke (UCLA REMAP)
+                                  David Clark (MIT)
+                                  Darleen Fisher (NSF)
+                                  Van Jacobson (Google)
+                                  Christos Papadopoulos (University of Memphis)
+                                  Lan Wang (University of Memphis)
+                                  Beichuan Zhang (University of Arizona)
+                                  Lixia Zhang (UCLA)
+
+12:15pm   Break
+1:15pm    Session 4: DARPA SHARE
+              Chair: Tamer Refaei (MITRE)
+          •   DARPA Secure Handhelds on Assured Resilient networks at the tactical Edge (SHARE),
+              Mary Schurgot (DARPA)
+          •   PLI-Sync: Prefetch Loss-Insensitive Sync for NDN Group Streaming, Constantin Serban
+              (Perspecta Labs)
+          •   NDN in DARPA SHARE, John DeHart (Washington University in St. Louis)
+2:00pm    Session 5: IoT/Edge
+              Chair: Ken Calvert (University of Kentucky)
+          •   The "Decision Maker": NDN concepts for intelligent automation, Marie-Jose Montpetit
+              (Concordia University Montreal)
+                •   MICN, a New Perspective on Network Coding with Named Data Networking, Hirah Malik
+                    (INRIA)
+                •   A Named Data Networking Architecture Design to Internet of Underwater Things, Qi
+                    Zhao (University of California Los Angeles)
+                •   Improving Existing Software Applications with a Practical and Secure NDN
+                    Publish/Subscribe Transport, Randy King (Operant Networks)
+3:00pm          Break
+3:30pm          Session 6: Security/MAC
+                    Chair: Craig Partridge (Colorado State University)
+                •   Rolling out NDN for DDoS Mitigation, Zhiyi Zhang (UCLA)
+                •   Secure Sharing of Spatio-temporal Data through Name-based Access Control, Laqin Fan
+                    (University of Memphis)
+                •   A Full Data-centric Network Stack Integrating V-MAC and NFD, Mohammed Elbadry
+                    (Stony Brook University)
+4:15pm          Session 7: Discovery/Configuration
+                    Chair: Marie-Jose Montpetit (Concordia University Montreal)
+                •   Plug-n-Play NDN, John Dellaverson (UCLA)
+                •   NDNSD: Service Discovery in NDN, Saurab Dulal (University of Memphis)
+                •   NDN Repo for Genomics Datasets - Progress and Future Directions, Zhaoning Kong
+                    (Purdue University) Susmit Shannigrahi (Tennessee Tech University)
+5:00pm          Closing
+
+
+Panel Abstracts:
+• Panel 1: Vehicular applications of NDN
+The automotive sector is undergoing a revolution in both in-vehicle and V2X communication. Demands
+placed by connected and autonomous vehicles far exceed the capabilities of existing technologies,
+motivating emerging technologies such as automotive Ethernet, that enables a closer integration of
+vehicular and Internet technologies and opens opportunities for both Internet and automotive researchers.
+This panel will explore data communication, security and privacy issues in automotive communication
+
+• Panel 2: IoT and other edge applications
+Panelists will be asked to discuss the major challenges to networking and/or security in their areas of
+expertise with an eye toward areas where NDN might help.
+
+• Panel 3: Named Data Networking: Lessons Learned Over the Last 10 Years
+The Named Data Networking (NDN) project was funded under the NSF Future Internet Architecture (FIA)
+program in 2010. The 10-year journey since then has been exciting, challenging, strenuous, and filled with
+unpredicted turns at times. A lot has been achieved and a lot has been learned. This panel is composed of
+people from the NSF FIA program management and NDN team PIs, with a goal to summarize the results,
+collect the lessons, and shed light into next 10 years as we continue along this exciting journey.
+
+
+Abstracts for Presentations/Demos/Posters (compiled in separate document)
+
