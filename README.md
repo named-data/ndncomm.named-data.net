@@ -31,43 +31,22 @@ Every recording should be on YouTube. Status per meeting:
 | 2023 | Day 1 Part 1 on YouTube. **Day 1 Part 2 and Day 2 were never published** | Ask NIST whether they exist |
 | 2024 | Day 1 and Day 2 on YouTube | — |
 | 2025 | Every talk and panel on YouTube (linked per talk) | — |
-| 2026 | 15 talks + panel are **self-hosted MP4s** on ndncomm2026.named-data.net | **Upload to YouTube**, then replace the links |
+| 2026 | Every talk and the panel on YouTube (linked per talk) | Decide on the unlinked panel clip (below) |
 
 The deleted Kaltura entry IDs are listed in `public/archive/<year>/videos.json`, in case NIST can restore them.
 
-### 2026: upload to YouTube
+### 2026: extra panel footage
 
-The files are in the [NDNComm-2026](https://github.com/conference-websites/NDNComm-2026) repo under
-`assets/talks/organized_talks/<folder>/video.mp4`. After uploading, replace each `"video"` URL in
-`src/content/programs/2026.json` with the YouTube link (`https://youtu.be/<id>`).
-
-| Folder | Talk |
-|--------|------|
-| `01_From_SRM_to_NDN_Lan_Wang` | From SRM to NDN: Three Decades of Lessons in Data-Centric Networking |
-| `02_Resilient_InNetwork_Storage_adam_Thieme` | Resilient In-Network Data Storage in NDN |
-| `03_NDN_CloudSync_Ronak_Badhe` | NDN-CloudSync: A Secure Storage Service Running on Multiple Clouds |
-| `04_Security_Library_Ferhat_Mecerhed` | An Open-Source Decentralized Access Control Library for Named Data Networking |
-| `05_NAC_ABE_Suravi_Regmi` | Enhancing NAC-ABE to Support Access Control for mHealth Applications and Beyond |
-| `06_OpenMLS_Mike_Han` | Message Layer Security in Ownly Group Encryption |
-| `07_NDN_Framework_Tianxing_Ma` | NDN Framework for Service Oriented Applications |
-| `08_NDN_for_AI_Marica_Amadeo` | NDN for AI and AI for NDN: Challenges, Opportunities and Early Results |
-| `09_MGuard_Updates_Suravi_Regmi` | MGuard: Development Updates |
-| `Panel` | Panel: Networking AI Agents: Challenges and Solutions |
-| `10_IoT_Digital_Autonomy_Lixia_Zhang` | Reclaiming Digital Autonomy: A Systematic Review of NDN Applications … |
-| `11_TrustNG_Amirreza_Ghafoori` | TrustNG: Using Named Data Networking as a Zero-Trust Overlay for Cloud … |
-| `12_Why_ONLY_Fails_Junxiao_Shi` | Why Ownly Does Not Work on the ndn6 Network? … |
-| `13_ICN_SCION_Global_Name_Service_Ken_Calvert` | ICN+SCION Global Name-Based Network Service |
-| `14_Map_Encap_BIER_Beichuan_Zhang` | From Map-and-Encap to BIER: Observations on Network Routing Scalability |
-| `15_Architecting_Scalable_Routing_Tianyuan_Yu` | Architecting a Scalable Routing and Forwarding System for NDN |
-
-The repo also has `Panel_Opening_Intro/video.mp4` and `Panel_Discussion/video.mp4`, which the 2026 program never
-linked. Decide whether they belong on YouTube too (the program has one "video" link per item).
+The [NDNComm-2026](https://github.com/conference-websites/NDNComm-2026) repo has two panel clips that its program
+never linked: `assets/talks/organized_talks/Panel_Opening_Intro/video.mp4` and `Panel_Discussion/video.mp4`. The
+channel has one extra upload, "Panel discussions 1 @ NDNComm 2026" (`kp-TrfR4Xdk`), which is not linked from the
+site either.
 
 ### Already on YouTube
 
 - 2023 Day 1 Part 1: `sfIW4SHkQcg`
 - 2024 Day 1: `BHX1xNs0C5s`, Day 2: `FGEM72Ar0Gg`
-- 2025: per-talk links in `src/content/programs/2025.json`
+- 2025 and 2026: per-talk links in `src/content/programs/<year>.json`
 
 The original 2023/2024 files came from NIST's Kaltura (`download_url` in `public/archive/<year>/videos.json`).
 
