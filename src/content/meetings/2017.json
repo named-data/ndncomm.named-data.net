@@ -1,0 +1,31 @@
+{
+  "title": "NDN Community Meeting 2017",
+  "start": "2017-03-22",
+  "end": "2017-03-26",
+  "format": "in-person",
+  "venue": "The Zone, FedEx Institute of Technology Building, University of Memphis",
+  "city": "Memphis, TN, USA",
+  "summary": "The Named Data Networking (NDN) Project hosted its third NDN community meeting (NDNcomm) on March 23-26, 2017.",
+  "host": {
+    "name": "Named Data Networking (NDN) Project",
+    "short": "NDN",
+    "url": "https://named-data.net/"
+  },
+  "organizers": [
+    {
+      "name": "Lotfi Benmohamed",
+      "affiliation": "NIST"
+    },
+    {
+      "name": "Christos Papadopoulos",
+      "affiliation": "Colorado State University"
+    },
+    {
+      "name": "Lan Wang",
+      "affiliation": "University of Memphis"
+    }
+  ],
+  "original_page": "https://www.caida.org/workshops/ndn/1703/",
+  "videos": [],
+  "video_note": "No recordings of this meeting are known."
+}

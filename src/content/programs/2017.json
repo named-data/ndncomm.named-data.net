@@ -1,0 +1,1053 @@
+{
+  "timezone": "",
+  "days": [
+    {
+      "date": "2017-03-22",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "17:00",
+          "kind": "other",
+          "title": "NDN Retreat"
+        },
+        {
+          "start": "16:00",
+          "end": "17:00",
+          "kind": "other",
+          "title": "NDNcomm Registration"
+        },
+        {
+          "start": "17:30",
+          "end": "19:30",
+          "kind": "break",
+          "title": "Student dinner"
+        },
+        {
+          "start": "17:30",
+          "end": "20:00",
+          "kind": "other",
+          "title": "NDN Consortium Meeting"
+        }
+      ]
+    },
+    {
+      "date": "2017-03-23",
+      "items": [
+        {
+          "start": "07:30",
+          "end": "08:30",
+          "kind": "break",
+          "title": "Breakfast"
+        },
+        {
+          "start": "08:30",
+          "end": "09:20",
+          "kind": "keynote",
+          "title": "Past Achievements and Future Plan of the NDN Project",
+          "speakers": [
+            {
+              "name": "Lixia Zhang",
+              "affiliation": "UCLA"
+            }
+          ]
+        },
+        {
+          "start": "09:20",
+          "end": "09:40",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "09:40",
+          "end": "10:40",
+          "kind": "session",
+          "title": "Mobile, IoT and Challenged Environments",
+          "chair": {
+            "name": "Beichuan Zhang"
+          },
+          "talks": [
+            {
+              "title": "Opportunities for NDN in Augmented Reality",
+              "speakers": [
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_jburke.pdf"
+            },
+            {
+              "title": "NDN-Opp: NDN in Opportunistic Networks",
+              "speakers": [
+                {
+                  "name": "Seweryn Dynerowicz",
+                  "affiliation": "COPELABS, University Lusofona"
+                },
+                {
+                  "name": "Omar Aponte",
+                  "affiliation": "COPELABS, University Lusofona"
+                },
+                {
+                  "name": "Paulo Mendes",
+                  "affiliation": "COPELABS, University Lusofona"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_sdynerowicz.pdf"
+            },
+            {
+              "title": "FleetLink: NDN-Powered Low-Cost, Low-Rate, Reliable, Secure Communication for Neighborhood Solar: A Practical Approach to Lowering the Cost of Solar",
+              "speakers": [
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Jeff Thompson",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_aafanasyev3.pdf"
+            },
+            {
+              "title": "Named Data Networking of Things: NDN for Microcontrollers (NDN-RIOT)",
+              "speakers": [
+                {
+                  "name": "Wentao Shang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_wshang.pdf"
+            },
+            {
+              "title": "Named Data Networking of Things: Trust Management for Autonomous Data-Centric Security",
+              "speakers": [
+                {
+                  "name": "Wentao Shang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_aafanasyev2.pdf"
+            }
+          ]
+        },
+        {
+          "start": "10:40",
+          "end": "11:00",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "11:00",
+          "end": "12:00",
+          "kind": "session",
+          "title": "Data-Intensive Applications",
+          "chair": {
+            "name": "Christos Papadopoulos"
+          },
+          "talks": [
+            {
+              "title": "Named Data Networking in Scientific Applications",
+              "speakers": [
+                {
+                  "name": "Susmit Shannigrahi",
+                  "affiliation": "CSU"
+                },
+                {
+                  "name": "Chengyu Fan",
+                  "affiliation": "CSU"
+                },
+                {
+                  "name": "Christos Papadopoulos",
+                  "affiliation": "CSU"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_sshannigrahi.pdf"
+            },
+            {
+              "title": "From Crowd to Cloud: Apply Named Data Networking Principles to Manage Air Sensor Data",
+              "speakers": [
+                {
+                  "name": "Yifang Zhu",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_yzhu.pdf"
+            },
+            {
+              "title": "Hadoop over NDN: Initial Experience and Results",
+              "speakers": [
+                {
+                  "name": "Mathias Gibbens",
+                  "affiliation": "University of Arizona"
+                },
+                {
+                  "name": "Chris Gniady",
+                  "affiliation": "University of Arizona"
+                },
+                {
+                  "name": "Lei Ye",
+                  "affiliation": "University of Arizona"
+                },
+                {
+                  "name": "Beichuan Zhang",
+                  "affiliation": "University of Arizona"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_mgibbens.pdf"
+            },
+            {
+              "title": "nTorrent: Peer-to-Peer File Sharing in Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Spyridon Mastorakis",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alexander Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Yingdi Yu",
+                  "affiliation": "Facebook, Inc"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_smastorakis2.pptx"
+            }
+          ]
+        },
+        {
+          "start": "12:00",
+          "end": "13:30",
+          "kind": "break",
+          "title": "Lunch"
+        },
+        {
+          "start": "13:30",
+          "end": "14:30",
+          "kind": "panel",
+          "title": "Panel: NDN Security - Current Status and Open Issues",
+          "chair": {
+            "name": "Christos Papadopoulos"
+          },
+          "panelists": [
+            {
+              "name": "Alex Afanasyev",
+              "affiliation": "UCLA"
+            },
+            {
+              "name": "Alex Halderman",
+              "affiliation": "U. Michigan"
+            },
+            {
+              "name": "Satyajayant Misra",
+              "affiliation": "New Mexico State University"
+            },
+            {
+              "name": "Dante Pacella",
+              "affiliation": "Verizon"
+            },
+            {
+              "name": "Mani Tadayon",
+              "affiliation": "Verizon"
+            }
+          ],
+          "talks": [
+            {
+              "title": "ICN Content Security Using Encrypted Manifest and Encrypted Content Chunks",
+              "speakers": [
+                {
+                  "name": "Dante Pacella",
+                  "affiliation": "Verizon"
+                },
+                {
+                  "name": "Mani Tadayon",
+                  "affiliation": "Verizon"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_dpacella2.pdf"
+            }
+          ]
+        },
+        {
+          "start": "14:30",
+          "end": "15:30",
+          "kind": "session",
+          "title": "All Aspects of NDN",
+          "chair": {
+            "name": "Lotfi Benmohamed"
+          },
+          "talks": [
+            {
+              "title": "Adaptive Caching Algorithms with Optimality Guarantees for NDN Networks",
+              "speakers": [
+                {
+                  "name": "Stratis Ioannidis",
+                  "affiliation": "Northeastern University"
+                },
+                {
+                  "name": "Edmund Yeh",
+                  "affiliation": "Northeastern University"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_eyeh.pdf"
+            },
+            {
+              "title": "NDN Control Center: NDN Networking Stack and Security Enabler for Desktop Systems",
+              "speakers": [
+                {
+                  "name": "Qi Zhao",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_qzhao.pdf"
+            },
+            {
+              "title": "NDN-Android: NDN Networking Stack for Android Platform",
+              "speakers": [
+                {
+                  "name": "Haitao Zhang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_aafanasyev4.pptx"
+            },
+            {
+              "title": "Facilitating ICN Deployment with an Extended OpenFlow Protocol",
+              "speakers": [
+                {
+                  "name": "Piotr Zuraniewski",
+                  "affiliation": "TNO"
+                },
+                {
+                  "name": "Ray van Brandenburg",
+                  "affiliation": "TNO"
+                },
+                {
+                  "name": "Borgert van der Kluit",
+                  "affiliation": "Chess Wise"
+                },
+                {
+                  "name": "Niels van Adrichem",
+                  "affiliation": "TNO"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_pzuraniewski.pdf"
+            }
+          ]
+        },
+        {
+          "start": "15:30",
+          "end": "16:00",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "16:00",
+          "end": "17:00",
+          "kind": "session",
+          "title": "Lightning Talks Introducing Posters and Demos",
+          "chair": {
+            "name": "Josh Polterock"
+          },
+          "talks": [
+            {
+              "title": "Demo: Integrating Named Data Networking with Transportation Simulation",
+              "speakers": [
+                {
+                  "name": "Meng Kuai",
+                  "affiliation": "The University of Alabama"
+                },
+                {
+                  "name": "Pawan Subedi",
+                  "affiliation": "The University of Alabama"
+                },
+                {
+                  "name": "Xiaoyan Hong",
+                  "affiliation": "The University of Alabama"
+                },
+                {
+                  "name": "Bing Zhou",
+                  "affiliation": "The University of Alabama"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_mkuai.pdf"
+            },
+            {
+              "title": "Demo: Implementing an environmental sensor system using ICN",
+              "speakers": [
+                {
+                  "name": "Bengt Ahlgren",
+                  "affiliation": "Swedish ICT - SICS"
+                },
+                {
+                  "name": "Anders Lindgren",
+                  "affiliation": "Swedish ICT - SICS"
+                },
+                {
+                  "name": "Adeel Mohammad Malik",
+                  "affiliation": "Ericsson Research"
+                },
+                {
+                  "name": "Edith Ngai",
+                  "affiliation": "Uppsala University"
+                },
+                {
+                  "name": "Borje Ohlman",
+                  "affiliation": "Ericsson Research"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_bohlman.pdf"
+            },
+            {
+              "title": "Demo: NDN operation in Opportunistic Wireless Networks",
+              "speakers": [
+                {
+                  "name": "Seweryn Dynerowicz",
+                  "affiliation": "COPELABS, University Lusofona"
+                },
+                {
+                  "name": "Omar Aponte",
+                  "affiliation": "COPELABS, University Lusofona"
+                },
+                {
+                  "name": "Paulo Mendes",
+                  "affiliation": "COPELABS, University Lusofona"
+                }
+              ]
+            },
+            {
+              "title": "Demo: Securing Smart Homes using NDN",
+              "speakers": [
+                {
+                  "name": "Lei Pi",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_lpi.pdf"
+            },
+            {
+              "title": "Demo: Scalable Real-time Collaborative Communication over NDN using Edge Service Routers",
+              "speakers": [
+                {
+                  "name": "Syed Obaid Amin",
+                  "affiliation": "Huawei Research Center"
+                },
+                {
+                  "name": "Haitao Zhang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Asit Chakraborti",
+                  "affiliation": "Huawei Research Center"
+                },
+                {
+                  "name": "Aytac Azgin",
+                  "affiliation": "Huawei Research Center"
+                },
+                {
+                  "name": "Ravishankar Ravindran",
+                  "affiliation": "Huawei Research Center"
+                },
+                {
+                  "name": "GQ Wang",
+                  "affiliation": "Huawei Research Center"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_samin.pdf"
+            },
+            {
+              "title": "Demo: Mini-NDN: a Lightweight and Scalable Emulation Environment for NDN",
+              "speakers": [
+                {
+                  "name": "Ashlesh Gawande",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_agawande.pdf"
+            },
+            {
+              "title": "Demo: Open mHealth: What is NDNFit",
+              "speakers": [
+                {
+                  "name": "Haitao Zhang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Zhehao Wang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_hzhang2.pdf"
+            },
+            {
+              "title": "Poster: Robus and Anonymous Information Sharing among Autonomous Vehicles",
+              "speakers": [
+                {
+                  "name": "Muktadir Chowdhury",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Ashlesh Gawande",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_mchowdhury.pdf"
+            },
+            {
+              "title": "Poster: Controlling Strategy Retransmissions in Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Hila Ben Abraham",
+                  "affiliation": "Washington University in St. Louis"
+                },
+                {
+                  "name": "Patrick Crowley",
+                  "affiliation": "Washington University in St. Louis"
+                }
+              ]
+            },
+            {
+              "title": "Poster: Network Measurement for NDN",
+              "speakers": [
+                {
+                  "name": "Davide Pesavento",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Omar Ilias El Mimouni",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Lotfi Benmohamed",
+                  "affiliation": "NIST"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_dpesavento.pdf"
+            },
+            {
+              "title": "Poster: Path Tracing in Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Siham Khoussi",
+                  "affiliation": "NIST"
+                },
+                {
+                  "name": "Lotfi Benmohamed",
+                  "affiliation": "NIST"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_skhoussi.pdf"
+            },
+            {
+              "title": "Poster: NDN Distributed File System(NDFS)",
+              "speakers": [
+                {
+                  "name": "Junior Dongo",
+                  "affiliation": "Paris-Est University"
+                },
+                {
+                  "name": "Charif Mahmoudi",
+                  "affiliation": "Paris-Est University"
+                },
+                {
+                  "name": "Fabrice Mourlin",
+                  "affiliation": "Paris-Est University"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_jdongo.pdf"
+            },
+            {
+              "title": "Poster: NDN for Cog Network to Support Next Generation Social Systems",
+              "speakers": [
+                {
+                  "name": "Arata Koike",
+                  "affiliation": "Nippon Telegraph and Telephone Corp."
+                },
+                {
+                  "name": "Yoshiko Sueda",
+                  "affiliation": "Nippon Telegraph and Telephone Corp."
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_akoike.pdf"
+            },
+            {
+              "title": "Poster: NDN-IoT Framework and Example Application \"Flow\"",
+              "speakers": [
+                {
+                  "name": "Zhehao Wang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Eitan Mendelowitz",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Zoe Sandoval",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_zwang.pdf"
+            },
+            {
+              "title": "Demo: NDN-Android: NDN Networking Stack for Android Platform",
+              "speakers": [
+                {
+                  "name": "Haitao Zhang",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_hzhang.pdf"
+            },
+            {
+              "title": "Demo: NDN Control Center: NDN Networking Stack and Security Enabler for Desktop Systems",
+              "speakers": [
+                {
+                  "name": "Qi Zhao",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_qzhao_demo.pdf"
+            },
+            {
+              "title": "Demo: Facilitating ICN Deployment with an Extended OpenFlow Protocol",
+              "speakers": [
+                {
+                  "name": "Piotr Zuraniewski",
+                  "affiliation": "TNO"
+                },
+                {
+                  "name": "Ray van Brandenburg",
+                  "affiliation": "TNO"
+                },
+                {
+                  "name": "Borgert van der Kluit",
+                  "affiliation": "Chess Wise"
+                },
+                {
+                  "name": "Niels van Adrichem",
+                  "affiliation": "TNO"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_pzuraniewski.pdf"
+            },
+            {
+              "title": "Demo: ndnSIM v2.3",
+              "speakers": [
+                {
+                  "name": "Spyridon Mastorakis",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alexander Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_smastorakis_demo.pdf"
+            }
+          ]
+        },
+        {
+          "start": "17:00",
+          "end": "17:15",
+          "kind": "other",
+          "title": "Andrew Meyers, Vice President for Research and Executive Director, University of Memphis Research Foundation",
+          "speakers": [
+            {
+              "name": "Andrew Meyers",
+              "affiliation": "University of Memphis Research Foundation"
+            }
+          ]
+        },
+        {
+          "start": "17:15",
+          "end": "20:00",
+          "kind": "other",
+          "title": "Posters, Demo and Dinner"
+        }
+      ]
+    },
+    {
+      "date": "2017-03-24",
+      "items": [
+        {
+          "start": "07:30",
+          "end": "08:30",
+          "kind": "break",
+          "title": "Breakfast"
+        },
+        {
+          "start": "08:30",
+          "end": "09:30",
+          "kind": "other",
+          "title": "NDNcomm: Community Feedback"
+        },
+        {
+          "start": "09:30",
+          "end": "10:45",
+          "kind": "session",
+          "title": "NDN Applications, Libraries and Tools",
+          "chair": {
+            "name": "Jeff Burke"
+          },
+          "talks": [
+            {
+              "title": "ChronoShare: Decentralized File Sharing Application over NDN",
+              "speakers": [
+                {
+                  "name": "Yukai Tu",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_aafanasyev5.pptx"
+            },
+            {
+              "title": "NDNS: DNS is NDN",
+              "speakers": [
+                {
+                  "name": "Yumin Xia",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_aafanasyev.pdf"
+            },
+            {
+              "title": "NDN-RTC and Experimental Library Functionality",
+              "speakers": [
+                {
+                  "name": "Peter Gusev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Jeff Thompson",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_pgusev.pdf"
+            },
+            {
+              "title": "Common Client Libraries - Update",
+              "speakers": [
+                {
+                  "name": "Jeff Thompson",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA"
+                }
+              ]
+            },
+            {
+              "title": "On the Evolution of ndnSIM: an Open-Source Ecosystem for NDN Experimentation",
+              "speakers": [
+                {
+                  "name": "Spyridon Mastorakis",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Alexander Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Lixia Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_smastorakis.pptx"
+            },
+            {
+              "title": "NDN Testbed: Status Update",
+              "speakers": [
+                {
+                  "name": "John DeHart",
+                  "affiliation": "Washington University"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_jdehart.pdf"
+            }
+          ]
+        },
+        {
+          "start": "10:45",
+          "end": "11:10",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "11:10",
+          "end": "12:00",
+          "kind": "session",
+          "title": "Routing and Forwarding",
+          "chair": {
+            "name": "GQ Wang"
+          },
+          "talks": [
+            {
+              "title": "Geohyperbolic Routing and Addressing Schemes For Overlay Networks",
+              "speakers": [
+                {
+                  "name": "Ivan Voitalov",
+                  "affiliation": "Northeastern University"
+                },
+                {
+                  "name": "Rodrigo Aldecoa",
+                  "affiliation": "Northeastern University"
+                },
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                },
+                {
+                  "name": "Dmitri Krioukov",
+                  "affiliation": "Northeastern University"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_ivoitalov.pdf"
+            },
+            {
+              "title": "How to Establish Loop-Free Multipath Routes in Named Data Networking?",
+              "speakers": [
+                {
+                  "name": "Klaus Schneider",
+                  "affiliation": "The University of Arizona"
+                },
+                {
+                  "name": "Beichuan Zhang",
+                  "affiliation": "The University of Arizona"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_kschneider.pdf"
+            },
+            {
+              "title": "A Native Content Discovery Mechanism for NDN",
+              "speakers": [
+                {
+                  "name": "Onur Ascigil",
+                  "affiliation": "University College London"
+                },
+                {
+                  "name": "Vasilis Sourlas",
+                  "affiliation": "University College London"
+                },
+                {
+                  "name": "Ioannis Psaras",
+                  "affiliation": "University College London"
+                },
+                {
+                  "name": "George Pavlou",
+                  "affiliation": "University College London"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_oascigil.pdf"
+            },
+            {
+              "title": "Geolocation Compass: Geolocalized Data Registry and Forwarding for ICN Networks",
+              "speakers": [
+                {
+                  "name": "Dante Pacella",
+                  "affiliation": "Verizon"
+                },
+                {
+                  "name": "Ashish Sardesai",
+                  "affiliation": "Verizon"
+                },
+                {
+                  "name": "Mani Tadayon",
+                  "affiliation": "Verizon"
+                }
+              ],
+              "slides": "archive/2017/slides/ndn1703_dpacella.pdf"
+            }
+          ]
+        },
+        {
+          "start": "12:00",
+          "end": "13:30",
+          "kind": "break",
+          "title": "Lunch"
+        },
+        {
+          "start": "13:30",
+          "end": "14:30",
+          "kind": "panel",
+          "title": "Panel: NDN at the Edge and on the Horizon",
+          "chair": {
+            "name": "Jeff Burke"
+          },
+          "panelists": [
+            {
+              "name": "Lixia Zhang",
+              "affiliation": "UCLA"
+            },
+            {
+              "name": "Sokwoo Rhee",
+              "affiliation": "NIST"
+            },
+            {
+              "name": "Luca Muscariello",
+              "affiliation": "Cisco"
+            }
+          ]
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "kind": "other",
+          "title": "NDN Hackathon Welcome/Project pitches/Group formation and dinner (Fishbowl Conference Room 203/205)"
+        }
+      ]
+    },
+    {
+      "date": "2017-03-25",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "kind": "break",
+          "title": "Breakfast"
+        },
+        {
+          "start": "09:00",
+          "end": "19:00",
+          "kind": "other",
+          "title": "NDN Hackathon"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "kind": "break",
+          "title": "Lunch"
+        },
+        {
+          "start": "19:00",
+          "end": "20:00",
+          "kind": "break",
+          "title": "Dinner"
+        }
+      ]
+    },
+    {
+      "date": "2017-03-26",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "kind": "break",
+          "title": "Breakfast"
+        },
+        {
+          "start": "09:00",
+          "end": "12:00",
+          "kind": "other",
+          "title": "NDN Hackathon"
+        },
+        {
+          "start": "12:00",
+          "end": "13:30",
+          "kind": "other",
+          "title": "Lunch, NDN Hackathon project presentations and judging"
+        }
+      ]
+    }
+  ]
+}

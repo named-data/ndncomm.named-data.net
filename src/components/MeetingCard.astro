@@ -25,7 +25,7 @@ const place = [m.venue, m.city].filter(Boolean).join(', ') || FORMAT_LABEL[m.for
   <div class="chips">
     {upcoming && <span class="chip chip-accent">Upcoming</span>}
     {stats.talks > 0 && <span class="chip">{stats.talks} talks</span>}
-    {stats.panels > 0 && <span class="chip">{stats.panels} panels</span>}
+    {stats.panels > 0 && <span class="chip">{stats.panels} panel{stats.panels > 1 ? 's' : ''}</span>}
     {
       !upcoming && m.videos.length > 0 && (
         <span class="chip chip-accent">
