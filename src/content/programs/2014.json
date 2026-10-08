@@ -1,0 +1,706 @@
+{
+  "timezone": "",
+  "days": [
+    {
+      "date": "2014-09-03",
+      "items": [
+        {
+          "start": "13:00",
+          "end": "17:00",
+          "kind": "other",
+          "title": "(optional) Named Data Networking Tutorial - Rehearsal for ACM ICN",
+          "speakers": [
+            {
+              "name": "Christos Papadopoulos",
+              "affiliation": "Colorado State University"
+            }
+          ],
+          "abstract": "Christos Papadopoulos (Colorado State University) will host an informal tutorial rehearsal in the afternoon for those able and willing to attend, in preparation for the NDN tutorial at ACM ICN 2014.",
+          "slides": "2014/slides/tutorialagenda.pdf",
+          "talks": [
+            {
+              "title": "ICN Tutorial Dry Run Intro",
+              "speakers": [
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_jburke_appintro.pdf"
+            },
+            {
+              "title": "Application Support",
+              "speakers": [
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_jburke_appsupport.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2014-09-04",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "kind": "break",
+          "title": "Breakfast"
+        },
+        {
+          "start": "09:00",
+          "end": "09:50",
+          "kind": "session",
+          "title": "Overview of NDN and the NDN Platform",
+          "talks": [
+            {
+              "title": "Brief intro to NDN",
+              "speakers": [
+                {
+                  "name": "Van Jacobson",
+                  "affiliation": "UCLA / Google"
+                }
+              ]
+            },
+            {
+              "title": "Overview of NDN Platform, application libraries, and API",
+              "speakers": [
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA REMAP"
+                },
+                {
+                  "name": "Jeff Thompson",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_jburke_overview.pdf"
+            },
+            {
+              "title": "Overview of NFD (NDN forwarding daemon)",
+              "speakers": [
+                {
+                  "name": "Beichuan Zhang",
+                  "affiliation": "University of Arizona"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_bzhang.pdf"
+            }
+          ]
+        },
+        {
+          "start": "09:50",
+          "end": "10:20",
+          "kind": "other",
+          "title": "Discussion",
+          "chair": {
+            "name": "kc claffy"
+          }
+        },
+        {
+          "start": "10:20",
+          "end": "10:50",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "10:50",
+          "end": "11:20",
+          "kind": "session",
+          "title": "Testbed Update",
+          "talks": [
+            {
+              "title": "NDN Testbed",
+              "speakers": [
+                {
+                  "name": "Patrick Crowley",
+                  "affiliation": "Washington University"
+                },
+                {
+                  "name": "John DeHart",
+                  "affiliation": "Washington University"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_dehart.pdf"
+            },
+            {
+              "title": "NDN CERT and its use with testbed",
+              "speakers": [
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "11:20",
+          "end": "11:30",
+          "kind": "other",
+          "title": "Discussion",
+          "chair": {
+            "name": "Patrick Crowley"
+          }
+        },
+        {
+          "start": "11:30",
+          "end": "11:45",
+          "kind": "session",
+          "title": "Lightning Talks",
+          "talks": [
+            {
+              "title": "Named Functions: Vertical or horizontal named-data extension?",
+              "speakers": [
+                {
+                  "name": "Christian Tschudin",
+                  "affiliation": "University of Basel"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_ctschudin.pdf"
+            }
+          ]
+        },
+        {
+          "start": "11:45",
+          "end": "13:15",
+          "kind": "break",
+          "title": "Lunch"
+        },
+        {
+          "start": "13:15",
+          "end": "14:15",
+          "kind": "session",
+          "title": "Routing and Forwarding",
+          "talks": [
+            {
+              "title": "Role of Routing in NDN Networks",
+              "speakers": [
+                {
+                  "name": "Beichuan Zhang",
+                  "affiliation": "University of Arizona"
+                }
+              ]
+            },
+            {
+              "title": "NLSR: Named Data Link State Routing Protocol",
+              "speakers": [
+                {
+                  "name": "Lan Wang",
+                  "affiliation": "University of Memphis"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_lwang.pdf"
+            },
+            {
+              "title": "An analytical model for pending interest table dimensioning in Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Giovanna Carofiglio",
+                  "affiliation": "Alcatel-Lucent"
+                }
+              ]
+            },
+            {
+              "title": "Scalable Pending Interest Table Design",
+              "speakers": [
+                {
+                  "name": "Patrick Crowley",
+                  "affiliation": "Washington University in St. Louis"
+                },
+                {
+                  "name": "Haowei Yuan",
+                  "affiliation": "Washington University in St. Louis"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "14:30",
+          "end": "15:00",
+          "kind": "other",
+          "title": "Discussion",
+          "chair": {
+            "name": "Beichuan Zhang"
+          }
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "15:30",
+          "end": "16:30",
+          "kind": "session",
+          "title": "Applications: Instrumented Environments",
+          "talks": [
+            {
+              "title": "NDN in local area networks",
+              "speakers": [
+                {
+                  "name": "Junxiao Shi",
+                  "affiliation": "University of Arizona"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_jshi.pptx"
+            },
+            {
+              "title": "NDN Internet of Things Toolkit for Raspberry Pi",
+              "speakers": [
+                {
+                  "name": "Adeola Bannis",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_abannis.pdf"
+            },
+            {
+              "title": "Japan-EU joint research: GreenICN, and Proactive Content Caching and Delivery Scheme Utilizing Transportation Systems",
+              "speakers": [
+                {
+                  "name": "Yong-Jin Park",
+                  "affiliation": "Waseda University"
+                },
+                {
+                  "name": "Hidenori Nakazato",
+                  "affiliation": "Waseda University"
+                },
+                {
+                  "name": "Atsushi Tagami",
+                  "affiliation": "KDDI R&D Laboratories Inc."
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_hnakazato.pdf"
+            },
+            {
+              "title": "NDN Sensor Network Emulator",
+              "speakers": [
+                {
+                  "name": "Wentao Shang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_wshang.pdf"
+            }
+          ]
+        },
+        {
+          "start": "16:30",
+          "end": "16:45",
+          "kind": "other",
+          "title": "Discussion",
+          "chair": {
+            "name": "Jeff Burke"
+          }
+        },
+        {
+          "start": "16:45",
+          "end": "17:30",
+          "kind": "session",
+          "title": "Lightning Talks",
+          "talks": [
+            {
+              "title": "Consumer-Producer API for Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Ilya Moiseenko",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_imoiseenko.pdf"
+            },
+            {
+              "title": "GENI and NDN",
+              "speakers": [
+                {
+                  "name": "Niky Riga",
+                  "affiliation": "GENI Project Office"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_nriga.pdf"
+            },
+            {
+              "title": "Large scale ICN deployment for carriers",
+              "speakers": [
+                {
+                  "name": "G.Q. Wang",
+                  "affiliation": "Huawei Technologies"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "17:30",
+          "end": "18:00",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "17:30",
+          "end": "20:00",
+          "kind": "other",
+          "title": "Demos / Poster Session / Reception",
+          "talks": [
+            {
+              "title": "Ambient Informatics - NDN Bus Bench",
+              "speakers": [
+                {
+                  "name": "Alexander Horn",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_ahorn_poster.pdf"
+            },
+            {
+              "title": "Using GeoFaces to route Interests and Data in Vehicular Networks",
+              "speakers": [
+                {
+                  "name": "Giulio Grassi",
+                  "affiliation": "UPMC - LIP6/UCLA"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_ggrassi_poster.pdf"
+            },
+            {
+              "title": "PnC: Predict and Cache in Content Centric networks",
+              "speakers": [
+                {
+                  "name": "Golnaz Farhadi",
+                  "affiliation": "Fujitsu Laboratories of America"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_gfarhadi_poster.pdf"
+            },
+            {
+              "title": "Consumer-Producer API for Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Ilya Moiseenko",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_imoiseenko_poster.pdf"
+            },
+            {
+              "title": "NDN Common Client Libraries API",
+              "speakers": [
+                {
+                  "name": "Jeff Thompson",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_jthompson_poster.pdf"
+            },
+            {
+              "title": "Music Sharing Room over Named Data Network",
+              "speakers": [
+                {
+                  "name": "Mengchen Pei",
+                  "affiliation": "BUPT/UCLA REMAP"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_mpei_poster.pdf"
+            },
+            {
+              "title": "NDN Real Time Conferencing Library",
+              "speakers": [
+                {
+                  "name": "Peter Gusev",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_pgusev_poster.pdf"
+            },
+            {
+              "title": "GENI for NDN Research and Education",
+              "speakers": [
+                {
+                  "name": "Niky Riga",
+                  "affiliation": "GENI Project Office"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_nriga_poster.pdf"
+            },
+            {
+              "title": "Parallels: An Exploration Engine for The Discovery of Ideas",
+              "speakers": [
+                {
+                  "name": "Steven Dale",
+                  "affiliation": "Thoughtworks // parallels.io"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_sdale_poster.pdf"
+            },
+            {
+              "title": "ChronoChat: a Server-less Multi-User Instant Message Application Over NDN",
+              "speakers": [
+                {
+                  "name": "Yingdi Yu",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_yyu_poster.pdf"
+            },
+            {
+              "title": "Project Matryoshka: NDN Multiplayer Online Game",
+              "speakers": [
+                {
+                  "name": "Zhehao Wang",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_zwang_poster.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2014-09-05",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "kind": "break",
+          "title": "Breakfast",
+          "talks": [
+            {
+              "title": "\"Office hours\" configuring ChronoChat",
+              "speakers": [
+                {
+                  "name": "Yingdi Yu",
+                  "affiliation": "UCLA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "09:00",
+          "end": "09:45",
+          "kind": "other",
+          "title": "Open Discussion: Reflections on Yesterday, Most Interesting Things Learned",
+          "chair": {
+            "name": "kc claffy"
+          }
+        },
+        {
+          "start": "09:45",
+          "end": "10:30",
+          "kind": "session",
+          "title": "New Applications",
+          "talks": [
+            {
+              "title": "NDN-RTC",
+              "speakers": [
+                {
+                  "name": "Peter Gusev",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_pgusev.pdf"
+            },
+            {
+              "title": "NDN support for climate applications",
+              "speakers": [
+                {
+                  "name": "Christos Papadopoulos",
+                  "affiliation": "Colorado State University"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_christos.pdf"
+            },
+            {
+              "title": "Open mHealth",
+              "speakers": [
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_jburke_openmhealth.pdf"
+            },
+            {
+              "title": "Big Data over NDN: NBigDN?",
+              "speakers": [
+                {
+                  "name": "Eric Osterweil",
+                  "affiliation": "Verisign Labs"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "10:30",
+          "end": "10:45",
+          "kind": "other",
+          "title": "Discussion",
+          "chair": {
+            "name": "kc claffy"
+          }
+        },
+        {
+          "start": "10:45",
+          "end": "11:15",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "11:15",
+          "end": "12:00",
+          "kind": "session",
+          "title": "Security",
+          "talks": [
+            {
+              "title": "Update on NDN security research",
+              "speakers": [
+                {
+                  "name": "James Kasten",
+                  "affiliation": "U. Mich"
+                }
+              ]
+            },
+            {
+              "title": "Logging System For Long-lifetime Data Validation Data",
+              "speakers": [
+                {
+                  "name": "Yingdi Yu",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_yyu.pdf"
+            },
+            {
+              "title": "Authorization credentials for controlled sharing in NDN: experiments with codecaps and macaroons in NDN.JS",
+              "speakers": [
+                {
+                  "name": "Pedro de-las-Heras-Quirós",
+                  "affiliation": "Universidad Rey Jan Carlos"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_pdelasherasquiros.pdf"
+            },
+            {
+              "title": "Privacy of Cached Data in Information-Centric Networks",
+              "speakers": [
+                {
+                  "name": "Aziz Mohaisen",
+                  "affiliation": "VeriSign Labs"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_amohaisen.pdf"
+            }
+          ]
+        },
+        {
+          "start": "12:00",
+          "end": "12:30",
+          "kind": "panel",
+          "title": "Panel Discussion: Industry view of NDN security and privacy landscape",
+          "panelists": [
+            {
+              "name": "Eve Schooler",
+              "affiliation": "Intel"
+            },
+            {
+              "name": "Allison Mankin",
+              "affiliation": "VeriSign Inc"
+            },
+            {
+              "name": "Ignacio Solis",
+              "affiliation": "PARC"
+            }
+          ],
+          "abstract": "Discussion questions:\n\n1. What is the biggest security or privacy problem of the current Internet that you think NDN can mitigate?\n\n2. What is the security or privacy aspect of the NDN architecture that will be the hardest to address?"
+        },
+        {
+          "start": "12:30",
+          "end": "13:30",
+          "kind": "break",
+          "title": "Lunch"
+        },
+        {
+          "start": "13:30",
+          "end": "15:00",
+          "kind": "panel",
+          "title": "Technical Discussion about NDN Design",
+          "chair": {
+            "name": "kc claffy"
+          },
+          "panelists": [
+            {
+              "name": "Massimo Gallo",
+              "affiliation": "Alcaltel-Lucent"
+            },
+            {
+              "name": "Mark Stapp",
+              "affiliation": "Cisco Systems"
+            },
+            {
+              "name": "Leonce Mekinda",
+              "affiliation": "Orange Labs/ France Telecom R&D"
+            }
+          ],
+          "abstract": "Required reading: Named Data Networking Technical Report\n\nDiscussion questions:\n\n1. What is the biggest showstopper in the NDN architecture for the problem(s) you are trying to solve? How would you like to see it addressed?\n\n2. What other holes do you believe exist in the current description of the NDN architecture?\n\n3. What do you consider to be the highest priorities in addressing the unanswered questions? Any suggestions on how to address them? Any offers to help?\n\n4. What is the most interesting / challenging application domain for NDN to consider now? What are the key challenges there it can help address?"
+        },
+        {
+          "start": "15:00",
+          "end": "15:15",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "15:15",
+          "end": "16:00",
+          "kind": "session",
+          "title": "Building Community",
+          "talks": [
+            {
+              "title": "NDN in Javascript: Building Community and Exploring Possibilities",
+              "speakers": [
+                {
+                  "name": "Ryan Bennett",
+                  "affiliation": "Colorado State University"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_rbennett.pdf"
+            },
+            {
+              "title": "Introduction to the NDN Consortium",
+              "speakers": [
+                {
+                  "name": "NDN Team"
+                }
+              ],
+              "slides": "2014/slides/ndncomm2014_jburke_consortium.pdf"
+            }
+          ]
+        },
+        {
+          "start": "16:00",
+          "end": "17:00",
+          "kind": "other",
+          "title": "Discussion: How to promote broader adoption and involvement",
+          "chair": {
+            "name": "Jeff Burke"
+          }
+        },
+        {
+          "start": "17:00",
+          "end": "17:30",
+          "kind": "closing",
+          "title": "Wrap-up, review of meeting"
+        }
+      ]
+    }
+  ]
+}

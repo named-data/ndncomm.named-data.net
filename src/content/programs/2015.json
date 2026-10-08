@@ -1,0 +1,784 @@
+{
+  "timezone": "",
+  "days": [
+    {
+      "date": "2015-09-26",
+      "items": [
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "kind": "break",
+          "title": "Hackathon Breakfast"
+        },
+        {
+          "start": "10:00",
+          "end": "10:10",
+          "kind": "other",
+          "title": "Project Idea Pitches"
+        },
+        {
+          "start": "10:10",
+          "end": "12:30",
+          "kind": "other",
+          "title": "Form small groups based on interests; Hack"
+        },
+        {
+          "start": "12:30",
+          "end": "18:00",
+          "kind": "other",
+          "title": "Lunch, then Hack"
+        },
+        {
+          "start": "18:00",
+          "end": "20:00",
+          "kind": "break",
+          "title": "Dinner and unwind social event (TBD)"
+        },
+        {
+          "start": "20:00",
+          "kind": "closing",
+          "title": "Close Hackathon Saturday"
+        }
+      ]
+    },
+    {
+      "date": "2015-09-27",
+      "items": [
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "kind": "break",
+          "title": "Hackathon Breakfast"
+        },
+        {
+          "start": "10:00",
+          "end": "12:30",
+          "kind": "other",
+          "title": "Hack"
+        },
+        {
+          "start": "12:30",
+          "end": "17:30",
+          "kind": "other",
+          "title": "Lunch, then Hack"
+        },
+        {
+          "start": "17:30",
+          "end": "18:30",
+          "kind": "other",
+          "title": "Project judging"
+        },
+        {
+          "start": "18:30",
+          "end": "20:30",
+          "kind": "other",
+          "title": "Dinner and committee meeting"
+        },
+        {
+          "start": "20:30",
+          "end": "21:00",
+          "kind": "other",
+          "title": "Award presentation"
+        },
+        {
+          "start": "21:00",
+          "kind": "closing",
+          "title": "Close Hackathon Sunday"
+        }
+      ]
+    },
+    {
+      "date": "2015-09-28",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "kind": "break",
+          "title": "Breakfast"
+        },
+        {
+          "start": "09:00",
+          "end": "09:45",
+          "kind": "keynote",
+          "title": "Keynote: NDN - Past, Present, Future",
+          "speakers": [
+            {
+              "name": "Jeff Burke",
+              "affiliation": "UCLA School of Theater, Film and Television"
+            },
+            {
+              "name": "Van Jacobson",
+              "affiliation": "UCLA"
+            }
+          ],
+          "talks": [
+            {
+              "title": "The Future of the Internet is the Future of Storytelling",
+              "speakers": [
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA School of Theater, Film and Television"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_jburke_keynote.pdf"
+            }
+          ]
+        },
+        {
+          "start": "09:45",
+          "end": "10:15",
+          "kind": "session",
+          "title": "Architecture Achievements",
+          "talks": [
+            {
+              "title": "NFD Development Progress",
+              "speakers": [
+                {
+                  "name": "Beichuan Zhang",
+                  "affiliation": "University of Arizona"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_bzhang.pdf"
+            }
+          ]
+        },
+        {
+          "start": "10:15",
+          "end": "10:45",
+          "kind": "session",
+          "title": "Data-Centric Security",
+          "talks": [
+            {
+              "title": "Schematized Trust: Design and Application",
+              "speakers": [
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_aafanasyev.pdf"
+            },
+            {
+              "title": "Content-Base Confidentiality: lessons learned in the past year",
+              "speakers": [
+                {
+                  "name": "Yingdi Yu",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_yyu.pdf"
+            }
+          ]
+        },
+        {
+          "start": "10:30",
+          "end": "10:45",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "10:45",
+          "end": "11:20",
+          "kind": "session",
+          "title": "NDN-NP Applications",
+          "talks": [
+            {
+              "title": "NDN-NP Applications Update",
+              "speakers": [
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_jburke.pdf"
+            },
+            {
+              "title": "NDN-RTC",
+              "speakers": [
+                {
+                  "name": "Peter Gusev",
+                  "affiliation": "UCLA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "11:20",
+          "end": "12:00",
+          "kind": "session",
+          "title": "Science and NDN",
+          "talks": [
+            {
+              "title": "Science Data and the NDN paradigm (remote presentation)",
+              "speakers": [
+                {
+                  "name": "Inder Monga",
+                  "affiliation": "ESnet"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_imonga.pdf"
+            },
+            {
+              "title": "Managing Scientific Data with NDN",
+              "speakers": [
+                {
+                  "name": "Susmit Shannigrahi",
+                  "affiliation": "Colorado State University"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_sshannigrahi.pdf"
+            },
+            {
+              "title": "(Possible) HEP Use Case for NDN",
+              "speakers": [
+                {
+                  "name": "Phil DeMar",
+                  "affiliation": "FermiLab"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_pdemar.pdf"
+            },
+            {
+              "title": "An NDN Testbed for Large-scale Scientific Data in Korea",
+              "speakers": [
+                {
+                  "name": "Huhnkuk Lim",
+                  "affiliation": "KISTI"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_hlim.pdf"
+            }
+          ]
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "kind": "break",
+          "title": "Working Lunch / Hackathon Project Demos"
+        },
+        {
+          "start": "13:00",
+          "end": "14:00",
+          "kind": "session",
+          "title": "Lightning Talks (5min each advertising for posters/demos)",
+          "talks": [
+            {
+              "title": "PartialSync: Synchronizing a Partial Namespace in NDN",
+              "speakers": [
+                {
+                  "name": "Minsheng Zhang",
+                  "affiliation": "University of Memphis"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_mzhang.pdf"
+            },
+            {
+              "title": "Hyperbolic vs. Link-State Routing in ICN",
+              "speakers": [
+                {
+                  "name": "Vince Lehman",
+                  "affiliation": "University of Memphis"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_vlehman.pdf"
+            },
+            {
+              "title": "Japan-EU Joint Research . GreenICN: Architecture and Applications of Green Information Centric Networking",
+              "speakers": [
+                {
+                  "name": "Hidenori Nakazato",
+                  "affiliation": "Waseda University"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_hnakazato.pdf"
+            },
+            {
+              "title": "TelHoc Borrego -- An Application Service Platform supported with NDN networking.",
+              "speakers": [
+                {
+                  "name": "Anders Plymoth",
+                  "affiliation": "TelHoc"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "14:00",
+          "end": "15:00",
+          "kind": "session",
+          "title": "Breakout Sessions (in parallel)",
+          "talks": [
+            {
+              "title": "Revisiting name-content binding: In-network name space operations",
+              "speakers": [
+                {
+                  "name": "Christian Tschudin",
+                  "affiliation": "University of Basel"
+                }
+              ],
+              "abstract": "NDN's forwarding-on-a-name approach works best for static content. For data on demand, name space stitching situations (IoT gateways) or cases where names include ephemeral elements like \"call-back names\", the question arises whether the network should not understand more of the intended usage of the involved name(s) than just forwarding. As an extreme case we have named functions where an interest's name is an arbitrary expression containing several names and where the network is supposed to rewrite the expression depending on its routing knowledge. A pragmatic extension is NDNS with its second (conditional forwarding hint) name.\n\nGoals: After a brief introduction to the topic,\n\n1. the session's participant will review the properties of NDN's current network-level usage of names,\n2. assess the relevance of new name-related in-network operations,\n3. if time permits, discuss in-network extensions where names are rewritten, or mapped, and can be bound to dynamic content.\n\nBreakout Room: Melnitz 1410",
+              "slides": "2015/slides/ndncomm2015_ctschudin.pdf"
+            },
+            {
+              "title": "NDN Development Environments and Support - Common Client Libraries",
+              "speakers": [
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "Jeff Thompson",
+                  "affiliation": "UCLA REMAP"
+                }
+              ],
+              "abstract": "Brief update on recent additions to the NDN libraries, their motivations and design tradeoffs. Open discussion of future features desired by the community, opportunities for participation in development, and feedback on the development environment(s). Technical questions about the libraries welcome.\n\nBreakout Room: Melnitz 1451",
+              "slides": "2015/slides/ndncomm2015_jthompson.pdf"
+            },
+            {
+              "title": "Security Support: Schematized Trust; Name Based Encryption",
+              "speakers": [
+                {
+                  "name": "Yingdi Yu",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "Discussion around the content-based security model of NDN, including topics about: 1) the difference between content-based security model and channel-based security model; 2) challenges in enabling content-based security in NDN app; 3) progress of security support in NDN.\n\nBreakout Room: Little Theater"
+            },
+            {
+              "title": "Defense Applications of NDN",
+              "speakers": [
+                {
+                  "name": "Tamer Refaei",
+                  "affiliation": "The MITRE Corporation"
+                }
+              ],
+              "abstract": "Tactical communication network environments are typically characterized as being dynamic, infrastructureless, and resource-constrained. Robustness, security, and reliability are recognized as critical requirements for all tactical systems. The objective of this session is to investigate the use of NDN in such environment.\n\nGoals:\n\n1. Introduce characteristics of tactical communication network environments\n2. Determine whether and to what extent ongoing research in Named Data Networking (NDN) is applicable to contested environments, and what adaptations must be made for contested environments.\n\nBreakout Room: Macgowan 2330"
+            },
+            {
+              "title": "NDN-NP Network Environments",
+              "speakers": [
+                {
+                  "name": "Jeff Burke",
+                  "affiliation": "UCLA REMAP"
+                },
+                {
+                  "name": "Zhehao Wang",
+                  "affiliation": "UCLA REMAP"
+                },
+                {
+                  "name": "Haitao Zhang",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "abstract": "Discussion of the Open mHealth and Enterprise Building Automation and Management network environments that are part of the NSF NDN-NP proposal, including 1) challenges from these domains 2) opportunities provided by NDN 3) progress on demonstration applications.\n\nBreakout Room: Little T Courtyard"
+            },
+            {
+              "title": "Evaluating NDN: How to Assess Technical and Social Goals of a Future Internet Architecture",
+              "speakers": [
+                {
+                  "name": "Nicholas Proferes",
+                  "affiliation": "University of Maryland"
+                },
+                {
+                  "name": "Dustin O'Hara",
+                  "affiliation": "UCLA"
+                },
+                {
+                  "name": "kc claffy",
+                  "affiliation": "UC San Diego/CAIDA"
+                }
+              ],
+              "abstract": "This interactive session will be a conversation among NDN developers and researchers about approaches for assessing progress towards the broad technical and social goals of NDN and ICN more generally. As a discussion prompt, we'll examine a developer survey currently under production, in addition discussing evaluation mechanisms appropriate for architecture.\n\nBreakout Room: Melnitz 2568"
+            }
+          ]
+        },
+        {
+          "start": "15:00",
+          "end": "15:15",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "15:15",
+          "end": "16:45",
+          "kind": "other",
+          "title": "Breakout Summary Presentations"
+        },
+        {
+          "start": "15:45",
+          "end": "16:30",
+          "kind": "other",
+          "title": "Hackathon Results Presentation",
+          "talks": [
+            {
+              "title": "Hackathon Results",
+              "speakers": [
+                {
+                  "name": "Steve DiBenedetto",
+                  "affiliation": "Colorado State University"
+                },
+                {
+                  "name": "Alex Afanasyev",
+                  "affiliation": "UCLA"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_hackathonreport.pdf"
+            }
+          ]
+        },
+        {
+          "start": "16:30",
+          "end": "18:00",
+          "kind": "keynote",
+          "title": "Keynote and Q&A",
+          "talks": [
+            {
+              "title": "IPR and Future Internet Architectures",
+              "speakers": [
+                {
+                  "name": "Eben Moglen",
+                  "affiliation": "Columbia Law School"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "18:00",
+          "end": "20:00",
+          "kind": "other",
+          "title": "Demos / Poster Session / Reception",
+          "talks": [
+            {
+              "title": "Experiments with the Emulated NDN Testbed in ONL",
+              "speakers": [
+                {
+                  "name": "Patrick Crowley",
+                  "affiliation": "University of Washington at St. Louis"
+                }
+              ]
+            },
+            {
+              "title": "NDN for scientific data",
+              "speakers": [
+                {
+                  "name": "Susmit Shannigrahi",
+                  "affiliation": "Colorado State University"
+                }
+              ]
+            },
+            {
+              "title": "Bandwidth-Efficient Solutions for Seamless Producer Mobility Support in Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Lei Liu",
+                  "affiliation": "Fujitsu Laboratories of America"
+                }
+              ]
+            },
+            {
+              "title": "Adaptive Rate Control integration on NDN-RTC",
+              "speakers": [
+                {
+                  "name": "Ryota Ohnishi",
+                  "affiliation": "Panasonic"
+                }
+              ]
+            },
+            {
+              "title": "PartialSync: Synchronizing a Partial Namespace in NDN",
+              "speakers": [
+                {
+                  "name": "Minsheng Zhang",
+                  "affiliation": "University of Memphis"
+                }
+              ]
+            },
+            {
+              "title": "NDN and the Internet of Things: Analytics Everywhere",
+              "speakers": [
+                {
+                  "name": "Andrew Brown",
+                  "affiliation": "Intel"
+                }
+              ]
+            },
+            {
+              "title": "ndnSIM 2.0: A new version of the NDN simulator for NS-3",
+              "speakers": [
+                {
+                  "name": "Spyridon Mastorakis",
+                  "affiliation": "UCLA"
+                }
+              ]
+            },
+            {
+              "title": "Load Balancing Approach for Adaptive Bit-Rate Streaming in Information Centric Networks",
+              "speakers": [
+                {
+                  "name": "Divyashri Bhat",
+                  "affiliation": "University of Massachusetts Amherst"
+                }
+              ]
+            },
+            {
+              "title": "Hierarchical storage in Building Management System",
+              "speakers": [
+                {
+                  "name": "Zhehao Wang",
+                  "affiliation": "UCLA REMAP"
+                }
+              ]
+            },
+            {
+              "title": "NDNFit architecture and progress",
+              "speakers": [
+                {
+                  "name": "Haitao Zhang",
+                  "affiliation": "UCLA"
+                }
+              ]
+            },
+            {
+              "title": "NDN-RTC testing and updates",
+              "speakers": [
+                {
+                  "name": "Jiachen Wang",
+                  "affiliation": "UCLA REMAP"
+                }
+              ]
+            },
+            {
+              "title": "Hyperbolic vs. Link-State Routing in ICN",
+              "speakers": [
+                {
+                  "name": "Vince Lehman",
+                  "affiliation": "University of Memphis"
+                }
+              ]
+            },
+            {
+              "title": "TelHoc Borrego - An Application Service Platform supported with NDN networking",
+              "speakers": [
+                {
+                  "name": "Anders Plymouth",
+                  "affiliation": "TelHoc"
+                }
+              ]
+            },
+            {
+              "title": "UX Design for NDN ID Manager & Data Sharing App",
+              "speakers": [
+                {
+                  "name": "Dustin O'Hara",
+                  "affiliation": "UCLA REMAP"
+                }
+              ]
+            },
+            {
+              "title": "NDN-Home: NDN based Smart Home System",
+              "speakers": [
+                {
+                  "name": "Teng Liang",
+                  "affiliation": "University of Arizona"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2015-09-29",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "kind": "session",
+          "title": "Working Breakfast / Breakout Sessions",
+          "talks": [
+            {
+              "title": "Team-building and writing proposals to support NDN research",
+              "speakers": [
+                {
+                  "name": "KC Claffy",
+                  "affiliation": "UC San Diego/CAIDA"
+                }
+              ],
+              "abstract": "Breakout Room: Melnitz 1410"
+            },
+            {
+              "title": "NDN startups",
+              "speakers": [
+                {
+                  "name": "Patrick Crowley",
+                  "affiliation": "University of Washington at St. Louis"
+                }
+              ],
+              "abstract": "Goals:\n\n1. Establish a shared understanding of why NDN startups are inevitable\n2. Brainstorm startup directions and opportunities\n3. Discuss ways students in particular can get started\n\nBreakout Room: Little Theater"
+            },
+            {
+              "title": "ICN-over-UDP",
+              "speakers": [
+                {
+                  "name": "Christian Tschudin",
+                  "affiliation": "University of Basel"
+                }
+              ],
+              "abstract": "Breakout Room: Melnitz 1410",
+              "slides": "2015/slides/ndncomm2015_ctschudin2.pdf"
+            }
+          ]
+        },
+        {
+          "start": "09:00",
+          "end": "10:30",
+          "kind": "other",
+          "title": "Open Discussion: Questions on Yesterday's Talks, Reflections on Yesterday, Most Interesting Things Learned"
+        },
+        {
+          "start": "10:30",
+          "end": "10:45",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "11:00",
+          "end": "12:00",
+          "kind": "session",
+          "title": "Industry Lightning Talks (5 min each)",
+          "chair": {
+            "name": "Eve Schooler",
+            "affiliation": "Intel"
+          },
+          "talks": [
+            {
+              "title": "Bandwidth-Efficient Solutions for Seamless Producer Mobility Support in Named Data Networking",
+              "speakers": [
+                {
+                  "name": "Lei Liu",
+                  "affiliation": "Fujitsu Laboratories of America, Inc."
+                }
+              ]
+            },
+            {
+              "title": "High-speed Software Prototype of Named-Data Networking",
+              "speakers": [
+                {
+                  "name": "Diego Perino",
+                  "affiliation": "Alcatel-Lucent"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_dperino.pdf"
+            },
+            {
+              "title": "Access Control Mechanisms for NDN via One-Time Names",
+              "speakers": [
+                {
+                  "name": "Maliheh Shirvanian",
+                  "affiliation": "University of Birmingham at Alabama/Verisign, Inc."
+                }
+              ]
+            },
+            {
+              "title": "NDN at Intel",
+              "speakers": [
+                {
+                  "name": "Andrew Brown",
+                  "affiliation": "Intel"
+                }
+              ],
+              "slides": "2015/slides/ndncomm2015_abrown.pdf"
+            },
+            {
+              "title": "Elastic PDU Design for ICN Protocols",
+              "speakers": [
+                {
+                  "name": "G.Q. Wang",
+                  "affiliation": "Huawei Technologies"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "12:00",
+          "end": "12:15",
+          "kind": "session",
+          "title": "Testbed Update/Testbed Participants",
+          "talks": [
+            {
+              "title": "Testbed update / Testbed Participants",
+              "speakers": [
+                {
+                  "name": "Patrick Crowley",
+                  "affiliation": "Washington University in St. Louis"
+                },
+                {
+                  "name": "John DeHart",
+                  "affiliation": "Washington University in St. Louis"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "12:15",
+          "end": "13:15",
+          "kind": "break",
+          "title": "Working Lunch / Discussion",
+          "abstract": "(Different subgroups may meet to discuss open technical issues)"
+        },
+        {
+          "start": "13:15",
+          "end": "14:15",
+          "kind": "panel",
+          "title": "Industry Panel: How is Industry Using NDN, What are Industry Interests, Consortium",
+          "chair": {
+            "name": "Eve Schooler",
+            "affiliation": "Intel"
+          },
+          "panelists": [
+            {
+              "name": "Ralph Droms",
+              "affiliation": "Cisco"
+            },
+            {
+              "name": "Luca Muscariello",
+              "affiliation": "Orange Labs/IRT-SystemX"
+            },
+            {
+              "name": "Borje Ohlman",
+              "affiliation": "Ericsson Research"
+            },
+            {
+              "name": "Ignacio Solis",
+              "affiliation": "PARC"
+            },
+            {
+              "name": "Guo Qiang Wang",
+              "affiliation": "Huawei Technologies"
+            },
+            {
+              "name": "Greg Rutz",
+              "affiliation": "CableLabs"
+            }
+          ]
+        },
+        {
+          "start": "14:15",
+          "end": "15:00",
+          "kind": "closing",
+          "title": "Wrap-up, review of meeting, final thoughts and feedback for next year"
+        },
+        {
+          "start": "15:00",
+          "kind": "closing",
+          "title": "Adjourn"
+        }
+      ]
+    }
+  ]
+}

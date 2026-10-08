@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!--[if lt IE 9]><script src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.0/html5shiv.min.js'></script><![endif] -->
+  <title>NDNcomm 2015 - CAIDA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="https://www.caida.org/caida-card.png"/>
+  <meta name="twitter:title" content="NDN Community Meeting (NDNcomm 2015): Architecture, Applications, and Collaboration" />
+  <meta name="twitter:site" content="@caidaorg" />
+  <meta name="twitter:description" content="The NDN Project will host its second NDN community meeting (NDNcomm) on September 28-29 2015, the second in a series of meetings. Registration period extended. Register to participate in NDNcomm 2015." />
+  <meta property="og:title" content="NDN Community Meeting (NDNcomm 2015): Architecture, Applications, and Collaboration" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.caida.org/workshops/ndn/1509/" /><meta property="og:image" content="https://www.caida.org/caida-card.png"/>
+  <meta property="og:site_name" content="CAIDA" />
+  <meta property="og:updated_time" content="2018-01-23T19:50:59+00:00" />
+  <meta property="article:publisher" content="https://www.facebook.com/caidaorg" />
+  <meta property="article:section" content="workshops" />
+
+  <meta property="og:description" content="The NDN Project will host its second NDN community meeting (NDNcomm) on September 28-29 2015, the second in a series of meetings. Registration period extended. Register to participate in NDNcomm 2015." />
+  <meta name="description" content="The NDN Project will host its second NDN community meeting (NDNcomm) on September 28-29 2015, the second in a series of meetings. Registration period extended. Register to participate in NDNcomm 2015." />  
+  <link rel="canonical" href="https://www.caida.org/workshops/ndn/1509/">
+  <link rel="icon" href="https://www.caida.org/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.caida.org/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.caida.org/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.caida.org/favicon-16x16.png">
+  <link rel="manifest" href="https://www.caida.org/site.webmanifest">
+  <link rel="mask-icon" href="https://www.caida.org/safari-pinned-tab.svg" color="#e37d35">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script>
+    $( document ).ready(function() {    
+      breadcrumbTogglesWidth();
+    });
+  </script>
+    <link rel="stylesheet" href="/css/style.min.7fdb4a61eac45dadb6d4d9e624f7bd932ad32f925990dfbb8cd3238a1ce3f77a.css">
+    <link rel="stylesheet" media="print" href="/css/print.min.e06ff4650f1106985b266c1236ea916037463bce127016b8741f19876c259e22.css">
+    
+    <link href="/c2supportfiles/workshop-agenda-min.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+.sessionchair{font-weight:normal;color:black;margin-left:2em;}
+.roominfo{margin-left:2em;}
+.subtopic{font-weight:bold;color:black;}
+.hackathon li { margin-bottom:0.25em;}
+</style>
+</head>
+
+<body class='page page-default-list'>
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+  <nav id="main-menu-mobile" class="main-menu-mobile overflow-auto">
+  <ul>
+    <li class="menu-item-resource catalog">       
+      <a href="https://catalog.caida.org/"><span>Resource Catalog</span></a>
+        <a class="subsection" href="https://catalog.caida.org/search?query=types=dataset%20links=tag:caida%20"><span>Datasets</span></a>
+        <a class="subsection" href="https://catalog.caida.org/search?query=types=presentation%20links=tag:caida%20"><span>Media / Presentations</span></a>
+        <a class="subsection" href="https://catalog.caida.org/search?query=types=paper%20links=tag:caida%20"><span>Papers</span></a>
+        <a class="subsection" href="https://catalog.caida.org/search?query=types=recipe%20"><span>Recipes</span></a>
+        <a class="subsection" href="https://catalog.caida.org/search?query=types=software%20"><span>Software / Tools</span></a>
+    </li>
+    <li class="menu-item-about">       
+      <a href="/about/"><span>About</span></a>
+        <a class="subsection" href="/about/supporting/"><span>Supporting</span></a>
+        <a class="subsection" href="/about/donate/"><span>Donate</span></a>
+        <a class="subsection" href="/about/sponsors/"><span>Sponsors</span></a>
+        <a class="subsection" href="/about/jobs/"><span>Jobs at CAIDA</span></a>
+        <a class="subsection" href="/about/annualreports/"><span>Annual Reports</span></a>
+        <a class="subsection" href="/about/progplan/"><span>Program Plan</span></a>
+        <a class="subsection" href="/about/legal/"><span>Legal Agreements</span></a>
+        <a class="subsection" href="/about/sso/"><span>Single Sign-On</span></a>
+        <a class="subsection" href="/staff/"><span>Staff</span></a>
+        <a class="subsection" href="/blog/"><span>Blog</span></a>
+        <a class="subsection" href="/about/contactinfo/"><span>Contact Us</span></a>
+    </li>
+    <li class="menu-item-workshops active">
+        <a href="/workshops/"><span>Workshops</span></a>
+    </li>
+    <li class="menu-item-projects">
+        <a href="/projects/"><span>Projects</span></a>
+    </li>
+    <li class="menu-item-funding">
+        <a href="/funding/"><span>Funding</span></a>
+    </li>
+    <li class="menu-item-blog">
+        <a href="/blog/"><span>Blog</span></a>
+    </li>
+  </ul>
+</nav>
+  <div class="wrapper">
+    <header>
+    <div class='header'>
+  <div class="container">
+    
+    <div class="logo">
+      
+      <a href="https://www.caida.org/"><img alt="CAIDA home" src="/images/caida.png" title="CAIDA - Center for Applied Internet Data Analysis" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://www.caida.org/"><img alt="CAIDA home" src="/images/caida_mobile.png" title="CAIDA - Center for Applied Internet Data Analysis" /></a>
+    </div>
+    <div class="d-none d-print-block p-2"><h1 class="text-light">NDN Community Meeting (NDNcomm 2015): Architecture, Applications, and Collaboration</h1></div>
+    <nav id="main-menu" class="main-menu" aria-label="Main">
+    <div class="btn-group">
+       
+        <a href="https://catalog.caida.org/" class="btn btn-light btn-md dropdown-toggle minw " aria-haspopup="true" aria-expanded="false" role="button" ><span class="d-lg-none">Catalog</span><span class="d-none d-lg-block">Resource Catalog</span><span class="sr-only" data-toggle="dropdown"> Toggle Dropdown</span></a>
+        <div class="dropdown-menu">
+            
+              <div class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="https://catalog.caida.org/search?query=types=dataset%20links=tag:caida%20">Datasets</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/catalog/datasets/overview/">Overview table</a>
+                </div>
+              </div>
+            
+            
+              <div class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="https://catalog.caida.org/search?query=types=presentation%20links=tag:caida%20">Media / Presentations</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="https://www.caida.org/catalog/media/posters/">Posters</a>
+                    <a class="dropdown-item" href="https://www.caida.org/catalog/media/visualizations/">Visualizations</a>
+                </div>
+              </div>
+            
+            
+              <div class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="https://catalog.caida.org/search?query=types=paper%20links=tag:caida%20">Papers</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="https://catalog.caida.org/search?query=types=paper%20!links=tag:caida%20links=tag:used_caida_data%20">External papers</a>
+                    <a class="dropdown-item" href="https://www.caida.org/catalog/datasets/publications/report-publication/">Report new publication</a>
+                </div>
+              </div>
+            
+            
+              <a class="dropdown-item solo" href="https://catalog.caida.org/search?query=types=recipe%20">Recipes</a>
+            
+              <a class="dropdown-item solo" href="https://catalog.caida.org/search?query=types=software%20">Software / Tools</a>
+        </div>
+      
+    </div>
+    <div class="btn-group">
+       
+        <a href="/about/" class="btn btn-light btn-md dropdown-toggle minw " aria-haspopup="true" aria-expanded="false" role="button" ><span class="d-lg-none">About</span><span class="d-none d-lg-block">About</span><span class="sr-only" data-toggle="dropdown"> Toggle Dropdown</span></a>
+        <div class="dropdown-menu">
+            
+              <a class="dropdown-item solo" href="/about/supporting/">Supporting</a>
+            
+              <a class="dropdown-item solo" href="/about/donate/">Donate</a>
+            
+              <a class="dropdown-item solo" href="/about/sponsors/">Sponsors</a>
+            
+              <a class="dropdown-item solo" href="/about/jobs/">Jobs at CAIDA</a>
+            
+              <a class="dropdown-item solo" href="/about/annualreports/">Annual Reports</a>
+            
+              <a class="dropdown-item solo" href="/about/progplan/">Program Plan</a>
+            
+              <a class="dropdown-item solo" href="/about/legal/">Legal Agreements</a>
+            
+              <a class="dropdown-item solo" href="/about/sso/">Single Sign-On</a>
+            
+              <a class="dropdown-item solo" href="/staff/">Staff</a>
+            
+              <a class="dropdown-item solo" href="/blog/">Blog</a>
+            
+              <a class="dropdown-item solo" href="/about/contactinfo/">Contact Us</a>
+        </div>
+      
+    </div>
+    <div class="btn-group">
+      
+        <a href="/workshops/" class="btn btn-light btn-md dropdown-toggle minw  active" aria-haspopup="true" aria-expanded="false" role="button" >Workshops<span class="sr-only" data-toggle="dropdown"> Toggle Dropdown</span></a>
+          
+        <div class="dropdown-menu">
+  
+  <a class="dropdown-item wkshp" href="/workshops/?workshopserieslisting=GMI&show_all=1" title="GMI3S">GMI Meetings</a>
+      <a class="dropdown-item solo wkshp" href="/workshops/training/2606/" title="ESCALATE Training Program (ETP)">ETP</a>
+      <a class="dropdown-item solo wkshp" href="/workshops/wide/2602/" title="11th CAIDA-WIDE Workshop">CAIDA-WIDE</a>
+      <a class="dropdown-item solo wkshp" href="/workshops/aims/2602/" title="AIMS-19 Workshop">AIMS-19</a>
+      <a class="dropdown-item solo wkshp" href="/workshops/aims/2509/" title="AIMS-18 (GMI-AIMS-6) Workshop">AIMS-18 (GMI-AIMS-6)</a>
+      <a class="dropdown-item solo wkshp" href="/workshops/aims/2502/" title="AIMS-17 (GMI-AIMS-5) Workshop">AIMS-17 (GMI-AIMS-5)</a>
+        </div>
+      
+    </div>
+    <div class="btn-group">
+      
+        <a href="/projects/" class="btn btn-light btn-md dropdown-toggle minw " aria-haspopup="true" aria-expanded="false" role="button" >Projects<span class="sr-only" data-toggle="dropdown"> Toggle Dropdown</span></a>
+          
+        <div class="dropdown-menu">
+  
+          <a class="dropdown-item solo" href="/projects/canis/" title="Curated AI-ready Network telescope datasets for Internet Security">CANIS</a>
+          <a class="dropdown-item solo" href="/projects/nids/" title="Network Infrastructure Data Science">NIDS</a>
+          <a class="dropdown-item solo" href="/projects/escalate/" title="Engaging Scholars in Cybersecurity Analysis: A Laboratory for Teaching and Education">ESCALATE</a>
+          <a class="dropdown-item solo" href="/projects/rootbeer/" title="Routing Operations Observational Technology: Building to Enable Education and Research">ROOTBEER</a>
+          <a class="dropdown-item solo" href="/projects/avoid/" title="Automated Verification Of Internet Data-paths for 5G">AVOID</a>
+          <a class="dropdown-item solo" href="/projects/spoofer/" title="Spoofer">Spoofer</a>
+          <a class="dropdown-item solo" href="/projects/cloudtrace/" title="Cloudtrace">Cloudtrace</a>
+          <a class="dropdown-item solo" href="/projects/network_telescope/" title="Network Telescope">Network Telescope</a>
+          <a class="dropdown-item solo" href="/projects/as-core/" title="AS Core Visualization">AS Core Visualization</a>
+          <a class="dropdown-item solo" href="/projects/ark/" title="Archipelago Measurement Infrastructure">Ark</a>
+        </div>
+      
+    </div>
+    <div class="btn-group">
+      
+        <a href="/funding/" class="btn btn-light btn-md dropdown-toggle minw " aria-haspopup="true" aria-expanded="false" role="button" >Funding<span class="sr-only" data-toggle="dropdown"> Toggle Dropdown</span></a>
+          
+        <div class="dropdown-menu">
+  
+          <a class="dropdown-item solo" href="/funding/msri-glimpse/" title="Global Laboratory for Internet Measurement, Probing, and Security Evaluation">GLIMPSE</a>
+          <a class="dropdown-item solo" href="/funding/cns-ivoyager/" title=" Internet Voyager for Gathering Cyber Threat Intelligence">iVoyager</a>
+          <a class="dropdown-item solo" href="/funding/cici-canis/" title="Curated AI-ready Network telescope datasets for Internet Security">CANIS</a>
+          <a class="dropdown-item solo" href="/funding/cici-rootbeer/" title="Routing Operations Observational Technology: Building to Enable Education and Research">ROOTBEER</a>
+          <a class="dropdown-item solo" href="/funding/cybertraining-escalate/" title="Engaging Scholars in Cybersecurity Analysis: A Laboratory for Teaching and Education">ESCALATE</a>
+          <a class="dropdown-item solo" href="/funding/cici-starnova/" title="Scalable Technology to Accelerate Research Network Operations Vulnerability Alerts">STARNOVA</a>
+          <a class="dropdown-item solo" href="/funding/cns-cloudbottlenecks/" title="Detection and Analysis of Infrastructure Bottlenecks in a Cloud-Centric Internet">Cloud Bottlenecks</a>
+          <a class="dropdown-item solo" href="/funding/ccri-ilands/" title="Integrated Library for Advancing Network Data Science">ILANDS</a>
+        </div>
+      
+    </div>
+    <div class="btn-group">
+      
+        <a href="/blog/" class="btn btn-light btn-md dropdown-toggle minw " aria-haspopup="true" aria-expanded="false" role="button" >Blog<span class="sr-only" data-toggle="dropdown"> Toggle Dropdown</span></a>
+          
+        <div class="dropdown-menu">
+    <a class="dropdown-item solo" href="/blog/caidas-annual-2024-report/" title="CAIDA&#39;s Annual 2024 Report">CAIDA&#39;s Annual 2024 Report</a>
+    <a class="dropdown-item solo" href="/blog/new-developments-in-100-gb-anonymized-passive-traces/" title="New Developments in 100 GB Anonymized Passive Traces">New Developments in 100 GB Anonymized Passive Traces</a>
+    <a class="dropdown-item solo" href="/blog/observing-the-ddos-landscape-requires-collaboration/" title="Observing the DDoS Landscape Requires Collaboration">Observing the DDoS Landscape Requires Collaboration</a>
+    <a class="dropdown-item solo" href="/blog/as-reachability-visualization/" title="AS Reachability Visualization">AS Reachability Visualization</a>
+    <a class="dropdown-item solo" href="/blog/caidas-2023-annual-report/" title="CAIDA&#39;s 2023 Annual Report">CAIDA&#39;s 2023 Annual Report</a>
+    <a class="dropdown-item solo" href="/blog/streamlining-access-to-bgp-routing-data/" title="Streamlining Access to BGP Routing Data">Streamlining Access to BGP Routing Data</a>
+    <a class="dropdown-item solo" href="/blog/seeking-beta-users-for-100-gb-link-anonymized-passive-traces/" title="Seeking Beta Users for 100 GB link Anonymized  Passive Traces">Seeking Beta Users for 100 GB link Anonymized  Passive Traces</a>
+    <a class="dropdown-item solo" href="/blog/help-caida-refine-and-enhance-the-fantail-platform/" title="Help CAIDA Refine and Enhance the FANTAIL Traceroute Analytics platform.">Help CAIDA Refine and Enhance the FANTAIL Traceroute Analytics platform.</a>
+    <a class="dropdown-item solo" href="/blog/understanding-the-deployment-of-public-recursive-resolvers/" title="Understanding the deployment of public recursive resolvers">Understanding the deployment of public recursive resolvers</a>
+    <a class="dropdown-item solo" href="/blog/itdk-2024-02/" title="ITDK 2024-02">ITDK 2024-02</a>
+
+        </div>
+      
+    </div>
+</nav>
+
+<div id="searchbox" class="d-none d-xl-block d-print-none">
+  <form method="GET" action="https://duckduckgo.com/" id="ddgform-main" class="form-inline my-2 my-xl-0">
+    <div class="input-group">
+      <input name="q" id="ddg-xl-search" value="" class="form-control" type="search" placeholder="Search CAIDA" aria-label="Search">
+      <input name="sites" value="www.caida.org" type="hidden">
+      <span class="input-group-append">
+        <button class="btn btn-outline-light ddg-search-button" aria-label="Search" title="Search within CAIDA pages" type="submit">
+            <i class="fa fa-search fa-2x"></i>
+        </button>
+      </span>
+    </div>   
+  </form>
+</div>
+
+
+    <div class="d-xl-none d-print-none">
+      <button class="btn d-inline d-xl-none btn-outline-light" aria-label="Search" data-toggle="collapse" data-target="#mobilesearch"><i class="fa fa-search"></i></button>
+      
+<button id="toggle-main-menu-mobile" class="btn hamburger hamburger--spin" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu-mobile">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+
+    </div>
+  </div>
+</div>
+<div class="container d-print-none" data-id="mobilesearch">
+  <div class="row">
+    <div id="mobilesearch" class="col-12 collapse bg-primary ">
+      <form method="GET" action="https://duckduckgo.com/" id="ddgform-mobile" class="my-2 my-xl-0">
+        <div class="input-group d-xl-none">
+          <input name="q" id="ddg-collapse-search" value="" class="form-control" type="search" placeholder="Search CAIDA" aria-label="Search">
+          <input name="sites" value="www.caida.org" type="hidden">         
+          <span class="input-group-append">
+            <button class="btn btn-success ddg-search-button" aria-label="Search" type="submit">
+                Search
+            </button>
+          </span>
+        </div>        
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container">
+<ul class="breadcrumb">
+  
+<li class="breadcrumb-item"><a href="/">CAIDA</a>
+</li>
+<li class="breadcrumb-item"><a href="/workshops/">CAIDA Workshops</a>
+</li>
+<li class="breadcrumb-item"><a href="/workshops/ndn/">NDN Project Retreats</a>
+</li>
+<li class="breadcrumb-item active"><a >NDNcomm 2015</a>
+</li>
+</ul></div>
+
+    </header>
+
+    <div class="pt-2 pt-md-3 pb-3 pb-md-6" data-id="sidebarcontainer" id="sidebarcontainer">
+        <div class="row">
+          <aside class="col-12 order-1 col-lg-3 col-xxl-2 mb-3"  id="asidebar">
+            <div class="sticky-top mw-50 sidebar ">
+              
+
+<div class="docs-menu">
+  <h5 id="onthispage">On this page</h5><div id="pagetoc"></div> 
+
+</div>  
+  
+            </div>
+          </aside>
+          <main id="main-content" class="col-12 order-12 col-lg-9 col-xxl-10">
+<h1 class="title d-print-none">NDN Community Meeting (NDNcomm 2015): Architecture, Applications, and Collaboration</h1>
+  <div class="hrwrap"><p>
+The NDN Project will host its second NDN community meeting (NDNcomm) on September 28th-29th 2015, the second in a series of meetings.
+</p>
+<p>
+We also held a two-day Hackathon the weekend before the meeting, Saturday September 26th and Sunday September 27th.</p>
+<p>The community meeting will be livestreamed and archived:
+YouTube Archived Livestream  <a href="https://www.youtube.com/watch?v=yLGzGK4c-ws">Day 1</a> - 
+<a href="https://www.youtube.com/watch?v=OJWHEz56AhQ">Day 2</a>
+</p>
+
+  </div>
+
+<div class="content">
+    <nav class="navbar navbar-expand navbar-dark bg-light rounded" id="page-menu">
+      <div class="d-lg-flex flex-grow-1 justify-content-md-center">
+        <ul class="navbar-nav flex-wrap">
+            
+<li class="nav-item btn btn-info rounded active"><a class="nav-link show" href="/workshops/ndn/1509/">NDNcomm 2015</a>
+            </li>
+
+            
+<li class="nav-item btn btn-info rounded"><a class="nav-link show" href="https://www.youtube.com/watch?v=yLGzGK4c-ws">Day 1 Stream</a>
+            </li>
+
+            
+<li class="nav-item btn btn-info rounded"><a class="nav-link show" href="https://www.youtube.com/watch?v=OJWHEz56AhQ">Day 2 Stream</a>
+            </li>
+
+            
+<li class="nav-item btn btn-info rounded"><a class="nav-link show" href="/workshops/ndn/1509/list/">Participants</a>
+            </li>
+
+            
+<li class="nav-item btn btn-info rounded"><a class="nav-link show" href="https://github.com/ndncomm">NDN Github</a>
+            </li>
+
+            
+<li class="nav-item btn btn-info rounded"><a class="nav-link show" href="https://catalog.caida.org/paper/2016_second_ndncomm/">Final Report</a>
+            </li>
+
+        </ul>
+      </div>
+    </nav>
+    <hr /><center>
+ <b><i>Date:</i></b> September 28 (Mon) - 29 (Tue), 2015<br />
+ <b><i>Place:</i></b> Little Theater, <a href="http://www.tft.ucla.edu/facilities/macgowan-hall/">Macgowan Hall</a>, UCLA Campus, Los Angeles, CA
+</center>
+      <h2>Named Data Networking: Architecture, Applications, and Collaboration</h2>
+<p>
+  University of California at Los Angeles hosted the second NDN Community Meeting in the last week of September 2015.
+  This two-day meeting provides an opportunity for the
+  community to exchange research experience and results, to discuss the
+  current state and future directions of the NDN architecture, and to identify
+  remaining issues.
+  We also plan to hold a 2-day hackathon on Saturday and Sunday September 26th-27th, the weekend before the meeting.
+      </p>
+      <p>
+  Based on community interest and submissions, we are receptive to a
+  variety of forms of participation at this meeting, e.g, technical talks,
+  panels, tutorials, demonstrations, hands-on learning.  In order to maximize
+  interaction and dig deeper into selected topics, we will have a series of
+  focused discussion sessions that include a few short talks (10-15 minutes),
+  but leaving lots of time for conversation and debate.
+      </p>
+<p>
+The NDN Project will host its second NDN community meeting (NDNcomm) on September 28th-29th 2015, the second in a series of meetings.
+</p>
+<p>
+We also held a two-day Hackathon the weekend before the meeting, Saturday September 26th and Sunday September 27th.</p>
+  Registration is closed.
+      </p>
+<hr class="caidacolorbar" />
+<h2 id="agenda">Agenda</h2>
+<p>
+ <b>Presenters, submit PDF slides to webmaster at caida.org with permission to link them to the agenda.</b>
+</p>
+<p>All events are in the Macgowan Hall Little Theater <i>except</i> the breakout sessions, which may be held in different locations specified. Presentations will be archived in the <a href="https://www.youtube.com/watch?v=yLGzGK4c-ws">day one live stream</a> and <a href="https://www.youtube.com/watch?v=OJWHEz56AhQ">day two live stream</a>.
+</p>
+  
+  <center>
+  <h3>September 26 (Hackathon Saturday)</h3>
+  Freud Playhouse, Macgowan Hall  
+</center>
+<ul class="hackathon">
+  <li style="list-style-type:none;">(Refer to <a href="http://ndncomm.github.io/">Hackathon Participation Guide</a> for additional details)</li>
+  <li class="wkshp-break">09:00 - 10:00 Hackathon Breakfast </li>
+  <li class="wkshp-agendaheader headercolor">10:00 - 10:10 Project Idea Pitches</li>
+  <li class="wkshp-agendaheader headercolor">Form small groups based on interests</li>
+  <li class="wkshp-agendaheader headercolor">Hack</li>
+  <li class="wkshp-break">12:30 Lunch</li>
+  <li class="wkshp-agendaheader headercolor">Hack</li>
+  <li class="wkshp-break">18:00 Dinner and unwind social event (TBD)</li>
+  <li class="wkshp-break">20:00 Close Hackathon Saturday</li>
+  </ul>
+  
+  <center class="toppad">
+  <h3>September 27 (Hackathon Sunday)</h3>
+  Freud Playhouse, Macgowan Hall
+</center>
+<ul class="hackathon">
+  <li class="wkshp-break">09:00 - 10:00 Hackathon Breakfast </li>  
+  <li class="wkshp-agendaheader headercolor">Hack</li>
+  <li class="wkshp-break">12:30 Lunch</li>
+  <li class="wkshp-agendaheader headercolor">Hack</li>
+  <li class="wkshp-agendaheader headercolor">17:30 - 18:30 Project judging</li>
+  <li class="wkshp-break">18:30 - 20:30 Dinner and committee meeting</li>
+  <li class="wkshp-agendaheader headercolor">20:30 - 21:00 Award presentation</li>
+  <li class="wkshp-break">21:00 Close Hackathon Sunday</li>
+  </ul>
+
+<center class="toppad">
+  <h3>September 28 (Monday)<br /><a href="https://www.youtube.com/watch?v=yLGzGK4c-ws">Day One Archived Livestream</a></h3>
+</center>
+<ul>
+<li class="wkshp-break">08:00 - 09:00 Breakfast
+</li>
+<li class="wkshp-agendaheader headercolor">09:00 - 09:45 Keynote: NDN - Past, Present, Future
+  <ul>
+    <li>Jeff Burke (UCLA School of Theater, Film and Television), <i><a href="slides/ndncomm2015_jburke_keynote.pdf">The Future of the Internet is the Future of Storytelling</a></i></li>
+    <li>Van Jacobson (UCLA)</li>
+  </ul>
+</li>
+<li class="wkshp-agendaheader headercolor">09:45 - 10:15 Architecture Achievements
+  <ul>
+    <li>Beichuan Zhang (University of Arizona), <i><a href="slides/ndncomm2015_bzhang.pdf">NFD Development Progress</a></i> </li>
+  </ul>
+</li>
+<li class="wkshp-agendaheader headercolor">10:15 - 10:45 Data-Centric Security
+  <ul>
+    <li>Alex Afanasyev (UCLA), <i><a href="slides/ndncomm2015_aafanasyev.pdf">Schematized Trust: Design and Application</a></i></li>
+    <li>Yingdi Yi (UCLA), <i><a href="slides/ndncomm2015_yyu.pdf">Content-Base Confidentiality: lessons learned in the past year</a></i></li>
+  </ul>
+</li>
+<li class="wkshp-break">10:30 - 10:45 Break</li>
+<li class="wkshp-agendaheader headercolor">10:45 - 11:20 NDN-NP Applications
+  <ul>
+    <li>Jeff Burke (UCLA REMAP), <i><a href="slides/ndncomm2015_jburke.pdf">NDN-NP Applications Update</a></i></li>
+    <li>Peter Gusev (UCLA), <i><a>NDN-RTC</a></i></li>
+
+  </ul>
+</li>
+<li class="wkshp-agendaheader headercolor">11:20 - 12:00 Science and NDN
+  <ul>
+    <li>Inder Monga (ESnet), <i><a href="slides/ndncomm2015_imonga.pdf">Science Data and the NDN paradigm</a></i> (remote presentation)</li>
+    <li>Susmit Shannigrahi (Colorado State University), <i><a href="slides/ndncomm2015_sshannigrahi.pdf">Managing Scientific Data with NDN</a></i></li>
+    <li>Phil DeMar (FermiLab), <i><a href="slides/ndncomm2015_pdemar.pdf">(Possible) HEP Use Case for NDN</a></i></li>
+    <li>Huhnkuk Lim (KISTI), <i><a href="slides/ndncomm2015_hlim.pdf">An NDN Testbed for Large-scale Scientific Data in Korea</a></i></li>
+  </ul>
+</li>
+<li class="wkshp-break">12:00 - 13:00 Working Lunch / <span class="wkshp-agendaheader headercolor">Hackathon Project Demos</span></li>
+<li class="wkshp-agendaheader headercolor">13:00 - 14:00 Lightning Talks (5min each advertising for posters/demos)
+  <ul>
+    <li class="wkshp-agendaheader headercolor"><span class="subtopic">Routing and Forwarding</span>
+    <ul>
+      <li>Minsheng Zhang (University of Memphis), <i><a href="slides/ndncomm2015_mzhang.pdf">PartialSync: Synchronizing a Partial Namespace in NDN</a></i></li>
+      <li>Vince Lehman (University of Memphis), <i><a href="slides/ndncomm2015_vlehman.pdf">Hyperbolic vs. Link-State Routing in ICN</a></i></li>
+    </ul>
+    </li>
+    <li class="wkshp-agendaheader headercolor"><span class="subtopic">New Resource-constrained Environments</span>
+    <ul>
+      <li>Hidenori Nakazato (Waseda University), <i><a href="slides/ndncomm2015_hnakazato.pdf">Japan-EU Joint Research . GreenICN: Architecture and
+      Applications of Green Information Centric Networking</a></i></li>
+    </ul>
+    </li>
+    <li class="wkshp-agendaheader headercolor"><span class="subtopic">Multimedia Support</span>
+    <ul>
+      <li>Anders Plymoth (TelHoc), <i><a>TelHoc Borrego -- An Application Service Platform supported with NDN networking.</a></i></li>
+    </ul>
+    </li>
+  </ul>
+</li>
+<li class="wkshp-agendaheader headercolor">14:00 - 15:00 Breakout Sessions (in parallel)
+  <ul>
+    <li><span class="subtopic"><a href="slides/ndncomm2015_ctschudin.pdf">Revisiting name-content binding: In-network name space operations</a></span><br />
+    <span class="sessionchair">Moderator: Christian Tschudin (University of Basel)</span><br />
+    <span class="roominfo">Breakout Room: Melnitz 1410</span>
+    <ul>
+      <li>NDN's forwarding-on-a-name approach works best for static content. For
+      data
+      on demand, name space stitching situations (IoT gateways) or cases where
+      names
+      include ephemeral elements like "call-back names", the question arises
+      whether
+      the network should not understand more of the intended usage of the involved
+      name(s) than just forwarding. As an extreme case we have named functions
+      where
+      an interest's name is an arbitrary expression containing several names and
+      where the network is supposed to rewrite the expression depending on its
+      routing knowledge. A pragmatic extension is NDNS with its second
+      (conditional
+      forwarding hint) name.
+      </li>
+      <li>Goals: After a brief introduction to the topic,
+      <ol>
+  <li>the session's participant will review the properties of NDN's
+  current network-level usage of names,</li>
+  <li>assess the relevance of new name-related in-network operations,</li>
+  <li>if time permits, discuss in-network extensions where names
+  are rewritten, or mapped, and can be bound to dynamic content.</li>
+      </ol>
+      </li>
+    </ul>
+    </li>
+    <li><span class="subtopic"><a href="slides/ndncomm2015_jthompson.pdf">NDN Development Environments and Support - Common Client Libraries</a></span><br />
+    <span class="sessionchair">Moderator: Alex Afanasyev (UCLA)/Jeff Thompson (UCLA REMAP)</span><br />
+    <span class="roominfo">Breakout Room: Melnitz 1451</span>
+    <ul>
+      <li>Brief update on recent additions to the NDN libraries, their motivations and design tradeoffs.  Open discussion of future features desired by the
+      community, opportunities for participation in development, and feedback on the development environment(s).  Technical questions about the libraries
+      welcome.</li>
+    </ul>
+    </li>    
+    <li><span class="subtopic"><a>Security Support: Schematized Trust; Name Based Encryption</a></span><br />
+    <span class="sessionchair">Moderator: Yingdi Yi (UCLA)</span><br />
+    <span class="roominfo">Breakout Room: Little Theater</span>
+    <ul>
+      <li>Discussion around the content-based security model of NDN, including
+      topics about: 1) the difference between content-based security model
+      and channel-based security model; 2) challenges in enabling
+      content-based security in NDN app; 3) progress of security support in
+      NDN.</li>
+    </ul>
+    </li>    
+    <li><span class="subtopic"><a>Defense Applications of NDN</a></span><br />
+    <span class="sessionchair">Moderator: Tamer Refaei (The MITRE Corporation)</span><br />
+    <span class="roominfo">Breakout Room: Macgowan 2330</span>
+    <ul>
+      <li>Tactical communication network
+      environments are typically characterized as being dynamic,
+      infrastructureless, and resource-constrained. Robustness, security, and
+      reliability are recognized as critical requirements for all tactical
+      systems.  The objective of this session is to investigate the use of NDN in
+      such environment.</li>
+      <li>Goals:
+      <ol>
+  <li>Introduce characteristics of tactical communication network environments</li>
+  <li>Determine whether and to what extent ongoing research in Named Data
+  Networking (NDN) is applicable to contested environments, and what
+  adaptations must be made for contested environments.</li>
+      </ol>
+      </li>
+    </ul>
+    </li>    
+    <li><span class="subtopic"><a>NDN-NP Network Environments</a></span><br />
+    <span class="sessionchair">Moderator: Jeff Burke, Zhehao Wang (UCLA REMAP), and Haitao Zhang (UCLA)</span><br />
+    <span class="roominfo">Breakout Room: Little T Courtyard</span>
+    <ul>
+      <li>Discussion of the Open mHealth and Enterprise Building Automation and Management network environments that are part of the NSF NDN-NP proposal,
+      including 1) challenges from these domains 2) opportunities provided by NDN 3) progress on demonstration applications.
+      </li>
+    </ul>
+    </li>    
+    <li><span class="subtopic"><a>Evaluating NDN: How to Assess Technical and Social Goals of a Future Internet Architecture</a></span><br />
+    <span class="sessionchair">Moderator: Nicholas Proferes (University of Maryland), Dustin O'Hara (UCLA), and kc claffy (UC San Diego/CAIDA)</span><br />
+    <span class="roominfo">Breakout Room: Melnitz 2568</span>
+    <ul><li>This interactive session will be a conversation among NDN developers and
+    researchers about approaches for assessing progress towards the broad
+    technical and social goals of NDN and ICN more generally.  As a discussion
+    prompt, we'll examine a developer survey currently under production, in
+    addition discussing evaluation mechanisms appropriate for architecture.</li></ul>
+    </li>
+  </ul>
+</li>
+<li class="wkshp-break">15:00 - 15:15 Break</li>
+<li class="wkshp-agendaheader headercolor">15:15 - 16:45 Breakout Summary Presentations
+</li>
+<li class="wkshp-agendaheader headercolor">15:45 - 16:30 Hackathon Results Presentation
+  <ul>
+    <li>Steve DiBenedetto (Colorado State University) and Alex Afanasyev (UCLA), <i><a href="slides/ndncomm2015_hackathonreport.pdf">Hackathon Results</a></i></li>
+  </ul>
+</li>
+<li class="wkshp-agendaheader headercolor">16:30 - 18:00 Keynote and Q&amp;A
+  <ul>
+    <li>Eben Moglen (Columbia Law School), <i><a>IPR and Future Internet Architectures</a></i></li>
+  </ul>
+</li>
+<li class="wkshp-agendaheader headercolor">18:00 - 20:00 Demos / Poster Session / <span class="wkshp-break">Reception</span>
+  <ul>
+    <li>Patrick Crowley (University of Washington at St. Louis), <i><a>Experiments with the Emulated NDN Testbed in ONL</a></i></li>
+    <li>Susmit Shannigrahi (Colorado State University), <i><a>NDN for scientific data</a></i></li>
+    <li>Lei Liu (Fujitsu Laboratories of America), <i><a>Bandwidth-Efficient Solutions for Seamless Producer Mobility Support in Named Data Networking</a></i></li>
+    <li>Ryota Ohnishi (Panasonic), <i><a>Adaptive Rate Control integration on NDN-RTC</a></i></li>
+    <li>Minsheng Zhang (University of Memphis), <i><a>PartialSync: Synchronizing a Partial Namespace in NDN</a></i></li>
+    <li>Andrew Brown (Intel), <i><a>NDN and the Internet of Things: Analytics Everywhere</a></i></li>
+    <li>Spyridon Mastorakis (UCLA), <i><a>ndnSIM 2.0: A new version of the NDN simulator for NS-3</a></i></li>
+    <li>Divyashri Bhat (University of Massachusetts Amherst), <i><a>Load Balancing Approach for Adaptive Bit-Rate Streaming in Information Centric Networks</a></i></li>
+    <li>Zhehao Wang (UCLA REMAP), <i><a>Hierarchical storage in Building Management System</a></i></li>
+    <li>Haitao Zhang (UCLA), <i><a>NDNFit architecture and progress</a></i></li>
+    <li>Jiachen Wang (UCLA REMAP), <i><a>NDN-RTC testing and updates</a></i></li>
+    <li>Vince Lehman (University of Memphis), <i><a>Hyperbolic vs. Link-State Routing in ICN</a></i></li>
+    <li>Anders Plymouth (TelHoc), <i><a>TelHoc Borrego - An Application Service Platform supported with NDN networking</a></i></li>
+    <li>Dustin O'Hara (UCLA REMAP), <i><a>UX Design for NDN ID Manager &amp; Data Sharing App</a></i></li>
+    <li>Teng Liang (University of Arizona), <i><a>NDN-Home: NDN based Smart Home System</a></i></li>
+  </ul>
+</li>
+</ul>
+
+<center class="toppad">
+  <h3>September 29 (Tuesday)<br /><a href="https://www.youtube.com/watch?v=OJWHEz56AhQ">Day Two Archived Livestream</a></h3>
+</center>
+<ul>
+<li class="wkshp-break">08:00 - 09:00 Working Breakfast / <span class="wkshp-agendaheader headercolor">Breakout Sessions</span>
+  <ul>
+    <li><span class="subtopic"><a>Team-building and writing proposals to support NDN research</a></span><br />
+    <span class="sessionchair">Moderator: KC Claffy (UC San Diego/CAIDA)</span><br />
+    <span class="roominfo">Breakout Room: Melnitz 1410</span>
+    </li>
+    <li><span class="subtopic"><a>NDN startups</a></span><br />
+    <span class="sessionchair">Moderator: Patrick Crowley (University of Washington at St. Louis)</span><br />
+    <span class="roominfo">Breakout Room: Little Theater</span>
+    <ul>
+      <li>Goals:
+      <ol>
+  <li>Establish a shared understanding of why NDN startups are inevitable</li>
+  <li>Brainstorm startup directions and opportunities</li>
+  <li>Discuss ways students in particular can get started</li>
+      </ol>
+      </li>
+    </ul>
+    </li>
+    <li><span class="subtopic"><a href="slides/ndncomm2015_ctschudin2.pdf">ICN-over-UDP</a></span><br />
+    <span class="sessionchair">Moderator: Christian Tschudin (University of Basel)</span><br />
+    <span class="roominfo">Breakout Room: Melnitz 1410</span>    
+    </li>
+  </ul>
+</li>
+<li class="wkshp-agendaheader headercolor">09:00 - 10:30 Open Discussion: Questions on Yesterday's Talks, Reflections on Yesterday, Most Interesting Things Learned
+</li>
+<li class="wkshp-break">10:30 - 10:45 Break</li>
+<li class="wkshp-agendaheader headercolor">11:00 - 12:00 Industry Lightning Talks (5 min each)
+  <br /><span class="sessionchair">Moderator: Eve Schooler (Intel)</span>
+  <ul>
+    <li>Lei Liu (Fujitsu Laboratories of America, Inc.), <i><a>Bandwidth-Efficient Solutions for Seamless Producer Mobility Support in Named Data Networking</a></i></li>
+    <li>Diego Perino (Alcatel-Lucent), <i><a href="slides/ndncomm2015_dperino.pdf">High-speed Software Prototype of Named-Data Networking</a></i></li>
+    <li>Maliheh Shirvanian (University of Birmingham at Alabama/Verisign, Inc.), <i><a>Access Control Mechanisms for NDN via One-Time Names</a></i></li>
+    <li>Andrew Brown (Intel), <i><a href="slides/ndncomm2015_abrown.pdf">NDN at Intel</a></i></li>
+    <li>G.Q. Wang (Huawei Technologies), <i><a>Elastic PDU Design for ICN Protocols</a></i></li>
+  </ul>
+</li>
+<li class="wkshp-agendaheader headercolor">12:00 - 12:15 Testbed Update/Testbed Participants
+  <ul>
+    <li>Patrick Crowley and John DeHart (Washington University in St. Louis), <i><a>Testbed update / Testbed Participants</a></i></li>
+  </ul>
+</li>
+<li class="wkshp-break">12:15 - 13:15 Working Lunch / <span class="wkshp-agendaheader headercolor">Discussion</span>
+  <ul>
+    <li><i>(Different subgroups may meet to discuss open technical issues)</i></li>
+  </ul>
+</li>
+<li class="wkshp-agendaheader headercolor">13:15 - 14:15 Industry Panel: How is Industry Using NDN, What are Industry Interests, Consortium
+  <br /><span class="sessionchair">Moderator: Eve Schooler (Intel)</span>
+  <ul>
+    <li>Ralph Droms (Cisco)</li>
+    <li>Luca Muscariello (Orange Labs/IRT-SystemX)</li>
+    <li>Borje Ohlman (Ericsson Research)</li>
+    <li>Ignacio Solis (PARC)</li>
+    <li>Guo Qiang Wang (Huawei Technologies)</li>
+    <li>Greg Rutz (CableLabs)</li>
+  </ul>
+</li>
+<li class="wkshp-agendaheader headercolor">14:15 - 15:00 Wrap-up, review of meeting, final thoughts and feedback for next year</li>
+<li class="wkshp-break">15:00 Adjourn</li>
+</ul>
+<hr class="caidacolorbar" />
+<p>On registration, participants were asked which topics were most important to see coverage of at NDNcomm 2015. Out of 100 responses:</p>
+<img src="ndncomm2015-interested.png" alt="Top 3: Forwarding Strategy, Scalable Routing, Naming Structure" />
+<hr class="caidacolorbar" />
+<h2 id="travelsupport">Side event: ACM Conference on Information-Centric Networking (ICN 2015)</h2>
+<p>
+  In the days right after NDNcomm 2015, the 2nd <a href="http://conferences.sigcomm.org/acm-icn/2015/program.php">ACM Conference on Information-Centric Networking (ICN 2015)</a> will be taking place in San Francisco, CA. Several NDNcomm participants will be heading to ACM ICN 2015.  <a href="http://conferences.sigcomm.org/acm-icn/2015/registration.php">Registration information</a> can be found on the ICN website.
+</p>
+<hr class="caidacolorbar" />
+<h2>Program Committee</h2>
+<ul>
+  <li>Co-Chair: Jeff Burke (UCLA REMAP)</li>
+  <li>Co-Chair: kc claffy (UC San Diego/CAIDA)</li>
+  <li>Patrick Crowley (Washington State University in St. Louis)</li>
+  <li>Christos Papadopoulos (Colorado State University)</li>
+  <li>Eiichi Muramoto (Panasonic R&amp;D)</li>
+  <li>Tamer Refaei (The MITRE Corporation)</li>
+  <li>Eve Schooler (Intel)</li>
+  <li>Lan Wang (University of Memphis)</li>
+  <li>Lixia Zhang (UCLA)</li>
+  <li>Steve DiBenedetto (Colorado State University)</li>
+  <li>Jeff Thompson (UCLA REMAP)</li>
+  <li>Alexander Afanasyev (UCLA)</li>
+  <li>Vince Lehman (University of Memphis)</li>
+</ul>
+<hr class="caidacolorbar" />
+<h2 id="travelsupport">Travel Support for students</h2>
+<p>
+  Travel support is available for full-time students attending the NDN Community Meeting (NDNComm 2015) and NDN Hackathon.   Funds for these travel grants are provided by the
+  <a href="http://named-data.net/consortium/">NDN Consortium</a>.
+</p>
+<h3>Travel Grant Application</h3>
+<p>
+  Grants are available only for full-time students registered for the meeting. Minority and women students from diverse institutions are particularly encouraged to
+  apply.  Preference will be given to those presenting at the meeting.
+  To apply and compete for a travel grant, the student applicant should email the following to ndn-registration@caida.org:
+</p>
+<ol type="1">
+  <li>The applying student's curriculum vitae (CV)</li>
+  <li>An application letter which should include:
+    <ol type="a">
+      <li>A brief summary of the student research interests and accomplishments to date</li>
+      <li>A statement about why the NDNComm attendance is important to the student</li>
+      <li>An estimate of the following costs of attending NDNComm: airfare, hotel and meals.  It is anticipated that travel grants will partially cover these costs of
+  attendance.</li>
+      <li> A statement of whether the student has registered for the meeting and proposed to present a paper, poster, etc. in the registration form.</li>
+    </ol>
+  </li>
+  <li>
+    A recommendation letter from the advisor of the student applicant is also required. The letter should provide the following:
+    <ul type="lettered">
+      <li>A confirmation that the student is a bona fide Ph.D. candidate or a M.Sc./B.Sc. student in good academic standing at the given institution.</li>
+      <li>An indication about how the student applicant would benefit from attending NDNComm.</li>
+      <li>A statement of financial commitment to pay the remainder of the student applicants' travel cost not covered by the grant.</li>
+    </ol>
+    The advisor's letter should be emailed to ndn-registration@caida.org.
+  </li>
+</ul>
+<ul>
+  <h3>Important Dates for travel support</h3>
+  <li>Travel Grant Application Submission Deadline: August 21, 2015</li>
+  <li>Travel Grant Award Notification:       August 28, 2015</li>
+  <li>Deadline to Accept/Decline Travel Grant Award:        September 4, 2015</li>
+</ul>
+<hr class="caidacolorbar" />
+<ul>
+  <h2 id="localarrangements">Local Arrangements / Getting to UCLA</h2>
+  <li>Meeting Room
+    <description>
+The meeting will be held in Little Theater in Macgowan Hall on the UCLA campus.  The UCLA website provides <a href="http://www.tft.ucla.edu/facilities/macgowan-hall/">directions to Macgowan Hall</a> from the east entrance of campus, and a <a href="https://www.maps.ucla.edu/?id=2043#!ct/75713?s/">UCLA Campus Map</a> shows Little Theater and its surroundings.
+    </description>
+  </li>
+  <li>Street Address / Taxi Dropoff 
+    <description>
+    The address of Macgowan Hall for GPS and taxi dropoff is <b>245 Charles E Young Drive East, Los Angeles, California 90095</b>.
+    </description>
+  </li>
+  <li>Self Parking
+    <description>
+Parking Structure 3 on Charles E. Young Dr East is closest to Macgowan Hall and the Little Theater. The standard parking fee is $12 for an all-day pass, from the pay stations in the parking structure.
+    </description>
+  </li>
+  <li>Airport Shuttle
+  <description>The <a href="https://main.transportation.ucla.edu/getting-to-ucla/travel-options/flyaway">LAX FlyAway Shuttle</a> is an hourly nonstop bus shuttle from LAX airport to a stop on the <a href="http://maps.ucla.edu/campus/?zlvl=7&amp;a_layers=flyr_airshuttle&amp;locid=83982">south end of UCLA campus </a>, 1.5 miles from Macgowan hall for $10 one-way (credit card only, no cash accepted). 
+  </description>
+  </li>
+  <li>Recommended Accomodations
+    <ul>
+      <li><a href="http://reservations.guesthouse.ucla.edu/">UCLA Guest House</a> (3 minute walk to location)</li>
+      <li><a href="https://www.uclahealth.org/locations/tiverton">UCLA Tiverton House</a></li>
+      <li><a href="http://www.wlosangeles.com/">W Hotel Westwood</a></li>
+      <li><a href="https://www.hotelpalomar-beverlyhills.com">Hotel Palomar</a></li>
+      <li><a href="http://www.hilgardhouse.com/">Hilgard House Hotel</a></li></ul></li>
+  <li><b>International Visitors</b>: Visa Letter of Invitation
+    <p class="indent">Please be aware that in order to attend NDNcomm 2015 you may need a visa to 
+enter the United States. <a href="visa">Attendees are responsible for attaining their own visas</a>, but we can assist by providing a letter of invitation if your local consular office requires it.
+    </p>
+  </li>
+</ul>
+<p>
+For transportation concerns, general questions and help, contact ndn-registration@caida.org
+</p>
+<h2>Support for NDNcomm 2015</h2>
+<p>
+  NDNcomm 2015 is supported by the contributions of industry members of the Named Data Networking Consortium, including Alcatel-Lucent, Brocade, Cisco
+  Systems, Fujitsu Laboratories of America, Huawei Technologies, Intel Corporation, Juniper Networks, Panasonic Corporation, Verisign, Inc., ViaSat.
+  Local arrangements are in cooperation with the UCLA School of Theater, Film and Television, UCLA Network Operations Center, and UCLA Internet
+  Research Laboratory.   NDN research is partially supported by the National Science Foundation (Award CNS-1345318 and others).
+</p> 
+
+</div>
+    <hr>
+    <h2 id="subpages">Additional Content</h2>  <h3 class="title-summary"><i class="fa fa-folder-open"></i> <a href="/workshops/ndn/1509/list/">NDNcomm 2015: Participants</a></h3>
+  <div class="summary mb-2">
+    <p>This page contains the list of participants of the second NDN community meeting (NDNcomm 2015) on September 28-29, 2015.</p>
+  </div>
+  <h3 class="title-summary"><i class="fa fa-folder-open"></i> <a href="/workshops/ndn/1509/visa/">NDN Community Meeting (NDNcomm 2015) Visa Letter of Invitation</a></h3>
+  <div class="summary mb-2">
+    <p><h2>Attendees are responsible for attaining their own visas</h2>
+<p>
+Please be aware that in order to attend NDNcomm 2015 you may need a visa to 
+enter the United States. We encourage you to contact the Consular Section of 
+the Embassy or Consulate near your location to determine how to apply, and 
+the likely time required for the process of visa issuance. NDNcomm 2015 has 
+no influence over the issuance of a visa. </p></p>
+  </div>
+
+          </main>
+        </div>
+      </div>
+
+</div>
+<footer class="d-print-none">
+  
+
+<div class="text-center d-print-none" id="lastmod">
+  <div class="d-flex justify-content-center text-muted">
+    <div><small>
+      <i class="fa fa-clock-o"></i> <strong>Published</strong>
+      <time datetime="2015-05-27T17:53:05&#43;00:00">May 27, 2015</time>
+    </small></div>
+    <div class="mx-3">
+      <div class="ml-2"><small>
+      <i class="fa fa-edit"></i> <strong>Last Modified</strong> <time datetime="2018-01-23T19:50:59&#43;00:00">January 23, 2018</time>
+      </small></div>
+    </div>
+  </div>
+  
+</div>
+  
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-2 col-md-1">
+        
+      </div>
+      <div class="col-8">
+        <div class="sub-footer-inner">
+          <ul>
+            <li><span class="d-none d-md-inline">Center&nbsp;for Applied Internet&nbsp;Data&nbsp;Analysis</span><span class="d-md-none">CAIDA</span> based at the <a href="//www.sdsc.edu/">University&nbsp;of&nbsp;California's San&nbsp;Diego&nbsp;Supercomputer&nbsp;Center</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-2 col-md-3">
+        <div class="sub-footer-inner">
+          <a class="text-nowrap" href="/about/accessibility/">Accessibility</a><span class="d-none d-md-inline">&nbsp;&middot;&nbsp;</span><a class="text-nowrap" href="/about/legal/privacy/">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+  <script>
+    function renderSidebar(){
+      if(window.innerWidth >= 1920){
+
+        $("#sidebarcontainer").removeClass("container");
+        $("#sidebarcontainer").addClass("container-fluid");
+        $("#asidebar").addClass("");
+        $("#asidebar").addClass("col-xxxl-1");
+        
+        
+        let main_width = $(".breadcrumb").width();
+        $("main").css({"max-width": main_width});
+        
+        
+        let marg_size = $(".breadcrumb")[0].getBoundingClientRect().x - $("aside")[0].getBoundingClientRect().width-10;
+        $("#asidebar").css({"margin-left":marg_size+"px"});
+        
+
+        $("#sidebarcontainer").css({"opacity":"1"});
+
+      } else {
+
+        $("#sidebarcontainer").removeClass("container-fluid");
+        $("#asidebar").removeClass("text-right");
+        $("#asidebar").css({"margin-left":""});
+        $("main").css({"max-width": ""});
+
+        $("#sidebarcontainer").addClass("container");
+        $("#sidebarcontainer").css({"opacity":"1"});
+
+      }
+    }
+
+    renderSidebar();
+
+     
+    $(window).resize(renderSidebar);
+    
+  </script>
+  <noscript>
+    <style>#sidebarcontainer { opacity: 1; }#asidebar { opacity: 0; }</style>
+  </noscript>
+  <script src="/js/global.min.37b7d559c2ddee04acb2526ee1001ff15c80c35e96f4c922b608ae8c36fa65fa.js"></script>
+
+  <script src="/c2supportfiles/awstats_misc_tracker.js" ></script>
+  <noscript><img src="/c2supportfiles/awstats_misc_tracker.js?nojs=y" height="0" width="0" style="display: none; border: 0;" alt="" /></noscript>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJW4XFS0MC"></script>
+  <script>
+  function isDoNotTrackEnabled() {
+    if (typeof window === 'undefined') return false
+    const { doNotTrack, navigator } = window
+    const dnt = (doNotTrack || navigator.doNotTrack || navigator.msDoNotTrack || msTracking())
+    if (!dnt) return false
+    if (dnt === true || dnt === 1 || dnt === 'yes' || (typeof dnt === 'string' && dnt.charAt(0) === '1')) {
+      return true
+    }
+    return false
+  }
+
+  function msTracking() {
+    const { external } = window
+    return 'msTrackingProtectionEnabled' in external &&
+    typeof external.msTrackingProtectionEnabled === 'function' &&
+    window.external.msTrackingProtectionEnabled()
+  }
+
+  if (!isDoNotTrackEnabled()) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GJW4XFS0MC', { 'anonymize_ip': false, cookie_flags: 'SameSite=None;Secure' });
+  }
+  </script>
+  
+  
+  
+</footer>
+</body>
+
+</html>

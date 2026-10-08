@@ -1,0 +1,35 @@
+{
+  "title": "NDN Community Meeting 2015",
+  "start": "2015-09-26",
+  "end": "2015-09-29",
+  "format": "in-person",
+  "venue": "Little Theater, Macgowan Hall, UCLA Campus",
+  "city": "Los Angeles, CA, USA",
+  "summary": "University of California at Los Angeles hosted the second NDN Community Meeting in the last week of September 2015.",
+  "host": {
+    "name": "University of California at Los Angeles",
+    "short": "UCLA",
+    "url": "https://www.ucla.edu/"
+  },
+  "organizers": [
+    {
+      "name": "Jeff Burke",
+      "affiliation": "UCLA REMAP"
+    },
+    {
+      "name": "kc claffy",
+      "affiliation": "UC San Diego/CAIDA"
+    }
+  ],
+  "original_page": "https://www.caida.org/workshops/ndn/1509/",
+  "videos": [
+    {
+      "label": "Day 1 — September 28, 2015",
+      "youtube": "yLGzGK4c-ws"
+    },
+    {
+      "label": "Day 2 — September 29, 2015",
+      "youtube": "OJWHEz56AhQ"
+    }
+  ]
+}

@@ -6,12 +6,12 @@ import { marked } from 'marked';
 
 const ARCHIVE = path.resolve('archive');
 const PUBLIC = path.resolve('public');
-const NIST = 'https://www.nist.gov';
 
 interface Doc {
   file: string;
   url: string;
   page: string | null;
+  label?: string;
 }
 
 /** Prefix a site-relative path with the configured base path. */
@@ -29,7 +29,7 @@ export function documents(year: string) {
   return docs.map((d) => ({
     ...d,
     href: url(`${year}/documents/${d.file}`),
-    kind: /abstract/i.test(d.file) ? 'Abstracts' : /agenda/i.test(d.file) ? 'Agenda' : d.file,
+    kind: d.label ?? (/abstract/i.test(d.file) ? 'Abstracts' : /agenda/i.test(d.file) ? 'Agenda' : d.file),
   }));
 }
 
@@ -71,8 +71,11 @@ const DROP_LINE = [
 // Collapsed <details> blocks on the NIST page lose their markup in the scrape.
 const SECTION_TITLES = /^(Agenda|Security Instructions?|Lodging Information)$/;
 
-/** The archived NIST page text, cleaned up and rendered to HTML with links pointing at local copies. */
-export function pageHtml(year: string) {
+/**
+ * The archived original page text, cleaned up and rendered to HTML. Relative links are resolved against the
+ * original page (`base`), and links to documents, slides and images we keep a copy of point at that copy.
+ */
+export function pageHtml(year: string, base: string) {
   const p = path.join(ARCHIVE, year, 'page.md');
   if (!fs.existsSync(p)) return '';
   let md = fs.readFileSync(p, 'utf8');
@@ -91,19 +94,19 @@ export function pageHtml(year: string) {
   );
 
   const docs = documents(year);
-  const localDoc = (href: string) => {
-    const abs = new URL(href, NIST).href;
-    return docs.find((d) => d.page === abs || d.url === abs)?.href;
+  // A file we serve ourselves under public/<year>/<dir>/, matched by file name.
+  const localCopy = (abs: string, dir: string) => {
+    const name = path.basename(new URL(abs).pathname);
+    return name && fs.existsSync(path.join(PUBLIC, year, dir, name)) ? url(`${year}/${dir}/${name}`) : undefined;
   };
-  const imagesDir = path.join(PUBLIC, year, 'images');
-  const localImage = (href: string) => {
-    const name = path.basename(new URL(href, NIST).pathname);
-    return fs.existsSync(path.join(imagesDir, name)) ? url(`${year}/images/${name}`) : null;
-  };
+  const localDoc = (abs: string) =>
+    docs.find((d) => d.page === abs || d.url === abs)?.href ?? localCopy(abs, 'slides') ?? localCopy(abs, 'documents');
 
-  md = md.replace(/(!?)\[([^\]]*)\]\((\/[^)\s]*)/g, (_, bang, text, href) => {
-    const local = bang ? localImage(href) : localDoc(href);
-    return `${bang}[${text}](${local ?? NIST + href}`;
+  md = md.replace(/(!?)\[([^\]]*)\]\(([^)\s]+)/g, (all, bang, text, href) => {
+    if (/^(#|mailto:)/.test(href)) return all;
+    const abs = new URL(href, base).href;
+    const local = bang ? localCopy(abs, 'images') : localDoc(abs);
+    return `${bang}[${text}](${local ?? abs}`;
   });
 
   return marked.parse(md.replace(/\n{3,}/g, '\n\n').trim(), { async: false }) as string;

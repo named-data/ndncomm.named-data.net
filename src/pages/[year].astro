@@ -16,7 +16,7 @@ const upcoming = isUpcoming(meeting);
 const program = await programFor(year);
 const docs = documents(year);
 const kaltura = kalturaInfo(year);
-const original = m.original_page ? pageHtml(year) : '';
+const original = m.original_page ? pageHtml(year, m.original_page) : '';
 const place = [m.venue, m.city].filter(Boolean).join(', ');
 const initials = (n: string) =>
   n

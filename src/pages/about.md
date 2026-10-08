@@ -11,11 +11,11 @@ each meeting, and will host announcements for future meetings.
 
 ## Past meetings
 
-Earlier meetings were published on other websites: the NDN project's 2017 meeting in Memphis on CAIDA's site, the
+Earlier meetings were published on other websites: the 2014, 2015 and 2017 meetings on CAIDA's site, the
 meetings hosted by the **National Institute of Standards and Technology (NIST)** (2018–2024) on nist.gov, and the
 meetings hosted by UCLA (2025–2026) on their own conference sites. This site preserves
 their programs, abstracts, slides and recordings, with a link to the original page on each meeting's page. Some
-recordings (2018–2021 and most of 2023) were removed from NIST's video hosting before they could be saved. If you
+recordings (2014, 2018–2021 and most of 2023) were lost or removed from NIST's video hosting before they could be saved. If you
 have a copy, please let us know on the [ndn-interest mailing list](https://www.lists.cs.ucla.edu/mailman/listinfo/ndn-interest).
 
 This site is maintained by the NDN community. It is not affiliated with or endorsed by NIST or CAIDA.

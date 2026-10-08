@@ -1,0 +1,27 @@
+{
+  "title": "NDN Community Meeting 2014",
+  "start": "2014-09-03",
+  "end": "2014-09-05",
+  "format": "in-person",
+  "venue": "Little Theater, Macgowan Hall, UCLA",
+  "city": "Los Angeles, CA, USA",
+  "summary": "The NDN Project hosted the first NDN community meeting (NDNcomm) on September 4th-5th 2014, the first in a series of meetings.",
+  "host": {
+    "name": "Named Data Networking (NDN) Project",
+    "short": "NDN",
+    "url": "https://named-data.net/"
+  },
+  "organizers": [
+    {
+      "name": "kc claffy",
+      "affiliation": "UC San Diego"
+    },
+    {
+      "name": "Jeff Burke",
+      "affiliation": "UCLA REMAP"
+    }
+  ],
+  "original_page": "https://www.caida.org/workshops/ndn/1409/",
+  "videos": [],
+  "video_note": "The meeting was livestreamed, but the recordings are currently lost. If you have a copy, please get in touch."
+}
