@@ -106,7 +106,3 @@ export function pageHtml(year: string) {
 
   return marked.parse(md.replace(/\n{3,}/g, '\n\n').trim(), { async: false }) as string;
 }
-
-export function waybackUrl(u: string) {
-  return `https://web.archive.org/web/2024/${u}`;
-}

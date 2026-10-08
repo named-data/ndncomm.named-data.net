@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
 import Program from '../components/Program.astro';
-import { url, documents, kalturaInfo, formatDuration, pageHtml, waybackUrl } from '../lib/archive';
+import { url, documents, kalturaInfo, formatDuration, pageHtml } from '../lib/archive';
 import { allMeetings, dateRange, FORMAT_LABEL, isUpcoming, programFor, recordingsLost, type Meeting } from '../lib/meetings';
 
 export async function getStaticPaths() {
@@ -59,8 +59,7 @@ const initials = (n: string) =>
           <p>
             {m.host && <strong>Organized and hosted by the {m.host.name}. </strong>}
             This page preserves the program, abstracts and recordings from the original event page at{' '}
-            <a href={m.original_page}>{m.original_page.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a>{' '}
-            (<a href={waybackUrl(m.original_page)}>Wayback Machine copy</a>).
+            <a href={m.original_page}>{m.original_page.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a>.
           </p>
         </aside>
       )
