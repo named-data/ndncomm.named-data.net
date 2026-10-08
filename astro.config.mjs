@@ -1,8 +1,9 @@
 import { defineConfig, passthroughImageService } from 'astro/config';
 
-// SITE and BASE_PATH are set by the GitHub Pages workflow; locally the site is served from /.
+// SITE and BASE_PATH come from the GitHub Pages workflow (base is empty once the custom domain
+// ndncomm.named-data.net is set in the repo's Pages settings); locally the site is served from /.
 export default defineConfig({
-  site: process.env.SITE,
+  site: process.env.SITE || 'https://ndncomm.named-data.net',
   base: process.env.BASE_PATH || '/',
   trailingSlash: 'always',
   image: { service: passthroughImageService() },
