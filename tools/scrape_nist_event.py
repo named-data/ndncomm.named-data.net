@@ -9,6 +9,7 @@ Writes into <output-dir>:
   page.md               content region converted to Markdown (needs pandoc)
   documents/*.pdf       documents linked from the page (agenda, abstracts, slides, ...)
   documents/*.txt       pdftotext versions (needs pdftotext)
+  images/*              images shown in the page content
   videos.json           Kaltura entries embedded on the page, with direct download URLs
 """
 import json
@@ -79,6 +80,7 @@ def kaltura_videos(html):
 def main(url, out):
     os.makedirs(os.path.join(out, "source"), exist_ok=True)
     os.makedirs(os.path.join(out, "documents"), exist_ok=True)
+    os.makedirs(os.path.join(out, "images"), exist_ok=True)
 
     _, raw = fetch(url)
     html = raw.decode("utf-8", "replace")
@@ -114,8 +116,17 @@ def main(url, out):
         print("doc:", name)
     json.dump(manifest, open(os.path.join(out, "documents", "manifest.json"), "w"), indent=2)
 
+    for src in sorted(set(re.findall(r'<img\b[^>]*\bsrc="([^"]+)"', region))):
+        _, data = fetch(urllib.parse.urljoin(BASE, src))
+        name = os.path.basename(urllib.parse.urlparse(src).path)
+        open(os.path.join(out, "images", name), "wb").write(data)
+        print("image:", name)
+
     videos = kaltura_videos(html)
-    json.dump(videos, open(os.path.join(out, "videos.json"), "w"), indent=2)
+    videos_path = os.path.join(out, "videos.json")
+    # don't clobber hand-written notes about videos that have since been deleted
+    if videos or not os.path.exists(videos_path):
+        json.dump(videos, open(videos_path, "w"), indent=2)
     for v in videos:
         print(f"video: {v['id']} {v['duration_sec']}s {v['name']}\n  {v['download_url']}")
 

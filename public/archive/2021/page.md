@@ -61,7 +61,7 @@ Registered attendees will receive the link to attend the virtual event on **Octo
 
 - [Pauline Truong](/people/pauline-truong "View staff profile page")
 
-  [\[email protected\]](/cdn-cgi/l/email-protection#0d7d6c786164636823797f7862636a4d63647e79236a627b)
+  [\[email protected\]](/cdn-cgi/l/email-protection#cabaabbfa6a3a4afe4beb8bfa5a4ad8aa4a3b9bee4ada5bc)
 
   \(301\) 975-3258
 
