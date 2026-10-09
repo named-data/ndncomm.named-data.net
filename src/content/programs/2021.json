@@ -353,7 +353,8 @@
                 }
               ],
               "abstract": "In this presentation we report our design and development of the NEAR (NDN wirEless Augmented Reality) platform, an open-source AR platform with an information-centric design. The platform integrates information-centric wireless design with acceleration and security support. In the NEAR design, mobile devices produce real time video streams, edge servers fetch these real-time camera views and publish AR contents, which are fetched by interested consumers. It supports heterogeneous AR tasks, including object detection, face detection, OpenPose, AR video overlay, 3D model rendering, multi-view video stitching, etc.\n\nWe designed the namespace for NEAR to enable the group transmission for AR contents. NEAR advantages the Wi-Fi transmission with link-layer multicast. NEAR leverages FPGA-based accelerators for YOLO and Pose Recognition to showcase the usage of acceleration-as-a-service in edge computing. NEAR also explores the NDN security design to provide encryption and integrity protection for AR named data. NEAR platform is open-source to the community and contains extensible modules for wireless, security, machine learning tasks, acceleration, and namespace design.\n\nWe also plan to demo the integration prototype of the NEAR platform. With the information-centric wireless integration based on link-layer multicast, the system scales to multiple users with marginal throughput overheads. We integrated heterogeneous AR tasks on the edge server with pythonNDN. Our prototype demonstrated the real-time multi-user AR experience with NDN. The platform also includes security support with encryption and integrity protection and acceleration support. We hope it could serve the community as the testbed to compare performance for new designs in the future.",
-              "slides": "2021/slides/s3-3-jinghao-zhao-near-platform.pdf"
+              "slides": "2021/slides/s3-3-jinghao-zhao-near-platform.pdf",
+              "video": "https://youtu.be/GUXzWyy4Ux4"
             }
           ]
         },
@@ -638,7 +639,8 @@
                 }
               ],
               "abstract": "Bootstrapping enables an NDN entity sending Interest and receiving Data packets securely.\n\nThe new challenge in NDN application deployment is to securely bootstrap a remote NDN entity, which requires mutual authentication and name assignment.\n\nIn this talk, we present a design for remote NDN entity bootstrapping that leverages existing authentication systems and minimizes manual operations.\n\nOur design addresses the two needs with (1) new NDN entity authenticating the trust anchor controller via software distribution with today's web security support, and trust zone controller authenticating a new entity by verifying its CA rooted certificate; (2) new entity self-obtaining a name from its existing authentications such as CA rooted certificates, and applying identity bundle from trust zone controller that provides initial trust relations and security credentials.\n\nWe apply this design to a federated data repository project to bootstrap NDN application instances on remote file servers from different campuses.",
-              "slides": "2021/slides/s5-3-tianyuan-yu-bootstrapping-remote-entity.pdf"
+              "slides": "2021/slides/s5-3-tianyuan-yu-bootstrapping-remote-entity.pdf",
+              "video": "https://youtu.be/wQH1wa4f_FQ"
             }
           ]
         },

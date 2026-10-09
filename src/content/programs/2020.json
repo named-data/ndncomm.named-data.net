@@ -495,7 +495,8 @@
                 }
               ],
               "abstract": "One unique architectural benefit of Named Data Networking (NDN) is adaptive forwarding, i.e., the forwarding plane is able to observe data retrieval performance of past Interests and use it to adjust forwarding decisions of future Interests. To be effective, adaptive forwarding assumes what we call Interest Routing Locality, that Interests sharing the same prefix are likely to take the same or similar forwarding path within a short time window, thus past observation can be an indicator of future performance. Since Interests can have multiple common prefixes with different lengths, the real challenge is what prefix length should be used in adaptive forwarding. The longer the common prefix is, the better Interest Path Locality, but the fewer future Interests it covers and the larger the forwarding table size. Existing implementations use static prefix length, which is known to have problems in dealing with partial network failures. In this presentation, I will introduce our work on dynamically aggregate and de-aggregate name prefixes in the forwarding table, so to use the prefixes that are the most appropriate under the current network situation. To reduce the overhead, we design mechanisms to minimize the use of longest prefix match in the processing of Data packets. Simulations demonstrate that the proposed techniques can make better forwarding decisions under partial network failures with significantly reduced overhead.",
-              "slides": "2020/slides/s3-1-teng-liang-prefix-granularity.pptx"
+              "slides": "2020/slides/s3-1-teng-liang-prefix-granularity.pptx",
+              "video": "https://youtu.be/giNxUUG7vMo"
             },
             {
               "title": "m-ASF - An Adaptive SRTT-based Forwarding Strategy for Mobile Environments",
@@ -885,7 +886,8 @@
                 }
               ],
               "abstract": "Current NFD performance on wireless networks is severely obstructed by the lack of a true data-centric MAC layer. Building on top of V-MAC, our novel data-centric MAC prototype that offers high rate (up to 65Mbps on pi and 900 mbps on another platform), low loss (1-3%) multicast support (dozens of receivers), we present V-MAC NFD Link Protocol (V-NLP), a Link Protocol integrating V-MAC and NFD for a fully data-centric network stack. The new stack eliminates the network grouping concept, and enables pub/sub abstraction at the radio level. V-NLP allows researchers and developers to run NFD over V-MAC with multiple frame types (Interest, Data, Announcement, Implicit Interest), customized data rates, and configurable multicast support. This fully data-centric stack will enable NFD to achieve high performance for applications in vehicles, drones and IoT environments. The source code for V-NLP, V-MAC and firmware for supported chipsets will be released to the community.",
-              "slides": "2020/slides/s6-3-mohammed-elbadry-v-mac.pptx"
+              "slides": "2020/slides/s6-3-mohammed-elbadry-v-mac.pptx",
+              "video": "https://youtu.be/PIelcwRbG00"
             }
           ]
         },
@@ -930,7 +932,8 @@
                 }
               ],
               "abstract": "A major barrier to the adoption of NDN is the high manual effort required to set up and configure a functioning NDN network consisting of multiple hosts. To date, such configuration has required manual configuration on every host to establish initial content reachability and manual reconfiguration of links between forwarders whenever there is a topology change. These configuration tasks are particularly difficult when one is working with embedded or IoT devices. Meanwhile, with IP networks, one can connect multiple end devices together in a local network and have them “just work”. Therefore, to help encourage the adoption of NDN beyond the research community, we have developed “Plug-n-Play NDN”, where an NDN environment can easily established in a LAN environment. We demonstrate its effectiveness using a small example scenario.",
-              "slides": "2020/slides/s7-1-john-dellaverson-plug-n-play-ndn.pptx"
+              "slides": "2020/slides/s7-1-john-dellaverson-plug-n-play-ndn.pptx",
+              "video": "https://youtu.be/Ex3DXJXsTik"
             },
             {
               "title": "NDNSD: Service Discovery in NDN",

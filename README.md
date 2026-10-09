@@ -29,7 +29,7 @@ Every recording should be on YouTube. Meeting videos without a `youtube` ID are 
 |------|--------|---------------|
 | 2014 | **Lost.** Livestreamed on `new.livestream.com/uclaremap`, which no longer exists | Ask UCLA REMAP for the recordings |
 | 2015 | Day 1 and Day 2 on YouTube, on the **UCLA REMAP** channel (`yLGzGK4c-ws`, `OJWHEz56AhQ`); linked, not re-uploaded | — |
-| 2016 | 5 videos still on NIST's Kaltura: Day 1 Part 1, Day 2 Parts 1–4. Day 1 Parts 2+ were not found | **Download and upload to YouTube** (commands below), then set `youtube` in `src/content/meetings/2016.json` |
+| 2016 | Day 1 Part 1 and Day 2 Parts 1–4 on YouTube (from NIST's Kaltura). Day 1 Parts 2+ were not found | — |
 | 2017 | No recordings are known | Find out whether the meeting was recorded |
 | 2018 | **Lost.** NIST's Kaltura playlist `1_6prajrqd` still lists 6 entries, all deleted | Find a copy (NIST or attendees) |
 | 2019 | **Lost.** Playlist `0_9sr1ou29` lists 8 entries, all deleted | Find a copy |
@@ -44,34 +44,17 @@ The deleted Kaltura entry IDs are listed in `archive/<year>/videos.json`, in cas
 
 None of this is mentioned on the public site, which only shows what exists.
 
-### 2016: download from NIST's Kaltura (original files)
+### Talk videos found in the slide archives
 
-```
-curl -L -C - -o "2016 - Day 1 Part 1.mp4" 'https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/1_9zbx8axe/format/download/protocol/https/flavorParamIds/0'
-curl -L -C - -o "2016 - Day 2 Part 1.mp4" 'https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/1_4hpiklw3/format/download/protocol/https/flavorParamIds/0'
-curl -L -C - -o "2016 - Day 2 Part 2.mp4" 'https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/0_dijdxevs/format/download/protocol/https/flavorParamIds/0'
-curl -L -C - -o "2016 - Day 2 Part 3.mp4" 'https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/1_680ahkdf/format/download/protocol/https/flavorParamIds/0'
-curl -L -C - -o "2016 - Day 2 Part 4.mp4" 'https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/0_8mjfbavt/format/download/protocol/https/flavorParamIds/0'
-```
-
-### Talk videos found in the slide archives (to upload to YouTube)
-
-The 2020/2021 presentation archives contained a few talk videos. They are in `~/Downloads/ndncomm-videos-to-upload/`
-(not in the repo). After uploading, add each as the talk's `"video"` in `src/content/programs/<year>.json`.
-
-| File | Talk |
-|------|------|
-| `2020 - Teng Liang - Prefix Granularity.mp4` (13 min) | 2020 Session 3, Teng Liang |
-| `2020 - Mohammed Elbadry - V-MAC ad-hoc demo.mp4` (14 s) | 2020 Session 6, V-MAC (demo clip) |
-| `2020 - John Dellaverson - Plug-n-Play NDN demo.mov` (2 min) | 2020 Session 7, Plug-n-Play NDN (also embedded in the deck) |
-| `2021 - Jinghao Zhao - NEAR Platform.mp4` (4 min) | 2021 Session 3, NEAR platform |
-| `2021 - Tianyuan Yu - Bootstrapping Remote Entity.mpeg` (3 min) | 2021 Session 5, bootstrapping |
+The 2020/2021 presentation archives contained five talk videos (Teng Liang, V-MAC demo, Plug-n-Play NDN demo, NEAR
+platform, bootstrapping). They are on YouTube and linked from those talks.
 
 ### Already on YouTube
 
 - 2023 Day 1 Part 1: `sfIW4SHkQcg`
 - 2024 Day 1: `BHX1xNs0C5s`, Day 2: `FGEM72Ar0Gg`
-- 2025 and 2026: per-talk links in `src/content/programs/<year>.json`
+- 2016: Day 1 Part 1, Day 2 Parts 1–4 (`src/content/meetings/2016.json`)
+- 2020, 2021 (a few talks), 2025 and 2026: per-talk links in `src/content/programs/<year>.json`
 
 The original 2023/2024 files came from NIST's Kaltura (`download_url` in `archive/<year>/videos.json`).
 
