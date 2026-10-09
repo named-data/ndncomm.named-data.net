@@ -29,10 +29,10 @@ Every recording should be on YouTube. Meeting videos without a `youtube` ID are 
 |------|--------|---------------|
 | 2014 | **Lost.** Livestreamed on `new.livestream.com/uclaremap`, which no longer exists | Ask UCLA REMAP for the recordings |
 | 2015 | Day 1 and Day 2 on YouTube, on the **UCLA REMAP** channel (`yLGzGK4c-ws`, `OJWHEz56AhQ`); linked, not re-uploaded | — |
-| 2016 | Day 1 Part 1 and Day 2 Parts 1–4 on YouTube (from NIST's Kaltura). Day 1 Parts 2+ were not found | — |
+| 2016 | Day 1 Part 1 and Day 2 Parts 1–4 on YouTube (from NIST's Kaltura), plus J. Alex Halderman's talk (Day 1). Day 1 Parts 2+ were not found | — |
 | 2017 | No recordings are known | Find out whether the meeting was recorded |
-| 2018 | **Lost.** NIST's Kaltura playlist `1_6prajrqd` still lists 6 entries, all deleted | Find a copy (NIST or attendees) |
-| 2019 | **Lost.** Playlist `0_9sr1ou29` lists 8 entries, all deleted | Find a copy |
+| 2018 | NIST's Kaltura playlist `1_6prajrqd` lists 6 entries, all deleted. Both panels are on YouTube (edited from the old recordings); one full day from a private copy is being added | Find the rest (NIST or attendees) |
+| 2019 | Playlist `0_9sr1ou29` lists 8 entries, all deleted. Both panels and Eric Osterweil's talk are on YouTube (edited from the old recordings) | Find the rest |
 | 2020 | **Lost.** 6 Kaltura entries (2 days × 3 parts) deleted | Find a copy |
 | 2021 | **Lost.** Playlist `1_mxq1yi8r` exists but is empty | Find a copy |
 | 2023 | Day 1 Part 1 on YouTube. **Day 1 Part 2 and Day 2 were never published** | Ask NIST whether they exist |
