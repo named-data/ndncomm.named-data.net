@@ -54,11 +54,6 @@ export function programStats(p?: Program) {
   };
 }
 
-/** Recordings are known to be gone (the note says so). */
-export function recordingsLost(m: Meeting) {
-  return m.data.videos.length === 0 && /lost|removed/i.test(m.data.video_note ?? '');
-}
-
 /** Contiguous "2018–2021, 2023–2024"-style list of years. */
 export function yearRanges(years: number[]) {
   const ys = [...new Set(years)].sort((a, b) => a - b);

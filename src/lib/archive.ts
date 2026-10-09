@@ -66,6 +66,10 @@ const DROP_LINE = [
   /^\[Read the Code of Conduct/,
   /^\[Was this page helpful/,
   /^The referenced media source is missing/,
+  // video embeds and recording announcements whose videos no longer exist at the source
+  /Recordings from the conference are now available/,
+  /^\*\*Day [12]\*\*$/,
+  /Recording and captioning will be posted/,
   /^(conference|meeting|Virtual Event)$/,
 ];
 // Collapsed <details> blocks on the NIST page lose their markup in the scrape.
@@ -105,9 +109,12 @@ export function pageHtml(year: string, base: string) {
   md = md.replace(/(!?)\[([^\]]*)\]\(([^)\s]+)/g, (all, bang, text, href) => {
     if (/^(#|mailto:)/.test(href)) return all;
     const abs = new URL(href, base).href;
+    // folders behind a login (e.g. Google Drive): keep the words, drop the link
+    if (/^https:\/\/drive\.google\.com\//.test(abs)) return bang ? '' : `[${text}](#`;
     const local = bang ? localCopy(abs, 'images') : localDoc(abs);
     return `${bang}[${text}](${local ?? abs}`;
   });
+  md = md.replace(/\[([^\]]*)\]\(#(?:\s+"[^"]*")?\)/g, '$1'); // the unlinked ones above become plain text
 
   return marked.parse(md.replace(/\n{3,}/g, '\n\n').trim(), { async: false }) as string;
 }

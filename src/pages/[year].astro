@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
 import Program from '../components/Program.astro';
 import { url, documents, kalturaInfo, formatDuration, pageHtml, orgLogo, orgUrl, personUrl } from '../lib/archive';
-import { allMeetings, dateRange, FORMAT_LABEL, isUpcoming, programFor, recordingsLost, type Meeting } from '../lib/meetings';
+import { allMeetings, dateRange, FORMAT_LABEL, isUpcoming, programFor, type Meeting } from '../lib/meetings';
 
 export async function getStaticPaths() {
   return (await allMeetings()).map((meeting) => ({ params: { year: meeting.id }, props: { meeting } }));
@@ -111,8 +111,8 @@ const initials = (n: string) =>
                 })}
               </div>
               {m.video_note && (
-                <p class:list={['note', { 'note-info': !recordingsLost(meeting) }]}>
-                  <Icon name={recordingsLost(meeting) ? 'clock' : 'play'} />
+                <p class="note note-info">
+                  <Icon name="play" />
                   <span>{m.video_note}</span>
                 </p>
               )}
