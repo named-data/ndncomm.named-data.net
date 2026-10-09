@@ -1,0 +1,350 @@
+{
+  "timezone": "",
+  "days": [
+    {
+      "date": "2016-05-31",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "kind": "other",
+          "title": "Registration and Networking"
+        },
+        {
+          "start": "09:00",
+          "end": "09:05",
+          "kind": "opening",
+          "title": "Introduction to the Workshop"
+        },
+        {
+          "start": "09:05",
+          "end": "09:45",
+          "kind": "keynote",
+          "title": "Keynote: Named Data Networking the Internet of Things",
+          "speakers": [
+            {
+              "name": "Van Jacobson",
+              "affiliation": "Google/UCLA"
+            }
+          ]
+        },
+        {
+          "start": "09:45",
+          "end": "10:45",
+          "kind": "session",
+          "title": "Plenary Session 1: Data-centric networking strategies for IoT",
+          "speakers": [
+            {
+              "name": "Eve Schooler",
+              "affiliation": "Intel"
+            },
+            {
+              "name": "Ralph Droms",
+              "affiliation": "Cisco"
+            }
+          ],
+          "more_slides": [
+            {
+              "label": "Eve Schooler",
+              "url": "2016/slides/Eve_Schooler.pdf"
+            }
+          ]
+        },
+        {
+          "start": "10:45",
+          "end": "11:00",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "11:00",
+          "end": "12:30",
+          "kind": "session",
+          "title": "Plenary Session 2: Open IoT/NDN research challenges",
+          "speakers": [
+            {
+              "name": "Joe Salvo",
+              "affiliation": "GE Global Research"
+            },
+            {
+              "name": "Giovani Pau",
+              "affiliation": "UPMC"
+            },
+            {
+              "name": "Lan Wang",
+              "affiliation": "University of Memphis"
+            }
+          ],
+          "more_slides": [
+            {
+              "label": "Lan Wang",
+              "url": "2016/slides/Lan_Wang.pdf"
+            }
+          ]
+        },
+        {
+          "start": "12:30",
+          "end": "13:45",
+          "kind": "break",
+          "title": "Lunch & Posters"
+        },
+        {
+          "start": "13:45",
+          "end": "14:30",
+          "kind": "keynote",
+          "title": "Keynote: Securing the Internet of Things",
+          "speakers": [
+            {
+              "name": "Ken Calvert",
+              "affiliation": "NSF & University of Kentucky"
+            }
+          ]
+        },
+        {
+          "start": "14:30",
+          "end": "15:30",
+          "kind": "session",
+          "title": "Plenary Session 3: Applying Data-Centric Security to Constrained Devices",
+          "speakers": [
+            {
+              "name": "Jeff Voas",
+              "affiliation": "NIST"
+            },
+            {
+              "name": "Alex Halderman",
+              "affiliation": "University of Michigan"
+            }
+          ],
+          "more_slides": [
+            {
+              "label": "Jeff Voas",
+              "url": "2016/slides/Jeff_Voas.pdf"
+            },
+            {
+              "label": "Alex Halderman",
+              "url": "2016/slides/Alex_Halderman.pdf"
+            }
+          ]
+        },
+        {
+          "start": "15:30",
+          "end": "15:45",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "15:45",
+          "end": "16:45",
+          "kind": "panel",
+          "title": "Panel: Interoperable IoT/ICN Roll-out over 5G",
+          "chair": {
+            "name": "Ralph Droms",
+            "affiliation": "Cisco"
+          },
+          "panelists": [
+            {
+              "name": "Van Jacobson",
+              "affiliation": "Google/UCLA"
+            },
+            {
+              "name": "Anil Guntupalli",
+              "affiliation": "Verizon"
+            },
+            {
+              "name": "Vince Park",
+              "affiliation": "Qualcomm"
+            }
+          ],
+          "more_slides": [
+            {
+              "label": "Vince Park",
+              "url": "2016/slides/Vince_Park.pdf"
+            }
+          ]
+        },
+        {
+          "start": "16:45",
+          "end": "17:30",
+          "kind": "other",
+          "title": "Open Q&A",
+          "chair": {
+            "name": "Allison Mankin",
+            "affiliation": "Independent"
+          }
+        },
+        {
+          "start": "17:30",
+          "kind": "closing",
+          "title": "Day 1 Closing Remarks"
+        }
+      ]
+    },
+    {
+      "date": "2016-06-01",
+      "items": [
+        {
+          "start": "08:00",
+          "end": "09:00",
+          "kind": "other",
+          "title": "Registration and Networking"
+        },
+        {
+          "start": "09:00",
+          "end": "09:05",
+          "kind": "opening",
+          "title": "Opening Remarks: Back to the Future - NDN for Data Delivery",
+          "speakers": [
+            {
+              "name": "Lixia Zhang",
+              "affiliation": "UCLA/NDN Lead PI"
+            }
+          ]
+        },
+        {
+          "start": "09:05",
+          "end": "09:45",
+          "kind": "keynote",
+          "title": "Keynote: NDN for Big Data",
+          "speakers": [
+            {
+              "name": "Inder Monga",
+              "affiliation": "CTO, ESnet"
+            }
+          ],
+          "slides": "2016/slides/Inder_Monga.pdf"
+        },
+        {
+          "start": "09:45",
+          "end": "10:45",
+          "kind": "session",
+          "title": "Plenary Session 1: Challenges in Networking for Scientific Big Data",
+          "speakers": [
+            {
+              "name": "Phil DeMar",
+              "affiliation": "Fermilab"
+            },
+            {
+              "name": "Lotfi Benmohamed",
+              "affiliation": "NIST"
+            }
+          ],
+          "more_slides": [
+            {
+              "label": "Lotfi Benmohamed",
+              "url": "2016/slides/Lotfi_Benmohamed.pdf"
+            }
+          ]
+        },
+        {
+          "start": "10:45",
+          "end": "11:00",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "11:00",
+          "end": "12:30",
+          "kind": "session",
+          "title": "Plenary Session 2: Progress on NDN research challenges for big data support",
+          "speakers": [
+            {
+              "name": "Christos Papadopoulos",
+              "affiliation": "Colorado State University"
+            },
+            {
+              "name": "Patrick Crowley",
+              "affiliation": "Washington University"
+            }
+          ],
+          "more_slides": [
+            {
+              "label": "Christos Papadopoulos",
+              "url": "2016/slides/Christos_Papadopoulos.pdf"
+            }
+          ]
+        },
+        {
+          "start": "12:30",
+          "end": "13:30",
+          "kind": "break",
+          "title": "Lunch & Posters"
+        },
+        {
+          "start": "13:30",
+          "end": "14:15",
+          "kind": "keynote",
+          "title": "Keynote: Evolution of cloud-supported media delivery",
+          "speakers": [
+            {
+              "name": "Noah Falstein",
+              "affiliation": "Chief Game Designer, Google"
+            }
+          ]
+        },
+        {
+          "start": "14:15",
+          "end": "15:15",
+          "kind": "session",
+          "title": "Plenary Session 3: Open research challenges for future content experiences",
+          "speakers": [
+            {
+              "name": "Leslie Daigle",
+              "affiliation": "Thinking Cat Enterprises LLC"
+            },
+            {
+              "name": "Andrew Lippman",
+              "affiliation": "MIT Media Lab"
+            }
+          ]
+        },
+        {
+          "start": "15:15",
+          "end": "15:30",
+          "kind": "break",
+          "title": "Break"
+        },
+        {
+          "start": "15:30",
+          "end": "16:30",
+          "kind": "panel",
+          "title": "Panel: Driving network architecture through media applications",
+          "chair": {
+            "name": "Jeff Burke",
+            "affiliation": "UCLA"
+          },
+          "panelists": [
+            {
+              "name": "Marie-José Montpetit",
+              "affiliation": "TriangleVideo.com"
+            },
+            {
+              "name": "David Riordan",
+              "affiliation": "Brown Institute for Media Innovation"
+            }
+          ],
+          "more_slides": [
+            {
+              "label": "David Riordan",
+              "url": "2016/slides/David_Riordan.pdf"
+            }
+          ]
+        },
+        {
+          "start": "16:30",
+          "end": "17:00",
+          "kind": "other",
+          "title": "Open Q&A",
+          "chair": {
+            "name": "Allison Mankin",
+            "affiliation": "Independent"
+          }
+        },
+        {
+          "start": "17:00",
+          "kind": "closing",
+          "title": "Day 2 Closing Remarks"
+        }
+      ]
+    }
+  ]
+}

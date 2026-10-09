@@ -10,6 +10,7 @@ const { meeting } = Astro.props;
 const m = meeting.data;
 const stats = programStats(await programFor(meeting.id));
 const upcoming = isUpcoming(meeting);
+const videos = m.videos.filter((v) => v.youtube).length;
 const place = [m.venue, m.city].filter(Boolean).join(', ') || FORMAT_LABEL[m.format];
 ---
 
@@ -27,10 +28,10 @@ const place = [m.venue, m.city].filter(Boolean).join(', ') || FORMAT_LABEL[m.for
     {stats.talks > 0 && <span class="chip">{stats.talks} talks</span>}
     {stats.panels > 0 && <span class="chip">{stats.panels} panel{stats.panels > 1 ? 's' : ''}</span>}
     {
-      !upcoming && m.videos.length > 0 && (
+      !upcoming && videos > 0 && (
         <span class="chip chip-accent">
           <Icon name="play" size={12} />
-          {m.videos.length} recording{m.videos.length > 1 ? 's' : ''}
+          {videos} recording{videos > 1 ? 's' : ''}
         </span>
       )
     }

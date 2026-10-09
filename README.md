@@ -7,6 +7,7 @@ It also archives the past meetings, whose pages were originally published elsewh
 |------|---------------|-----------|
 | 2014 | [caida.org/workshops/ndn/1409](https://www.caida.org/workshops/ndn/1409/) | NDN project (at UCLA) |
 | 2015 | [caida.org/workshops/ndn/1509](https://www.caida.org/workshops/ndn/1509/) | UCLA |
+| 2016 | [nist.gov …/workshop-named-data-networking](https://www.nist.gov/news-events/events/workshop-named-data-networking) ("Workshop on Named Data Networking"; listed as the 2016 meeting) | NIST |
 | 2017 | [caida.org/workshops/ndn/1703](https://www.caida.org/workshops/ndn/1703/) | NDN project (Memphis, TN) |
 | 2018 | [nist.gov …/named-data-networking-community-meeting-2018](https://www.nist.gov/news-events/events/2018/09/named-data-networking-community-meeting-2018) | NIST |
 | 2019 | [nist.gov …/2019/09/ndn-community-meeting](https://www.nist.gov/news-events/events/2019/09/ndn-community-meeting) | NIST |
@@ -17,17 +18,18 @@ It also archives the past meetings, whose pages were originally published elsewh
 | 2025 | [ndncomm2025.named-data.net](https://ndncomm2025.named-data.net/) ([source](https://github.com/conference-websites/NDNComm-2025)) | UCLA |
 | 2026 | [ndncomm2026.named-data.net](https://ndncomm2026.named-data.net/) ([source](https://github.com/conference-websites/NDNComm-2026)) | UCLA (online) |
 
-There was no NDNComm in 2016 or 2022. 2014 and 2015 have meeting reports (from CAIDA's paper catalog) in
+There was no NDNComm in 2022. 2016 is NIST's "Workshop on Named Data Networking", which served as that year's community meeting. 2014 and 2015 have meeting reports (from CAIDA's paper catalog) in
 `public/<year>/documents/`.
 
 ## Recordings: status and to-do
 
-Every recording should be on YouTube. Status per meeting:
+Every recording should be on YouTube. Meeting videos without a `youtube` ID are not shown on the site. Status per meeting:
 
 | Year | Status | What's needed |
 |------|--------|---------------|
 | 2014 | **Lost.** Livestreamed on `new.livestream.com/uclaremap`, which no longer exists | Ask UCLA REMAP for the recordings |
 | 2015 | Day 1 and Day 2 on YouTube, on the **UCLA REMAP** channel (`yLGzGK4c-ws`, `OJWHEz56AhQ`); linked, not re-uploaded | — |
+| 2016 | 5 videos still on NIST's Kaltura: Day 1 Part 1, Day 2 Parts 1–4. Day 1 Parts 2+ were not found | **Download and upload to YouTube** (commands below), then set `youtube` in `src/content/meetings/2016.json` |
 | 2017 | No recordings are known | Find out whether the meeting was recorded |
 | 2018 | **Lost.** NIST's Kaltura playlist `1_6prajrqd` still lists 6 entries, all deleted | Find a copy (NIST or attendees) |
 | 2019 | **Lost.** Playlist `0_9sr1ou29` lists 8 entries, all deleted | Find a copy |
@@ -41,6 +43,16 @@ Every recording should be on YouTube. Status per meeting:
 The deleted Kaltura entry IDs are listed in `archive/<year>/videos.json`, in case NIST can restore them.
 
 None of this is mentioned on the public site, which only shows what exists.
+
+### 2016: download from NIST's Kaltura (original files)
+
+```
+curl -L -C - -o "2016 - Day 1 Part 1.mp4" 'https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/1_9zbx8axe/format/download/protocol/https/flavorParamIds/0'
+curl -L -C - -o "2016 - Day 2 Part 1.mp4" 'https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/1_4hpiklw3/format/download/protocol/https/flavorParamIds/0'
+curl -L -C - -o "2016 - Day 2 Part 2.mp4" 'https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/0_dijdxevs/format/download/protocol/https/flavorParamIds/0'
+curl -L -C - -o "2016 - Day 2 Part 3.mp4" 'https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/1_680ahkdf/format/download/protocol/https/flavorParamIds/0'
+curl -L -C - -o "2016 - Day 2 Part 4.mp4" 'https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/0_8mjfbavt/format/download/protocol/https/flavorParamIds/0'
+```
 
 ### Talk videos found in the slide archives (to upload to YouTube)
 
@@ -65,7 +77,8 @@ The original 2023/2024 files came from NIST's Kaltura (`download_url` in `archiv
 
 ## Slides
 
-- 2014, 2015, 2017, 2025, 2026: from the original conference pages.
+- 2014, 2015, 2016, 2017, 2025, 2026: from the original conference pages (2016: the speaker PDFs linked from NIST's
+  agenda page, `archive/2016/agenda/`).
 - 2020, 2021, 2023: from the organizers' presentation archives (Google Drive), matched to talks. The "Session 7:
   Discovery/Configuration" folder shipped with the 2021 archive belongs to 2020. The 2020 "0 - Merged.pdf" poster file
   was skipped (it repeats the individual posters). The embedded demo video in the 2020 Plug-n-Play NDN deck was

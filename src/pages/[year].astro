@@ -19,6 +19,8 @@ const kaltura = kalturaInfo(year);
 const original = m.original_page ? pageHtml(year, m.original_page) : '';
 // External links open in a new tab, so visitors don't leave the site.
 const ext = (href?: string) => (href ? { target: '_blank', rel: 'noopener' } : {});
+// Only recordings already on YouTube are shown; ones still to be uploaded stay out of the page.
+const videos = m.videos.filter((v) => v.youtube);
 const organizers = m.organizers.map((o) => ({
   ...o,
   logo: orgLogo(o.affiliation),
@@ -52,7 +54,7 @@ const initials = (n: string) =>
       {m.summary && <p class="lede" style="margin-top: 18px">{m.summary}</p>}
       <div class="btn-row">
         {program && <a class="btn btn-primary" href="#program">View program <Icon name="arrow" size={16} /></a>}
-        {m.videos.length > 0 && <a class="btn btn-ghost" href="#recordings"><Icon name="play" size={15} />Recordings</a>}
+        {videos.length > 0 && <a class="btn btn-ghost" href="#recordings"><Icon name="play" size={15} />Recordings</a>}
         {m.links?.registration && <a class="btn btn-primary" href={m.links.registration}>Register</a>}
         {m.links?.call_for_submissions && <a class="btn btn-ghost" href={m.links.call_for_submissions}>Call for submissions</a>}
       </div>
@@ -76,12 +78,12 @@ const initials = (n: string) =>
     <div class="page-grid">
       <div>
         {
-          (m.videos.length > 0 || m.video_note) && !upcoming && (
+          (videos.length > 0 || m.video_note) && !upcoming && (
             <section class="block" id="recordings">
               <h2>Recordings</h2>
-              {m.videos.length > 0 && <p class="sub">Full-length recordings of the meeting.</p>}
+              {videos.length > 0 && <p class="sub">Full-length recordings of the meeting.</p>}
               <div class="videos">
-                {m.videos.map((v) => {
+                {videos.map((v) => {
                   const k = v.kaltura ? kaltura[v.kaltura] : undefined;
                   return (
                     <figure class="video-card" style="margin: 0">

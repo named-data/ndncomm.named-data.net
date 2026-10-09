@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1_9zbx8axe",
+    "name": "Workshop on Named Data Networking , Day 1 Part 1",
+    "duration_sec": 7566,
+    "playlist": "0_lr5t8w51",
+    "created_at": 1464789539,
+    "thumbnail": "https://cdnsecakmi.kaltura.com/p/684682/sp/68468200/thumbnail/entry_id/1_9zbx8axe/version/100032",
+    "download_url": "https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/1_9zbx8axe/format/download/protocol/https/flavorParamIds/0"
+  },
+  {
+    "id": "1_4hpiklw3",
+    "name": "Workshop on Named Data Networking , Day 2 Part 1",
+    "duration_sec": 5831,
+    "playlist": "0_lr5t8w51",
+    "created_at": 1464815339,
+    "thumbnail": "https://cdnsecakmi.kaltura.com/p/684682/sp/68468200/thumbnail/entry_id/1_4hpiklw3/version/100012",
+    "download_url": "https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/1_4hpiklw3/format/download/protocol/https/flavorParamIds/0"
+  },
+  {
+    "id": "0_dijdxevs",
+    "name": "Workshop on Named Data Networking , Day 2 Part 2",
+    "duration_sec": 5424,
+    "playlist": "0_lr5t8w51",
+    "created_at": 1465397702,
+    "thumbnail": "https://cdnsecakmi.kaltura.com/p/684682/sp/68468200/thumbnail/entry_id/0_dijdxevs/version/100012",
+    "download_url": "https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/0_dijdxevs/format/download/protocol/https/flavorParamIds/0"
+  },
+  {
+    "id": "1_680ahkdf",
+    "name": "Workshop on Named Data Networking , Day 2 Part 3",
+    "duration_sec": 5825,
+    "playlist": "0_lr5t8w51",
+    "created_at": 1465398008,
+    "thumbnail": "https://cdnsecakmi.kaltura.com/p/684682/sp/68468200/thumbnail/entry_id/1_680ahkdf/version/100011",
+    "download_url": "https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/1_680ahkdf/format/download/protocol/https/flavorParamIds/0"
+  },
+  {
+    "id": "0_8mjfbavt",
+    "name": "Workshop on Named Data Networking , Day 2 Part 4",
+    "duration_sec": 5516,
+    "playlist": "0_lr5t8w51",
+    "created_at": 1465398381,
+    "thumbnail": "https://cdnsecakmi.kaltura.com/p/684682/sp/68468200/thumbnail/entry_id/0_8mjfbavt/version/100012",
+    "download_url": "https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/0_8mjfbavt/format/download/protocol/https/flavorParamIds/0"
+  }
+]

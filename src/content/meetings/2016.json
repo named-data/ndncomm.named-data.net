@@ -1,0 +1,42 @@
+{
+  "title": "Workshop on Named Data Networking",
+  "start": "2016-05-31",
+  "end": "2016-06-01",
+  "format": "in-person",
+  "venue": "NIST Gaithersburg Campus",
+  "city": "Gaithersburg, MD, USA",
+  "host": {
+    "name": "National Institute of Standards and Technology (NIST)",
+    "short": "NIST",
+    "url": "https://www.nist.gov/"
+  },
+  "organizers": [],
+  "original_page": "https://www.nist.gov/news-events/events/workshop-named-data-networking",
+  "videos": [
+    {
+      "label": "Day 1, Part 1 — May 31, 2016",
+      "kaltura": "1_9zbx8axe",
+      "youtube": null
+    },
+    {
+      "label": "Day 2, Part 1 — June 1, 2016",
+      "kaltura": "1_4hpiklw3",
+      "youtube": null
+    },
+    {
+      "label": "Day 2, Part 2 — June 1, 2016",
+      "kaltura": "0_dijdxevs",
+      "youtube": null
+    },
+    {
+      "label": "Day 2, Part 3 — June 1, 2016",
+      "kaltura": "1_680ahkdf",
+      "youtube": null
+    },
+    {
+      "label": "Day 2, Part 4 — June 1, 2016",
+      "kaltura": "0_8mjfbavt",
+      "youtube": null
+    }
+  ]
+}

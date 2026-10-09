@@ -12,7 +12,7 @@ each meeting, and will host announcements for future meetings.
 ## Past meetings
 
 Earlier meetings were published on other websites: the 2014, 2015 and 2017 meetings on CAIDA's site, the
-meetings hosted by the **National Institute of Standards and Technology (NIST)** (2018–2024) on nist.gov, and the
+meetings hosted by the **National Institute of Standards and Technology (NIST)** (2016 and 2018–2024) on nist.gov, and the
 meetings hosted by UCLA (2025–2026) on their own conference sites. This site preserves
 their programs, abstracts, slides and recordings, with a link to the original page on each meeting's page.
 
