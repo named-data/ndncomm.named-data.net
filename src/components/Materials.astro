@@ -6,14 +6,17 @@ interface Props {
   video?: string;
   slides?: string;
   more?: { label: string; url: string }[];
+  moreSlides?: { label: string; url: string }[];
 }
-const { video, slides, more = [] } = Astro.props;
-const slidesHref = slides && (/^https?:/.test(slides) ? slides : url(slides));
-const slidesKind = slides && /\.pptx?$/i.test(slides) ? 'PPT' : 'PDF';
+const { video, slides, more = [], moreSlides = [] } = Astro.props;
+const href = (u: string) => (/^https?:/.test(u) ? u : url(u));
+const kind = (u: string) => (/\.pptx?$/i.test(u) ? 'PPT' : 'PDF');
+const slidesHref = slides && href(slides);
+const slidesKind = slides && kind(slides);
 ---
 
 {
-  (video || slides || more.length > 0) && (
+  (video || slides || more.length > 0 || moreSlides.length > 0) && (
     <div class="materials">
       {video && (
         <a class="material material-video" href={video} target="_blank" rel="noopener">
@@ -33,6 +36,12 @@ const slidesKind = slides && /\.pptx?$/i.test(slides) ? 'PPT' : 'PDF';
           Slides <span class="muted">{slidesKind}</span>
         </a>
       )}
+      {moreSlides.map((d) => (
+        <a class="material" href={href(d.url)} target="_blank" rel="noopener">
+          <Icon name="file" size={13} />
+          {d.label} <span class="muted">{kind(d.url)}</span>
+        </a>
+      ))}
     </div>
   )
 }

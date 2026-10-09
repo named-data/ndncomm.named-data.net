@@ -79,6 +79,8 @@ const programs = defineCollection({
             // further recordings of the same item, e.g. separate panel discussion clips
             more_videos: z.array(z.object({ label: z.string(), url: z.string().url() })).optional(),
             slides: z.string().optional(),
+            // further decks for the same item, e.g. one per panelist
+            more_slides: z.array(z.object({ label: z.string(), url: z.string() })).optional(),
             talks: z.array(talk).optional(),
           }),
         ),

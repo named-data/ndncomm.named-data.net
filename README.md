@@ -27,7 +27,7 @@ Every recording should be on YouTube. Status per meeting:
 | Year | Status | What's needed |
 |------|--------|---------------|
 | 2014 | **Lost.** Livestreamed on `new.livestream.com/uclaremap`, which no longer exists | Ask UCLA REMAP for the recordings |
-| 2015 | Day 1 and Day 2 on YouTube, on the **UCLA REMAP** channel (`yLGzGK4c-ws`, `OJWHEz56AhQ`) | Optionally re-upload to the NDN channel |
+| 2015 | Day 1 and Day 2 on YouTube, on the **UCLA REMAP** channel (`yLGzGK4c-ws`, `OJWHEz56AhQ`); linked, not re-uploaded | — |
 | 2017 | No recordings are known | Find out whether the meeting was recorded |
 | 2018 | **Lost.** NIST's Kaltura playlist `1_6prajrqd` still lists 6 entries, all deleted | Find a copy (NIST or attendees) |
 | 2019 | **Lost.** Playlist `0_9sr1ou29` lists 8 entries, all deleted | Find a copy |
@@ -40,6 +40,21 @@ Every recording should be on YouTube. Status per meeting:
 
 The deleted Kaltura entry IDs are listed in `archive/<year>/videos.json`, in case NIST can restore them.
 
+None of this is mentioned on the public site, which only shows what exists.
+
+### Talk videos found in the slide archives (to upload to YouTube)
+
+The 2020/2021 presentation archives contained a few talk videos. They are in `~/Downloads/ndncomm-videos-to-upload/`
+(not in the repo). After uploading, add each as the talk's `"video"` in `src/content/programs/<year>.json`.
+
+| File | Talk |
+|------|------|
+| `2020 - Teng Liang - Prefix Granularity.mp4` (13 min) | 2020 Session 3, Teng Liang |
+| `2020 - Mohammed Elbadry - V-MAC ad-hoc demo.mp4` (14 s) | 2020 Session 6, V-MAC (demo clip) |
+| `2020 - John Dellaverson - Plug-n-Play NDN demo.mov` (2 min) | 2020 Session 7, Plug-n-Play NDN (also embedded in the deck) |
+| `2021 - Jinghao Zhao - NEAR Platform.mp4` (4 min) | 2021 Session 3, NEAR platform |
+| `2021 - Tianyuan Yu - Bootstrapping Remote Entity.mpeg` (3 min) | 2021 Session 5, bootstrapping |
+
 ### Already on YouTube
 
 - 2023 Day 1 Part 1: `sfIW4SHkQcg`
@@ -48,15 +63,14 @@ The deleted Kaltura entry IDs are listed in `archive/<year>/videos.json`, in cas
 
 The original 2023/2024 files came from NIST's Kaltura (`download_url` in `archive/<year>/videos.json`).
 
-## Other missing material
+## Slides
 
-- **2021 slides:** the NIST page linked them in a Google Drive folder
-  (`https://drive.google.com/drive/folders/0ACSWNKeNXxxwUk9PVA`), which now requires a NIST login. Access was
-  requested on 2026-10-08. The 2021 organizers (Lotfi Benmohamed, Susmit Shannigrahi, Marie-José Montpetit) may also
-  have a copy. Once the files are in hand, add them to `public/2021/slides/` and a `"slides"` path to each talk in
-  `src/content/programs/2021.json`. The archived 2021 page text still links that folder ("Presentation Files"); drop
-  the link if the files can't be recovered.
-- **2018–2020, 2023, 2024 slides:** NIST never published them.
+- 2014, 2015, 2017, 2025, 2026: from the original conference pages.
+- 2020, 2021, 2023: from the organizers' presentation archives (Google Drive), matched to talks. The "Session 7:
+  Discovery/Configuration" folder shipped with the 2021 archive belongs to 2020. The 2020 "0 - Merged.pdf" poster file
+  was skipped (it repeats the individual posters). The embedded demo video in the 2020 Plug-n-Play NDN deck was
+  re-encoded (46 MB to 6 MB).
+- 2023: only 6 decks exist in the archive. 2018, 2019, 2024: no slides were published.
 
 ## Website
 
