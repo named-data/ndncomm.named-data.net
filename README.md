@@ -31,7 +31,7 @@ Every recording should be on YouTube. Meeting videos without a `youtube` ID are 
 | 2015 | Day 1 and Day 2 on YouTube, on the **UCLA REMAP** channel (`yLGzGK4c-ws`, `OJWHEz56AhQ`); linked, not re-uploaded | — |
 | 2016 | Day 1 Part 1 and Day 2 Parts 1–4 on YouTube (from NIST's Kaltura), plus J. Alex Halderman's talk (Day 1). Day 1 Parts 2+ were not found | — |
 | 2017 | No recordings are known | Find out whether the meeting was recorded |
-| 2018 | NIST's Kaltura playlist `1_6prajrqd` lists 6 entries, all deleted. Both panels are on YouTube (edited from the old recordings); one full day from a private copy is being added | Find the rest (NIST or attendees) |
+| 2018 | NIST's Kaltura playlist `1_6prajrqd` lists 6 entries, all deleted. Both panels are on YouTube (edited from the old recordings); Day 1 (Sept 19) is on YouTube from a private copy (`RHSfyd9IlCU`) | Find the rest (NIST or attendees) |
 | 2019 | Playlist `0_9sr1ou29` lists 8 entries, all deleted. Both panels are on YouTube (edited from the old recordings) | Find the rest |
 | 2020 | **Lost.** 6 Kaltura entries (2 days × 3 parts) deleted | Find a copy |
 | 2021 | **Lost.** Playlist `1_mxq1yi8r` exists but is empty | Find a copy |
