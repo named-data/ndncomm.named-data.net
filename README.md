@@ -29,13 +29,13 @@ Every recording should be on YouTube. Meeting videos without a `youtube` ID are 
 |------|--------|---------------|
 | 2014 | Livestreamed on `new.livestream.com/uclaremap`; that address does not resolve today. We have no copy | Ask UCLA REMAP |
 | 2015 | Day 1 and Day 2 on YouTube, on the **UCLA REMAP** channel (`yLGzGK4c-ws`, `OJWHEz56AhQ`); linked, not re-uploaded | — |
-| 2016 | Day 1 Part 1 and Day 2 Parts 1–4 on YouTube (from NIST's Kaltura), plus J. Alex Halderman's talk (Day 1). We have no copy of the rest of Day 1 | — |
+| 2016 | Day 1 Part 1 and Day 2 Parts 1–4 on YouTube (from NIST's Kaltura), plus J. Alex Halderman's talk (Day 1). NIST also published Day 1 Parts 2–4 (`1_dhfy9g52`, `0_8jgtadwa`, `1_abu6cu9y`, 2016-06-01); the Kaltura API now reports them as not found. We have no copy | Ask NIST |
 | 2017 | No recordings are known | Find out whether the meeting was recorded |
-| 2018 | Day 1 (Sept 19, `RHSfyd9IlCU`) and both panels on YouTube. NIST's Kaltura playlist `1_6prajrqd` lists 6 entries that the Kaltura API now reports as not found. We have no copy of Day 2 | Ask NIST or attendees |
-| 2019 | Both panels on YouTube. Kaltura playlist `0_9sr1ou29` lists 8 entries that the API now reports as not found. We have no copy of the rest | Ask NIST or attendees |
-| 2020 | Three talk/demo videos (from the presentation archive) on YouTube. The 6 Kaltura entries (2 days × 3 parts) that the event page embedded are now reported as not found. We have no copy | Ask NIST or attendees |
-| 2021 | Two talk videos (from the presentation archive) on YouTube. Kaltura playlist `1_mxq1yi8r` exists but is empty today. We have no copy of the sessions | Ask NIST or attendees |
-| 2023 | Day 1 Part 1 on YouTube. The NIST event page's playlist contains only Day 1 Part 1. We have no copy of Day 1 Part 2 or Day 2 | Ask NIST |
+| 2018 | Day 1 (Sept 19, `RHSfyd9IlCU`) and both panels on YouTube. NIST's Kaltura playlist `1_6prajrqd` lists 6 entries that the Kaltura API now reports as not found; no archived titles were found. We have no copy of Day 2 | Ask NIST or attendees |
+| 2019 | Both panels on YouTube. Kaltura playlist `0_9sr1ou29` lists 8 entries that the API now reports as not found; no archived titles were found. We have no copy of the rest | Ask NIST or attendees |
+| 2020 | Three talk/demo videos (from the presentation archive) on YouTube. NIST published "NDN Community Meeting Day 1 Part 1" … "Day 2 Part 3" (6 videos, 2020-09-16/18; IDs, titles and archived page links in `archive/2020/videos.json`); the Kaltura API now reports them as not found. We have no copy | Ask NIST or attendees |
+| 2021 | Two talk videos (from the presentation archive) on YouTube. Kaltura playlist `1_mxq1yi8r` exists but is empty today. No archived copy of its contents or of per-video NIST pages was found, so the titles and IDs are unknown. We have no copy of the sessions | Ask NIST or attendees |
+| 2023 | Day 1 Part 1 on YouTube. NIST also published Day 1 Part 2 and Day 2 Parts 1–2 as separate video pages (`1_9af1fw8z`, `1_3xliild6`, `1_5j98jojx`, 2023-03-07/08; see `archive/2023/videos.json`); the Kaltura API now reports them as not found. We have no copy | Ask NIST |
 | 2024 | Day 1 and Day 2 on YouTube | — |
 | 2025 | Every talk and panel on YouTube (linked per talk) | — |
 | 2026 | Every talk, the panel and its two discussion clips on YouTube (linked per talk) | — |

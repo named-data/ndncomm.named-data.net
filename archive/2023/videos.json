@@ -7,5 +7,29 @@
     "created_at": 1678291445,
     "thumbnail": "https://cdnsecakmi.kaltura.com/p/684682/sp/68468200/thumbnail/entry_id/1_5sqzakox/version/100011",
     "download_url": "https://cdnapisec.kaltura.com/p/684682/sp/68468200/playManifest/entryId/1_5sqzakox/format/download/protocol/https/flavorParamIds/0"
+  },
+  {
+    "id": "1_9af1fw8z",
+    "name": "Named Data Networking Community Meeting Day1 Part2",
+    "published": "2023-03-08",
+    "nist_page": "https://www.nist.gov/video/named-data-networking-community-meeting-day1-part2",
+    "wayback": "https://web.archive.org/web/2024/https://www.nist.gov/video/named-data-networking-community-meeting-day1-part2",
+    "status": "NIST video page found in the Wayback Machine; the Kaltura API reports the entry as not found (checked 2026-10-09)"
+  },
+  {
+    "id": "1_3xliild6",
+    "name": "Named Data Networking Community Meeting Day2 Part1",
+    "published": "2023-03-08",
+    "nist_page": "https://www.nist.gov/video/named-data-networking-community-meeting-day2-part1",
+    "wayback": "https://web.archive.org/web/2024/https://www.nist.gov/video/named-data-networking-community-meeting-day2-part1",
+    "status": "NIST video page found in the Wayback Machine; the Kaltura API reports the entry as not found (checked 2026-10-09)"
+  },
+  {
+    "id": "1_5j98jojx",
+    "name": "Named Data Networking Community Meeting Day2 Part2",
+    "published": "2023-03-07",
+    "nist_page": "https://www.nist.gov/video/named-data-networking-community-meeting-day2-part2",
+    "wayback": "https://web.archive.org/web/2024/https://www.nist.gov/video/named-data-networking-community-meeting-day2-part2",
+    "status": "NIST video page found in the Wayback Machine; the Kaltura API reports the entry as not found (checked 2026-10-09)"
   }
 ]
