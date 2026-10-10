@@ -62,8 +62,8 @@ The original 2023/2024 files came from NIST's Kaltura (`download_url` in `archiv
 
 - 2014, 2015, 2016, 2017, 2025, 2026: from the original conference pages (2016: the speaker PDFs linked from NIST's
   agenda page, `archive/2016/agenda/`).
-- 2020, 2021, 2023: from the organizers' presentation archives (Google Drive), matched to talks. The "Session 7:
-  Discovery/Configuration" folder shipped with the 2021 archive belongs to 2020. The 2020 "0 - Merged.pdf" poster file
+- 2020, 2021, 2023: from the organizers' presentation archives (Google Drive), matched to talks. 2020 includes its "Session 7:
+  Discovery/Configuration" decks. The 2020 "0 - Merged.pdf" poster file
   was skipped (it repeats the individual posters). The embedded demo video in the 2020 Plug-n-Play NDN deck was
   re-encoded (46 MB to 6 MB).
 - 2023: the presentation archive contains 6 decks. 2018, 2019, 2024: the event pages link no slides, and we have
